@@ -3,3 +3,4 @@ _svd: ../svd/MK20D5.svd
 _include:
   - ../patches/mk20d5/sim/sopt5_uart_txsrc.yaml
   - ../patches/mk20d5/fmc/cache_addresses.yaml
+  - ../patches/mk20d5/dmamux/source_enums.yaml

@@ -2,10 +2,599 @@
 pub type R = crate::R<ChcfgSpec>;
 #[doc = "Register `CHCFG%s` writer"]
 pub type W = crate::W<ChcfgSpec>;
+#[doc = "DMA Channel Source (slot)\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Source {
+    #[doc = "0: DMA channel disabled"]
+    Disabled = 0,
+    #[doc = "2: UART0 receive"]
+    Uart0rx = 2,
+    #[doc = "3: UART0 transmit"]
+    Uart0tx = 3,
+    #[doc = "4: UART1 receive"]
+    Uart1rx = 4,
+    #[doc = "5: UART1 transmit"]
+    Uart1tx = 5,
+    #[doc = "6: UART2 receive"]
+    Uart2rx = 6,
+    #[doc = "7: UART2 transmit"]
+    Uart2tx = 7,
+    #[doc = "14: I2S0 receive"]
+    I2s0rx = 14,
+    #[doc = "15: I2S0 transmit"]
+    I2s0tx = 15,
+    #[doc = "16: SPI0 receive"]
+    Spi0rx = 16,
+    #[doc = "17: SPI0 transmit"]
+    Spi0tx = 17,
+    #[doc = "22: I2C0"]
+    I2c0 = 22,
+    #[doc = "24: FTM0 channel 0"]
+    Ftm0ch0 = 24,
+    #[doc = "25: FTM0 channel 1"]
+    Ftm0ch1 = 25,
+    #[doc = "26: FTM0 channel 2"]
+    Ftm0ch2 = 26,
+    #[doc = "27: FTM0 channel 3"]
+    Ftm0ch3 = 27,
+    #[doc = "28: FTM0 channel 4"]
+    Ftm0ch4 = 28,
+    #[doc = "29: FTM0 channel 5"]
+    Ftm0ch5 = 29,
+    #[doc = "30: FTM0 channel 6"]
+    Ftm0ch6 = 30,
+    #[doc = "31: FTM0 channel 7"]
+    Ftm0ch7 = 31,
+    #[doc = "32: FTM1 channel 0"]
+    Ftm1ch0 = 32,
+    #[doc = "33: FTM1 channel 1"]
+    Ftm1ch1 = 33,
+    #[doc = "40: ADC0"]
+    Adc0 = 40,
+    #[doc = "42: CMP0"]
+    Cmp0 = 42,
+    #[doc = "43: CMP1"]
+    Cmp1 = 43,
+    #[doc = "45: DAC0"]
+    Dac0 = 45,
+    #[doc = "47: CMT"]
+    Cmt = 47,
+    #[doc = "48: PDB"]
+    Pdb = 48,
+    #[doc = "49: PORTA"]
+    PortA = 49,
+    #[doc = "50: PORTB"]
+    PortB = 50,
+    #[doc = "51: PORTC"]
+    PortC = 51,
+    #[doc = "52: PORTD"]
+    PortD = 52,
+    #[doc = "53: PORTE"]
+    PortE = 53,
+    #[doc = "54: Always enabled slot 0"]
+    AlwaysOn0 = 54,
+    #[doc = "55: Always enabled slot 1"]
+    AlwaysOn1 = 55,
+    #[doc = "56: Always enabled slot 2"]
+    AlwaysOn2 = 56,
+    #[doc = "57: Always enabled slot 3"]
+    AlwaysOn3 = 57,
+    #[doc = "58: Always enabled slot 4"]
+    AlwaysOn4 = 58,
+    #[doc = "59: Always enabled slot 5"]
+    AlwaysOn5 = 59,
+    #[doc = "60: Always enabled slot 6"]
+    AlwaysOn6 = 60,
+    #[doc = "61: Always enabled slot 7"]
+    AlwaysOn7 = 61,
+    #[doc = "62: Always enabled slot 8"]
+    AlwaysOn8 = 62,
+    #[doc = "63: Always enabled slot 9"]
+    AlwaysOn9 = 63,
+}
+impl From<Source> for u8 {
+    #[inline(always)]
+    fn from(variant: Source) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Source {
+    type Ux = u8;
+}
+impl crate::IsEnum for Source {}
 #[doc = "Field `SOURCE` reader - DMA Channel Source (slot)"]
-pub type SourceR = crate::FieldReader;
+pub type SourceR = crate::FieldReader<Source>;
+impl SourceR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<Source> {
+        match self.bits {
+            0 => Some(Source::Disabled),
+            2 => Some(Source::Uart0rx),
+            3 => Some(Source::Uart0tx),
+            4 => Some(Source::Uart1rx),
+            5 => Some(Source::Uart1tx),
+            6 => Some(Source::Uart2rx),
+            7 => Some(Source::Uart2tx),
+            14 => Some(Source::I2s0rx),
+            15 => Some(Source::I2s0tx),
+            16 => Some(Source::Spi0rx),
+            17 => Some(Source::Spi0tx),
+            22 => Some(Source::I2c0),
+            24 => Some(Source::Ftm0ch0),
+            25 => Some(Source::Ftm0ch1),
+            26 => Some(Source::Ftm0ch2),
+            27 => Some(Source::Ftm0ch3),
+            28 => Some(Source::Ftm0ch4),
+            29 => Some(Source::Ftm0ch5),
+            30 => Some(Source::Ftm0ch6),
+            31 => Some(Source::Ftm0ch7),
+            32 => Some(Source::Ftm1ch0),
+            33 => Some(Source::Ftm1ch1),
+            40 => Some(Source::Adc0),
+            42 => Some(Source::Cmp0),
+            43 => Some(Source::Cmp1),
+            45 => Some(Source::Dac0),
+            47 => Some(Source::Cmt),
+            48 => Some(Source::Pdb),
+            49 => Some(Source::PortA),
+            50 => Some(Source::PortB),
+            51 => Some(Source::PortC),
+            52 => Some(Source::PortD),
+            53 => Some(Source::PortE),
+            54 => Some(Source::AlwaysOn0),
+            55 => Some(Source::AlwaysOn1),
+            56 => Some(Source::AlwaysOn2),
+            57 => Some(Source::AlwaysOn3),
+            58 => Some(Source::AlwaysOn4),
+            59 => Some(Source::AlwaysOn5),
+            60 => Some(Source::AlwaysOn6),
+            61 => Some(Source::AlwaysOn7),
+            62 => Some(Source::AlwaysOn8),
+            63 => Some(Source::AlwaysOn9),
+            _ => None,
+        }
+    }
+    #[doc = "DMA channel disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == Source::Disabled
+    }
+    #[doc = "UART0 receive"]
+    #[inline(always)]
+    pub fn is_uart0rx(&self) -> bool {
+        *self == Source::Uart0rx
+    }
+    #[doc = "UART0 transmit"]
+    #[inline(always)]
+    pub fn is_uart0tx(&self) -> bool {
+        *self == Source::Uart0tx
+    }
+    #[doc = "UART1 receive"]
+    #[inline(always)]
+    pub fn is_uart1rx(&self) -> bool {
+        *self == Source::Uart1rx
+    }
+    #[doc = "UART1 transmit"]
+    #[inline(always)]
+    pub fn is_uart1tx(&self) -> bool {
+        *self == Source::Uart1tx
+    }
+    #[doc = "UART2 receive"]
+    #[inline(always)]
+    pub fn is_uart2rx(&self) -> bool {
+        *self == Source::Uart2rx
+    }
+    #[doc = "UART2 transmit"]
+    #[inline(always)]
+    pub fn is_uart2tx(&self) -> bool {
+        *self == Source::Uart2tx
+    }
+    #[doc = "I2S0 receive"]
+    #[inline(always)]
+    pub fn is_i2s0rx(&self) -> bool {
+        *self == Source::I2s0rx
+    }
+    #[doc = "I2S0 transmit"]
+    #[inline(always)]
+    pub fn is_i2s0tx(&self) -> bool {
+        *self == Source::I2s0tx
+    }
+    #[doc = "SPI0 receive"]
+    #[inline(always)]
+    pub fn is_spi0rx(&self) -> bool {
+        *self == Source::Spi0rx
+    }
+    #[doc = "SPI0 transmit"]
+    #[inline(always)]
+    pub fn is_spi0tx(&self) -> bool {
+        *self == Source::Spi0tx
+    }
+    #[doc = "I2C0"]
+    #[inline(always)]
+    pub fn is_i2c0(&self) -> bool {
+        *self == Source::I2c0
+    }
+    #[doc = "FTM0 channel 0"]
+    #[inline(always)]
+    pub fn is_ftm0ch0(&self) -> bool {
+        *self == Source::Ftm0ch0
+    }
+    #[doc = "FTM0 channel 1"]
+    #[inline(always)]
+    pub fn is_ftm0ch1(&self) -> bool {
+        *self == Source::Ftm0ch1
+    }
+    #[doc = "FTM0 channel 2"]
+    #[inline(always)]
+    pub fn is_ftm0ch2(&self) -> bool {
+        *self == Source::Ftm0ch2
+    }
+    #[doc = "FTM0 channel 3"]
+    #[inline(always)]
+    pub fn is_ftm0ch3(&self) -> bool {
+        *self == Source::Ftm0ch3
+    }
+    #[doc = "FTM0 channel 4"]
+    #[inline(always)]
+    pub fn is_ftm0ch4(&self) -> bool {
+        *self == Source::Ftm0ch4
+    }
+    #[doc = "FTM0 channel 5"]
+    #[inline(always)]
+    pub fn is_ftm0ch5(&self) -> bool {
+        *self == Source::Ftm0ch5
+    }
+    #[doc = "FTM0 channel 6"]
+    #[inline(always)]
+    pub fn is_ftm0ch6(&self) -> bool {
+        *self == Source::Ftm0ch6
+    }
+    #[doc = "FTM0 channel 7"]
+    #[inline(always)]
+    pub fn is_ftm0ch7(&self) -> bool {
+        *self == Source::Ftm0ch7
+    }
+    #[doc = "FTM1 channel 0"]
+    #[inline(always)]
+    pub fn is_ftm1ch0(&self) -> bool {
+        *self == Source::Ftm1ch0
+    }
+    #[doc = "FTM1 channel 1"]
+    #[inline(always)]
+    pub fn is_ftm1ch1(&self) -> bool {
+        *self == Source::Ftm1ch1
+    }
+    #[doc = "ADC0"]
+    #[inline(always)]
+    pub fn is_adc0(&self) -> bool {
+        *self == Source::Adc0
+    }
+    #[doc = "CMP0"]
+    #[inline(always)]
+    pub fn is_cmp0(&self) -> bool {
+        *self == Source::Cmp0
+    }
+    #[doc = "CMP1"]
+    #[inline(always)]
+    pub fn is_cmp1(&self) -> bool {
+        *self == Source::Cmp1
+    }
+    #[doc = "DAC0"]
+    #[inline(always)]
+    pub fn is_dac0(&self) -> bool {
+        *self == Source::Dac0
+    }
+    #[doc = "CMT"]
+    #[inline(always)]
+    pub fn is_cmt(&self) -> bool {
+        *self == Source::Cmt
+    }
+    #[doc = "PDB"]
+    #[inline(always)]
+    pub fn is_pdb(&self) -> bool {
+        *self == Source::Pdb
+    }
+    #[doc = "PORTA"]
+    #[inline(always)]
+    pub fn is_port_a(&self) -> bool {
+        *self == Source::PortA
+    }
+    #[doc = "PORTB"]
+    #[inline(always)]
+    pub fn is_port_b(&self) -> bool {
+        *self == Source::PortB
+    }
+    #[doc = "PORTC"]
+    #[inline(always)]
+    pub fn is_port_c(&self) -> bool {
+        *self == Source::PortC
+    }
+    #[doc = "PORTD"]
+    #[inline(always)]
+    pub fn is_port_d(&self) -> bool {
+        *self == Source::PortD
+    }
+    #[doc = "PORTE"]
+    #[inline(always)]
+    pub fn is_port_e(&self) -> bool {
+        *self == Source::PortE
+    }
+    #[doc = "Always enabled slot 0"]
+    #[inline(always)]
+    pub fn is_always_on0(&self) -> bool {
+        *self == Source::AlwaysOn0
+    }
+    #[doc = "Always enabled slot 1"]
+    #[inline(always)]
+    pub fn is_always_on1(&self) -> bool {
+        *self == Source::AlwaysOn1
+    }
+    #[doc = "Always enabled slot 2"]
+    #[inline(always)]
+    pub fn is_always_on2(&self) -> bool {
+        *self == Source::AlwaysOn2
+    }
+    #[doc = "Always enabled slot 3"]
+    #[inline(always)]
+    pub fn is_always_on3(&self) -> bool {
+        *self == Source::AlwaysOn3
+    }
+    #[doc = "Always enabled slot 4"]
+    #[inline(always)]
+    pub fn is_always_on4(&self) -> bool {
+        *self == Source::AlwaysOn4
+    }
+    #[doc = "Always enabled slot 5"]
+    #[inline(always)]
+    pub fn is_always_on5(&self) -> bool {
+        *self == Source::AlwaysOn5
+    }
+    #[doc = "Always enabled slot 6"]
+    #[inline(always)]
+    pub fn is_always_on6(&self) -> bool {
+        *self == Source::AlwaysOn6
+    }
+    #[doc = "Always enabled slot 7"]
+    #[inline(always)]
+    pub fn is_always_on7(&self) -> bool {
+        *self == Source::AlwaysOn7
+    }
+    #[doc = "Always enabled slot 8"]
+    #[inline(always)]
+    pub fn is_always_on8(&self) -> bool {
+        *self == Source::AlwaysOn8
+    }
+    #[doc = "Always enabled slot 9"]
+    #[inline(always)]
+    pub fn is_always_on9(&self) -> bool {
+        *self == Source::AlwaysOn9
+    }
+}
 #[doc = "Field `SOURCE` writer - DMA Channel Source (slot)"]
-pub type SourceW<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+pub type SourceW<'a, REG> = crate::FieldWriter<'a, REG, 6, Source>;
+impl<'a, REG> SourceW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "DMA channel disabled"]
+    #[inline(always)]
+    pub fn disabled(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::Disabled)
+    }
+    #[doc = "UART0 receive"]
+    #[inline(always)]
+    pub fn uart0rx(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::Uart0rx)
+    }
+    #[doc = "UART0 transmit"]
+    #[inline(always)]
+    pub fn uart0tx(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::Uart0tx)
+    }
+    #[doc = "UART1 receive"]
+    #[inline(always)]
+    pub fn uart1rx(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::Uart1rx)
+    }
+    #[doc = "UART1 transmit"]
+    #[inline(always)]
+    pub fn uart1tx(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::Uart1tx)
+    }
+    #[doc = "UART2 receive"]
+    #[inline(always)]
+    pub fn uart2rx(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::Uart2rx)
+    }
+    #[doc = "UART2 transmit"]
+    #[inline(always)]
+    pub fn uart2tx(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::Uart2tx)
+    }
+    #[doc = "I2S0 receive"]
+    #[inline(always)]
+    pub fn i2s0rx(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::I2s0rx)
+    }
+    #[doc = "I2S0 transmit"]
+    #[inline(always)]
+    pub fn i2s0tx(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::I2s0tx)
+    }
+    #[doc = "SPI0 receive"]
+    #[inline(always)]
+    pub fn spi0rx(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::Spi0rx)
+    }
+    #[doc = "SPI0 transmit"]
+    #[inline(always)]
+    pub fn spi0tx(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::Spi0tx)
+    }
+    #[doc = "I2C0"]
+    #[inline(always)]
+    pub fn i2c0(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::I2c0)
+    }
+    #[doc = "FTM0 channel 0"]
+    #[inline(always)]
+    pub fn ftm0ch0(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::Ftm0ch0)
+    }
+    #[doc = "FTM0 channel 1"]
+    #[inline(always)]
+    pub fn ftm0ch1(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::Ftm0ch1)
+    }
+    #[doc = "FTM0 channel 2"]
+    #[inline(always)]
+    pub fn ftm0ch2(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::Ftm0ch2)
+    }
+    #[doc = "FTM0 channel 3"]
+    #[inline(always)]
+    pub fn ftm0ch3(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::Ftm0ch3)
+    }
+    #[doc = "FTM0 channel 4"]
+    #[inline(always)]
+    pub fn ftm0ch4(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::Ftm0ch4)
+    }
+    #[doc = "FTM0 channel 5"]
+    #[inline(always)]
+    pub fn ftm0ch5(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::Ftm0ch5)
+    }
+    #[doc = "FTM0 channel 6"]
+    #[inline(always)]
+    pub fn ftm0ch6(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::Ftm0ch6)
+    }
+    #[doc = "FTM0 channel 7"]
+    #[inline(always)]
+    pub fn ftm0ch7(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::Ftm0ch7)
+    }
+    #[doc = "FTM1 channel 0"]
+    #[inline(always)]
+    pub fn ftm1ch0(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::Ftm1ch0)
+    }
+    #[doc = "FTM1 channel 1"]
+    #[inline(always)]
+    pub fn ftm1ch1(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::Ftm1ch1)
+    }
+    #[doc = "ADC0"]
+    #[inline(always)]
+    pub fn adc0(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::Adc0)
+    }
+    #[doc = "CMP0"]
+    #[inline(always)]
+    pub fn cmp0(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::Cmp0)
+    }
+    #[doc = "CMP1"]
+    #[inline(always)]
+    pub fn cmp1(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::Cmp1)
+    }
+    #[doc = "DAC0"]
+    #[inline(always)]
+    pub fn dac0(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::Dac0)
+    }
+    #[doc = "CMT"]
+    #[inline(always)]
+    pub fn cmt(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::Cmt)
+    }
+    #[doc = "PDB"]
+    #[inline(always)]
+    pub fn pdb(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::Pdb)
+    }
+    #[doc = "PORTA"]
+    #[inline(always)]
+    pub fn port_a(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::PortA)
+    }
+    #[doc = "PORTB"]
+    #[inline(always)]
+    pub fn port_b(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::PortB)
+    }
+    #[doc = "PORTC"]
+    #[inline(always)]
+    pub fn port_c(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::PortC)
+    }
+    #[doc = "PORTD"]
+    #[inline(always)]
+    pub fn port_d(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::PortD)
+    }
+    #[doc = "PORTE"]
+    #[inline(always)]
+    pub fn port_e(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::PortE)
+    }
+    #[doc = "Always enabled slot 0"]
+    #[inline(always)]
+    pub fn always_on0(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::AlwaysOn0)
+    }
+    #[doc = "Always enabled slot 1"]
+    #[inline(always)]
+    pub fn always_on1(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::AlwaysOn1)
+    }
+    #[doc = "Always enabled slot 2"]
+    #[inline(always)]
+    pub fn always_on2(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::AlwaysOn2)
+    }
+    #[doc = "Always enabled slot 3"]
+    #[inline(always)]
+    pub fn always_on3(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::AlwaysOn3)
+    }
+    #[doc = "Always enabled slot 4"]
+    #[inline(always)]
+    pub fn always_on4(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::AlwaysOn4)
+    }
+    #[doc = "Always enabled slot 5"]
+    #[inline(always)]
+    pub fn always_on5(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::AlwaysOn5)
+    }
+    #[doc = "Always enabled slot 6"]
+    #[inline(always)]
+    pub fn always_on6(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::AlwaysOn6)
+    }
+    #[doc = "Always enabled slot 7"]
+    #[inline(always)]
+    pub fn always_on7(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::AlwaysOn7)
+    }
+    #[doc = "Always enabled slot 8"]
+    #[inline(always)]
+    pub fn always_on8(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::AlwaysOn8)
+    }
+    #[doc = "Always enabled slot 9"]
+    #[inline(always)]
+    pub fn always_on9(self) -> &'a mut crate::W<REG> {
+        self.variant(Source::AlwaysOn9)
+    }
+}
 #[doc = "DMA Channel Trigger Enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Trig {

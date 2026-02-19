@@ -1,6 +1,6 @@
 # mk20dx-pac: Project Status
 
-**Last updated:** 2026-02-19 (Phase 4 complete)
+**Last updated:** 2026-02-19 (Phase 5 ergonomics in progress)
 
 ---
 
@@ -238,7 +238,7 @@ form -i lib.rs -o src/ → 562 .rs files
 cargo check --target thumbv7em-none-eabi → OK (1544 warnings)
 ```
 
-MK20D7 requires no patches — builds clean from unpatched SVD.
+MK20D7 required no correctness patches — builds clean from unpatched SVD. (Ergonomics patches added in Phase 5.)
 
 ### Patches Still Needed
 
@@ -250,12 +250,12 @@ MK20D7 requires no patches — builds clean from unpatched SVD.
 - [x] Verify DMA NBYTES field widths — confirmed correct
 - [x] Verify FTM_CONF field positions — confirmed correct
 
-**Priority 2 — Ergonomics (future):**
+**Priority 2 — Ergonomics:**
 - [ ] Register array collection (FTM channels, DMA TCDs, PORT PCR registers)
-- [ ] Register clustering
-- [ ] Enumerated values for common fields
+- [ ] Register clustering (DMA TCD — blocked by svd2rust#16)
+- [x] Enumerated values for common fields — investigated, most already present (see Phase 5)
 - [ ] Peripheral name prefix stripping
-- [ ] DMAMUX source enumerated values
+- [x] DMAMUX source enumerated values — patched (see Phase 5)
 
 ---
 
@@ -383,9 +383,60 @@ Warnings are all benign (1543/3324 lifetime elision + 1 cfg each).
 
 ---
 
+## Phase 5: Ergonomics Patches — IN PROGRESS
+
+### 5.1 DMAMUX SOURCE Enumerated Values — COMPLETE
+
+The DMAMUX CHCFG SOURCE field was a bare 6-bit field with zero enums, requiring raw numeric literals for every DMA channel configuration. Named source enums were added for both variants.
+
+| | MK20D5 (Teensy 3.0) | MK20D7 (Teensy 3.1/3.2) |
+|---|---|---|
+| **Patch file** | `patches/mk20d5/dmamux/source_enums.yaml` | `patches/mk20d7/dmamux/source_enums.yaml` |
+| **Source enum variants** | 43 (including Disabled + 10 AlwaysOn) | 50 (including Disabled + 10 AlwaysOn) |
+| **Named DMA sources** | 32 | 39 |
+| **Source** | kinetis.h lines 88-129 (`__MK20DX128__`) | kinetis.h lines 220-268 (`__MK20DX256__`) |
+
+MK20D5 lacks these peripherals compared to MK20D7: SPI1 (RX/TX), I2C1, FTM2 (CH0/CH1), ADC1, CMP2.
+
+**Generated API example (before vs after):**
+```rust
+// Before: raw numeric value, easy to get wrong
+dmamux.chcfg[0].write(|w| unsafe { w.source().bits(16) });
+
+// After: named enum variant, self-documenting
+dmamux.chcfg[0].write(|w| w.source().variant(Source::Spi0rx));
+```
+
+Reader returns `Option<Source>` (sparse enum — not all 64 values are named). Writer methods are safe (no `unsafe` needed).
+
+### 5.2 Existing Enumerated Values — Already Complete
+
+Investigation of the MK20D7 SVD revealed that most peripherals already have comprehensive enumerated values:
+
+| Peripheral | Field | Status |
+|-----------|-------|--------|
+| SIM | SCGC1-7 clock gate bits | Already has `Enabled`/`Disabled` enums |
+| PORT | PCR MUX field | Already has `Alt0`-`Alt7` pin mux enums |
+| UART0 | C1/C2/S1/S2/BDH control fields | Already has named bit enums |
+| FTM0 | SC CLKS, PS fields | Already has clock source and prescaler enums |
+| ADC0 | SC1n/CFG1/CFG2 fields | Already has mode, clock, resolution enums |
+| GPIO | PDDR direction bits | Already has `Input`/`Output` enums |
+
+No additional enum patches needed for these peripherals.
+
+### 5.3 Remaining Ergonomics Work
+
+| Item | Status | Notes |
+|------|--------|-------|
+| DMA TCD clustering | Blocked | svd2rust#16 — overloaded registers at same offset prevent proper clustering |
+| Register array collection | Future | FTM channels, PORT PCR registers |
+| Peripheral name prefix stripping | Future | Lower priority, cosmetic |
+
+---
+
 ## What's Next
 
-1. **Phase 5: HAL layer** — future scope
+1. **Phase 5 continued**: Additional ergonomics patches (register arrays, prefix stripping)
 2. **Phase 6: Publishing** — crate metadata, docs, crates.io
 
 ---
@@ -404,10 +455,12 @@ Warnings are all benign (1543/3324 lifetime elision + 1 cfg each).
 | `reference/K20P64M50SF0RM.pdf` | 50MHz K20 ref manual | Downloaded from PJRC |
 | `reference/refman_chapters/` | Extracted 72MHz chapters (51 files) | Generated, gitignored |
 | `reference/refman_50mhz_chapters/` | Extracted 50MHz chapters (49 files) | Generated, gitignored |
-| `devices/mk20d5.yaml` | svdtools device config | Includes 2 patches |
-| `devices/mk20d7.yaml` | svdtools device config | No patches needed |
+| `devices/mk20d5.yaml` | svdtools device config | Includes 3 patches |
+| `devices/mk20d7.yaml` | svdtools device config | Includes 1 patch |
 | `patches/mk20d5/sim/sopt5_uart_txsrc.yaml` | SIM_SOPT5 field width fix | Applied, verified |
 | `patches/mk20d5/fmc/cache_addresses.yaml` | FMC address + dimIncrement fix | Applied, verified |
+| `patches/mk20d5/dmamux/source_enums.yaml` | DMAMUX SOURCE field enums (43 variants) | Applied, verified |
+| `patches/mk20d7/dmamux/source_enums.yaml` | DMAMUX SOURCE field enums (50 variants) | Applied, verified |
 | `scripts/compare_header_svd.py` | Header↔SVD comparison | Working, produces JSON+text reports |
 | `scripts/missing_summary.py` | Quick MISSING_IN_SVD summary | Utility script |
 | `scripts/extract_refman_chapters.py` | PDF→Markdown chapter extraction | Working |

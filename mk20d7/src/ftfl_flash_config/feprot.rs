@@ -1,0 +1,22 @@
+#[doc = "Register `FEPROT` reader"]
+pub type R = crate::R<FeprotSpec>;
+#[doc = "Field `EPROT` reader - no description available"]
+pub type EprotR = crate::FieldReader;
+impl R {
+    #[doc = "Bits 0:7 - no description available"]
+    #[inline(always)]
+    pub fn eprot(&self) -> EprotR {
+        EprotR::new(self.bits)
+    }
+}
+#[doc = "Non-volatile EERAM Protection Register\n\nYou can [`read`](crate::Reg::read) this register and get [`feprot::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct FeprotSpec;
+impl crate::RegisterSpec for FeprotSpec {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [`feprot::R`](R) reader structure"]
+impl crate::Readable for FeprotSpec {}
+#[doc = "`reset()` method sets FEPROT to value 0xff"]
+impl crate::Resettable for FeprotSpec {
+    const RESET_VALUE: u8 = 0xff;
+}

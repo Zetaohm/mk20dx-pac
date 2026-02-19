@@ -1,0 +1,40 @@
+#[doc = "Register `CLMS` reader"]
+pub type R = crate::R<ClmsSpec>;
+#[doc = "Register `CLMS` writer"]
+pub type W = crate::W<ClmsSpec>;
+#[doc = "Field `CLMS` reader - Calibration value"]
+pub type ClmsR = crate::FieldReader;
+#[doc = "Field `CLMS` writer - Calibration value"]
+pub type ClmsW<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+impl R {
+    #[doc = "Bits 0:5 - Calibration value"]
+    #[inline(always)]
+    pub fn clms(&self) -> ClmsR {
+        ClmsR::new((self.bits & 0x3f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:5 - Calibration value"]
+    #[inline(always)]
+    #[must_use]
+    pub fn clms(&mut self) -> ClmsW<ClmsSpec> {
+        ClmsW::new(self, 0)
+    }
+}
+#[doc = "ADC minus-side general calibration value register\n\nYou can [`read`](crate::Reg::read) this register and get [`clms::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clms::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ClmsSpec;
+impl crate::RegisterSpec for ClmsSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`clms::R`](R) reader structure"]
+impl crate::Readable for ClmsSpec {}
+#[doc = "`write(|w| ..)` method takes [`clms::W`](W) writer structure"]
+impl crate::Writable for ClmsSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets CLMS to value 0x20"]
+impl crate::Resettable for ClmsSpec {
+    const RESET_VALUE: u32 = 0x20;
+}

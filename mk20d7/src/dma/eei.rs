@@ -1,0 +1,1049 @@
+#[doc = "Register `EEI` reader"]
+pub type R = crate::R<EeiSpec>;
+#[doc = "Register `EEI` writer"]
+pub type W = crate::W<EeiSpec>;
+#[doc = "Enable Error Interrupt 0\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Eei0 {
+    #[doc = "0: The error signal for corresponding channel does not generate an error interrupt"]
+    _0 = 0,
+    #[doc = "1: The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1 = 1,
+}
+impl From<Eei0> for bool {
+    #[inline(always)]
+    fn from(variant: Eei0) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `EEI0` reader - Enable Error Interrupt 0"]
+pub type Eei0R = crate::BitReader<Eei0>;
+impl Eei0R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Eei0 {
+        match self.bits {
+            false => Eei0::_0,
+            true => Eei0::_1,
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Eei0::_0
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Eei0::_1
+    }
+}
+#[doc = "Field `EEI0` writer - Enable Error Interrupt 0"]
+pub type Eei0W<'a, REG> = crate::BitWriter<'a, REG, Eei0>;
+impl<'a, REG> Eei0W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei0::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei0::_1)
+    }
+}
+#[doc = "Enable Error Interrupt 1\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Eei1 {
+    #[doc = "0: The error signal for corresponding channel does not generate an error interrupt"]
+    _0 = 0,
+    #[doc = "1: The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1 = 1,
+}
+impl From<Eei1> for bool {
+    #[inline(always)]
+    fn from(variant: Eei1) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `EEI1` reader - Enable Error Interrupt 1"]
+pub type Eei1R = crate::BitReader<Eei1>;
+impl Eei1R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Eei1 {
+        match self.bits {
+            false => Eei1::_0,
+            true => Eei1::_1,
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Eei1::_0
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Eei1::_1
+    }
+}
+#[doc = "Field `EEI1` writer - Enable Error Interrupt 1"]
+pub type Eei1W<'a, REG> = crate::BitWriter<'a, REG, Eei1>;
+impl<'a, REG> Eei1W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei1::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei1::_1)
+    }
+}
+#[doc = "Enable Error Interrupt 2\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Eei2 {
+    #[doc = "0: The error signal for corresponding channel does not generate an error interrupt"]
+    _0 = 0,
+    #[doc = "1: The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1 = 1,
+}
+impl From<Eei2> for bool {
+    #[inline(always)]
+    fn from(variant: Eei2) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `EEI2` reader - Enable Error Interrupt 2"]
+pub type Eei2R = crate::BitReader<Eei2>;
+impl Eei2R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Eei2 {
+        match self.bits {
+            false => Eei2::_0,
+            true => Eei2::_1,
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Eei2::_0
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Eei2::_1
+    }
+}
+#[doc = "Field `EEI2` writer - Enable Error Interrupt 2"]
+pub type Eei2W<'a, REG> = crate::BitWriter<'a, REG, Eei2>;
+impl<'a, REG> Eei2W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei2::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei2::_1)
+    }
+}
+#[doc = "Enable Error Interrupt 3\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Eei3 {
+    #[doc = "0: The error signal for corresponding channel does not generate an error interrupt"]
+    _0 = 0,
+    #[doc = "1: The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1 = 1,
+}
+impl From<Eei3> for bool {
+    #[inline(always)]
+    fn from(variant: Eei3) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `EEI3` reader - Enable Error Interrupt 3"]
+pub type Eei3R = crate::BitReader<Eei3>;
+impl Eei3R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Eei3 {
+        match self.bits {
+            false => Eei3::_0,
+            true => Eei3::_1,
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Eei3::_0
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Eei3::_1
+    }
+}
+#[doc = "Field `EEI3` writer - Enable Error Interrupt 3"]
+pub type Eei3W<'a, REG> = crate::BitWriter<'a, REG, Eei3>;
+impl<'a, REG> Eei3W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei3::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei3::_1)
+    }
+}
+#[doc = "Enable Error Interrupt 4\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Eei4 {
+    #[doc = "0: The error signal for corresponding channel does not generate an error interrupt"]
+    _0 = 0,
+    #[doc = "1: The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1 = 1,
+}
+impl From<Eei4> for bool {
+    #[inline(always)]
+    fn from(variant: Eei4) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `EEI4` reader - Enable Error Interrupt 4"]
+pub type Eei4R = crate::BitReader<Eei4>;
+impl Eei4R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Eei4 {
+        match self.bits {
+            false => Eei4::_0,
+            true => Eei4::_1,
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Eei4::_0
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Eei4::_1
+    }
+}
+#[doc = "Field `EEI4` writer - Enable Error Interrupt 4"]
+pub type Eei4W<'a, REG> = crate::BitWriter<'a, REG, Eei4>;
+impl<'a, REG> Eei4W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei4::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei4::_1)
+    }
+}
+#[doc = "Enable Error Interrupt 5\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Eei5 {
+    #[doc = "0: The error signal for corresponding channel does not generate an error interrupt"]
+    _0 = 0,
+    #[doc = "1: The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1 = 1,
+}
+impl From<Eei5> for bool {
+    #[inline(always)]
+    fn from(variant: Eei5) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `EEI5` reader - Enable Error Interrupt 5"]
+pub type Eei5R = crate::BitReader<Eei5>;
+impl Eei5R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Eei5 {
+        match self.bits {
+            false => Eei5::_0,
+            true => Eei5::_1,
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Eei5::_0
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Eei5::_1
+    }
+}
+#[doc = "Field `EEI5` writer - Enable Error Interrupt 5"]
+pub type Eei5W<'a, REG> = crate::BitWriter<'a, REG, Eei5>;
+impl<'a, REG> Eei5W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei5::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei5::_1)
+    }
+}
+#[doc = "Enable Error Interrupt 6\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Eei6 {
+    #[doc = "0: The error signal for corresponding channel does not generate an error interrupt"]
+    _0 = 0,
+    #[doc = "1: The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1 = 1,
+}
+impl From<Eei6> for bool {
+    #[inline(always)]
+    fn from(variant: Eei6) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `EEI6` reader - Enable Error Interrupt 6"]
+pub type Eei6R = crate::BitReader<Eei6>;
+impl Eei6R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Eei6 {
+        match self.bits {
+            false => Eei6::_0,
+            true => Eei6::_1,
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Eei6::_0
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Eei6::_1
+    }
+}
+#[doc = "Field `EEI6` writer - Enable Error Interrupt 6"]
+pub type Eei6W<'a, REG> = crate::BitWriter<'a, REG, Eei6>;
+impl<'a, REG> Eei6W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei6::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei6::_1)
+    }
+}
+#[doc = "Enable Error Interrupt 7\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Eei7 {
+    #[doc = "0: The error signal for corresponding channel does not generate an error interrupt"]
+    _0 = 0,
+    #[doc = "1: The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1 = 1,
+}
+impl From<Eei7> for bool {
+    #[inline(always)]
+    fn from(variant: Eei7) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `EEI7` reader - Enable Error Interrupt 7"]
+pub type Eei7R = crate::BitReader<Eei7>;
+impl Eei7R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Eei7 {
+        match self.bits {
+            false => Eei7::_0,
+            true => Eei7::_1,
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Eei7::_0
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Eei7::_1
+    }
+}
+#[doc = "Field `EEI7` writer - Enable Error Interrupt 7"]
+pub type Eei7W<'a, REG> = crate::BitWriter<'a, REG, Eei7>;
+impl<'a, REG> Eei7W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei7::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei7::_1)
+    }
+}
+#[doc = "Enable Error Interrupt 8\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Eei8 {
+    #[doc = "0: The error signal for corresponding channel does not generate an error interrupt"]
+    _0 = 0,
+    #[doc = "1: The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1 = 1,
+}
+impl From<Eei8> for bool {
+    #[inline(always)]
+    fn from(variant: Eei8) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `EEI8` reader - Enable Error Interrupt 8"]
+pub type Eei8R = crate::BitReader<Eei8>;
+impl Eei8R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Eei8 {
+        match self.bits {
+            false => Eei8::_0,
+            true => Eei8::_1,
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Eei8::_0
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Eei8::_1
+    }
+}
+#[doc = "Field `EEI8` writer - Enable Error Interrupt 8"]
+pub type Eei8W<'a, REG> = crate::BitWriter<'a, REG, Eei8>;
+impl<'a, REG> Eei8W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei8::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei8::_1)
+    }
+}
+#[doc = "Enable Error Interrupt 9\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Eei9 {
+    #[doc = "0: The error signal for corresponding channel does not generate an error interrupt"]
+    _0 = 0,
+    #[doc = "1: The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1 = 1,
+}
+impl From<Eei9> for bool {
+    #[inline(always)]
+    fn from(variant: Eei9) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `EEI9` reader - Enable Error Interrupt 9"]
+pub type Eei9R = crate::BitReader<Eei9>;
+impl Eei9R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Eei9 {
+        match self.bits {
+            false => Eei9::_0,
+            true => Eei9::_1,
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Eei9::_0
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Eei9::_1
+    }
+}
+#[doc = "Field `EEI9` writer - Enable Error Interrupt 9"]
+pub type Eei9W<'a, REG> = crate::BitWriter<'a, REG, Eei9>;
+impl<'a, REG> Eei9W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei9::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei9::_1)
+    }
+}
+#[doc = "Enable Error Interrupt 10\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Eei10 {
+    #[doc = "0: The error signal for corresponding channel does not generate an error interrupt"]
+    _0 = 0,
+    #[doc = "1: The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1 = 1,
+}
+impl From<Eei10> for bool {
+    #[inline(always)]
+    fn from(variant: Eei10) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `EEI10` reader - Enable Error Interrupt 10"]
+pub type Eei10R = crate::BitReader<Eei10>;
+impl Eei10R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Eei10 {
+        match self.bits {
+            false => Eei10::_0,
+            true => Eei10::_1,
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Eei10::_0
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Eei10::_1
+    }
+}
+#[doc = "Field `EEI10` writer - Enable Error Interrupt 10"]
+pub type Eei10W<'a, REG> = crate::BitWriter<'a, REG, Eei10>;
+impl<'a, REG> Eei10W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei10::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei10::_1)
+    }
+}
+#[doc = "Enable Error Interrupt 11\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Eei11 {
+    #[doc = "0: The error signal for corresponding channel does not generate an error interrupt"]
+    _0 = 0,
+    #[doc = "1: The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1 = 1,
+}
+impl From<Eei11> for bool {
+    #[inline(always)]
+    fn from(variant: Eei11) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `EEI11` reader - Enable Error Interrupt 11"]
+pub type Eei11R = crate::BitReader<Eei11>;
+impl Eei11R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Eei11 {
+        match self.bits {
+            false => Eei11::_0,
+            true => Eei11::_1,
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Eei11::_0
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Eei11::_1
+    }
+}
+#[doc = "Field `EEI11` writer - Enable Error Interrupt 11"]
+pub type Eei11W<'a, REG> = crate::BitWriter<'a, REG, Eei11>;
+impl<'a, REG> Eei11W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei11::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei11::_1)
+    }
+}
+#[doc = "Enable Error Interrupt 12\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Eei12 {
+    #[doc = "0: The error signal for corresponding channel does not generate an error interrupt"]
+    _0 = 0,
+    #[doc = "1: The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1 = 1,
+}
+impl From<Eei12> for bool {
+    #[inline(always)]
+    fn from(variant: Eei12) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `EEI12` reader - Enable Error Interrupt 12"]
+pub type Eei12R = crate::BitReader<Eei12>;
+impl Eei12R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Eei12 {
+        match self.bits {
+            false => Eei12::_0,
+            true => Eei12::_1,
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Eei12::_0
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Eei12::_1
+    }
+}
+#[doc = "Field `EEI12` writer - Enable Error Interrupt 12"]
+pub type Eei12W<'a, REG> = crate::BitWriter<'a, REG, Eei12>;
+impl<'a, REG> Eei12W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei12::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei12::_1)
+    }
+}
+#[doc = "Enable Error Interrupt 13\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Eei13 {
+    #[doc = "0: The error signal for corresponding channel does not generate an error interrupt"]
+    _0 = 0,
+    #[doc = "1: The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1 = 1,
+}
+impl From<Eei13> for bool {
+    #[inline(always)]
+    fn from(variant: Eei13) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `EEI13` reader - Enable Error Interrupt 13"]
+pub type Eei13R = crate::BitReader<Eei13>;
+impl Eei13R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Eei13 {
+        match self.bits {
+            false => Eei13::_0,
+            true => Eei13::_1,
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Eei13::_0
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Eei13::_1
+    }
+}
+#[doc = "Field `EEI13` writer - Enable Error Interrupt 13"]
+pub type Eei13W<'a, REG> = crate::BitWriter<'a, REG, Eei13>;
+impl<'a, REG> Eei13W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei13::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei13::_1)
+    }
+}
+#[doc = "Enable Error Interrupt 14\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Eei14 {
+    #[doc = "0: The error signal for corresponding channel does not generate an error interrupt"]
+    _0 = 0,
+    #[doc = "1: The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1 = 1,
+}
+impl From<Eei14> for bool {
+    #[inline(always)]
+    fn from(variant: Eei14) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `EEI14` reader - Enable Error Interrupt 14"]
+pub type Eei14R = crate::BitReader<Eei14>;
+impl Eei14R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Eei14 {
+        match self.bits {
+            false => Eei14::_0,
+            true => Eei14::_1,
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Eei14::_0
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Eei14::_1
+    }
+}
+#[doc = "Field `EEI14` writer - Enable Error Interrupt 14"]
+pub type Eei14W<'a, REG> = crate::BitWriter<'a, REG, Eei14>;
+impl<'a, REG> Eei14W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei14::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei14::_1)
+    }
+}
+#[doc = "Enable Error Interrupt 15\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Eei15 {
+    #[doc = "0: The error signal for corresponding channel does not generate an error interrupt"]
+    _0 = 0,
+    #[doc = "1: The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1 = 1,
+}
+impl From<Eei15> for bool {
+    #[inline(always)]
+    fn from(variant: Eei15) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `EEI15` reader - Enable Error Interrupt 15"]
+pub type Eei15R = crate::BitReader<Eei15>;
+impl Eei15R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Eei15 {
+        match self.bits {
+            false => Eei15::_0,
+            true => Eei15::_1,
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Eei15::_0
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Eei15::_1
+    }
+}
+#[doc = "Field `EEI15` writer - Enable Error Interrupt 15"]
+pub type Eei15W<'a, REG> = crate::BitWriter<'a, REG, Eei15>;
+impl<'a, REG> Eei15W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei15::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Eei15::_1)
+    }
+}
+impl R {
+    #[doc = "Bit 0 - Enable Error Interrupt 0"]
+    #[inline(always)]
+    pub fn eei0(&self) -> Eei0R {
+        Eei0R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Enable Error Interrupt 1"]
+    #[inline(always)]
+    pub fn eei1(&self) -> Eei1R {
+        Eei1R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - Enable Error Interrupt 2"]
+    #[inline(always)]
+    pub fn eei2(&self) -> Eei2R {
+        Eei2R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Enable Error Interrupt 3"]
+    #[inline(always)]
+    pub fn eei3(&self) -> Eei3R {
+        Eei3R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Enable Error Interrupt 4"]
+    #[inline(always)]
+    pub fn eei4(&self) -> Eei4R {
+        Eei4R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - Enable Error Interrupt 5"]
+    #[inline(always)]
+    pub fn eei5(&self) -> Eei5R {
+        Eei5R::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - Enable Error Interrupt 6"]
+    #[inline(always)]
+    pub fn eei6(&self) -> Eei6R {
+        Eei6R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - Enable Error Interrupt 7"]
+    #[inline(always)]
+    pub fn eei7(&self) -> Eei7R {
+        Eei7R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - Enable Error Interrupt 8"]
+    #[inline(always)]
+    pub fn eei8(&self) -> Eei8R {
+        Eei8R::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - Enable Error Interrupt 9"]
+    #[inline(always)]
+    pub fn eei9(&self) -> Eei9R {
+        Eei9R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - Enable Error Interrupt 10"]
+    #[inline(always)]
+    pub fn eei10(&self) -> Eei10R {
+        Eei10R::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - Enable Error Interrupt 11"]
+    #[inline(always)]
+    pub fn eei11(&self) -> Eei11R {
+        Eei11R::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - Enable Error Interrupt 12"]
+    #[inline(always)]
+    pub fn eei12(&self) -> Eei12R {
+        Eei12R::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13 - Enable Error Interrupt 13"]
+    #[inline(always)]
+    pub fn eei13(&self) -> Eei13R {
+        Eei13R::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14 - Enable Error Interrupt 14"]
+    #[inline(always)]
+    pub fn eei14(&self) -> Eei14R {
+        Eei14R::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15 - Enable Error Interrupt 15"]
+    #[inline(always)]
+    pub fn eei15(&self) -> Eei15R {
+        Eei15R::new(((self.bits >> 15) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Enable Error Interrupt 0"]
+    #[inline(always)]
+    #[must_use]
+    pub fn eei0(&mut self) -> Eei0W<EeiSpec> {
+        Eei0W::new(self, 0)
+    }
+    #[doc = "Bit 1 - Enable Error Interrupt 1"]
+    #[inline(always)]
+    #[must_use]
+    pub fn eei1(&mut self) -> Eei1W<EeiSpec> {
+        Eei1W::new(self, 1)
+    }
+    #[doc = "Bit 2 - Enable Error Interrupt 2"]
+    #[inline(always)]
+    #[must_use]
+    pub fn eei2(&mut self) -> Eei2W<EeiSpec> {
+        Eei2W::new(self, 2)
+    }
+    #[doc = "Bit 3 - Enable Error Interrupt 3"]
+    #[inline(always)]
+    #[must_use]
+    pub fn eei3(&mut self) -> Eei3W<EeiSpec> {
+        Eei3W::new(self, 3)
+    }
+    #[doc = "Bit 4 - Enable Error Interrupt 4"]
+    #[inline(always)]
+    #[must_use]
+    pub fn eei4(&mut self) -> Eei4W<EeiSpec> {
+        Eei4W::new(self, 4)
+    }
+    #[doc = "Bit 5 - Enable Error Interrupt 5"]
+    #[inline(always)]
+    #[must_use]
+    pub fn eei5(&mut self) -> Eei5W<EeiSpec> {
+        Eei5W::new(self, 5)
+    }
+    #[doc = "Bit 6 - Enable Error Interrupt 6"]
+    #[inline(always)]
+    #[must_use]
+    pub fn eei6(&mut self) -> Eei6W<EeiSpec> {
+        Eei6W::new(self, 6)
+    }
+    #[doc = "Bit 7 - Enable Error Interrupt 7"]
+    #[inline(always)]
+    #[must_use]
+    pub fn eei7(&mut self) -> Eei7W<EeiSpec> {
+        Eei7W::new(self, 7)
+    }
+    #[doc = "Bit 8 - Enable Error Interrupt 8"]
+    #[inline(always)]
+    #[must_use]
+    pub fn eei8(&mut self) -> Eei8W<EeiSpec> {
+        Eei8W::new(self, 8)
+    }
+    #[doc = "Bit 9 - Enable Error Interrupt 9"]
+    #[inline(always)]
+    #[must_use]
+    pub fn eei9(&mut self) -> Eei9W<EeiSpec> {
+        Eei9W::new(self, 9)
+    }
+    #[doc = "Bit 10 - Enable Error Interrupt 10"]
+    #[inline(always)]
+    #[must_use]
+    pub fn eei10(&mut self) -> Eei10W<EeiSpec> {
+        Eei10W::new(self, 10)
+    }
+    #[doc = "Bit 11 - Enable Error Interrupt 11"]
+    #[inline(always)]
+    #[must_use]
+    pub fn eei11(&mut self) -> Eei11W<EeiSpec> {
+        Eei11W::new(self, 11)
+    }
+    #[doc = "Bit 12 - Enable Error Interrupt 12"]
+    #[inline(always)]
+    #[must_use]
+    pub fn eei12(&mut self) -> Eei12W<EeiSpec> {
+        Eei12W::new(self, 12)
+    }
+    #[doc = "Bit 13 - Enable Error Interrupt 13"]
+    #[inline(always)]
+    #[must_use]
+    pub fn eei13(&mut self) -> Eei13W<EeiSpec> {
+        Eei13W::new(self, 13)
+    }
+    #[doc = "Bit 14 - Enable Error Interrupt 14"]
+    #[inline(always)]
+    #[must_use]
+    pub fn eei14(&mut self) -> Eei14W<EeiSpec> {
+        Eei14W::new(self, 14)
+    }
+    #[doc = "Bit 15 - Enable Error Interrupt 15"]
+    #[inline(always)]
+    #[must_use]
+    pub fn eei15(&mut self) -> Eei15W<EeiSpec> {
+        Eei15W::new(self, 15)
+    }
+}
+#[doc = "Enable Error Interrupt Register\n\nYou can [`read`](crate::Reg::read) this register and get [`eei::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`eei::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct EeiSpec;
+impl crate::RegisterSpec for EeiSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`eei::R`](R) reader structure"]
+impl crate::Readable for EeiSpec {}
+#[doc = "`write(|w| ..)` method takes [`eei::W`](W) writer structure"]
+impl crate::Writable for EeiSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets EEI to value 0"]
+impl crate::Resettable for EeiSpec {
+    const RESET_VALUE: u32 = 0;
+}

@@ -1,0 +1,335 @@
+#[doc = "Register `FMS` reader"]
+pub type R = crate::R<FmsSpec>;
+#[doc = "Register `FMS` writer"]
+pub type W = crate::W<FmsSpec>;
+#[doc = "Fault Detection Flag 0\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Faultf0 {
+    #[doc = "0: No fault condition was detected at the fault input."]
+    _0 = 0,
+    #[doc = "1: A fault condition was detected at the fault input."]
+    _1 = 1,
+}
+impl From<Faultf0> for bool {
+    #[inline(always)]
+    fn from(variant: Faultf0) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FAULTF0` reader - Fault Detection Flag 0"]
+pub type Faultf0R = crate::BitReader<Faultf0>;
+impl Faultf0R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Faultf0 {
+        match self.bits {
+            false => Faultf0::_0,
+            true => Faultf0::_1,
+        }
+    }
+    #[doc = "No fault condition was detected at the fault input."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Faultf0::_0
+    }
+    #[doc = "A fault condition was detected at the fault input."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Faultf0::_1
+    }
+}
+#[doc = "Fault Detection Flag 1\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Faultf1 {
+    #[doc = "0: No fault condition was detected at the fault input."]
+    _0 = 0,
+    #[doc = "1: A fault condition was detected at the fault input."]
+    _1 = 1,
+}
+impl From<Faultf1> for bool {
+    #[inline(always)]
+    fn from(variant: Faultf1) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FAULTF1` reader - Fault Detection Flag 1"]
+pub type Faultf1R = crate::BitReader<Faultf1>;
+impl Faultf1R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Faultf1 {
+        match self.bits {
+            false => Faultf1::_0,
+            true => Faultf1::_1,
+        }
+    }
+    #[doc = "No fault condition was detected at the fault input."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Faultf1::_0
+    }
+    #[doc = "A fault condition was detected at the fault input."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Faultf1::_1
+    }
+}
+#[doc = "Fault Detection Flag 2\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Faultf2 {
+    #[doc = "0: No fault condition was detected at the fault input."]
+    _0 = 0,
+    #[doc = "1: A fault condition was detected at the fault input."]
+    _1 = 1,
+}
+impl From<Faultf2> for bool {
+    #[inline(always)]
+    fn from(variant: Faultf2) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FAULTF2` reader - Fault Detection Flag 2"]
+pub type Faultf2R = crate::BitReader<Faultf2>;
+impl Faultf2R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Faultf2 {
+        match self.bits {
+            false => Faultf2::_0,
+            true => Faultf2::_1,
+        }
+    }
+    #[doc = "No fault condition was detected at the fault input."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Faultf2::_0
+    }
+    #[doc = "A fault condition was detected at the fault input."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Faultf2::_1
+    }
+}
+#[doc = "Fault Detection Flag 3\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Faultf3 {
+    #[doc = "0: No fault condition was detected at the fault input."]
+    _0 = 0,
+    #[doc = "1: A fault condition was detected at the fault input."]
+    _1 = 1,
+}
+impl From<Faultf3> for bool {
+    #[inline(always)]
+    fn from(variant: Faultf3) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FAULTF3` reader - Fault Detection Flag 3"]
+pub type Faultf3R = crate::BitReader<Faultf3>;
+impl Faultf3R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Faultf3 {
+        match self.bits {
+            false => Faultf3::_0,
+            true => Faultf3::_1,
+        }
+    }
+    #[doc = "No fault condition was detected at the fault input."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Faultf3::_0
+    }
+    #[doc = "A fault condition was detected at the fault input."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Faultf3::_1
+    }
+}
+#[doc = "Fault Inputs\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Faultin {
+    #[doc = "0: The logic OR of the enabled fault inputs is 0."]
+    _0 = 0,
+    #[doc = "1: The logic OR of the enabled fault inputs is 1."]
+    _1 = 1,
+}
+impl From<Faultin> for bool {
+    #[inline(always)]
+    fn from(variant: Faultin) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FAULTIN` reader - Fault Inputs"]
+pub type FaultinR = crate::BitReader<Faultin>;
+impl FaultinR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Faultin {
+        match self.bits {
+            false => Faultin::_0,
+            true => Faultin::_1,
+        }
+    }
+    #[doc = "The logic OR of the enabled fault inputs is 0."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Faultin::_0
+    }
+    #[doc = "The logic OR of the enabled fault inputs is 1."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Faultin::_1
+    }
+}
+#[doc = "Write Protection Enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Wpen {
+    #[doc = "0: Write protection is disabled. Write protected bits can be written."]
+    _0 = 0,
+    #[doc = "1: Write protection is enabled. Write protected bits cannot be written."]
+    _1 = 1,
+}
+impl From<Wpen> for bool {
+    #[inline(always)]
+    fn from(variant: Wpen) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `WPEN` reader - Write Protection Enable"]
+pub type WpenR = crate::BitReader<Wpen>;
+impl WpenR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Wpen {
+        match self.bits {
+            false => Wpen::_0,
+            true => Wpen::_1,
+        }
+    }
+    #[doc = "Write protection is disabled. Write protected bits can be written."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Wpen::_0
+    }
+    #[doc = "Write protection is enabled. Write protected bits cannot be written."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Wpen::_1
+    }
+}
+#[doc = "Field `WPEN` writer - Write Protection Enable"]
+pub type WpenW<'a, REG> = crate::BitWriter<'a, REG, Wpen>;
+impl<'a, REG> WpenW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Write protection is disabled. Write protected bits can be written."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Wpen::_0)
+    }
+    #[doc = "Write protection is enabled. Write protected bits cannot be written."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Wpen::_1)
+    }
+}
+#[doc = "Fault Detection Flag\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Faultf {
+    #[doc = "0: No fault condition was detected."]
+    _0 = 0,
+    #[doc = "1: A fault condition was detected."]
+    _1 = 1,
+}
+impl From<Faultf> for bool {
+    #[inline(always)]
+    fn from(variant: Faultf) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FAULTF` reader - Fault Detection Flag"]
+pub type FaultfR = crate::BitReader<Faultf>;
+impl FaultfR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Faultf {
+        match self.bits {
+            false => Faultf::_0,
+            true => Faultf::_1,
+        }
+    }
+    #[doc = "No fault condition was detected."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Faultf::_0
+    }
+    #[doc = "A fault condition was detected."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Faultf::_1
+    }
+}
+impl R {
+    #[doc = "Bit 0 - Fault Detection Flag 0"]
+    #[inline(always)]
+    pub fn faultf0(&self) -> Faultf0R {
+        Faultf0R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Fault Detection Flag 1"]
+    #[inline(always)]
+    pub fn faultf1(&self) -> Faultf1R {
+        Faultf1R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - Fault Detection Flag 2"]
+    #[inline(always)]
+    pub fn faultf2(&self) -> Faultf2R {
+        Faultf2R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Fault Detection Flag 3"]
+    #[inline(always)]
+    pub fn faultf3(&self) -> Faultf3R {
+        Faultf3R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 5 - Fault Inputs"]
+    #[inline(always)]
+    pub fn faultin(&self) -> FaultinR {
+        FaultinR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - Write Protection Enable"]
+    #[inline(always)]
+    pub fn wpen(&self) -> WpenR {
+        WpenR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - Fault Detection Flag"]
+    #[inline(always)]
+    pub fn faultf(&self) -> FaultfR {
+        FaultfR::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 6 - Write Protection Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn wpen(&mut self) -> WpenW<FmsSpec> {
+        WpenW::new(self, 6)
+    }
+}
+#[doc = "Fault Mode Status\n\nYou can [`read`](crate::Reg::read) this register and get [`fms::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fms::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct FmsSpec;
+impl crate::RegisterSpec for FmsSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`fms::R`](R) reader structure"]
+impl crate::Readable for FmsSpec {}
+#[doc = "`write(|w| ..)` method takes [`fms::W`](W) writer structure"]
+impl crate::Writable for FmsSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets FMS to value 0"]
+impl crate::Resettable for FmsSpec {
+    const RESET_VALUE: u32 = 0;
+}

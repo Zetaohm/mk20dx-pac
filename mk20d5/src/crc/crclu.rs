@@ -1,0 +1,40 @@
+#[doc = "Register `CRCLU` reader"]
+pub type R = crate::R<CrcluSpec>;
+#[doc = "Register `CRCLU` writer"]
+pub type W = crate::W<CrcluSpec>;
+#[doc = "Field `CRCLU` reader - CRCLL stores the second 8 bits of the 32 bit CRC"]
+pub type CrcluR = crate::FieldReader;
+#[doc = "Field `CRCLU` writer - CRCLL stores the second 8 bits of the 32 bit CRC"]
+pub type CrcluW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+impl R {
+    #[doc = "Bits 0:7 - CRCLL stores the second 8 bits of the 32 bit CRC"]
+    #[inline(always)]
+    pub fn crclu(&self) -> CrcluR {
+        CrcluR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - CRCLL stores the second 8 bits of the 32 bit CRC"]
+    #[inline(always)]
+    #[must_use]
+    pub fn crclu(&mut self) -> CrcluW<CrcluSpec> {
+        CrcluW::new(self, 0)
+    }
+}
+#[doc = "CRC_CRCLU register.\n\nYou can [`read`](crate::Reg::read) this register and get [`crclu::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`crclu::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CrcluSpec;
+impl crate::RegisterSpec for CrcluSpec {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [`crclu::R`](R) reader structure"]
+impl crate::Readable for CrcluSpec {}
+#[doc = "`write(|w| ..)` method takes [`crclu::W`](W) writer structure"]
+impl crate::Writable for CrcluSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+}
+#[doc = "`reset()` method sets CRCLU to value 0xff"]
+impl crate::Resettable for CrcluSpec {
+    const RESET_VALUE: u8 = 0xff;
+}

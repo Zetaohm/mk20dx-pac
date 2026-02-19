@@ -1,0 +1,40 @@
+#[doc = "Register `WINL` reader"]
+pub type R = crate::R<WinlSpec>;
+#[doc = "Register `WINL` writer"]
+pub type W = crate::W<WinlSpec>;
+#[doc = "Field `WINLOW` reader - no description available"]
+pub type WinlowR = crate::FieldReader<u16>;
+#[doc = "Field `WINLOW` writer - no description available"]
+pub type WinlowW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+impl R {
+    #[doc = "Bits 0:15 - no description available"]
+    #[inline(always)]
+    pub fn winlow(&self) -> WinlowR {
+        WinlowR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:15 - no description available"]
+    #[inline(always)]
+    #[must_use]
+    pub fn winlow(&mut self) -> WinlowW<WinlSpec> {
+        WinlowW::new(self, 0)
+    }
+}
+#[doc = "Watchdog Window Register Low\n\nYou can [`read`](crate::Reg::read) this register and get [`winl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`winl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct WinlSpec;
+impl crate::RegisterSpec for WinlSpec {
+    type Ux = u16;
+}
+#[doc = "`read()` method returns [`winl::R`](R) reader structure"]
+impl crate::Readable for WinlSpec {}
+#[doc = "`write(|w| ..)` method takes [`winl::W`](W) writer structure"]
+impl crate::Writable for WinlSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+}
+#[doc = "`reset()` method sets WINL to value 0x10"]
+impl crate::Resettable for WinlSpec {
+    const RESET_VALUE: u16 = 0x10;
+}

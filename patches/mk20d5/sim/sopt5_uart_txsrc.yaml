@@ -1,0 +1,19 @@
+# Fix SIM_SOPT5 UART TX source field widths
+#
+# MK20D5.svd defines UART0TXSRC and UART1TXSRC as 1-bit fields,
+# but they should be 2-bit fields per the K20 reference manual.
+#
+# Evidence:
+#   - kinetis.h: (((n) & 3) << 0) and (((n) & 3) << 4) = 2-bit masks
+#   - MK20D7.svd: correctly defines both as bitWidth=2
+#   - Three valid values: 00 (UART TX pin), 01 (modulated by FTM), 10 (modulated by FTM)
+#
+# Cross-reference: K20P64M72SF1RM, Chapter 12 (SIM), SIM_SOPT5 register
+
+SIM:
+  SOPT5:
+    _modify:
+      UART0TXSRC:
+        bitWidth: 2
+      UART1TXSRC:
+        bitWidth: 2

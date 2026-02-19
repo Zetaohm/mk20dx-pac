@@ -1,0 +1,386 @@
+#[doc = "Register `PUSHR` reader"]
+pub type R = crate::R<Spi1PushrSpec>;
+#[doc = "Register `PUSHR` writer"]
+pub type W = crate::W<Spi1PushrSpec>;
+#[doc = "Field `TXDATA` reader - Transmit Data"]
+pub type TxdataR = crate::FieldReader<u16>;
+#[doc = "Field `TXDATA` writer - Transmit Data"]
+pub type TxdataW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+#[doc = "no description available\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Pcs {
+    #[doc = "0: Negate the PCS\\[x\\]
+signal."]
+    _0 = 0,
+    #[doc = "1: Assert the PCS\\[x\\]
+signal."]
+    _1 = 1,
+}
+impl From<Pcs> for u8 {
+    #[inline(always)]
+    fn from(variant: Pcs) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Pcs {
+    type Ux = u8;
+}
+impl crate::IsEnum for Pcs {}
+#[doc = "Field `PCS` reader - no description available"]
+pub type PcsR = crate::FieldReader<Pcs>;
+impl PcsR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<Pcs> {
+        match self.bits {
+            0 => Some(Pcs::_0),
+            1 => Some(Pcs::_1),
+            _ => None,
+        }
+    }
+    #[doc = "Negate the PCS\\[x\\]
+signal."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Pcs::_0
+    }
+    #[doc = "Assert the PCS\\[x\\]
+signal."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Pcs::_1
+    }
+}
+#[doc = "Field `PCS` writer - no description available"]
+pub type PcsW<'a, REG> = crate::FieldWriter<'a, REG, 6, Pcs>;
+impl<'a, REG> PcsW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "Negate the PCS\\[x\\]
+signal."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Pcs::_0)
+    }
+    #[doc = "Assert the PCS\\[x\\]
+signal."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Pcs::_1)
+    }
+}
+#[doc = "Clear Transfer Counter.\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Ctcnt {
+    #[doc = "0: Do not clear the TCR\\[SPI_TCNT\\]
+field."]
+    _0 = 0,
+    #[doc = "1: Clear the TCR\\[SPI_TCNT\\]
+field."]
+    _1 = 1,
+}
+impl From<Ctcnt> for bool {
+    #[inline(always)]
+    fn from(variant: Ctcnt) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `CTCNT` reader - Clear Transfer Counter."]
+pub type CtcntR = crate::BitReader<Ctcnt>;
+impl CtcntR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Ctcnt {
+        match self.bits {
+            false => Ctcnt::_0,
+            true => Ctcnt::_1,
+        }
+    }
+    #[doc = "Do not clear the TCR\\[SPI_TCNT\\]
+field."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Ctcnt::_0
+    }
+    #[doc = "Clear the TCR\\[SPI_TCNT\\]
+field."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Ctcnt::_1
+    }
+}
+#[doc = "Field `CTCNT` writer - Clear Transfer Counter."]
+pub type CtcntW<'a, REG> = crate::BitWriter<'a, REG, Ctcnt>;
+impl<'a, REG> CtcntW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Do not clear the TCR\\[SPI_TCNT\\]
+field."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Ctcnt::_0)
+    }
+    #[doc = "Clear the TCR\\[SPI_TCNT\\]
+field."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Ctcnt::_1)
+    }
+}
+#[doc = "End Of Queue\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Eoq {
+    #[doc = "0: The SPI data is not the last data to transfer."]
+    _0 = 0,
+    #[doc = "1: The SPI data is the last data to transfer."]
+    _1 = 1,
+}
+impl From<Eoq> for bool {
+    #[inline(always)]
+    fn from(variant: Eoq) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `EOQ` reader - End Of Queue"]
+pub type EoqR = crate::BitReader<Eoq>;
+impl EoqR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Eoq {
+        match self.bits {
+            false => Eoq::_0,
+            true => Eoq::_1,
+        }
+    }
+    #[doc = "The SPI data is not the last data to transfer."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Eoq::_0
+    }
+    #[doc = "The SPI data is the last data to transfer."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Eoq::_1
+    }
+}
+#[doc = "Field `EOQ` writer - End Of Queue"]
+pub type EoqW<'a, REG> = crate::BitWriter<'a, REG, Eoq>;
+impl<'a, REG> EoqW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The SPI data is not the last data to transfer."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Eoq::_0)
+    }
+    #[doc = "The SPI data is the last data to transfer."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Eoq::_1)
+    }
+}
+#[doc = "Clock and Transfer Attributes Select.\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Ctas {
+    #[doc = "0: CTAR0"]
+    _000 = 0,
+    #[doc = "1: CTAR1"]
+    _001 = 1,
+}
+impl From<Ctas> for u8 {
+    #[inline(always)]
+    fn from(variant: Ctas) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Ctas {
+    type Ux = u8;
+}
+impl crate::IsEnum for Ctas {}
+#[doc = "Field `CTAS` reader - Clock and Transfer Attributes Select."]
+pub type CtasR = crate::FieldReader<Ctas>;
+impl CtasR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<Ctas> {
+        match self.bits {
+            0 => Some(Ctas::_000),
+            1 => Some(Ctas::_001),
+            _ => None,
+        }
+    }
+    #[doc = "CTAR0"]
+    #[inline(always)]
+    pub fn is_000(&self) -> bool {
+        *self == Ctas::_000
+    }
+    #[doc = "CTAR1"]
+    #[inline(always)]
+    pub fn is_001(&self) -> bool {
+        *self == Ctas::_001
+    }
+}
+#[doc = "Field `CTAS` writer - Clock and Transfer Attributes Select."]
+pub type CtasW<'a, REG> = crate::FieldWriter<'a, REG, 3, Ctas>;
+impl<'a, REG> CtasW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "CTAR0"]
+    #[inline(always)]
+    pub fn _000(self) -> &'a mut crate::W<REG> {
+        self.variant(Ctas::_000)
+    }
+    #[doc = "CTAR1"]
+    #[inline(always)]
+    pub fn _001(self) -> &'a mut crate::W<REG> {
+        self.variant(Ctas::_001)
+    }
+}
+#[doc = "Continuous Peripheral Chip Select Enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Cont {
+    #[doc = "0: Return PCSn signals to their inactive state between transfers."]
+    _0 = 0,
+    #[doc = "1: Keep PCSn signals asserted between transfers."]
+    _1 = 1,
+}
+impl From<Cont> for bool {
+    #[inline(always)]
+    fn from(variant: Cont) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `CONT` reader - Continuous Peripheral Chip Select Enable"]
+pub type ContR = crate::BitReader<Cont>;
+impl ContR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Cont {
+        match self.bits {
+            false => Cont::_0,
+            true => Cont::_1,
+        }
+    }
+    #[doc = "Return PCSn signals to their inactive state between transfers."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Cont::_0
+    }
+    #[doc = "Keep PCSn signals asserted between transfers."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Cont::_1
+    }
+}
+#[doc = "Field `CONT` writer - Continuous Peripheral Chip Select Enable"]
+pub type ContW<'a, REG> = crate::BitWriter<'a, REG, Cont>;
+impl<'a, REG> ContW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Return PCSn signals to their inactive state between transfers."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Cont::_0)
+    }
+    #[doc = "Keep PCSn signals asserted between transfers."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Cont::_1)
+    }
+}
+impl R {
+    #[doc = "Bits 0:15 - Transmit Data"]
+    #[inline(always)]
+    pub fn txdata(&self) -> TxdataR {
+        TxdataR::new((self.bits & 0xffff) as u16)
+    }
+    #[doc = "Bits 16:21 - no description available"]
+    #[inline(always)]
+    pub fn pcs(&self) -> PcsR {
+        PcsR::new(((self.bits >> 16) & 0x3f) as u8)
+    }
+    #[doc = "Bit 26 - Clear Transfer Counter."]
+    #[inline(always)]
+    pub fn ctcnt(&self) -> CtcntR {
+        CtcntR::new(((self.bits >> 26) & 1) != 0)
+    }
+    #[doc = "Bit 27 - End Of Queue"]
+    #[inline(always)]
+    pub fn eoq(&self) -> EoqR {
+        EoqR::new(((self.bits >> 27) & 1) != 0)
+    }
+    #[doc = "Bits 28:30 - Clock and Transfer Attributes Select."]
+    #[inline(always)]
+    pub fn ctas(&self) -> CtasR {
+        CtasR::new(((self.bits >> 28) & 7) as u8)
+    }
+    #[doc = "Bit 31 - Continuous Peripheral Chip Select Enable"]
+    #[inline(always)]
+    pub fn cont(&self) -> ContR {
+        ContR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:15 - Transmit Data"]
+    #[inline(always)]
+    #[must_use]
+    pub fn txdata(&mut self) -> TxdataW<Spi1PushrSpec> {
+        TxdataW::new(self, 0)
+    }
+    #[doc = "Bits 16:21 - no description available"]
+    #[inline(always)]
+    #[must_use]
+    pub fn pcs(&mut self) -> PcsW<Spi1PushrSpec> {
+        PcsW::new(self, 16)
+    }
+    #[doc = "Bit 26 - Clear Transfer Counter."]
+    #[inline(always)]
+    #[must_use]
+    pub fn ctcnt(&mut self) -> CtcntW<Spi1PushrSpec> {
+        CtcntW::new(self, 26)
+    }
+    #[doc = "Bit 27 - End Of Queue"]
+    #[inline(always)]
+    #[must_use]
+    pub fn eoq(&mut self) -> EoqW<Spi1PushrSpec> {
+        EoqW::new(self, 27)
+    }
+    #[doc = "Bits 28:30 - Clock and Transfer Attributes Select."]
+    #[inline(always)]
+    #[must_use]
+    pub fn ctas(&mut self) -> CtasW<Spi1PushrSpec> {
+        CtasW::new(self, 28)
+    }
+    #[doc = "Bit 31 - Continuous Peripheral Chip Select Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cont(&mut self) -> ContW<Spi1PushrSpec> {
+        ContW::new(self, 31)
+    }
+}
+#[doc = "DSPI PUSH TX FIFO Register In Master Mode\n\nYou can [`read`](crate::Reg::read) this register and get [`spi1_pushr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spi1_pushr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Spi1PushrSpec;
+impl crate::RegisterSpec for Spi1PushrSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`spi1_pushr::R`](R) reader structure"]
+impl crate::Readable for Spi1PushrSpec {}
+#[doc = "`write(|w| ..)` method takes [`spi1_pushr::W`](W) writer structure"]
+impl crate::Writable for Spi1PushrSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets PUSHR to value 0"]
+impl crate::Resettable for Spi1PushrSpec {
+    const RESET_VALUE: u32 = 0;
+}

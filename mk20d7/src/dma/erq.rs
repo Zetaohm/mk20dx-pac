@@ -1,0 +1,1049 @@
+#[doc = "Register `ERQ` reader"]
+pub type R = crate::R<ErqSpec>;
+#[doc = "Register `ERQ` writer"]
+pub type W = crate::W<ErqSpec>;
+#[doc = "Enable DMA Request 0\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Erq0 {
+    #[doc = "0: The DMA request signal for the corresponding channel is disabled"]
+    _0 = 0,
+    #[doc = "1: The DMA request signal for the corresponding channel is enabled"]
+    _1 = 1,
+}
+impl From<Erq0> for bool {
+    #[inline(always)]
+    fn from(variant: Erq0) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `ERQ0` reader - Enable DMA Request 0"]
+pub type Erq0R = crate::BitReader<Erq0>;
+impl Erq0R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Erq0 {
+        match self.bits {
+            false => Erq0::_0,
+            true => Erq0::_1,
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Erq0::_0
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Erq0::_1
+    }
+}
+#[doc = "Field `ERQ0` writer - Enable DMA Request 0"]
+pub type Erq0W<'a, REG> = crate::BitWriter<'a, REG, Erq0>;
+impl<'a, REG> Erq0W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq0::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq0::_1)
+    }
+}
+#[doc = "Enable DMA Request 1\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Erq1 {
+    #[doc = "0: The DMA request signal for the corresponding channel is disabled"]
+    _0 = 0,
+    #[doc = "1: The DMA request signal for the corresponding channel is enabled"]
+    _1 = 1,
+}
+impl From<Erq1> for bool {
+    #[inline(always)]
+    fn from(variant: Erq1) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `ERQ1` reader - Enable DMA Request 1"]
+pub type Erq1R = crate::BitReader<Erq1>;
+impl Erq1R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Erq1 {
+        match self.bits {
+            false => Erq1::_0,
+            true => Erq1::_1,
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Erq1::_0
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Erq1::_1
+    }
+}
+#[doc = "Field `ERQ1` writer - Enable DMA Request 1"]
+pub type Erq1W<'a, REG> = crate::BitWriter<'a, REG, Erq1>;
+impl<'a, REG> Erq1W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq1::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq1::_1)
+    }
+}
+#[doc = "Enable DMA Request 2\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Erq2 {
+    #[doc = "0: The DMA request signal for the corresponding channel is disabled"]
+    _0 = 0,
+    #[doc = "1: The DMA request signal for the corresponding channel is enabled"]
+    _1 = 1,
+}
+impl From<Erq2> for bool {
+    #[inline(always)]
+    fn from(variant: Erq2) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `ERQ2` reader - Enable DMA Request 2"]
+pub type Erq2R = crate::BitReader<Erq2>;
+impl Erq2R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Erq2 {
+        match self.bits {
+            false => Erq2::_0,
+            true => Erq2::_1,
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Erq2::_0
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Erq2::_1
+    }
+}
+#[doc = "Field `ERQ2` writer - Enable DMA Request 2"]
+pub type Erq2W<'a, REG> = crate::BitWriter<'a, REG, Erq2>;
+impl<'a, REG> Erq2W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq2::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq2::_1)
+    }
+}
+#[doc = "Enable DMA Request 3\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Erq3 {
+    #[doc = "0: The DMA request signal for the corresponding channel is disabled"]
+    _0 = 0,
+    #[doc = "1: The DMA request signal for the corresponding channel is enabled"]
+    _1 = 1,
+}
+impl From<Erq3> for bool {
+    #[inline(always)]
+    fn from(variant: Erq3) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `ERQ3` reader - Enable DMA Request 3"]
+pub type Erq3R = crate::BitReader<Erq3>;
+impl Erq3R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Erq3 {
+        match self.bits {
+            false => Erq3::_0,
+            true => Erq3::_1,
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Erq3::_0
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Erq3::_1
+    }
+}
+#[doc = "Field `ERQ3` writer - Enable DMA Request 3"]
+pub type Erq3W<'a, REG> = crate::BitWriter<'a, REG, Erq3>;
+impl<'a, REG> Erq3W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq3::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq3::_1)
+    }
+}
+#[doc = "Enable DMA Request 4\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Erq4 {
+    #[doc = "0: The DMA request signal for the corresponding channel is disabled"]
+    _0 = 0,
+    #[doc = "1: The DMA request signal for the corresponding channel is enabled"]
+    _1 = 1,
+}
+impl From<Erq4> for bool {
+    #[inline(always)]
+    fn from(variant: Erq4) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `ERQ4` reader - Enable DMA Request 4"]
+pub type Erq4R = crate::BitReader<Erq4>;
+impl Erq4R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Erq4 {
+        match self.bits {
+            false => Erq4::_0,
+            true => Erq4::_1,
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Erq4::_0
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Erq4::_1
+    }
+}
+#[doc = "Field `ERQ4` writer - Enable DMA Request 4"]
+pub type Erq4W<'a, REG> = crate::BitWriter<'a, REG, Erq4>;
+impl<'a, REG> Erq4W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq4::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq4::_1)
+    }
+}
+#[doc = "Enable DMA Request 5\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Erq5 {
+    #[doc = "0: The DMA request signal for the corresponding channel is disabled"]
+    _0 = 0,
+    #[doc = "1: The DMA request signal for the corresponding channel is enabled"]
+    _1 = 1,
+}
+impl From<Erq5> for bool {
+    #[inline(always)]
+    fn from(variant: Erq5) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `ERQ5` reader - Enable DMA Request 5"]
+pub type Erq5R = crate::BitReader<Erq5>;
+impl Erq5R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Erq5 {
+        match self.bits {
+            false => Erq5::_0,
+            true => Erq5::_1,
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Erq5::_0
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Erq5::_1
+    }
+}
+#[doc = "Field `ERQ5` writer - Enable DMA Request 5"]
+pub type Erq5W<'a, REG> = crate::BitWriter<'a, REG, Erq5>;
+impl<'a, REG> Erq5W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq5::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq5::_1)
+    }
+}
+#[doc = "Enable DMA Request 6\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Erq6 {
+    #[doc = "0: The DMA request signal for the corresponding channel is disabled"]
+    _0 = 0,
+    #[doc = "1: The DMA request signal for the corresponding channel is enabled"]
+    _1 = 1,
+}
+impl From<Erq6> for bool {
+    #[inline(always)]
+    fn from(variant: Erq6) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `ERQ6` reader - Enable DMA Request 6"]
+pub type Erq6R = crate::BitReader<Erq6>;
+impl Erq6R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Erq6 {
+        match self.bits {
+            false => Erq6::_0,
+            true => Erq6::_1,
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Erq6::_0
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Erq6::_1
+    }
+}
+#[doc = "Field `ERQ6` writer - Enable DMA Request 6"]
+pub type Erq6W<'a, REG> = crate::BitWriter<'a, REG, Erq6>;
+impl<'a, REG> Erq6W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq6::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq6::_1)
+    }
+}
+#[doc = "Enable DMA Request 7\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Erq7 {
+    #[doc = "0: The DMA request signal for the corresponding channel is disabled"]
+    _0 = 0,
+    #[doc = "1: The DMA request signal for the corresponding channel is enabled"]
+    _1 = 1,
+}
+impl From<Erq7> for bool {
+    #[inline(always)]
+    fn from(variant: Erq7) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `ERQ7` reader - Enable DMA Request 7"]
+pub type Erq7R = crate::BitReader<Erq7>;
+impl Erq7R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Erq7 {
+        match self.bits {
+            false => Erq7::_0,
+            true => Erq7::_1,
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Erq7::_0
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Erq7::_1
+    }
+}
+#[doc = "Field `ERQ7` writer - Enable DMA Request 7"]
+pub type Erq7W<'a, REG> = crate::BitWriter<'a, REG, Erq7>;
+impl<'a, REG> Erq7W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq7::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq7::_1)
+    }
+}
+#[doc = "Enable DMA Request 8\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Erq8 {
+    #[doc = "0: The DMA request signal for the corresponding channel is disabled"]
+    _0 = 0,
+    #[doc = "1: The DMA request signal for the corresponding channel is enabled"]
+    _1 = 1,
+}
+impl From<Erq8> for bool {
+    #[inline(always)]
+    fn from(variant: Erq8) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `ERQ8` reader - Enable DMA Request 8"]
+pub type Erq8R = crate::BitReader<Erq8>;
+impl Erq8R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Erq8 {
+        match self.bits {
+            false => Erq8::_0,
+            true => Erq8::_1,
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Erq8::_0
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Erq8::_1
+    }
+}
+#[doc = "Field `ERQ8` writer - Enable DMA Request 8"]
+pub type Erq8W<'a, REG> = crate::BitWriter<'a, REG, Erq8>;
+impl<'a, REG> Erq8W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq8::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq8::_1)
+    }
+}
+#[doc = "Enable DMA Request 9\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Erq9 {
+    #[doc = "0: The DMA request signal for the corresponding channel is disabled"]
+    _0 = 0,
+    #[doc = "1: The DMA request signal for the corresponding channel is enabled"]
+    _1 = 1,
+}
+impl From<Erq9> for bool {
+    #[inline(always)]
+    fn from(variant: Erq9) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `ERQ9` reader - Enable DMA Request 9"]
+pub type Erq9R = crate::BitReader<Erq9>;
+impl Erq9R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Erq9 {
+        match self.bits {
+            false => Erq9::_0,
+            true => Erq9::_1,
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Erq9::_0
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Erq9::_1
+    }
+}
+#[doc = "Field `ERQ9` writer - Enable DMA Request 9"]
+pub type Erq9W<'a, REG> = crate::BitWriter<'a, REG, Erq9>;
+impl<'a, REG> Erq9W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq9::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq9::_1)
+    }
+}
+#[doc = "Enable DMA Request 10\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Erq10 {
+    #[doc = "0: The DMA request signal for the corresponding channel is disabled"]
+    _0 = 0,
+    #[doc = "1: The DMA request signal for the corresponding channel is enabled"]
+    _1 = 1,
+}
+impl From<Erq10> for bool {
+    #[inline(always)]
+    fn from(variant: Erq10) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `ERQ10` reader - Enable DMA Request 10"]
+pub type Erq10R = crate::BitReader<Erq10>;
+impl Erq10R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Erq10 {
+        match self.bits {
+            false => Erq10::_0,
+            true => Erq10::_1,
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Erq10::_0
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Erq10::_1
+    }
+}
+#[doc = "Field `ERQ10` writer - Enable DMA Request 10"]
+pub type Erq10W<'a, REG> = crate::BitWriter<'a, REG, Erq10>;
+impl<'a, REG> Erq10W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq10::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq10::_1)
+    }
+}
+#[doc = "Enable DMA Request 11\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Erq11 {
+    #[doc = "0: The DMA request signal for the corresponding channel is disabled"]
+    _0 = 0,
+    #[doc = "1: The DMA request signal for the corresponding channel is enabled"]
+    _1 = 1,
+}
+impl From<Erq11> for bool {
+    #[inline(always)]
+    fn from(variant: Erq11) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `ERQ11` reader - Enable DMA Request 11"]
+pub type Erq11R = crate::BitReader<Erq11>;
+impl Erq11R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Erq11 {
+        match self.bits {
+            false => Erq11::_0,
+            true => Erq11::_1,
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Erq11::_0
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Erq11::_1
+    }
+}
+#[doc = "Field `ERQ11` writer - Enable DMA Request 11"]
+pub type Erq11W<'a, REG> = crate::BitWriter<'a, REG, Erq11>;
+impl<'a, REG> Erq11W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq11::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq11::_1)
+    }
+}
+#[doc = "Enable DMA Request 12\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Erq12 {
+    #[doc = "0: The DMA request signal for the corresponding channel is disabled"]
+    _0 = 0,
+    #[doc = "1: The DMA request signal for the corresponding channel is enabled"]
+    _1 = 1,
+}
+impl From<Erq12> for bool {
+    #[inline(always)]
+    fn from(variant: Erq12) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `ERQ12` reader - Enable DMA Request 12"]
+pub type Erq12R = crate::BitReader<Erq12>;
+impl Erq12R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Erq12 {
+        match self.bits {
+            false => Erq12::_0,
+            true => Erq12::_1,
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Erq12::_0
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Erq12::_1
+    }
+}
+#[doc = "Field `ERQ12` writer - Enable DMA Request 12"]
+pub type Erq12W<'a, REG> = crate::BitWriter<'a, REG, Erq12>;
+impl<'a, REG> Erq12W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq12::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq12::_1)
+    }
+}
+#[doc = "Enable DMA Request 13\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Erq13 {
+    #[doc = "0: The DMA request signal for the corresponding channel is disabled"]
+    _0 = 0,
+    #[doc = "1: The DMA request signal for the corresponding channel is enabled"]
+    _1 = 1,
+}
+impl From<Erq13> for bool {
+    #[inline(always)]
+    fn from(variant: Erq13) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `ERQ13` reader - Enable DMA Request 13"]
+pub type Erq13R = crate::BitReader<Erq13>;
+impl Erq13R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Erq13 {
+        match self.bits {
+            false => Erq13::_0,
+            true => Erq13::_1,
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Erq13::_0
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Erq13::_1
+    }
+}
+#[doc = "Field `ERQ13` writer - Enable DMA Request 13"]
+pub type Erq13W<'a, REG> = crate::BitWriter<'a, REG, Erq13>;
+impl<'a, REG> Erq13W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq13::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq13::_1)
+    }
+}
+#[doc = "Enable DMA Request 14\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Erq14 {
+    #[doc = "0: The DMA request signal for the corresponding channel is disabled"]
+    _0 = 0,
+    #[doc = "1: The DMA request signal for the corresponding channel is enabled"]
+    _1 = 1,
+}
+impl From<Erq14> for bool {
+    #[inline(always)]
+    fn from(variant: Erq14) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `ERQ14` reader - Enable DMA Request 14"]
+pub type Erq14R = crate::BitReader<Erq14>;
+impl Erq14R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Erq14 {
+        match self.bits {
+            false => Erq14::_0,
+            true => Erq14::_1,
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Erq14::_0
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Erq14::_1
+    }
+}
+#[doc = "Field `ERQ14` writer - Enable DMA Request 14"]
+pub type Erq14W<'a, REG> = crate::BitWriter<'a, REG, Erq14>;
+impl<'a, REG> Erq14W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq14::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq14::_1)
+    }
+}
+#[doc = "Enable DMA Request 15\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Erq15 {
+    #[doc = "0: The DMA request signal for the corresponding channel is disabled"]
+    _0 = 0,
+    #[doc = "1: The DMA request signal for the corresponding channel is enabled"]
+    _1 = 1,
+}
+impl From<Erq15> for bool {
+    #[inline(always)]
+    fn from(variant: Erq15) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `ERQ15` reader - Enable DMA Request 15"]
+pub type Erq15R = crate::BitReader<Erq15>;
+impl Erq15R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Erq15 {
+        match self.bits {
+            false => Erq15::_0,
+            true => Erq15::_1,
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Erq15::_0
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Erq15::_1
+    }
+}
+#[doc = "Field `ERQ15` writer - Enable DMA Request 15"]
+pub type Erq15W<'a, REG> = crate::BitWriter<'a, REG, Erq15>;
+impl<'a, REG> Erq15W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq15::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Erq15::_1)
+    }
+}
+impl R {
+    #[doc = "Bit 0 - Enable DMA Request 0"]
+    #[inline(always)]
+    pub fn erq0(&self) -> Erq0R {
+        Erq0R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Enable DMA Request 1"]
+    #[inline(always)]
+    pub fn erq1(&self) -> Erq1R {
+        Erq1R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - Enable DMA Request 2"]
+    #[inline(always)]
+    pub fn erq2(&self) -> Erq2R {
+        Erq2R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Enable DMA Request 3"]
+    #[inline(always)]
+    pub fn erq3(&self) -> Erq3R {
+        Erq3R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Enable DMA Request 4"]
+    #[inline(always)]
+    pub fn erq4(&self) -> Erq4R {
+        Erq4R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - Enable DMA Request 5"]
+    #[inline(always)]
+    pub fn erq5(&self) -> Erq5R {
+        Erq5R::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - Enable DMA Request 6"]
+    #[inline(always)]
+    pub fn erq6(&self) -> Erq6R {
+        Erq6R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - Enable DMA Request 7"]
+    #[inline(always)]
+    pub fn erq7(&self) -> Erq7R {
+        Erq7R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - Enable DMA Request 8"]
+    #[inline(always)]
+    pub fn erq8(&self) -> Erq8R {
+        Erq8R::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - Enable DMA Request 9"]
+    #[inline(always)]
+    pub fn erq9(&self) -> Erq9R {
+        Erq9R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - Enable DMA Request 10"]
+    #[inline(always)]
+    pub fn erq10(&self) -> Erq10R {
+        Erq10R::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - Enable DMA Request 11"]
+    #[inline(always)]
+    pub fn erq11(&self) -> Erq11R {
+        Erq11R::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - Enable DMA Request 12"]
+    #[inline(always)]
+    pub fn erq12(&self) -> Erq12R {
+        Erq12R::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13 - Enable DMA Request 13"]
+    #[inline(always)]
+    pub fn erq13(&self) -> Erq13R {
+        Erq13R::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14 - Enable DMA Request 14"]
+    #[inline(always)]
+    pub fn erq14(&self) -> Erq14R {
+        Erq14R::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15 - Enable DMA Request 15"]
+    #[inline(always)]
+    pub fn erq15(&self) -> Erq15R {
+        Erq15R::new(((self.bits >> 15) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Enable DMA Request 0"]
+    #[inline(always)]
+    #[must_use]
+    pub fn erq0(&mut self) -> Erq0W<ErqSpec> {
+        Erq0W::new(self, 0)
+    }
+    #[doc = "Bit 1 - Enable DMA Request 1"]
+    #[inline(always)]
+    #[must_use]
+    pub fn erq1(&mut self) -> Erq1W<ErqSpec> {
+        Erq1W::new(self, 1)
+    }
+    #[doc = "Bit 2 - Enable DMA Request 2"]
+    #[inline(always)]
+    #[must_use]
+    pub fn erq2(&mut self) -> Erq2W<ErqSpec> {
+        Erq2W::new(self, 2)
+    }
+    #[doc = "Bit 3 - Enable DMA Request 3"]
+    #[inline(always)]
+    #[must_use]
+    pub fn erq3(&mut self) -> Erq3W<ErqSpec> {
+        Erq3W::new(self, 3)
+    }
+    #[doc = "Bit 4 - Enable DMA Request 4"]
+    #[inline(always)]
+    #[must_use]
+    pub fn erq4(&mut self) -> Erq4W<ErqSpec> {
+        Erq4W::new(self, 4)
+    }
+    #[doc = "Bit 5 - Enable DMA Request 5"]
+    #[inline(always)]
+    #[must_use]
+    pub fn erq5(&mut self) -> Erq5W<ErqSpec> {
+        Erq5W::new(self, 5)
+    }
+    #[doc = "Bit 6 - Enable DMA Request 6"]
+    #[inline(always)]
+    #[must_use]
+    pub fn erq6(&mut self) -> Erq6W<ErqSpec> {
+        Erq6W::new(self, 6)
+    }
+    #[doc = "Bit 7 - Enable DMA Request 7"]
+    #[inline(always)]
+    #[must_use]
+    pub fn erq7(&mut self) -> Erq7W<ErqSpec> {
+        Erq7W::new(self, 7)
+    }
+    #[doc = "Bit 8 - Enable DMA Request 8"]
+    #[inline(always)]
+    #[must_use]
+    pub fn erq8(&mut self) -> Erq8W<ErqSpec> {
+        Erq8W::new(self, 8)
+    }
+    #[doc = "Bit 9 - Enable DMA Request 9"]
+    #[inline(always)]
+    #[must_use]
+    pub fn erq9(&mut self) -> Erq9W<ErqSpec> {
+        Erq9W::new(self, 9)
+    }
+    #[doc = "Bit 10 - Enable DMA Request 10"]
+    #[inline(always)]
+    #[must_use]
+    pub fn erq10(&mut self) -> Erq10W<ErqSpec> {
+        Erq10W::new(self, 10)
+    }
+    #[doc = "Bit 11 - Enable DMA Request 11"]
+    #[inline(always)]
+    #[must_use]
+    pub fn erq11(&mut self) -> Erq11W<ErqSpec> {
+        Erq11W::new(self, 11)
+    }
+    #[doc = "Bit 12 - Enable DMA Request 12"]
+    #[inline(always)]
+    #[must_use]
+    pub fn erq12(&mut self) -> Erq12W<ErqSpec> {
+        Erq12W::new(self, 12)
+    }
+    #[doc = "Bit 13 - Enable DMA Request 13"]
+    #[inline(always)]
+    #[must_use]
+    pub fn erq13(&mut self) -> Erq13W<ErqSpec> {
+        Erq13W::new(self, 13)
+    }
+    #[doc = "Bit 14 - Enable DMA Request 14"]
+    #[inline(always)]
+    #[must_use]
+    pub fn erq14(&mut self) -> Erq14W<ErqSpec> {
+        Erq14W::new(self, 14)
+    }
+    #[doc = "Bit 15 - Enable DMA Request 15"]
+    #[inline(always)]
+    #[must_use]
+    pub fn erq15(&mut self) -> Erq15W<ErqSpec> {
+        Erq15W::new(self, 15)
+    }
+}
+#[doc = "Enable Request Register\n\nYou can [`read`](crate::Reg::read) this register and get [`erq::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`erq::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ErqSpec;
+impl crate::RegisterSpec for ErqSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`erq::R`](R) reader structure"]
+impl crate::Readable for ErqSpec {}
+#[doc = "`write(|w| ..)` method takes [`erq::W`](W) writer structure"]
+impl crate::Writable for ErqSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets ERQ to value 0"]
+impl crate::Resettable for ErqSpec {
+    const RESET_VALUE: u32 = 0;
+}

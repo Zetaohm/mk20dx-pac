@@ -1,0 +1,1817 @@
+#[doc = "Register `COMBINE` reader"]
+pub type R = crate::R<CombineSpec>;
+#[doc = "Register `COMBINE` writer"]
+pub type W = crate::W<CombineSpec>;
+#[doc = "Combine Channels for n = 0\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Combine0 {
+    #[doc = "0: Channels (n) and (n+1) are independent."]
+    _0 = 0,
+    #[doc = "1: Channels (n) and (n+1) are combined."]
+    _1 = 1,
+}
+impl From<Combine0> for bool {
+    #[inline(always)]
+    fn from(variant: Combine0) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `COMBINE0` reader - Combine Channels for n = 0"]
+pub type Combine0R = crate::BitReader<Combine0>;
+impl Combine0R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Combine0 {
+        match self.bits {
+            false => Combine0::_0,
+            true => Combine0::_1,
+        }
+    }
+    #[doc = "Channels (n) and (n+1) are independent."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Combine0::_0
+    }
+    #[doc = "Channels (n) and (n+1) are combined."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Combine0::_1
+    }
+}
+#[doc = "Field `COMBINE0` writer - Combine Channels for n = 0"]
+pub type Combine0W<'a, REG> = crate::BitWriter<'a, REG, Combine0>;
+impl<'a, REG> Combine0W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Channels (n) and (n+1) are independent."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Combine0::_0)
+    }
+    #[doc = "Channels (n) and (n+1) are combined."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Combine0::_1)
+    }
+}
+#[doc = "Complement of Channel (n) for n = 0\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Comp0 {
+    #[doc = "0: The channel (n+1) output is the same as the channel (n) output."]
+    _0 = 0,
+    #[doc = "1: The channel (n+1) output is the complement of the channel (n) output."]
+    _1 = 1,
+}
+impl From<Comp0> for bool {
+    #[inline(always)]
+    fn from(variant: Comp0) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `COMP0` reader - Complement of Channel (n) for n = 0"]
+pub type Comp0R = crate::BitReader<Comp0>;
+impl Comp0R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Comp0 {
+        match self.bits {
+            false => Comp0::_0,
+            true => Comp0::_1,
+        }
+    }
+    #[doc = "The channel (n+1) output is the same as the channel (n) output."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Comp0::_0
+    }
+    #[doc = "The channel (n+1) output is the complement of the channel (n) output."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Comp0::_1
+    }
+}
+#[doc = "Field `COMP0` writer - Complement of Channel (n) for n = 0"]
+pub type Comp0W<'a, REG> = crate::BitWriter<'a, REG, Comp0>;
+impl<'a, REG> Comp0W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The channel (n+1) output is the same as the channel (n) output."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Comp0::_0)
+    }
+    #[doc = "The channel (n+1) output is the complement of the channel (n) output."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Comp0::_1)
+    }
+}
+#[doc = "Dual Edge Capture Mode Enable for n = 0\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Decapen0 {
+    #[doc = "0: The dual edge capture mode in this pair of channels is disabled."]
+    _0 = 0,
+    #[doc = "1: The dual edge capture mode in this pair of channels is enabled."]
+    _1 = 1,
+}
+impl From<Decapen0> for bool {
+    #[inline(always)]
+    fn from(variant: Decapen0) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `DECAPEN0` reader - Dual Edge Capture Mode Enable for n = 0"]
+pub type Decapen0R = crate::BitReader<Decapen0>;
+impl Decapen0R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Decapen0 {
+        match self.bits {
+            false => Decapen0::_0,
+            true => Decapen0::_1,
+        }
+    }
+    #[doc = "The dual edge capture mode in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Decapen0::_0
+    }
+    #[doc = "The dual edge capture mode in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Decapen0::_1
+    }
+}
+#[doc = "Field `DECAPEN0` writer - Dual Edge Capture Mode Enable for n = 0"]
+pub type Decapen0W<'a, REG> = crate::BitWriter<'a, REG, Decapen0>;
+impl<'a, REG> Decapen0W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The dual edge capture mode in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Decapen0::_0)
+    }
+    #[doc = "The dual edge capture mode in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Decapen0::_1)
+    }
+}
+#[doc = "Dual Edge Capture Mode Captures for n = 0\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Decap0 {
+    #[doc = "0: The dual edge captures are inactive."]
+    _0 = 0,
+    #[doc = "1: The dual edge captures are active."]
+    _1 = 1,
+}
+impl From<Decap0> for bool {
+    #[inline(always)]
+    fn from(variant: Decap0) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `DECAP0` reader - Dual Edge Capture Mode Captures for n = 0"]
+pub type Decap0R = crate::BitReader<Decap0>;
+impl Decap0R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Decap0 {
+        match self.bits {
+            false => Decap0::_0,
+            true => Decap0::_1,
+        }
+    }
+    #[doc = "The dual edge captures are inactive."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Decap0::_0
+    }
+    #[doc = "The dual edge captures are active."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Decap0::_1
+    }
+}
+#[doc = "Field `DECAP0` writer - Dual Edge Capture Mode Captures for n = 0"]
+pub type Decap0W<'a, REG> = crate::BitWriter<'a, REG, Decap0>;
+impl<'a, REG> Decap0W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The dual edge captures are inactive."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Decap0::_0)
+    }
+    #[doc = "The dual edge captures are active."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Decap0::_1)
+    }
+}
+#[doc = "Deadtime Enable for n = 0\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Dten0 {
+    #[doc = "0: The deadtime insertion in this pair of channels is disabled."]
+    _0 = 0,
+    #[doc = "1: The deadtime insertion in this pair of channels is enabled."]
+    _1 = 1,
+}
+impl From<Dten0> for bool {
+    #[inline(always)]
+    fn from(variant: Dten0) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `DTEN0` reader - Deadtime Enable for n = 0"]
+pub type Dten0R = crate::BitReader<Dten0>;
+impl Dten0R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Dten0 {
+        match self.bits {
+            false => Dten0::_0,
+            true => Dten0::_1,
+        }
+    }
+    #[doc = "The deadtime insertion in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Dten0::_0
+    }
+    #[doc = "The deadtime insertion in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Dten0::_1
+    }
+}
+#[doc = "Field `DTEN0` writer - Deadtime Enable for n = 0"]
+pub type Dten0W<'a, REG> = crate::BitWriter<'a, REG, Dten0>;
+impl<'a, REG> Dten0W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The deadtime insertion in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Dten0::_0)
+    }
+    #[doc = "The deadtime insertion in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Dten0::_1)
+    }
+}
+#[doc = "Synchronization Enable for n = 0\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Syncen0 {
+    #[doc = "0: The PWM synchronization in this pair of channels is disabled."]
+    _0 = 0,
+    #[doc = "1: The PWM synchronization in this pair of channels is enabled."]
+    _1 = 1,
+}
+impl From<Syncen0> for bool {
+    #[inline(always)]
+    fn from(variant: Syncen0) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `SYNCEN0` reader - Synchronization Enable for n = 0"]
+pub type Syncen0R = crate::BitReader<Syncen0>;
+impl Syncen0R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Syncen0 {
+        match self.bits {
+            false => Syncen0::_0,
+            true => Syncen0::_1,
+        }
+    }
+    #[doc = "The PWM synchronization in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Syncen0::_0
+    }
+    #[doc = "The PWM synchronization in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Syncen0::_1
+    }
+}
+#[doc = "Field `SYNCEN0` writer - Synchronization Enable for n = 0"]
+pub type Syncen0W<'a, REG> = crate::BitWriter<'a, REG, Syncen0>;
+impl<'a, REG> Syncen0W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The PWM synchronization in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Syncen0::_0)
+    }
+    #[doc = "The PWM synchronization in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Syncen0::_1)
+    }
+}
+#[doc = "Fault Control Enable for n = 0\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Faulten0 {
+    #[doc = "0: The fault control in this pair of channels is disabled."]
+    _0 = 0,
+    #[doc = "1: The fault control in this pair of channels is enabled."]
+    _1 = 1,
+}
+impl From<Faulten0> for bool {
+    #[inline(always)]
+    fn from(variant: Faulten0) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FAULTEN0` reader - Fault Control Enable for n = 0"]
+pub type Faulten0R = crate::BitReader<Faulten0>;
+impl Faulten0R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Faulten0 {
+        match self.bits {
+            false => Faulten0::_0,
+            true => Faulten0::_1,
+        }
+    }
+    #[doc = "The fault control in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Faulten0::_0
+    }
+    #[doc = "The fault control in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Faulten0::_1
+    }
+}
+#[doc = "Field `FAULTEN0` writer - Fault Control Enable for n = 0"]
+pub type Faulten0W<'a, REG> = crate::BitWriter<'a, REG, Faulten0>;
+impl<'a, REG> Faulten0W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The fault control in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Faulten0::_0)
+    }
+    #[doc = "The fault control in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Faulten0::_1)
+    }
+}
+#[doc = "Combine Channels for n = 2\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Combine1 {
+    #[doc = "0: Channels (n) and (n+1) are independent."]
+    _0 = 0,
+    #[doc = "1: Channels (n) and (n+1) are combined."]
+    _1 = 1,
+}
+impl From<Combine1> for bool {
+    #[inline(always)]
+    fn from(variant: Combine1) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `COMBINE1` reader - Combine Channels for n = 2"]
+pub type Combine1R = crate::BitReader<Combine1>;
+impl Combine1R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Combine1 {
+        match self.bits {
+            false => Combine1::_0,
+            true => Combine1::_1,
+        }
+    }
+    #[doc = "Channels (n) and (n+1) are independent."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Combine1::_0
+    }
+    #[doc = "Channels (n) and (n+1) are combined."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Combine1::_1
+    }
+}
+#[doc = "Field `COMBINE1` writer - Combine Channels for n = 2"]
+pub type Combine1W<'a, REG> = crate::BitWriter<'a, REG, Combine1>;
+impl<'a, REG> Combine1W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Channels (n) and (n+1) are independent."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Combine1::_0)
+    }
+    #[doc = "Channels (n) and (n+1) are combined."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Combine1::_1)
+    }
+}
+#[doc = "Complement of Channel (n) for n = 2\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Comp1 {
+    #[doc = "0: The channel (n+1) output is the same as the channel (n) output."]
+    _0 = 0,
+    #[doc = "1: The channel (n+1) output is the complement of the channel (n) output."]
+    _1 = 1,
+}
+impl From<Comp1> for bool {
+    #[inline(always)]
+    fn from(variant: Comp1) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `COMP1` reader - Complement of Channel (n) for n = 2"]
+pub type Comp1R = crate::BitReader<Comp1>;
+impl Comp1R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Comp1 {
+        match self.bits {
+            false => Comp1::_0,
+            true => Comp1::_1,
+        }
+    }
+    #[doc = "The channel (n+1) output is the same as the channel (n) output."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Comp1::_0
+    }
+    #[doc = "The channel (n+1) output is the complement of the channel (n) output."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Comp1::_1
+    }
+}
+#[doc = "Field `COMP1` writer - Complement of Channel (n) for n = 2"]
+pub type Comp1W<'a, REG> = crate::BitWriter<'a, REG, Comp1>;
+impl<'a, REG> Comp1W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The channel (n+1) output is the same as the channel (n) output."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Comp1::_0)
+    }
+    #[doc = "The channel (n+1) output is the complement of the channel (n) output."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Comp1::_1)
+    }
+}
+#[doc = "Dual Edge Capture Mode Enable for n = 2\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Decapen1 {
+    #[doc = "0: The dual edge capture mode in this pair of channels is disabled."]
+    _0 = 0,
+    #[doc = "1: The dual edge capture mode in this pair of channels is enabled."]
+    _1 = 1,
+}
+impl From<Decapen1> for bool {
+    #[inline(always)]
+    fn from(variant: Decapen1) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `DECAPEN1` reader - Dual Edge Capture Mode Enable for n = 2"]
+pub type Decapen1R = crate::BitReader<Decapen1>;
+impl Decapen1R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Decapen1 {
+        match self.bits {
+            false => Decapen1::_0,
+            true => Decapen1::_1,
+        }
+    }
+    #[doc = "The dual edge capture mode in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Decapen1::_0
+    }
+    #[doc = "The dual edge capture mode in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Decapen1::_1
+    }
+}
+#[doc = "Field `DECAPEN1` writer - Dual Edge Capture Mode Enable for n = 2"]
+pub type Decapen1W<'a, REG> = crate::BitWriter<'a, REG, Decapen1>;
+impl<'a, REG> Decapen1W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The dual edge capture mode in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Decapen1::_0)
+    }
+    #[doc = "The dual edge capture mode in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Decapen1::_1)
+    }
+}
+#[doc = "Dual Edge Capture Mode Captures for n = 2\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Decap1 {
+    #[doc = "0: The dual edge captures are inactive."]
+    _0 = 0,
+    #[doc = "1: The dual edge captures are active."]
+    _1 = 1,
+}
+impl From<Decap1> for bool {
+    #[inline(always)]
+    fn from(variant: Decap1) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `DECAP1` reader - Dual Edge Capture Mode Captures for n = 2"]
+pub type Decap1R = crate::BitReader<Decap1>;
+impl Decap1R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Decap1 {
+        match self.bits {
+            false => Decap1::_0,
+            true => Decap1::_1,
+        }
+    }
+    #[doc = "The dual edge captures are inactive."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Decap1::_0
+    }
+    #[doc = "The dual edge captures are active."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Decap1::_1
+    }
+}
+#[doc = "Field `DECAP1` writer - Dual Edge Capture Mode Captures for n = 2"]
+pub type Decap1W<'a, REG> = crate::BitWriter<'a, REG, Decap1>;
+impl<'a, REG> Decap1W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The dual edge captures are inactive."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Decap1::_0)
+    }
+    #[doc = "The dual edge captures are active."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Decap1::_1)
+    }
+}
+#[doc = "Deadtime Enable for n = 2\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Dten1 {
+    #[doc = "0: The deadtime insertion in this pair of channels is disabled."]
+    _0 = 0,
+    #[doc = "1: The deadtime insertion in this pair of channels is enabled."]
+    _1 = 1,
+}
+impl From<Dten1> for bool {
+    #[inline(always)]
+    fn from(variant: Dten1) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `DTEN1` reader - Deadtime Enable for n = 2"]
+pub type Dten1R = crate::BitReader<Dten1>;
+impl Dten1R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Dten1 {
+        match self.bits {
+            false => Dten1::_0,
+            true => Dten1::_1,
+        }
+    }
+    #[doc = "The deadtime insertion in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Dten1::_0
+    }
+    #[doc = "The deadtime insertion in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Dten1::_1
+    }
+}
+#[doc = "Field `DTEN1` writer - Deadtime Enable for n = 2"]
+pub type Dten1W<'a, REG> = crate::BitWriter<'a, REG, Dten1>;
+impl<'a, REG> Dten1W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The deadtime insertion in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Dten1::_0)
+    }
+    #[doc = "The deadtime insertion in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Dten1::_1)
+    }
+}
+#[doc = "Synchronization Enable for n = 2\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Syncen1 {
+    #[doc = "0: The PWM synchronization in this pair of channels is disabled."]
+    _0 = 0,
+    #[doc = "1: The PWM synchronization in this pair of channels is enabled."]
+    _1 = 1,
+}
+impl From<Syncen1> for bool {
+    #[inline(always)]
+    fn from(variant: Syncen1) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `SYNCEN1` reader - Synchronization Enable for n = 2"]
+pub type Syncen1R = crate::BitReader<Syncen1>;
+impl Syncen1R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Syncen1 {
+        match self.bits {
+            false => Syncen1::_0,
+            true => Syncen1::_1,
+        }
+    }
+    #[doc = "The PWM synchronization in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Syncen1::_0
+    }
+    #[doc = "The PWM synchronization in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Syncen1::_1
+    }
+}
+#[doc = "Field `SYNCEN1` writer - Synchronization Enable for n = 2"]
+pub type Syncen1W<'a, REG> = crate::BitWriter<'a, REG, Syncen1>;
+impl<'a, REG> Syncen1W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The PWM synchronization in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Syncen1::_0)
+    }
+    #[doc = "The PWM synchronization in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Syncen1::_1)
+    }
+}
+#[doc = "Fault Control Enable for n = 2\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Faulten1 {
+    #[doc = "0: The fault control in this pair of channels is disabled."]
+    _0 = 0,
+    #[doc = "1: The fault control in this pair of channels is enabled."]
+    _1 = 1,
+}
+impl From<Faulten1> for bool {
+    #[inline(always)]
+    fn from(variant: Faulten1) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FAULTEN1` reader - Fault Control Enable for n = 2"]
+pub type Faulten1R = crate::BitReader<Faulten1>;
+impl Faulten1R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Faulten1 {
+        match self.bits {
+            false => Faulten1::_0,
+            true => Faulten1::_1,
+        }
+    }
+    #[doc = "The fault control in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Faulten1::_0
+    }
+    #[doc = "The fault control in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Faulten1::_1
+    }
+}
+#[doc = "Field `FAULTEN1` writer - Fault Control Enable for n = 2"]
+pub type Faulten1W<'a, REG> = crate::BitWriter<'a, REG, Faulten1>;
+impl<'a, REG> Faulten1W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The fault control in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Faulten1::_0)
+    }
+    #[doc = "The fault control in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Faulten1::_1)
+    }
+}
+#[doc = "Combine Channels for n = 4\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Combine2 {
+    #[doc = "0: Channels (n) and (n+1) are independent."]
+    _0 = 0,
+    #[doc = "1: Channels (n) and (n+1) are combined."]
+    _1 = 1,
+}
+impl From<Combine2> for bool {
+    #[inline(always)]
+    fn from(variant: Combine2) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `COMBINE2` reader - Combine Channels for n = 4"]
+pub type Combine2R = crate::BitReader<Combine2>;
+impl Combine2R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Combine2 {
+        match self.bits {
+            false => Combine2::_0,
+            true => Combine2::_1,
+        }
+    }
+    #[doc = "Channels (n) and (n+1) are independent."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Combine2::_0
+    }
+    #[doc = "Channels (n) and (n+1) are combined."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Combine2::_1
+    }
+}
+#[doc = "Field `COMBINE2` writer - Combine Channels for n = 4"]
+pub type Combine2W<'a, REG> = crate::BitWriter<'a, REG, Combine2>;
+impl<'a, REG> Combine2W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Channels (n) and (n+1) are independent."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Combine2::_0)
+    }
+    #[doc = "Channels (n) and (n+1) are combined."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Combine2::_1)
+    }
+}
+#[doc = "Complement of Channel (n) for n = 4\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Comp2 {
+    #[doc = "0: The channel (n+1) output is the same as the channel (n) output."]
+    _0 = 0,
+    #[doc = "1: The channel (n+1) output is the complement of the channel (n) output."]
+    _1 = 1,
+}
+impl From<Comp2> for bool {
+    #[inline(always)]
+    fn from(variant: Comp2) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `COMP2` reader - Complement of Channel (n) for n = 4"]
+pub type Comp2R = crate::BitReader<Comp2>;
+impl Comp2R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Comp2 {
+        match self.bits {
+            false => Comp2::_0,
+            true => Comp2::_1,
+        }
+    }
+    #[doc = "The channel (n+1) output is the same as the channel (n) output."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Comp2::_0
+    }
+    #[doc = "The channel (n+1) output is the complement of the channel (n) output."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Comp2::_1
+    }
+}
+#[doc = "Field `COMP2` writer - Complement of Channel (n) for n = 4"]
+pub type Comp2W<'a, REG> = crate::BitWriter<'a, REG, Comp2>;
+impl<'a, REG> Comp2W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The channel (n+1) output is the same as the channel (n) output."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Comp2::_0)
+    }
+    #[doc = "The channel (n+1) output is the complement of the channel (n) output."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Comp2::_1)
+    }
+}
+#[doc = "Dual Edge Capture Mode Enable for n = 4\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Decapen2 {
+    #[doc = "0: The dual edge capture mode in this pair of channels is disabled."]
+    _0 = 0,
+    #[doc = "1: The dual edge capture mode in this pair of channels is enabled."]
+    _1 = 1,
+}
+impl From<Decapen2> for bool {
+    #[inline(always)]
+    fn from(variant: Decapen2) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `DECAPEN2` reader - Dual Edge Capture Mode Enable for n = 4"]
+pub type Decapen2R = crate::BitReader<Decapen2>;
+impl Decapen2R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Decapen2 {
+        match self.bits {
+            false => Decapen2::_0,
+            true => Decapen2::_1,
+        }
+    }
+    #[doc = "The dual edge capture mode in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Decapen2::_0
+    }
+    #[doc = "The dual edge capture mode in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Decapen2::_1
+    }
+}
+#[doc = "Field `DECAPEN2` writer - Dual Edge Capture Mode Enable for n = 4"]
+pub type Decapen2W<'a, REG> = crate::BitWriter<'a, REG, Decapen2>;
+impl<'a, REG> Decapen2W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The dual edge capture mode in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Decapen2::_0)
+    }
+    #[doc = "The dual edge capture mode in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Decapen2::_1)
+    }
+}
+#[doc = "Dual Edge Capture Mode Captures for n = 4\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Decap2 {
+    #[doc = "0: The dual edge captures are inactive."]
+    _0 = 0,
+    #[doc = "1: The dual edge captures are active."]
+    _1 = 1,
+}
+impl From<Decap2> for bool {
+    #[inline(always)]
+    fn from(variant: Decap2) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `DECAP2` reader - Dual Edge Capture Mode Captures for n = 4"]
+pub type Decap2R = crate::BitReader<Decap2>;
+impl Decap2R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Decap2 {
+        match self.bits {
+            false => Decap2::_0,
+            true => Decap2::_1,
+        }
+    }
+    #[doc = "The dual edge captures are inactive."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Decap2::_0
+    }
+    #[doc = "The dual edge captures are active."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Decap2::_1
+    }
+}
+#[doc = "Field `DECAP2` writer - Dual Edge Capture Mode Captures for n = 4"]
+pub type Decap2W<'a, REG> = crate::BitWriter<'a, REG, Decap2>;
+impl<'a, REG> Decap2W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The dual edge captures are inactive."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Decap2::_0)
+    }
+    #[doc = "The dual edge captures are active."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Decap2::_1)
+    }
+}
+#[doc = "Deadtime Enable for n = 4\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Dten2 {
+    #[doc = "0: The deadtime insertion in this pair of channels is disabled."]
+    _0 = 0,
+    #[doc = "1: The deadtime insertion in this pair of channels is enabled."]
+    _1 = 1,
+}
+impl From<Dten2> for bool {
+    #[inline(always)]
+    fn from(variant: Dten2) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `DTEN2` reader - Deadtime Enable for n = 4"]
+pub type Dten2R = crate::BitReader<Dten2>;
+impl Dten2R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Dten2 {
+        match self.bits {
+            false => Dten2::_0,
+            true => Dten2::_1,
+        }
+    }
+    #[doc = "The deadtime insertion in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Dten2::_0
+    }
+    #[doc = "The deadtime insertion in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Dten2::_1
+    }
+}
+#[doc = "Field `DTEN2` writer - Deadtime Enable for n = 4"]
+pub type Dten2W<'a, REG> = crate::BitWriter<'a, REG, Dten2>;
+impl<'a, REG> Dten2W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The deadtime insertion in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Dten2::_0)
+    }
+    #[doc = "The deadtime insertion in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Dten2::_1)
+    }
+}
+#[doc = "Synchronization Enable for n = 4\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Syncen2 {
+    #[doc = "0: The PWM synchronization in this pair of channels is disabled."]
+    _0 = 0,
+    #[doc = "1: The PWM synchronization in this pair of channels is enabled."]
+    _1 = 1,
+}
+impl From<Syncen2> for bool {
+    #[inline(always)]
+    fn from(variant: Syncen2) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `SYNCEN2` reader - Synchronization Enable for n = 4"]
+pub type Syncen2R = crate::BitReader<Syncen2>;
+impl Syncen2R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Syncen2 {
+        match self.bits {
+            false => Syncen2::_0,
+            true => Syncen2::_1,
+        }
+    }
+    #[doc = "The PWM synchronization in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Syncen2::_0
+    }
+    #[doc = "The PWM synchronization in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Syncen2::_1
+    }
+}
+#[doc = "Field `SYNCEN2` writer - Synchronization Enable for n = 4"]
+pub type Syncen2W<'a, REG> = crate::BitWriter<'a, REG, Syncen2>;
+impl<'a, REG> Syncen2W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The PWM synchronization in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Syncen2::_0)
+    }
+    #[doc = "The PWM synchronization in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Syncen2::_1)
+    }
+}
+#[doc = "Fault Control Enable for n = 4\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Faulten2 {
+    #[doc = "0: The fault control in this pair of channels is disabled."]
+    _0 = 0,
+    #[doc = "1: The fault control in this pair of channels is enabled."]
+    _1 = 1,
+}
+impl From<Faulten2> for bool {
+    #[inline(always)]
+    fn from(variant: Faulten2) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FAULTEN2` reader - Fault Control Enable for n = 4"]
+pub type Faulten2R = crate::BitReader<Faulten2>;
+impl Faulten2R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Faulten2 {
+        match self.bits {
+            false => Faulten2::_0,
+            true => Faulten2::_1,
+        }
+    }
+    #[doc = "The fault control in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Faulten2::_0
+    }
+    #[doc = "The fault control in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Faulten2::_1
+    }
+}
+#[doc = "Field `FAULTEN2` writer - Fault Control Enable for n = 4"]
+pub type Faulten2W<'a, REG> = crate::BitWriter<'a, REG, Faulten2>;
+impl<'a, REG> Faulten2W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The fault control in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Faulten2::_0)
+    }
+    #[doc = "The fault control in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Faulten2::_1)
+    }
+}
+#[doc = "Combine Channels for n = 6\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Combine3 {
+    #[doc = "0: Channels (n) and (n+1) are independent."]
+    _0 = 0,
+    #[doc = "1: Channels (n) and (n+1) are combined."]
+    _1 = 1,
+}
+impl From<Combine3> for bool {
+    #[inline(always)]
+    fn from(variant: Combine3) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `COMBINE3` reader - Combine Channels for n = 6"]
+pub type Combine3R = crate::BitReader<Combine3>;
+impl Combine3R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Combine3 {
+        match self.bits {
+            false => Combine3::_0,
+            true => Combine3::_1,
+        }
+    }
+    #[doc = "Channels (n) and (n+1) are independent."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Combine3::_0
+    }
+    #[doc = "Channels (n) and (n+1) are combined."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Combine3::_1
+    }
+}
+#[doc = "Field `COMBINE3` writer - Combine Channels for n = 6"]
+pub type Combine3W<'a, REG> = crate::BitWriter<'a, REG, Combine3>;
+impl<'a, REG> Combine3W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Channels (n) and (n+1) are independent."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Combine3::_0)
+    }
+    #[doc = "Channels (n) and (n+1) are combined."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Combine3::_1)
+    }
+}
+#[doc = "Complement of Channel (n) for n = 6\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Comp3 {
+    #[doc = "0: The channel (n+1) output is the same as the channel (n) output."]
+    _0 = 0,
+    #[doc = "1: The channel (n+1) output is the complement of the channel (n) output."]
+    _1 = 1,
+}
+impl From<Comp3> for bool {
+    #[inline(always)]
+    fn from(variant: Comp3) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `COMP3` reader - Complement of Channel (n) for n = 6"]
+pub type Comp3R = crate::BitReader<Comp3>;
+impl Comp3R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Comp3 {
+        match self.bits {
+            false => Comp3::_0,
+            true => Comp3::_1,
+        }
+    }
+    #[doc = "The channel (n+1) output is the same as the channel (n) output."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Comp3::_0
+    }
+    #[doc = "The channel (n+1) output is the complement of the channel (n) output."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Comp3::_1
+    }
+}
+#[doc = "Field `COMP3` writer - Complement of Channel (n) for n = 6"]
+pub type Comp3W<'a, REG> = crate::BitWriter<'a, REG, Comp3>;
+impl<'a, REG> Comp3W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The channel (n+1) output is the same as the channel (n) output."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Comp3::_0)
+    }
+    #[doc = "The channel (n+1) output is the complement of the channel (n) output."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Comp3::_1)
+    }
+}
+#[doc = "Dual Edge Capture Mode Enable for n = 6\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Decapen3 {
+    #[doc = "0: The dual edge capture mode in this pair of channels is disabled."]
+    _0 = 0,
+    #[doc = "1: The dual edge capture mode in this pair of channels is enabled."]
+    _1 = 1,
+}
+impl From<Decapen3> for bool {
+    #[inline(always)]
+    fn from(variant: Decapen3) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `DECAPEN3` reader - Dual Edge Capture Mode Enable for n = 6"]
+pub type Decapen3R = crate::BitReader<Decapen3>;
+impl Decapen3R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Decapen3 {
+        match self.bits {
+            false => Decapen3::_0,
+            true => Decapen3::_1,
+        }
+    }
+    #[doc = "The dual edge capture mode in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Decapen3::_0
+    }
+    #[doc = "The dual edge capture mode in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Decapen3::_1
+    }
+}
+#[doc = "Field `DECAPEN3` writer - Dual Edge Capture Mode Enable for n = 6"]
+pub type Decapen3W<'a, REG> = crate::BitWriter<'a, REG, Decapen3>;
+impl<'a, REG> Decapen3W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The dual edge capture mode in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Decapen3::_0)
+    }
+    #[doc = "The dual edge capture mode in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Decapen3::_1)
+    }
+}
+#[doc = "Dual Edge Capture Mode Captures for n = 6\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Decap3 {
+    #[doc = "0: The dual edge captures are inactive."]
+    _0 = 0,
+    #[doc = "1: The dual edge captures are active."]
+    _1 = 1,
+}
+impl From<Decap3> for bool {
+    #[inline(always)]
+    fn from(variant: Decap3) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `DECAP3` reader - Dual Edge Capture Mode Captures for n = 6"]
+pub type Decap3R = crate::BitReader<Decap3>;
+impl Decap3R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Decap3 {
+        match self.bits {
+            false => Decap3::_0,
+            true => Decap3::_1,
+        }
+    }
+    #[doc = "The dual edge captures are inactive."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Decap3::_0
+    }
+    #[doc = "The dual edge captures are active."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Decap3::_1
+    }
+}
+#[doc = "Field `DECAP3` writer - Dual Edge Capture Mode Captures for n = 6"]
+pub type Decap3W<'a, REG> = crate::BitWriter<'a, REG, Decap3>;
+impl<'a, REG> Decap3W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The dual edge captures are inactive."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Decap3::_0)
+    }
+    #[doc = "The dual edge captures are active."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Decap3::_1)
+    }
+}
+#[doc = "Deadtime Enable for n = 6\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Dten3 {
+    #[doc = "0: The deadtime insertion in this pair of channels is disabled."]
+    _0 = 0,
+    #[doc = "1: The deadtime insertion in this pair of channels is enabled."]
+    _1 = 1,
+}
+impl From<Dten3> for bool {
+    #[inline(always)]
+    fn from(variant: Dten3) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `DTEN3` reader - Deadtime Enable for n = 6"]
+pub type Dten3R = crate::BitReader<Dten3>;
+impl Dten3R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Dten3 {
+        match self.bits {
+            false => Dten3::_0,
+            true => Dten3::_1,
+        }
+    }
+    #[doc = "The deadtime insertion in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Dten3::_0
+    }
+    #[doc = "The deadtime insertion in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Dten3::_1
+    }
+}
+#[doc = "Field `DTEN3` writer - Deadtime Enable for n = 6"]
+pub type Dten3W<'a, REG> = crate::BitWriter<'a, REG, Dten3>;
+impl<'a, REG> Dten3W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The deadtime insertion in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Dten3::_0)
+    }
+    #[doc = "The deadtime insertion in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Dten3::_1)
+    }
+}
+#[doc = "Synchronization Enable for n = 6\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Syncen3 {
+    #[doc = "0: The PWM synchronization in this pair of channels is disabled."]
+    _0 = 0,
+    #[doc = "1: The PWM synchronization in this pair of channels is enabled."]
+    _1 = 1,
+}
+impl From<Syncen3> for bool {
+    #[inline(always)]
+    fn from(variant: Syncen3) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `SYNCEN3` reader - Synchronization Enable for n = 6"]
+pub type Syncen3R = crate::BitReader<Syncen3>;
+impl Syncen3R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Syncen3 {
+        match self.bits {
+            false => Syncen3::_0,
+            true => Syncen3::_1,
+        }
+    }
+    #[doc = "The PWM synchronization in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Syncen3::_0
+    }
+    #[doc = "The PWM synchronization in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Syncen3::_1
+    }
+}
+#[doc = "Field `SYNCEN3` writer - Synchronization Enable for n = 6"]
+pub type Syncen3W<'a, REG> = crate::BitWriter<'a, REG, Syncen3>;
+impl<'a, REG> Syncen3W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The PWM synchronization in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Syncen3::_0)
+    }
+    #[doc = "The PWM synchronization in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Syncen3::_1)
+    }
+}
+#[doc = "Fault Control Enable for n = 6\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Faulten3 {
+    #[doc = "0: The fault control in this pair of channels is disabled."]
+    _0 = 0,
+    #[doc = "1: The fault control in this pair of channels is enabled."]
+    _1 = 1,
+}
+impl From<Faulten3> for bool {
+    #[inline(always)]
+    fn from(variant: Faulten3) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FAULTEN3` reader - Fault Control Enable for n = 6"]
+pub type Faulten3R = crate::BitReader<Faulten3>;
+impl Faulten3R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Faulten3 {
+        match self.bits {
+            false => Faulten3::_0,
+            true => Faulten3::_1,
+        }
+    }
+    #[doc = "The fault control in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Faulten3::_0
+    }
+    #[doc = "The fault control in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Faulten3::_1
+    }
+}
+#[doc = "Field `FAULTEN3` writer - Fault Control Enable for n = 6"]
+pub type Faulten3W<'a, REG> = crate::BitWriter<'a, REG, Faulten3>;
+impl<'a, REG> Faulten3W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The fault control in this pair of channels is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Faulten3::_0)
+    }
+    #[doc = "The fault control in this pair of channels is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Faulten3::_1)
+    }
+}
+impl R {
+    #[doc = "Bit 0 - Combine Channels for n = 0"]
+    #[inline(always)]
+    pub fn combine0(&self) -> Combine0R {
+        Combine0R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Complement of Channel (n) for n = 0"]
+    #[inline(always)]
+    pub fn comp0(&self) -> Comp0R {
+        Comp0R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - Dual Edge Capture Mode Enable for n = 0"]
+    #[inline(always)]
+    pub fn decapen0(&self) -> Decapen0R {
+        Decapen0R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Dual Edge Capture Mode Captures for n = 0"]
+    #[inline(always)]
+    pub fn decap0(&self) -> Decap0R {
+        Decap0R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Deadtime Enable for n = 0"]
+    #[inline(always)]
+    pub fn dten0(&self) -> Dten0R {
+        Dten0R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - Synchronization Enable for n = 0"]
+    #[inline(always)]
+    pub fn syncen0(&self) -> Syncen0R {
+        Syncen0R::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - Fault Control Enable for n = 0"]
+    #[inline(always)]
+    pub fn faulten0(&self) -> Faulten0R {
+        Faulten0R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 8 - Combine Channels for n = 2"]
+    #[inline(always)]
+    pub fn combine1(&self) -> Combine1R {
+        Combine1R::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - Complement of Channel (n) for n = 2"]
+    #[inline(always)]
+    pub fn comp1(&self) -> Comp1R {
+        Comp1R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - Dual Edge Capture Mode Enable for n = 2"]
+    #[inline(always)]
+    pub fn decapen1(&self) -> Decapen1R {
+        Decapen1R::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - Dual Edge Capture Mode Captures for n = 2"]
+    #[inline(always)]
+    pub fn decap1(&self) -> Decap1R {
+        Decap1R::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - Deadtime Enable for n = 2"]
+    #[inline(always)]
+    pub fn dten1(&self) -> Dten1R {
+        Dten1R::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13 - Synchronization Enable for n = 2"]
+    #[inline(always)]
+    pub fn syncen1(&self) -> Syncen1R {
+        Syncen1R::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14 - Fault Control Enable for n = 2"]
+    #[inline(always)]
+    pub fn faulten1(&self) -> Faulten1R {
+        Faulten1R::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 16 - Combine Channels for n = 4"]
+    #[inline(always)]
+    pub fn combine2(&self) -> Combine2R {
+        Combine2R::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17 - Complement of Channel (n) for n = 4"]
+    #[inline(always)]
+    pub fn comp2(&self) -> Comp2R {
+        Comp2R::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18 - Dual Edge Capture Mode Enable for n = 4"]
+    #[inline(always)]
+    pub fn decapen2(&self) -> Decapen2R {
+        Decapen2R::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19 - Dual Edge Capture Mode Captures for n = 4"]
+    #[inline(always)]
+    pub fn decap2(&self) -> Decap2R {
+        Decap2R::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 20 - Deadtime Enable for n = 4"]
+    #[inline(always)]
+    pub fn dten2(&self) -> Dten2R {
+        Dten2R::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bit 21 - Synchronization Enable for n = 4"]
+    #[inline(always)]
+    pub fn syncen2(&self) -> Syncen2R {
+        Syncen2R::new(((self.bits >> 21) & 1) != 0)
+    }
+    #[doc = "Bit 22 - Fault Control Enable for n = 4"]
+    #[inline(always)]
+    pub fn faulten2(&self) -> Faulten2R {
+        Faulten2R::new(((self.bits >> 22) & 1) != 0)
+    }
+    #[doc = "Bit 24 - Combine Channels for n = 6"]
+    #[inline(always)]
+    pub fn combine3(&self) -> Combine3R {
+        Combine3R::new(((self.bits >> 24) & 1) != 0)
+    }
+    #[doc = "Bit 25 - Complement of Channel (n) for n = 6"]
+    #[inline(always)]
+    pub fn comp3(&self) -> Comp3R {
+        Comp3R::new(((self.bits >> 25) & 1) != 0)
+    }
+    #[doc = "Bit 26 - Dual Edge Capture Mode Enable for n = 6"]
+    #[inline(always)]
+    pub fn decapen3(&self) -> Decapen3R {
+        Decapen3R::new(((self.bits >> 26) & 1) != 0)
+    }
+    #[doc = "Bit 27 - Dual Edge Capture Mode Captures for n = 6"]
+    #[inline(always)]
+    pub fn decap3(&self) -> Decap3R {
+        Decap3R::new(((self.bits >> 27) & 1) != 0)
+    }
+    #[doc = "Bit 28 - Deadtime Enable for n = 6"]
+    #[inline(always)]
+    pub fn dten3(&self) -> Dten3R {
+        Dten3R::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bit 29 - Synchronization Enable for n = 6"]
+    #[inline(always)]
+    pub fn syncen3(&self) -> Syncen3R {
+        Syncen3R::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - Fault Control Enable for n = 6"]
+    #[inline(always)]
+    pub fn faulten3(&self) -> Faulten3R {
+        Faulten3R::new(((self.bits >> 30) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Combine Channels for n = 0"]
+    #[inline(always)]
+    #[must_use]
+    pub fn combine0(&mut self) -> Combine0W<CombineSpec> {
+        Combine0W::new(self, 0)
+    }
+    #[doc = "Bit 1 - Complement of Channel (n) for n = 0"]
+    #[inline(always)]
+    #[must_use]
+    pub fn comp0(&mut self) -> Comp0W<CombineSpec> {
+        Comp0W::new(self, 1)
+    }
+    #[doc = "Bit 2 - Dual Edge Capture Mode Enable for n = 0"]
+    #[inline(always)]
+    #[must_use]
+    pub fn decapen0(&mut self) -> Decapen0W<CombineSpec> {
+        Decapen0W::new(self, 2)
+    }
+    #[doc = "Bit 3 - Dual Edge Capture Mode Captures for n = 0"]
+    #[inline(always)]
+    #[must_use]
+    pub fn decap0(&mut self) -> Decap0W<CombineSpec> {
+        Decap0W::new(self, 3)
+    }
+    #[doc = "Bit 4 - Deadtime Enable for n = 0"]
+    #[inline(always)]
+    #[must_use]
+    pub fn dten0(&mut self) -> Dten0W<CombineSpec> {
+        Dten0W::new(self, 4)
+    }
+    #[doc = "Bit 5 - Synchronization Enable for n = 0"]
+    #[inline(always)]
+    #[must_use]
+    pub fn syncen0(&mut self) -> Syncen0W<CombineSpec> {
+        Syncen0W::new(self, 5)
+    }
+    #[doc = "Bit 6 - Fault Control Enable for n = 0"]
+    #[inline(always)]
+    #[must_use]
+    pub fn faulten0(&mut self) -> Faulten0W<CombineSpec> {
+        Faulten0W::new(self, 6)
+    }
+    #[doc = "Bit 8 - Combine Channels for n = 2"]
+    #[inline(always)]
+    #[must_use]
+    pub fn combine1(&mut self) -> Combine1W<CombineSpec> {
+        Combine1W::new(self, 8)
+    }
+    #[doc = "Bit 9 - Complement of Channel (n) for n = 2"]
+    #[inline(always)]
+    #[must_use]
+    pub fn comp1(&mut self) -> Comp1W<CombineSpec> {
+        Comp1W::new(self, 9)
+    }
+    #[doc = "Bit 10 - Dual Edge Capture Mode Enable for n = 2"]
+    #[inline(always)]
+    #[must_use]
+    pub fn decapen1(&mut self) -> Decapen1W<CombineSpec> {
+        Decapen1W::new(self, 10)
+    }
+    #[doc = "Bit 11 - Dual Edge Capture Mode Captures for n = 2"]
+    #[inline(always)]
+    #[must_use]
+    pub fn decap1(&mut self) -> Decap1W<CombineSpec> {
+        Decap1W::new(self, 11)
+    }
+    #[doc = "Bit 12 - Deadtime Enable for n = 2"]
+    #[inline(always)]
+    #[must_use]
+    pub fn dten1(&mut self) -> Dten1W<CombineSpec> {
+        Dten1W::new(self, 12)
+    }
+    #[doc = "Bit 13 - Synchronization Enable for n = 2"]
+    #[inline(always)]
+    #[must_use]
+    pub fn syncen1(&mut self) -> Syncen1W<CombineSpec> {
+        Syncen1W::new(self, 13)
+    }
+    #[doc = "Bit 14 - Fault Control Enable for n = 2"]
+    #[inline(always)]
+    #[must_use]
+    pub fn faulten1(&mut self) -> Faulten1W<CombineSpec> {
+        Faulten1W::new(self, 14)
+    }
+    #[doc = "Bit 16 - Combine Channels for n = 4"]
+    #[inline(always)]
+    #[must_use]
+    pub fn combine2(&mut self) -> Combine2W<CombineSpec> {
+        Combine2W::new(self, 16)
+    }
+    #[doc = "Bit 17 - Complement of Channel (n) for n = 4"]
+    #[inline(always)]
+    #[must_use]
+    pub fn comp2(&mut self) -> Comp2W<CombineSpec> {
+        Comp2W::new(self, 17)
+    }
+    #[doc = "Bit 18 - Dual Edge Capture Mode Enable for n = 4"]
+    #[inline(always)]
+    #[must_use]
+    pub fn decapen2(&mut self) -> Decapen2W<CombineSpec> {
+        Decapen2W::new(self, 18)
+    }
+    #[doc = "Bit 19 - Dual Edge Capture Mode Captures for n = 4"]
+    #[inline(always)]
+    #[must_use]
+    pub fn decap2(&mut self) -> Decap2W<CombineSpec> {
+        Decap2W::new(self, 19)
+    }
+    #[doc = "Bit 20 - Deadtime Enable for n = 4"]
+    #[inline(always)]
+    #[must_use]
+    pub fn dten2(&mut self) -> Dten2W<CombineSpec> {
+        Dten2W::new(self, 20)
+    }
+    #[doc = "Bit 21 - Synchronization Enable for n = 4"]
+    #[inline(always)]
+    #[must_use]
+    pub fn syncen2(&mut self) -> Syncen2W<CombineSpec> {
+        Syncen2W::new(self, 21)
+    }
+    #[doc = "Bit 22 - Fault Control Enable for n = 4"]
+    #[inline(always)]
+    #[must_use]
+    pub fn faulten2(&mut self) -> Faulten2W<CombineSpec> {
+        Faulten2W::new(self, 22)
+    }
+    #[doc = "Bit 24 - Combine Channels for n = 6"]
+    #[inline(always)]
+    #[must_use]
+    pub fn combine3(&mut self) -> Combine3W<CombineSpec> {
+        Combine3W::new(self, 24)
+    }
+    #[doc = "Bit 25 - Complement of Channel (n) for n = 6"]
+    #[inline(always)]
+    #[must_use]
+    pub fn comp3(&mut self) -> Comp3W<CombineSpec> {
+        Comp3W::new(self, 25)
+    }
+    #[doc = "Bit 26 - Dual Edge Capture Mode Enable for n = 6"]
+    #[inline(always)]
+    #[must_use]
+    pub fn decapen3(&mut self) -> Decapen3W<CombineSpec> {
+        Decapen3W::new(self, 26)
+    }
+    #[doc = "Bit 27 - Dual Edge Capture Mode Captures for n = 6"]
+    #[inline(always)]
+    #[must_use]
+    pub fn decap3(&mut self) -> Decap3W<CombineSpec> {
+        Decap3W::new(self, 27)
+    }
+    #[doc = "Bit 28 - Deadtime Enable for n = 6"]
+    #[inline(always)]
+    #[must_use]
+    pub fn dten3(&mut self) -> Dten3W<CombineSpec> {
+        Dten3W::new(self, 28)
+    }
+    #[doc = "Bit 29 - Synchronization Enable for n = 6"]
+    #[inline(always)]
+    #[must_use]
+    pub fn syncen3(&mut self) -> Syncen3W<CombineSpec> {
+        Syncen3W::new(self, 29)
+    }
+    #[doc = "Bit 30 - Fault Control Enable for n = 6"]
+    #[inline(always)]
+    #[must_use]
+    pub fn faulten3(&mut self) -> Faulten3W<CombineSpec> {
+        Faulten3W::new(self, 30)
+    }
+}
+#[doc = "Function for Linked Channels\n\nYou can [`read`](crate::Reg::read) this register and get [`combine::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`combine::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CombineSpec;
+impl crate::RegisterSpec for CombineSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`combine::R`](R) reader structure"]
+impl crate::Readable for CombineSpec {}
+#[doc = "`write(|w| ..)` method takes [`combine::W`](W) writer structure"]
+impl crate::Writable for CombineSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets COMBINE to value 0"]
+impl crate::Resettable for CombineSpec {
+    const RESET_VALUE: u32 = 0;
+}

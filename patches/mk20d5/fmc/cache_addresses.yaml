@@ -1,0 +1,41 @@
+# Fix FMC cache register addresses for MK20D5 (50MHz K20 sub-family)
+#
+# The MK20D5 SVD uses the 72MHz K20 (8-set) FMC cache layout with wide
+# way-spacing (0x20 for tags, 0x40 for data), but the MK20DX128VLH5 is
+# a 50MHz part with a 4-way, 2-set, 32-bit line size cache that uses
+# dense contiguous addresses.
+#
+# Evidence:
+#   - K20P64M50SF0RM (50MHz ref manual) chapter 27: explicitly shows
+#     4-way, 2-set cache with dense register layout
+#   - kinetis.h: matches the 50MHz ref manual addresses exactly
+#   - K20P64M72SF1RM (72MHz ref manual) chapter 27: shows 4-way, 8-set
+#     cache with wider spacing — this is correct for MK20D7, NOT MK20D5
+#
+# Cross-reference: K20P64M50SF0RM, Chapter 27 (FMC), Section 27.3
+
+FMC:
+  _modify:
+    # TAG registers: way spacing should be 0x08 (2 sets × 4 bytes), not 0x20
+    # Way 0 is already correct at 0x100
+    "TAGVDW1S*":
+      addressOffset: 0x108
+    "TAGVDW2S*":
+      addressOffset: 0x110
+    "TAGVDW3S*":
+      addressOffset: 0x118
+    # DATA registers: way spacing should be 0x08 (2 sets × 4 bytes), not 0x40
+    # Base should be 0x200 (not 0x204), dimIncrement should be 0x4 (not 0x8)
+    # 50MHz part has single 32-bit data words, not U/L 64-bit split
+    "DATAW0S*":
+      addressOffset: 0x200
+      dimIncrement: 0x4
+    "DATAW1S*":
+      addressOffset: 0x208
+      dimIncrement: 0x4
+    "DATAW2S*":
+      addressOffset: 0x210
+      dimIncrement: 0x4
+    "DATAW3S*":
+      addressOffset: 0x218
+      dimIncrement: 0x4

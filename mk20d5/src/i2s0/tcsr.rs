@@ -1,0 +1,1104 @@
+#[doc = "Register `TCSR` reader"]
+pub type R = crate::R<TcsrSpec>;
+#[doc = "Register `TCSR` writer"]
+pub type W = crate::W<TcsrSpec>;
+#[doc = "FIFO request DMA enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Frde {
+    #[doc = "0: Disables the DMA request."]
+    _0 = 0,
+    #[doc = "1: Enables the DMA request."]
+    _1 = 1,
+}
+impl From<Frde> for bool {
+    #[inline(always)]
+    fn from(variant: Frde) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FRDE` reader - FIFO request DMA enable"]
+pub type FrdeR = crate::BitReader<Frde>;
+impl FrdeR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Frde {
+        match self.bits {
+            false => Frde::_0,
+            true => Frde::_1,
+        }
+    }
+    #[doc = "Disables the DMA request."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Frde::_0
+    }
+    #[doc = "Enables the DMA request."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Frde::_1
+    }
+}
+#[doc = "Field `FRDE` writer - FIFO request DMA enable"]
+pub type FrdeW<'a, REG> = crate::BitWriter<'a, REG, Frde>;
+impl<'a, REG> FrdeW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Disables the DMA request."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Frde::_0)
+    }
+    #[doc = "Enables the DMA request."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Frde::_1)
+    }
+}
+#[doc = "FIFO warning DMA enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Fwde {
+    #[doc = "0: Disables the DMA request."]
+    _0 = 0,
+    #[doc = "1: Enables the DMA request."]
+    _1 = 1,
+}
+impl From<Fwde> for bool {
+    #[inline(always)]
+    fn from(variant: Fwde) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FWDE` reader - FIFO warning DMA enable"]
+pub type FwdeR = crate::BitReader<Fwde>;
+impl FwdeR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Fwde {
+        match self.bits {
+            false => Fwde::_0,
+            true => Fwde::_1,
+        }
+    }
+    #[doc = "Disables the DMA request."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Fwde::_0
+    }
+    #[doc = "Enables the DMA request."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Fwde::_1
+    }
+}
+#[doc = "Field `FWDE` writer - FIFO warning DMA enable"]
+pub type FwdeW<'a, REG> = crate::BitWriter<'a, REG, Fwde>;
+impl<'a, REG> FwdeW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Disables the DMA request."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Fwde::_0)
+    }
+    #[doc = "Enables the DMA request."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Fwde::_1)
+    }
+}
+#[doc = "FIFO request interrupt enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Frie {
+    #[doc = "0: Disables the interrupt."]
+    _0 = 0,
+    #[doc = "1: Enables the interrupt."]
+    _1 = 1,
+}
+impl From<Frie> for bool {
+    #[inline(always)]
+    fn from(variant: Frie) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FRIE` reader - FIFO request interrupt enable"]
+pub type FrieR = crate::BitReader<Frie>;
+impl FrieR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Frie {
+        match self.bits {
+            false => Frie::_0,
+            true => Frie::_1,
+        }
+    }
+    #[doc = "Disables the interrupt."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Frie::_0
+    }
+    #[doc = "Enables the interrupt."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Frie::_1
+    }
+}
+#[doc = "Field `FRIE` writer - FIFO request interrupt enable"]
+pub type FrieW<'a, REG> = crate::BitWriter<'a, REG, Frie>;
+impl<'a, REG> FrieW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Disables the interrupt."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Frie::_0)
+    }
+    #[doc = "Enables the interrupt."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Frie::_1)
+    }
+}
+#[doc = "FIFO warning interrupt enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Fwie {
+    #[doc = "0: Disables the interrupt."]
+    _0 = 0,
+    #[doc = "1: Enables the interrupt."]
+    _1 = 1,
+}
+impl From<Fwie> for bool {
+    #[inline(always)]
+    fn from(variant: Fwie) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FWIE` reader - FIFO warning interrupt enable"]
+pub type FwieR = crate::BitReader<Fwie>;
+impl FwieR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Fwie {
+        match self.bits {
+            false => Fwie::_0,
+            true => Fwie::_1,
+        }
+    }
+    #[doc = "Disables the interrupt."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Fwie::_0
+    }
+    #[doc = "Enables the interrupt."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Fwie::_1
+    }
+}
+#[doc = "Field `FWIE` writer - FIFO warning interrupt enable"]
+pub type FwieW<'a, REG> = crate::BitWriter<'a, REG, Fwie>;
+impl<'a, REG> FwieW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Disables the interrupt."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Fwie::_0)
+    }
+    #[doc = "Enables the interrupt."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Fwie::_1)
+    }
+}
+#[doc = "FIFO error interrupt enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Feie {
+    #[doc = "0: Disables the interrupt,"]
+    _0 = 0,
+    #[doc = "1: Enables the interrupt."]
+    _1 = 1,
+}
+impl From<Feie> for bool {
+    #[inline(always)]
+    fn from(variant: Feie) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FEIE` reader - FIFO error interrupt enable"]
+pub type FeieR = crate::BitReader<Feie>;
+impl FeieR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Feie {
+        match self.bits {
+            false => Feie::_0,
+            true => Feie::_1,
+        }
+    }
+    #[doc = "Disables the interrupt,"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Feie::_0
+    }
+    #[doc = "Enables the interrupt."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Feie::_1
+    }
+}
+#[doc = "Field `FEIE` writer - FIFO error interrupt enable"]
+pub type FeieW<'a, REG> = crate::BitWriter<'a, REG, Feie>;
+impl<'a, REG> FeieW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Disables the interrupt,"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Feie::_0)
+    }
+    #[doc = "Enables the interrupt."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Feie::_1)
+    }
+}
+#[doc = "Sync error interrupt enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Seie {
+    #[doc = "0: Disables interrupt."]
+    _0 = 0,
+    #[doc = "1: Enables interrupt."]
+    _1 = 1,
+}
+impl From<Seie> for bool {
+    #[inline(always)]
+    fn from(variant: Seie) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `SEIE` reader - Sync error interrupt enable"]
+pub type SeieR = crate::BitReader<Seie>;
+impl SeieR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Seie {
+        match self.bits {
+            false => Seie::_0,
+            true => Seie::_1,
+        }
+    }
+    #[doc = "Disables interrupt."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Seie::_0
+    }
+    #[doc = "Enables interrupt."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Seie::_1
+    }
+}
+#[doc = "Field `SEIE` writer - Sync error interrupt enable"]
+pub type SeieW<'a, REG> = crate::BitWriter<'a, REG, Seie>;
+impl<'a, REG> SeieW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Disables interrupt."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Seie::_0)
+    }
+    #[doc = "Enables interrupt."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Seie::_1)
+    }
+}
+#[doc = "Word start interrupt enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Wsie {
+    #[doc = "0: Disables interrupt."]
+    _0 = 0,
+    #[doc = "1: Enables interrupt."]
+    _1 = 1,
+}
+impl From<Wsie> for bool {
+    #[inline(always)]
+    fn from(variant: Wsie) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `WSIE` reader - Word start interrupt enable"]
+pub type WsieR = crate::BitReader<Wsie>;
+impl WsieR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Wsie {
+        match self.bits {
+            false => Wsie::_0,
+            true => Wsie::_1,
+        }
+    }
+    #[doc = "Disables interrupt."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Wsie::_0
+    }
+    #[doc = "Enables interrupt."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Wsie::_1
+    }
+}
+#[doc = "Field `WSIE` writer - Word start interrupt enable"]
+pub type WsieW<'a, REG> = crate::BitWriter<'a, REG, Wsie>;
+impl<'a, REG> WsieW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Disables interrupt."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Wsie::_0)
+    }
+    #[doc = "Enables interrupt."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Wsie::_1)
+    }
+}
+#[doc = "FIFO request flag\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Frf {
+    #[doc = "0: Transmit FIFO watermark not reached."]
+    _0 = 0,
+    #[doc = "1: Transmit FIFO watermark has been reached."]
+    _1 = 1,
+}
+impl From<Frf> for bool {
+    #[inline(always)]
+    fn from(variant: Frf) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FRF` reader - FIFO request flag"]
+pub type FrfR = crate::BitReader<Frf>;
+impl FrfR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Frf {
+        match self.bits {
+            false => Frf::_0,
+            true => Frf::_1,
+        }
+    }
+    #[doc = "Transmit FIFO watermark not reached."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Frf::_0
+    }
+    #[doc = "Transmit FIFO watermark has been reached."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Frf::_1
+    }
+}
+#[doc = "FIFO warning flag\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Fwf {
+    #[doc = "0: No enabled transmit FIFO is empty."]
+    _0 = 0,
+    #[doc = "1: Enabled transmit FIFO is empty."]
+    _1 = 1,
+}
+impl From<Fwf> for bool {
+    #[inline(always)]
+    fn from(variant: Fwf) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FWF` reader - FIFO warning flag"]
+pub type FwfR = crate::BitReader<Fwf>;
+impl FwfR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Fwf {
+        match self.bits {
+            false => Fwf::_0,
+            true => Fwf::_1,
+        }
+    }
+    #[doc = "No enabled transmit FIFO is empty."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Fwf::_0
+    }
+    #[doc = "Enabled transmit FIFO is empty."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Fwf::_1
+    }
+}
+#[doc = "FIFO error flag\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Fef {
+    #[doc = "0: Transmit underrun not detected."]
+    _0 = 0,
+    #[doc = "1: Transmit underrun detected."]
+    _1 = 1,
+}
+impl From<Fef> for bool {
+    #[inline(always)]
+    fn from(variant: Fef) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FEF` reader - FIFO error flag"]
+pub type FefR = crate::BitReader<Fef>;
+impl FefR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Fef {
+        match self.bits {
+            false => Fef::_0,
+            true => Fef::_1,
+        }
+    }
+    #[doc = "Transmit underrun not detected."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Fef::_0
+    }
+    #[doc = "Transmit underrun detected."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Fef::_1
+    }
+}
+#[doc = "Field `FEF` writer - FIFO error flag"]
+pub type FefW<'a, REG> = crate::BitWriter<'a, REG, Fef>;
+impl<'a, REG> FefW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Transmit underrun not detected."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Fef::_0)
+    }
+    #[doc = "Transmit underrun detected."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Fef::_1)
+    }
+}
+#[doc = "Sync error flag\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Sef {
+    #[doc = "0: Sync error not detected."]
+    _0 = 0,
+    #[doc = "1: Frame sync error detected."]
+    _1 = 1,
+}
+impl From<Sef> for bool {
+    #[inline(always)]
+    fn from(variant: Sef) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `SEF` reader - Sync error flag"]
+pub type SefR = crate::BitReader<Sef>;
+impl SefR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Sef {
+        match self.bits {
+            false => Sef::_0,
+            true => Sef::_1,
+        }
+    }
+    #[doc = "Sync error not detected."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Sef::_0
+    }
+    #[doc = "Frame sync error detected."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Sef::_1
+    }
+}
+#[doc = "Field `SEF` writer - Sync error flag"]
+pub type SefW<'a, REG> = crate::BitWriter<'a, REG, Sef>;
+impl<'a, REG> SefW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Sync error not detected."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Sef::_0)
+    }
+    #[doc = "Frame sync error detected."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Sef::_1)
+    }
+}
+#[doc = "Word start flag\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Wsf {
+    #[doc = "0: Start of word not detected."]
+    _0 = 0,
+    #[doc = "1: Start of word detected."]
+    _1 = 1,
+}
+impl From<Wsf> for bool {
+    #[inline(always)]
+    fn from(variant: Wsf) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `WSF` reader - Word start flag"]
+pub type WsfR = crate::BitReader<Wsf>;
+impl WsfR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Wsf {
+        match self.bits {
+            false => Wsf::_0,
+            true => Wsf::_1,
+        }
+    }
+    #[doc = "Start of word not detected."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Wsf::_0
+    }
+    #[doc = "Start of word detected."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Wsf::_1
+    }
+}
+#[doc = "Field `WSF` writer - Word start flag"]
+pub type WsfW<'a, REG> = crate::BitWriter<'a, REG, Wsf>;
+impl<'a, REG> WsfW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Start of word not detected."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Wsf::_0)
+    }
+    #[doc = "Start of word detected."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Wsf::_1)
+    }
+}
+#[doc = "Software reset\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Sr {
+    #[doc = "0: No effect."]
+    _0 = 0,
+    #[doc = "1: Software reset."]
+    _1 = 1,
+}
+impl From<Sr> for bool {
+    #[inline(always)]
+    fn from(variant: Sr) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `SR` reader - Software reset"]
+pub type SrR = crate::BitReader<Sr>;
+impl SrR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Sr {
+        match self.bits {
+            false => Sr::_0,
+            true => Sr::_1,
+        }
+    }
+    #[doc = "No effect."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Sr::_0
+    }
+    #[doc = "Software reset."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Sr::_1
+    }
+}
+#[doc = "Field `SR` writer - Software reset"]
+pub type SrW<'a, REG> = crate::BitWriter<'a, REG, Sr>;
+impl<'a, REG> SrW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "No effect."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Sr::_0)
+    }
+    #[doc = "Software reset."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Sr::_1)
+    }
+}
+#[doc = "FIFO reset\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Fr {
+    #[doc = "0: No effect."]
+    _0 = 0,
+    #[doc = "1: FIFO reset."]
+    _1 = 1,
+}
+impl From<Fr> for bool {
+    #[inline(always)]
+    fn from(variant: Fr) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FR` writer - FIFO reset"]
+pub type FrW<'a, REG> = crate::BitWriter<'a, REG, Fr>;
+impl<'a, REG> FrW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "No effect."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Fr::_0)
+    }
+    #[doc = "FIFO reset."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Fr::_1)
+    }
+}
+#[doc = "Bit Clock Enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Bce {
+    #[doc = "0: Transmit bit clock is disabled"]
+    _0 = 0,
+    #[doc = "1: Transmit bit clock is enabled"]
+    _1 = 1,
+}
+impl From<Bce> for bool {
+    #[inline(always)]
+    fn from(variant: Bce) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `BCE` reader - Bit Clock Enable"]
+pub type BceR = crate::BitReader<Bce>;
+impl BceR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Bce {
+        match self.bits {
+            false => Bce::_0,
+            true => Bce::_1,
+        }
+    }
+    #[doc = "Transmit bit clock is disabled"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Bce::_0
+    }
+    #[doc = "Transmit bit clock is enabled"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Bce::_1
+    }
+}
+#[doc = "Field `BCE` writer - Bit Clock Enable"]
+pub type BceW<'a, REG> = crate::BitWriter<'a, REG, Bce>;
+impl<'a, REG> BceW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Transmit bit clock is disabled"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Bce::_0)
+    }
+    #[doc = "Transmit bit clock is enabled"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Bce::_1)
+    }
+}
+#[doc = "Debug enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Dbge {
+    #[doc = "0: Transmitter is disabled in debug mode, after completing the current frame."]
+    _0 = 0,
+    #[doc = "1: Transmitter is enabled in debug mode."]
+    _1 = 1,
+}
+impl From<Dbge> for bool {
+    #[inline(always)]
+    fn from(variant: Dbge) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `DBGE` reader - Debug enable"]
+pub type DbgeR = crate::BitReader<Dbge>;
+impl DbgeR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Dbge {
+        match self.bits {
+            false => Dbge::_0,
+            true => Dbge::_1,
+        }
+    }
+    #[doc = "Transmitter is disabled in debug mode, after completing the current frame."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Dbge::_0
+    }
+    #[doc = "Transmitter is enabled in debug mode."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Dbge::_1
+    }
+}
+#[doc = "Field `DBGE` writer - Debug enable"]
+pub type DbgeW<'a, REG> = crate::BitWriter<'a, REG, Dbge>;
+impl<'a, REG> DbgeW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Transmitter is disabled in debug mode, after completing the current frame."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Dbge::_0)
+    }
+    #[doc = "Transmitter is enabled in debug mode."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Dbge::_1)
+    }
+}
+#[doc = "Stop enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Stope {
+    #[doc = "0: Transmitter disabled in stop mode."]
+    _0 = 0,
+    #[doc = "1: Transmitter enabled in stop mode."]
+    _1 = 1,
+}
+impl From<Stope> for bool {
+    #[inline(always)]
+    fn from(variant: Stope) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `STOPE` reader - Stop enable"]
+pub type StopeR = crate::BitReader<Stope>;
+impl StopeR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Stope {
+        match self.bits {
+            false => Stope::_0,
+            true => Stope::_1,
+        }
+    }
+    #[doc = "Transmitter disabled in stop mode."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Stope::_0
+    }
+    #[doc = "Transmitter enabled in stop mode."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Stope::_1
+    }
+}
+#[doc = "Field `STOPE` writer - Stop enable"]
+pub type StopeW<'a, REG> = crate::BitWriter<'a, REG, Stope>;
+impl<'a, REG> StopeW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Transmitter disabled in stop mode."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Stope::_0)
+    }
+    #[doc = "Transmitter enabled in stop mode."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Stope::_1)
+    }
+}
+#[doc = "Transmitter enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Te {
+    #[doc = "0: Transmitter is disabled."]
+    _0 = 0,
+    #[doc = "1: Transmitter is enabled, or transmitter has been disabled and not end of frame."]
+    _1 = 1,
+}
+impl From<Te> for bool {
+    #[inline(always)]
+    fn from(variant: Te) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `TE` reader - Transmitter enable"]
+pub type TeR = crate::BitReader<Te>;
+impl TeR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Te {
+        match self.bits {
+            false => Te::_0,
+            true => Te::_1,
+        }
+    }
+    #[doc = "Transmitter is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Te::_0
+    }
+    #[doc = "Transmitter is enabled, or transmitter has been disabled and not end of frame."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Te::_1
+    }
+}
+#[doc = "Field `TE` writer - Transmitter enable"]
+pub type TeW<'a, REG> = crate::BitWriter<'a, REG, Te>;
+impl<'a, REG> TeW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Transmitter is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Te::_0)
+    }
+    #[doc = "Transmitter is enabled, or transmitter has been disabled and not end of frame."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Te::_1)
+    }
+}
+impl R {
+    #[doc = "Bit 0 - FIFO request DMA enable"]
+    #[inline(always)]
+    pub fn frde(&self) -> FrdeR {
+        FrdeR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - FIFO warning DMA enable"]
+    #[inline(always)]
+    pub fn fwde(&self) -> FwdeR {
+        FwdeR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 8 - FIFO request interrupt enable"]
+    #[inline(always)]
+    pub fn frie(&self) -> FrieR {
+        FrieR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - FIFO warning interrupt enable"]
+    #[inline(always)]
+    pub fn fwie(&self) -> FwieR {
+        FwieR::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - FIFO error interrupt enable"]
+    #[inline(always)]
+    pub fn feie(&self) -> FeieR {
+        FeieR::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - Sync error interrupt enable"]
+    #[inline(always)]
+    pub fn seie(&self) -> SeieR {
+        SeieR::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - Word start interrupt enable"]
+    #[inline(always)]
+    pub fn wsie(&self) -> WsieR {
+        WsieR::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 16 - FIFO request flag"]
+    #[inline(always)]
+    pub fn frf(&self) -> FrfR {
+        FrfR::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17 - FIFO warning flag"]
+    #[inline(always)]
+    pub fn fwf(&self) -> FwfR {
+        FwfR::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18 - FIFO error flag"]
+    #[inline(always)]
+    pub fn fef(&self) -> FefR {
+        FefR::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19 - Sync error flag"]
+    #[inline(always)]
+    pub fn sef(&self) -> SefR {
+        SefR::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 20 - Word start flag"]
+    #[inline(always)]
+    pub fn wsf(&self) -> WsfR {
+        WsfR::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bit 24 - Software reset"]
+    #[inline(always)]
+    pub fn sr(&self) -> SrR {
+        SrR::new(((self.bits >> 24) & 1) != 0)
+    }
+    #[doc = "Bit 28 - Bit Clock Enable"]
+    #[inline(always)]
+    pub fn bce(&self) -> BceR {
+        BceR::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bit 29 - Debug enable"]
+    #[inline(always)]
+    pub fn dbge(&self) -> DbgeR {
+        DbgeR::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - Stop enable"]
+    #[inline(always)]
+    pub fn stope(&self) -> StopeR {
+        StopeR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - Transmitter enable"]
+    #[inline(always)]
+    pub fn te(&self) -> TeR {
+        TeR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - FIFO request DMA enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn frde(&mut self) -> FrdeW<TcsrSpec> {
+        FrdeW::new(self, 0)
+    }
+    #[doc = "Bit 1 - FIFO warning DMA enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn fwde(&mut self) -> FwdeW<TcsrSpec> {
+        FwdeW::new(self, 1)
+    }
+    #[doc = "Bit 8 - FIFO request interrupt enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn frie(&mut self) -> FrieW<TcsrSpec> {
+        FrieW::new(self, 8)
+    }
+    #[doc = "Bit 9 - FIFO warning interrupt enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn fwie(&mut self) -> FwieW<TcsrSpec> {
+        FwieW::new(self, 9)
+    }
+    #[doc = "Bit 10 - FIFO error interrupt enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn feie(&mut self) -> FeieW<TcsrSpec> {
+        FeieW::new(self, 10)
+    }
+    #[doc = "Bit 11 - Sync error interrupt enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn seie(&mut self) -> SeieW<TcsrSpec> {
+        SeieW::new(self, 11)
+    }
+    #[doc = "Bit 12 - Word start interrupt enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn wsie(&mut self) -> WsieW<TcsrSpec> {
+        WsieW::new(self, 12)
+    }
+    #[doc = "Bit 18 - FIFO error flag"]
+    #[inline(always)]
+    #[must_use]
+    pub fn fef(&mut self) -> FefW<TcsrSpec> {
+        FefW::new(self, 18)
+    }
+    #[doc = "Bit 19 - Sync error flag"]
+    #[inline(always)]
+    #[must_use]
+    pub fn sef(&mut self) -> SefW<TcsrSpec> {
+        SefW::new(self, 19)
+    }
+    #[doc = "Bit 20 - Word start flag"]
+    #[inline(always)]
+    #[must_use]
+    pub fn wsf(&mut self) -> WsfW<TcsrSpec> {
+        WsfW::new(self, 20)
+    }
+    #[doc = "Bit 24 - Software reset"]
+    #[inline(always)]
+    #[must_use]
+    pub fn sr(&mut self) -> SrW<TcsrSpec> {
+        SrW::new(self, 24)
+    }
+    #[doc = "Bit 25 - FIFO reset"]
+    #[inline(always)]
+    #[must_use]
+    pub fn fr(&mut self) -> FrW<TcsrSpec> {
+        FrW::new(self, 25)
+    }
+    #[doc = "Bit 28 - Bit Clock Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn bce(&mut self) -> BceW<TcsrSpec> {
+        BceW::new(self, 28)
+    }
+    #[doc = "Bit 29 - Debug enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn dbge(&mut self) -> DbgeW<TcsrSpec> {
+        DbgeW::new(self, 29)
+    }
+    #[doc = "Bit 30 - Stop enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn stope(&mut self) -> StopeW<TcsrSpec> {
+        StopeW::new(self, 30)
+    }
+    #[doc = "Bit 31 - Transmitter enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn te(&mut self) -> TeW<TcsrSpec> {
+        TeW::new(self, 31)
+    }
+}
+#[doc = "SAI Transmit Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`tcsr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tcsr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct TcsrSpec;
+impl crate::RegisterSpec for TcsrSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`tcsr::R`](R) reader structure"]
+impl crate::Readable for TcsrSpec {}
+#[doc = "`write(|w| ..)` method takes [`tcsr::W`](W) writer structure"]
+impl crate::Writable for TcsrSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets TCSR to value 0"]
+impl crate::Resettable for TcsrSpec {
+    const RESET_VALUE: u32 = 0;
+}

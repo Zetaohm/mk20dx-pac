@@ -1,0 +1,70 @@
+#[doc = "Register `ACTLR` reader"]
+pub type R = crate::R<ActlrSpec>;
+#[doc = "Register `ACTLR` writer"]
+pub type W = crate::W<ActlrSpec>;
+#[doc = "Field `DISMCYCINT` reader - Disables interruption of multi-cycle instructions."]
+pub type DismcycintR = crate::BitReader;
+#[doc = "Field `DISMCYCINT` writer - Disables interruption of multi-cycle instructions."]
+pub type DismcycintW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DISDEFWBUF` reader - Disables write buffer use during default memory map accesses."]
+pub type DisdefwbufR = crate::BitReader;
+#[doc = "Field `DISDEFWBUF` writer - Disables write buffer use during default memory map accesses."]
+pub type DisdefwbufW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DISFOLD` reader - Disables folding of IT instructions."]
+pub type DisfoldR = crate::BitReader;
+#[doc = "Field `DISFOLD` writer - Disables folding of IT instructions."]
+pub type DisfoldW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - Disables interruption of multi-cycle instructions."]
+    #[inline(always)]
+    pub fn dismcycint(&self) -> DismcycintR {
+        DismcycintR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Disables write buffer use during default memory map accesses."]
+    #[inline(always)]
+    pub fn disdefwbuf(&self) -> DisdefwbufR {
+        DisdefwbufR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - Disables folding of IT instructions."]
+    #[inline(always)]
+    pub fn disfold(&self) -> DisfoldR {
+        DisfoldR::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Disables interruption of multi-cycle instructions."]
+    #[inline(always)]
+    #[must_use]
+    pub fn dismcycint(&mut self) -> DismcycintW<ActlrSpec> {
+        DismcycintW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Disables write buffer use during default memory map accesses."]
+    #[inline(always)]
+    #[must_use]
+    pub fn disdefwbuf(&mut self) -> DisdefwbufW<ActlrSpec> {
+        DisdefwbufW::new(self, 1)
+    }
+    #[doc = "Bit 2 - Disables folding of IT instructions."]
+    #[inline(always)]
+    #[must_use]
+    pub fn disfold(&mut self) -> DisfoldW<ActlrSpec> {
+        DisfoldW::new(self, 2)
+    }
+}
+#[doc = "Auxiliary Control Register,\n\nYou can [`read`](crate::Reg::read) this register and get [`actlr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`actlr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ActlrSpec;
+impl crate::RegisterSpec for ActlrSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`actlr::R`](R) reader structure"]
+impl crate::Readable for ActlrSpec {}
+#[doc = "`write(|w| ..)` method takes [`actlr::W`](W) writer structure"]
+impl crate::Writable for ActlrSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets ACTLR to value 0"]
+impl crate::Resettable for ActlrSpec {
+    const RESET_VALUE: u32 = 0;
+}

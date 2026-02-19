@@ -1,0 +1,16 @@
+[package]
+name = "mk20d5"
+version = "0.1.0"
+edition = "2021"
+description = "Peripheral Access Crate for MK20DX128 (Teensy 3.0)"
+license = "MIT OR Apache-2.0"
+categories = ["embedded", "hardware-support", "no-std"]
+keywords = ["arm", "cortex-m", "teensy", "kinetis", "nxp"]
+
+[dependencies]
+cortex-m = "0.7"
+vcell = "0.1"
+cortex-m-rt = { version = "0.7", optional = true }
+
+[features]
+rt = ["cortex-m-rt/device"]

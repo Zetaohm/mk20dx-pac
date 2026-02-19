@@ -1,0 +1,83 @@
+#[doc = "Register `FLT` reader"]
+pub type R = crate::R<FltSpec>;
+#[doc = "Register `FLT` writer"]
+pub type W = crate::W<FltSpec>;
+#[doc = "I2C programmable filter factor\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Flt {
+    #[doc = "0: No filter/bypass"]
+    _0 = 0,
+}
+impl From<Flt> for u8 {
+    #[inline(always)]
+    fn from(variant: Flt) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Flt {
+    type Ux = u8;
+}
+impl crate::IsEnum for Flt {}
+#[doc = "Field `FLT` reader - I2C programmable filter factor"]
+pub type FltR = crate::FieldReader<Flt>;
+impl FltR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<Flt> {
+        match self.bits {
+            0 => Some(Flt::_0),
+            _ => None,
+        }
+    }
+    #[doc = "No filter/bypass"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Flt::_0
+    }
+}
+#[doc = "Field `FLT` writer - I2C programmable filter factor"]
+pub type FltW<'a, REG> = crate::FieldWriter<'a, REG, 5, Flt>;
+impl<'a, REG> FltW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "No filter/bypass"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Flt::_0)
+    }
+}
+impl R {
+    #[doc = "Bits 0:4 - I2C programmable filter factor"]
+    #[inline(always)]
+    pub fn flt(&self) -> FltR {
+        FltR::new(self.bits & 0x1f)
+    }
+}
+impl W {
+    #[doc = "Bits 0:4 - I2C programmable filter factor"]
+    #[inline(always)]
+    #[must_use]
+    pub fn flt(&mut self) -> FltW<FltSpec> {
+        FltW::new(self, 0)
+    }
+}
+#[doc = "I2C Programmable Input Glitch Filter register\n\nYou can [`read`](crate::Reg::read) this register and get [`flt::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`flt::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct FltSpec;
+impl crate::RegisterSpec for FltSpec {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [`flt::R`](R) reader structure"]
+impl crate::Readable for FltSpec {}
+#[doc = "`write(|w| ..)` method takes [`flt::W`](W) writer structure"]
+impl crate::Writable for FltSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+}
+#[doc = "`reset()` method sets FLT to value 0"]
+impl crate::Resettable for FltSpec {
+    const RESET_VALUE: u8 = 0;
+}

@@ -1,0 +1,405 @@
+#[doc = "Register `CRS%s` reader"]
+pub type R = crate::R<CrsSpec>;
+#[doc = "Register `CRS%s` writer"]
+pub type W = crate::W<CrsSpec>;
+#[doc = "Park\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Park {
+    #[doc = "0: Park on master port M0"]
+    _000 = 0,
+    #[doc = "1: Park on master port M1"]
+    _001 = 1,
+    #[doc = "2: Park on master port M2"]
+    _010 = 2,
+    #[doc = "3: Park on master port M3"]
+    _011 = 3,
+}
+impl From<Park> for u8 {
+    #[inline(always)]
+    fn from(variant: Park) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Park {
+    type Ux = u8;
+}
+impl crate::IsEnum for Park {}
+#[doc = "Field `PARK` reader - Park"]
+pub type ParkR = crate::FieldReader<Park>;
+impl ParkR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<Park> {
+        match self.bits {
+            0 => Some(Park::_000),
+            1 => Some(Park::_001),
+            2 => Some(Park::_010),
+            3 => Some(Park::_011),
+            _ => None,
+        }
+    }
+    #[doc = "Park on master port M0"]
+    #[inline(always)]
+    pub fn is_000(&self) -> bool {
+        *self == Park::_000
+    }
+    #[doc = "Park on master port M1"]
+    #[inline(always)]
+    pub fn is_001(&self) -> bool {
+        *self == Park::_001
+    }
+    #[doc = "Park on master port M2"]
+    #[inline(always)]
+    pub fn is_010(&self) -> bool {
+        *self == Park::_010
+    }
+    #[doc = "Park on master port M3"]
+    #[inline(always)]
+    pub fn is_011(&self) -> bool {
+        *self == Park::_011
+    }
+}
+#[doc = "Field `PARK` writer - Park"]
+pub type ParkW<'a, REG> = crate::FieldWriter<'a, REG, 3, Park>;
+impl<'a, REG> ParkW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "Park on master port M0"]
+    #[inline(always)]
+    pub fn _000(self) -> &'a mut crate::W<REG> {
+        self.variant(Park::_000)
+    }
+    #[doc = "Park on master port M1"]
+    #[inline(always)]
+    pub fn _001(self) -> &'a mut crate::W<REG> {
+        self.variant(Park::_001)
+    }
+    #[doc = "Park on master port M2"]
+    #[inline(always)]
+    pub fn _010(self) -> &'a mut crate::W<REG> {
+        self.variant(Park::_010)
+    }
+    #[doc = "Park on master port M3"]
+    #[inline(always)]
+    pub fn _011(self) -> &'a mut crate::W<REG> {
+        self.variant(Park::_011)
+    }
+}
+#[doc = "Parking control\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Pctl {
+    #[doc = "0: When no master makes a request, the arbiter parks the slave port on the master port defined by the PARK bit field"]
+    _00 = 0,
+    #[doc = "1: When no master makes a request, the arbiter parks the slave port on the last master to be in control of the slave port"]
+    _01 = 1,
+    #[doc = "2: When no master makes a request, the slave port is not parked on a master and the arbiter drives all outputs to a constant safe state"]
+    _10 = 2,
+}
+impl From<Pctl> for u8 {
+    #[inline(always)]
+    fn from(variant: Pctl) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Pctl {
+    type Ux = u8;
+}
+impl crate::IsEnum for Pctl {}
+#[doc = "Field `PCTL` reader - Parking control"]
+pub type PctlR = crate::FieldReader<Pctl>;
+impl PctlR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<Pctl> {
+        match self.bits {
+            0 => Some(Pctl::_00),
+            1 => Some(Pctl::_01),
+            2 => Some(Pctl::_10),
+            _ => None,
+        }
+    }
+    #[doc = "When no master makes a request, the arbiter parks the slave port on the master port defined by the PARK bit field"]
+    #[inline(always)]
+    pub fn is_00(&self) -> bool {
+        *self == Pctl::_00
+    }
+    #[doc = "When no master makes a request, the arbiter parks the slave port on the last master to be in control of the slave port"]
+    #[inline(always)]
+    pub fn is_01(&self) -> bool {
+        *self == Pctl::_01
+    }
+    #[doc = "When no master makes a request, the slave port is not parked on a master and the arbiter drives all outputs to a constant safe state"]
+    #[inline(always)]
+    pub fn is_10(&self) -> bool {
+        *self == Pctl::_10
+    }
+}
+#[doc = "Field `PCTL` writer - Parking control"]
+pub type PctlW<'a, REG> = crate::FieldWriter<'a, REG, 2, Pctl>;
+impl<'a, REG> PctlW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "When no master makes a request, the arbiter parks the slave port on the master port defined by the PARK bit field"]
+    #[inline(always)]
+    pub fn _00(self) -> &'a mut crate::W<REG> {
+        self.variant(Pctl::_00)
+    }
+    #[doc = "When no master makes a request, the arbiter parks the slave port on the last master to be in control of the slave port"]
+    #[inline(always)]
+    pub fn _01(self) -> &'a mut crate::W<REG> {
+        self.variant(Pctl::_01)
+    }
+    #[doc = "When no master makes a request, the slave port is not parked on a master and the arbiter drives all outputs to a constant safe state"]
+    #[inline(always)]
+    pub fn _10(self) -> &'a mut crate::W<REG> {
+        self.variant(Pctl::_10)
+    }
+}
+#[doc = "Arbitration mode\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Arb {
+    #[doc = "0: Fixed priority"]
+    _00 = 0,
+    #[doc = "1: Round-robin, or rotating, priority"]
+    _01 = 1,
+}
+impl From<Arb> for u8 {
+    #[inline(always)]
+    fn from(variant: Arb) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Arb {
+    type Ux = u8;
+}
+impl crate::IsEnum for Arb {}
+#[doc = "Field `ARB` reader - Arbitration mode"]
+pub type ArbR = crate::FieldReader<Arb>;
+impl ArbR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<Arb> {
+        match self.bits {
+            0 => Some(Arb::_00),
+            1 => Some(Arb::_01),
+            _ => None,
+        }
+    }
+    #[doc = "Fixed priority"]
+    #[inline(always)]
+    pub fn is_00(&self) -> bool {
+        *self == Arb::_00
+    }
+    #[doc = "Round-robin, or rotating, priority"]
+    #[inline(always)]
+    pub fn is_01(&self) -> bool {
+        *self == Arb::_01
+    }
+}
+#[doc = "Field `ARB` writer - Arbitration mode"]
+pub type ArbW<'a, REG> = crate::FieldWriter<'a, REG, 2, Arb>;
+impl<'a, REG> ArbW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "Fixed priority"]
+    #[inline(always)]
+    pub fn _00(self) -> &'a mut crate::W<REG> {
+        self.variant(Arb::_00)
+    }
+    #[doc = "Round-robin, or rotating, priority"]
+    #[inline(always)]
+    pub fn _01(self) -> &'a mut crate::W<REG> {
+        self.variant(Arb::_01)
+    }
+}
+#[doc = "Halt low priority\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Hlp {
+    #[doc = "0: The low power mode request has the highest priority for arbitration on this slave port"]
+    _0 = 0,
+    #[doc = "1: The low power mode request has the lowest initial priority for arbitration on this slave port"]
+    _1 = 1,
+}
+impl From<Hlp> for bool {
+    #[inline(always)]
+    fn from(variant: Hlp) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `HLP` reader - Halt low priority"]
+pub type HlpR = crate::BitReader<Hlp>;
+impl HlpR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Hlp {
+        match self.bits {
+            false => Hlp::_0,
+            true => Hlp::_1,
+        }
+    }
+    #[doc = "The low power mode request has the highest priority for arbitration on this slave port"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Hlp::_0
+    }
+    #[doc = "The low power mode request has the lowest initial priority for arbitration on this slave port"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Hlp::_1
+    }
+}
+#[doc = "Field `HLP` writer - Halt low priority"]
+pub type HlpW<'a, REG> = crate::BitWriter<'a, REG, Hlp>;
+impl<'a, REG> HlpW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The low power mode request has the highest priority for arbitration on this slave port"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Hlp::_0)
+    }
+    #[doc = "The low power mode request has the lowest initial priority for arbitration on this slave port"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Hlp::_1)
+    }
+}
+#[doc = "Read only\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Ro {
+    #[doc = "0: The slave port's registers are writeable"]
+    _0 = 0,
+    #[doc = "1: The slave port's registers are read-only and cannot be written. Attempted writes have no effect on the registers and result in a bus error response."]
+    _1 = 1,
+}
+impl From<Ro> for bool {
+    #[inline(always)]
+    fn from(variant: Ro) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `RO` reader - Read only"]
+pub type RoR = crate::BitReader<Ro>;
+impl RoR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Ro {
+        match self.bits {
+            false => Ro::_0,
+            true => Ro::_1,
+        }
+    }
+    #[doc = "The slave port's registers are writeable"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Ro::_0
+    }
+    #[doc = "The slave port's registers are read-only and cannot be written. Attempted writes have no effect on the registers and result in a bus error response."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Ro::_1
+    }
+}
+#[doc = "Field `RO` writer - Read only"]
+pub type RoW<'a, REG> = crate::BitWriter<'a, REG, Ro>;
+impl<'a, REG> RoW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The slave port's registers are writeable"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Ro::_0)
+    }
+    #[doc = "The slave port's registers are read-only and cannot be written. Attempted writes have no effect on the registers and result in a bus error response."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Ro::_1)
+    }
+}
+impl R {
+    #[doc = "Bits 0:2 - Park"]
+    #[inline(always)]
+    pub fn park(&self) -> ParkR {
+        ParkR::new((self.bits & 7) as u8)
+    }
+    #[doc = "Bits 4:5 - Parking control"]
+    #[inline(always)]
+    pub fn pctl(&self) -> PctlR {
+        PctlR::new(((self.bits >> 4) & 3) as u8)
+    }
+    #[doc = "Bits 8:9 - Arbitration mode"]
+    #[inline(always)]
+    pub fn arb(&self) -> ArbR {
+        ArbR::new(((self.bits >> 8) & 3) as u8)
+    }
+    #[doc = "Bit 30 - Halt low priority"]
+    #[inline(always)]
+    pub fn hlp(&self) -> HlpR {
+        HlpR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - Read only"]
+    #[inline(always)]
+    pub fn ro(&self) -> RoR {
+        RoR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:2 - Park"]
+    #[inline(always)]
+    #[must_use]
+    pub fn park(&mut self) -> ParkW<CrsSpec> {
+        ParkW::new(self, 0)
+    }
+    #[doc = "Bits 4:5 - Parking control"]
+    #[inline(always)]
+    #[must_use]
+    pub fn pctl(&mut self) -> PctlW<CrsSpec> {
+        PctlW::new(self, 4)
+    }
+    #[doc = "Bits 8:9 - Arbitration mode"]
+    #[inline(always)]
+    #[must_use]
+    pub fn arb(&mut self) -> ArbW<CrsSpec> {
+        ArbW::new(self, 8)
+    }
+    #[doc = "Bit 30 - Halt low priority"]
+    #[inline(always)]
+    #[must_use]
+    pub fn hlp(&mut self) -> HlpW<CrsSpec> {
+        HlpW::new(self, 30)
+    }
+    #[doc = "Bit 31 - Read only"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ro(&mut self) -> RoW<CrsSpec> {
+        RoW::new(self, 31)
+    }
+}
+#[doc = "Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`crs::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`crs::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CrsSpec;
+impl crate::RegisterSpec for CrsSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`crs::R`](R) reader structure"]
+impl crate::Readable for CrsSpec {}
+#[doc = "`write(|w| ..)` method takes [`crs::W`](W) writer structure"]
+impl crate::Writable for CrsSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets CRS%s to value 0"]
+impl crate::Resettable for CrsSpec {
+    const RESET_VALUE: u32 = 0;
+}

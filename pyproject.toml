@@ -1,0 +1,9 @@
+[project]
+name = "mk20dx-pac"
+version = "0.1.0"
+description = "SVD patching and comparison scripts for MK20DX128/MK20DX256 PAC crates"
+requires-python = ">=3.12"
+dependencies = [
+    "cmsis-svd>=0.6",
+    "pymupdf>=1.27.1",
+]

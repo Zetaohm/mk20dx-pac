@@ -1,0 +1,227 @@
+#[doc = "Register `CFIFO` reader"]
+pub type R = crate::R<CfifoSpec>;
+#[doc = "Register `CFIFO` writer"]
+pub type W = crate::W<CfifoSpec>;
+#[doc = "Receive FIFO Underflow Interrupt Enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Rxufe {
+    #[doc = "0: RXUF flag does not generate an interrupt to the host."]
+    _0 = 0,
+    #[doc = "1: RXUF flag generates an interrupt to the host."]
+    _1 = 1,
+}
+impl From<Rxufe> for bool {
+    #[inline(always)]
+    fn from(variant: Rxufe) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `RXUFE` reader - Receive FIFO Underflow Interrupt Enable"]
+pub type RxufeR = crate::BitReader<Rxufe>;
+impl RxufeR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Rxufe {
+        match self.bits {
+            false => Rxufe::_0,
+            true => Rxufe::_1,
+        }
+    }
+    #[doc = "RXUF flag does not generate an interrupt to the host."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Rxufe::_0
+    }
+    #[doc = "RXUF flag generates an interrupt to the host."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Rxufe::_1
+    }
+}
+#[doc = "Field `RXUFE` writer - Receive FIFO Underflow Interrupt Enable"]
+pub type RxufeW<'a, REG> = crate::BitWriter<'a, REG, Rxufe>;
+impl<'a, REG> RxufeW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "RXUF flag does not generate an interrupt to the host."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Rxufe::_0)
+    }
+    #[doc = "RXUF flag generates an interrupt to the host."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Rxufe::_1)
+    }
+}
+#[doc = "Transmit FIFO Overflow Interrupt Enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Txofe {
+    #[doc = "0: TXOF flag does not generate an interrupt to the host."]
+    _0 = 0,
+    #[doc = "1: TXOF flag generates an interrupt to the host."]
+    _1 = 1,
+}
+impl From<Txofe> for bool {
+    #[inline(always)]
+    fn from(variant: Txofe) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `TXOFE` reader - Transmit FIFO Overflow Interrupt Enable"]
+pub type TxofeR = crate::BitReader<Txofe>;
+impl TxofeR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Txofe {
+        match self.bits {
+            false => Txofe::_0,
+            true => Txofe::_1,
+        }
+    }
+    #[doc = "TXOF flag does not generate an interrupt to the host."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Txofe::_0
+    }
+    #[doc = "TXOF flag generates an interrupt to the host."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Txofe::_1
+    }
+}
+#[doc = "Field `TXOFE` writer - Transmit FIFO Overflow Interrupt Enable"]
+pub type TxofeW<'a, REG> = crate::BitWriter<'a, REG, Txofe>;
+impl<'a, REG> TxofeW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "TXOF flag does not generate an interrupt to the host."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Txofe::_0)
+    }
+    #[doc = "TXOF flag generates an interrupt to the host."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Txofe::_1)
+    }
+}
+#[doc = "Receive FIFO/Buffer Flush\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Rxflush {
+    #[doc = "0: No flush operation occurs."]
+    _0 = 0,
+    #[doc = "1: All data in the receive FIFO/buffer is cleared out."]
+    _1 = 1,
+}
+impl From<Rxflush> for bool {
+    #[inline(always)]
+    fn from(variant: Rxflush) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `RXFLUSH` writer - Receive FIFO/Buffer Flush"]
+pub type RxflushW<'a, REG> = crate::BitWriter<'a, REG, Rxflush>;
+impl<'a, REG> RxflushW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "No flush operation occurs."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Rxflush::_0)
+    }
+    #[doc = "All data in the receive FIFO/buffer is cleared out."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Rxflush::_1)
+    }
+}
+#[doc = "Transmit FIFO/Buffer Flush\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Txflush {
+    #[doc = "0: No flush operation occurs."]
+    _0 = 0,
+    #[doc = "1: All data in the transmit FIFO/Buffer is cleared out."]
+    _1 = 1,
+}
+impl From<Txflush> for bool {
+    #[inline(always)]
+    fn from(variant: Txflush) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `TXFLUSH` writer - Transmit FIFO/Buffer Flush"]
+pub type TxflushW<'a, REG> = crate::BitWriter<'a, REG, Txflush>;
+impl<'a, REG> TxflushW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "No flush operation occurs."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Txflush::_0)
+    }
+    #[doc = "All data in the transmit FIFO/Buffer is cleared out."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Txflush::_1)
+    }
+}
+impl R {
+    #[doc = "Bit 0 - Receive FIFO Underflow Interrupt Enable"]
+    #[inline(always)]
+    pub fn rxufe(&self) -> RxufeR {
+        RxufeR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Transmit FIFO Overflow Interrupt Enable"]
+    #[inline(always)]
+    pub fn txofe(&self) -> TxofeR {
+        TxofeR::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Receive FIFO Underflow Interrupt Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn rxufe(&mut self) -> RxufeW<CfifoSpec> {
+        RxufeW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Transmit FIFO Overflow Interrupt Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn txofe(&mut self) -> TxofeW<CfifoSpec> {
+        TxofeW::new(self, 1)
+    }
+    #[doc = "Bit 6 - Receive FIFO/Buffer Flush"]
+    #[inline(always)]
+    #[must_use]
+    pub fn rxflush(&mut self) -> RxflushW<CfifoSpec> {
+        RxflushW::new(self, 6)
+    }
+    #[doc = "Bit 7 - Transmit FIFO/Buffer Flush"]
+    #[inline(always)]
+    #[must_use]
+    pub fn txflush(&mut self) -> TxflushW<CfifoSpec> {
+        TxflushW::new(self, 7)
+    }
+}
+#[doc = "UART FIFO Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`cfifo::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfifo::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CfifoSpec;
+impl crate::RegisterSpec for CfifoSpec {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [`cfifo::R`](R) reader structure"]
+impl crate::Readable for CfifoSpec {}
+#[doc = "`write(|w| ..)` method takes [`cfifo::W`](W) writer structure"]
+impl crate::Writable for CfifoSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+}
+#[doc = "`reset()` method sets CFIFO to value 0"]
+impl crate::Resettable for CfifoSpec {
+    const RESET_VALUE: u8 = 0;
+}

@@ -1,0 +1,55 @@
+#[doc = "Register `PO%sDLY` reader"]
+pub type R = crate::R<PodlySpec>;
+#[doc = "Register `PO%sDLY` writer"]
+pub type W = crate::W<PodlySpec>;
+#[doc = "Field `DLY2` reader - PDB Pulse-Out Delay 2"]
+pub type Dly2R = crate::FieldReader<u16>;
+#[doc = "Field `DLY2` writer - PDB Pulse-Out Delay 2"]
+pub type Dly2W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+#[doc = "Field `DLY1` reader - PDB Pulse-Out Delay 1"]
+pub type Dly1R = crate::FieldReader<u16>;
+#[doc = "Field `DLY1` writer - PDB Pulse-Out Delay 1"]
+pub type Dly1W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+impl R {
+    #[doc = "Bits 0:15 - PDB Pulse-Out Delay 2"]
+    #[inline(always)]
+    pub fn dly2(&self) -> Dly2R {
+        Dly2R::new((self.bits & 0xffff) as u16)
+    }
+    #[doc = "Bits 16:31 - PDB Pulse-Out Delay 1"]
+    #[inline(always)]
+    pub fn dly1(&self) -> Dly1R {
+        Dly1R::new(((self.bits >> 16) & 0xffff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bits 0:15 - PDB Pulse-Out Delay 2"]
+    #[inline(always)]
+    #[must_use]
+    pub fn dly2(&mut self) -> Dly2W<PodlySpec> {
+        Dly2W::new(self, 0)
+    }
+    #[doc = "Bits 16:31 - PDB Pulse-Out Delay 1"]
+    #[inline(always)]
+    #[must_use]
+    pub fn dly1(&mut self) -> Dly1W<PodlySpec> {
+        Dly1W::new(self, 16)
+    }
+}
+#[doc = "Pulse-Out n Delay Register\n\nYou can [`read`](crate::Reg::read) this register and get [`podly::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`podly::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct PodlySpec;
+impl crate::RegisterSpec for PodlySpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`podly::R`](R) reader structure"]
+impl crate::Readable for PodlySpec {}
+#[doc = "`write(|w| ..)` method takes [`podly::W`](W) writer structure"]
+impl crate::Writable for PodlySpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets PO%sDLY to value 0"]
+impl crate::Resettable for PodlySpec {
+    const RESET_VALUE: u32 = 0;
+}

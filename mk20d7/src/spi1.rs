@@ -1,0 +1,160 @@
+#[repr(C)]
+#[doc = "Register block"]
+pub struct RegisterBlock {
+    mcr: Mcr,
+    _reserved1: [u8; 0x04],
+    tcr: Tcr,
+    _reserved_2_spi1_: [u8; 0x08],
+    _reserved3: [u8; 0x18],
+    sr: Sr,
+    rser: Rser,
+    _reserved_5_spi1_: [u8; 0x04],
+    popr: Popr,
+    txfr: [Txfr; 4],
+    _reserved8: [u8; 0x30],
+    rxfr: [Rxfr; 4],
+}
+impl RegisterBlock {
+    #[doc = "0x00 - DSPI Module Configuration Register"]
+    #[inline(always)]
+    pub const fn mcr(&self) -> &Mcr {
+        &self.mcr
+    }
+    #[doc = "0x08 - DSPI Transfer Count Register"]
+    #[inline(always)]
+    pub const fn tcr(&self) -> &Tcr {
+        &self.tcr
+    }
+    #[doc = "0x0c - DSPI Clock and Transfer Attributes Register (In Slave Mode)"]
+    #[inline(always)]
+    pub const fn spi1_ctar_slave(&self) -> &Spi1CtarSlave {
+        unsafe { &*(self as *const Self).cast::<u8>().add(12).cast() }
+    }
+    #[doc = "0x0c..0x14 - DSPI Clock and Transfer Attributes Register (In Master Mode)"]
+    #[inline(always)]
+    pub const fn spi1_ctar(&self, n: usize) -> &Spi1Ctar {
+        #[allow(clippy::no_effect)]
+        [(); 2][n];
+        unsafe { &*(self as *const Self).cast::<u8>().add(12).add(4 * n).cast() }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x0c..0x14 - DSPI Clock and Transfer Attributes Register (In Master Mode)"]
+    #[inline(always)]
+    pub fn spi1_ctar_iter(&self) -> impl Iterator<Item = &Spi1Ctar> {
+        (0..2)
+            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(12).add(4 * n).cast() })
+    }
+    #[doc = "0x2c - DSPI Status Register"]
+    #[inline(always)]
+    pub const fn sr(&self) -> &Sr {
+        &self.sr
+    }
+    #[doc = "0x30 - DSPI DMA/Interrupt Request Select and Enable Register"]
+    #[inline(always)]
+    pub const fn rser(&self) -> &Rser {
+        &self.rser
+    }
+    #[doc = "0x34 - DSPI PUSH TX FIFO Register In Slave Mode"]
+    #[inline(always)]
+    pub const fn spi1_pushr_slave(&self) -> &Spi1PushrSlave {
+        unsafe { &*(self as *const Self).cast::<u8>().add(52).cast() }
+    }
+    #[doc = "0x34 - DSPI PUSH TX FIFO Register In Master Mode"]
+    #[inline(always)]
+    pub const fn spi1_pushr(&self) -> &Spi1Pushr {
+        unsafe { &*(self as *const Self).cast::<u8>().add(52).cast() }
+    }
+    #[doc = "0x38 - DSPI POP RX FIFO Register"]
+    #[inline(always)]
+    pub const fn popr(&self) -> &Popr {
+        &self.popr
+    }
+    #[doc = "0x3c..0x4c - DSPI Transmit FIFO Registers"]
+    #[inline(always)]
+    pub const fn txfr(&self, n: usize) -> &Txfr {
+        &self.txfr[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x3c..0x4c - DSPI Transmit FIFO Registers"]
+    #[inline(always)]
+    pub fn txfr_iter(&self) -> impl Iterator<Item = &Txfr> {
+        self.txfr.iter()
+    }
+    #[doc = "0x7c..0x8c - DSPI Receive FIFO Registers"]
+    #[inline(always)]
+    pub const fn rxfr(&self, n: usize) -> &Rxfr {
+        &self.rxfr[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x7c..0x8c - DSPI Receive FIFO Registers"]
+    #[inline(always)]
+    pub fn rxfr_iter(&self) -> impl Iterator<Item = &Rxfr> {
+        self.rxfr.iter()
+    }
+}
+#[doc = "MCR (rw) register accessor: DSPI Module Configuration Register\n\nYou can [`read`](crate::Reg::read) this register and get [`mcr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mcr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mcr`]
+module"]
+#[doc(alias = "MCR")]
+pub type Mcr = crate::Reg<mcr::McrSpec>;
+#[doc = "DSPI Module Configuration Register"]
+pub mod mcr;
+#[doc = "TCR (rw) register accessor: DSPI Transfer Count Register\n\nYou can [`read`](crate::Reg::read) this register and get [`tcr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tcr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tcr`]
+module"]
+#[doc(alias = "TCR")]
+pub type Tcr = crate::Reg<tcr::TcrSpec>;
+#[doc = "DSPI Transfer Count Register"]
+pub mod tcr;
+#[doc = "SPI1_CTAR (rw) register accessor: DSPI Clock and Transfer Attributes Register (In Master Mode)\n\nYou can [`read`](crate::Reg::read) this register and get [`spi1_ctar::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spi1_ctar::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@spi1_ctar`]
+module"]
+#[doc(alias = "SPI1_CTAR")]
+pub type Spi1Ctar = crate::Reg<spi1_ctar::Spi1CtarSpec>;
+#[doc = "DSPI Clock and Transfer Attributes Register (In Master Mode)"]
+pub mod spi1_ctar;
+#[doc = "SPI1_CTAR_SLAVE (rw) register accessor: DSPI Clock and Transfer Attributes Register (In Slave Mode)\n\nYou can [`read`](crate::Reg::read) this register and get [`spi1_ctar_slave::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spi1_ctar_slave::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@spi1_ctar_slave`]
+module"]
+#[doc(alias = "SPI1_CTAR_SLAVE")]
+pub type Spi1CtarSlave = crate::Reg<spi1_ctar_slave::Spi1CtarSlaveSpec>;
+#[doc = "DSPI Clock and Transfer Attributes Register (In Slave Mode)"]
+pub mod spi1_ctar_slave;
+#[doc = "SR (rw) register accessor: DSPI Status Register\n\nYou can [`read`](crate::Reg::read) this register and get [`sr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sr`]
+module"]
+#[doc(alias = "SR")]
+pub type Sr = crate::Reg<sr::SrSpec>;
+#[doc = "DSPI Status Register"]
+pub mod sr;
+#[doc = "RSER (rw) register accessor: DSPI DMA/Interrupt Request Select and Enable Register\n\nYou can [`read`](crate::Reg::read) this register and get [`rser::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rser::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rser`]
+module"]
+#[doc(alias = "RSER")]
+pub type Rser = crate::Reg<rser::RserSpec>;
+#[doc = "DSPI DMA/Interrupt Request Select and Enable Register"]
+pub mod rser;
+#[doc = "SPI1_PUSHR (rw) register accessor: DSPI PUSH TX FIFO Register In Master Mode\n\nYou can [`read`](crate::Reg::read) this register and get [`spi1_pushr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spi1_pushr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@spi1_pushr`]
+module"]
+#[doc(alias = "SPI1_PUSHR")]
+pub type Spi1Pushr = crate::Reg<spi1_pushr::Spi1PushrSpec>;
+#[doc = "DSPI PUSH TX FIFO Register In Master Mode"]
+pub mod spi1_pushr;
+#[doc = "SPI1_PUSHR_SLAVE (rw) register accessor: DSPI PUSH TX FIFO Register In Slave Mode\n\nYou can [`read`](crate::Reg::read) this register and get [`spi1_pushr_slave::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spi1_pushr_slave::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@spi1_pushr_slave`]
+module"]
+#[doc(alias = "SPI1_PUSHR_SLAVE")]
+pub type Spi1PushrSlave = crate::Reg<spi1_pushr_slave::Spi1PushrSlaveSpec>;
+#[doc = "DSPI PUSH TX FIFO Register In Slave Mode"]
+pub mod spi1_pushr_slave;
+#[doc = "POPR (r) register accessor: DSPI POP RX FIFO Register\n\nYou can [`read`](crate::Reg::read) this register and get [`popr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@popr`]
+module"]
+#[doc(alias = "POPR")]
+pub type Popr = crate::Reg<popr::PoprSpec>;
+#[doc = "DSPI POP RX FIFO Register"]
+pub mod popr;
+#[doc = "TXFR (r) register accessor: DSPI Transmit FIFO Registers\n\nYou can [`read`](crate::Reg::read) this register and get [`txfr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@txfr`]
+module"]
+#[doc(alias = "TXFR")]
+pub type Txfr = crate::Reg<txfr::TxfrSpec>;
+#[doc = "DSPI Transmit FIFO Registers"]
+pub mod txfr;
+#[doc = "RXFR (r) register accessor: DSPI Receive FIFO Registers\n\nYou can [`read`](crate::Reg::read) this register and get [`rxfr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rxfr`]
+module"]
+#[doc(alias = "RXFR")]
+pub type Rxfr = crate::Reg<rxfr::RxfrSpec>;
+#[doc = "DSPI Receive FIFO Registers"]
+pub mod rxfr;

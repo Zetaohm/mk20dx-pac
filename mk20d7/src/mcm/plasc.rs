@@ -1,0 +1,62 @@
+#[doc = "Register `PLASC` reader"]
+pub type R = crate::R<PlascSpec>;
+#[doc = "Each bit in the ASC field indicates if there is a corresponding connection to the crossbar switch's slave input port.\n\nValue on reset: 31"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Asc {
+    #[doc = "0: A bus slave connection to AXBS input port n is absent"]
+    _0 = 0,
+    #[doc = "1: A bus slave connection to AXBS input port n is present"]
+    _1 = 1,
+}
+impl From<Asc> for u8 {
+    #[inline(always)]
+    fn from(variant: Asc) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Asc {
+    type Ux = u8;
+}
+impl crate::IsEnum for Asc {}
+#[doc = "Field `ASC` reader - Each bit in the ASC field indicates if there is a corresponding connection to the crossbar switch's slave input port."]
+pub type AscR = crate::FieldReader<Asc>;
+impl AscR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<Asc> {
+        match self.bits {
+            0 => Some(Asc::_0),
+            1 => Some(Asc::_1),
+            _ => None,
+        }
+    }
+    #[doc = "A bus slave connection to AXBS input port n is absent"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Asc::_0
+    }
+    #[doc = "A bus slave connection to AXBS input port n is present"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Asc::_1
+    }
+}
+impl R {
+    #[doc = "Bits 0:7 - Each bit in the ASC field indicates if there is a corresponding connection to the crossbar switch's slave input port."]
+    #[inline(always)]
+    pub fn asc(&self) -> AscR {
+        AscR::new((self.bits & 0xff) as u8)
+    }
+}
+#[doc = "Crossbar switch (AXBS) slave configuration\n\nYou can [`read`](crate::Reg::read) this register and get [`plasc::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct PlascSpec;
+impl crate::RegisterSpec for PlascSpec {
+    type Ux = u16;
+}
+#[doc = "`read()` method returns [`plasc::R`](R) reader structure"]
+impl crate::Readable for PlascSpec {}
+#[doc = "`reset()` method sets PLASC to value 0x1f"]
+impl crate::Resettable for PlascSpec {
+    const RESET_VALUE: u16 = 0x1f;
+}

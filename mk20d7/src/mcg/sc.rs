@@ -1,0 +1,494 @@
+#[doc = "Register `SC` reader"]
+pub type R = crate::R<ScSpec>;
+#[doc = "Register `SC` writer"]
+pub type W = crate::W<ScSpec>;
+#[doc = "OSC0 Loss of Clock Status\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Locs0 {
+    #[doc = "0: Loss of OSC0 has not occurred."]
+    _0 = 0,
+    #[doc = "1: Loss of OSC0 has occurred."]
+    _1 = 1,
+}
+impl From<Locs0> for bool {
+    #[inline(always)]
+    fn from(variant: Locs0) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `LOCS0` reader - OSC0 Loss of Clock Status"]
+pub type Locs0R = crate::BitReader<Locs0>;
+impl Locs0R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Locs0 {
+        match self.bits {
+            false => Locs0::_0,
+            true => Locs0::_1,
+        }
+    }
+    #[doc = "Loss of OSC0 has not occurred."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Locs0::_0
+    }
+    #[doc = "Loss of OSC0 has occurred."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Locs0::_1
+    }
+}
+#[doc = "Field `LOCS0` writer - OSC0 Loss of Clock Status"]
+pub type Locs0W<'a, REG> = crate::BitWriter<'a, REG, Locs0>;
+impl<'a, REG> Locs0W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Loss of OSC0 has not occurred."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Locs0::_0)
+    }
+    #[doc = "Loss of OSC0 has occurred."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Locs0::_1)
+    }
+}
+#[doc = "Fast Clock Internal Reference Divider\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Fcrdiv {
+    #[doc = "0: Divide Factor is 1"]
+    _000 = 0,
+    #[doc = "1: Divide Factor is 2."]
+    _001 = 1,
+    #[doc = "2: Divide Factor is 4."]
+    _010 = 2,
+    #[doc = "3: Divide Factor is 8."]
+    _011 = 3,
+    #[doc = "4: Divide Factor is 16"]
+    _100 = 4,
+    #[doc = "5: Divide Factor is 32"]
+    _101 = 5,
+    #[doc = "6: Divide Factor is 64"]
+    _110 = 6,
+    #[doc = "7: Divide Factor is 128."]
+    _111 = 7,
+}
+impl From<Fcrdiv> for u8 {
+    #[inline(always)]
+    fn from(variant: Fcrdiv) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Fcrdiv {
+    type Ux = u8;
+}
+impl crate::IsEnum for Fcrdiv {}
+#[doc = "Field `FCRDIV` reader - Fast Clock Internal Reference Divider"]
+pub type FcrdivR = crate::FieldReader<Fcrdiv>;
+impl FcrdivR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Fcrdiv {
+        match self.bits {
+            0 => Fcrdiv::_000,
+            1 => Fcrdiv::_001,
+            2 => Fcrdiv::_010,
+            3 => Fcrdiv::_011,
+            4 => Fcrdiv::_100,
+            5 => Fcrdiv::_101,
+            6 => Fcrdiv::_110,
+            7 => Fcrdiv::_111,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "Divide Factor is 1"]
+    #[inline(always)]
+    pub fn is_000(&self) -> bool {
+        *self == Fcrdiv::_000
+    }
+    #[doc = "Divide Factor is 2."]
+    #[inline(always)]
+    pub fn is_001(&self) -> bool {
+        *self == Fcrdiv::_001
+    }
+    #[doc = "Divide Factor is 4."]
+    #[inline(always)]
+    pub fn is_010(&self) -> bool {
+        *self == Fcrdiv::_010
+    }
+    #[doc = "Divide Factor is 8."]
+    #[inline(always)]
+    pub fn is_011(&self) -> bool {
+        *self == Fcrdiv::_011
+    }
+    #[doc = "Divide Factor is 16"]
+    #[inline(always)]
+    pub fn is_100(&self) -> bool {
+        *self == Fcrdiv::_100
+    }
+    #[doc = "Divide Factor is 32"]
+    #[inline(always)]
+    pub fn is_101(&self) -> bool {
+        *self == Fcrdiv::_101
+    }
+    #[doc = "Divide Factor is 64"]
+    #[inline(always)]
+    pub fn is_110(&self) -> bool {
+        *self == Fcrdiv::_110
+    }
+    #[doc = "Divide Factor is 128."]
+    #[inline(always)]
+    pub fn is_111(&self) -> bool {
+        *self == Fcrdiv::_111
+    }
+}
+#[doc = "Field `FCRDIV` writer - Fast Clock Internal Reference Divider"]
+pub type FcrdivW<'a, REG> = crate::FieldWriter<'a, REG, 3, Fcrdiv, crate::Safe>;
+impl<'a, REG> FcrdivW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "Divide Factor is 1"]
+    #[inline(always)]
+    pub fn _000(self) -> &'a mut crate::W<REG> {
+        self.variant(Fcrdiv::_000)
+    }
+    #[doc = "Divide Factor is 2."]
+    #[inline(always)]
+    pub fn _001(self) -> &'a mut crate::W<REG> {
+        self.variant(Fcrdiv::_001)
+    }
+    #[doc = "Divide Factor is 4."]
+    #[inline(always)]
+    pub fn _010(self) -> &'a mut crate::W<REG> {
+        self.variant(Fcrdiv::_010)
+    }
+    #[doc = "Divide Factor is 8."]
+    #[inline(always)]
+    pub fn _011(self) -> &'a mut crate::W<REG> {
+        self.variant(Fcrdiv::_011)
+    }
+    #[doc = "Divide Factor is 16"]
+    #[inline(always)]
+    pub fn _100(self) -> &'a mut crate::W<REG> {
+        self.variant(Fcrdiv::_100)
+    }
+    #[doc = "Divide Factor is 32"]
+    #[inline(always)]
+    pub fn _101(self) -> &'a mut crate::W<REG> {
+        self.variant(Fcrdiv::_101)
+    }
+    #[doc = "Divide Factor is 64"]
+    #[inline(always)]
+    pub fn _110(self) -> &'a mut crate::W<REG> {
+        self.variant(Fcrdiv::_110)
+    }
+    #[doc = "Divide Factor is 128."]
+    #[inline(always)]
+    pub fn _111(self) -> &'a mut crate::W<REG> {
+        self.variant(Fcrdiv::_111)
+    }
+}
+#[doc = "FLL Filter Preserve Enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Fltprsrv {
+    #[doc = "0: FLL filter and FLL frequency will reset on changes to currect clock mode."]
+    _0 = 0,
+    #[doc = "1: Fll filter and FLL frequency retain their previous values during new clock mode change."]
+    _1 = 1,
+}
+impl From<Fltprsrv> for bool {
+    #[inline(always)]
+    fn from(variant: Fltprsrv) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FLTPRSRV` reader - FLL Filter Preserve Enable"]
+pub type FltprsrvR = crate::BitReader<Fltprsrv>;
+impl FltprsrvR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Fltprsrv {
+        match self.bits {
+            false => Fltprsrv::_0,
+            true => Fltprsrv::_1,
+        }
+    }
+    #[doc = "FLL filter and FLL frequency will reset on changes to currect clock mode."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Fltprsrv::_0
+    }
+    #[doc = "Fll filter and FLL frequency retain their previous values during new clock mode change."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Fltprsrv::_1
+    }
+}
+#[doc = "Field `FLTPRSRV` writer - FLL Filter Preserve Enable"]
+pub type FltprsrvW<'a, REG> = crate::BitWriter<'a, REG, Fltprsrv>;
+impl<'a, REG> FltprsrvW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "FLL filter and FLL frequency will reset on changes to currect clock mode."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Fltprsrv::_0)
+    }
+    #[doc = "Fll filter and FLL frequency retain their previous values during new clock mode change."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Fltprsrv::_1)
+    }
+}
+#[doc = "Automatic Trim machine Fail Flag\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Atmf {
+    #[doc = "0: Automatic Trim Machine completed normally."]
+    _0 = 0,
+    #[doc = "1: Automatic Trim Machine failed."]
+    _1 = 1,
+}
+impl From<Atmf> for bool {
+    #[inline(always)]
+    fn from(variant: Atmf) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `ATMF` reader - Automatic Trim machine Fail Flag"]
+pub type AtmfR = crate::BitReader<Atmf>;
+impl AtmfR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Atmf {
+        match self.bits {
+            false => Atmf::_0,
+            true => Atmf::_1,
+        }
+    }
+    #[doc = "Automatic Trim Machine completed normally."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Atmf::_0
+    }
+    #[doc = "Automatic Trim Machine failed."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Atmf::_1
+    }
+}
+#[doc = "Field `ATMF` writer - Automatic Trim machine Fail Flag"]
+pub type AtmfW<'a, REG> = crate::BitWriter<'a, REG, Atmf>;
+impl<'a, REG> AtmfW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Automatic Trim Machine completed normally."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Atmf::_0)
+    }
+    #[doc = "Automatic Trim Machine failed."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Atmf::_1)
+    }
+}
+#[doc = "Automatic Trim Machine Select\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Atms {
+    #[doc = "0: 32 kHz Internal Reference Clock selected."]
+    _0 = 0,
+    #[doc = "1: 4 MHz Internal Reference Clock selected."]
+    _1 = 1,
+}
+impl From<Atms> for bool {
+    #[inline(always)]
+    fn from(variant: Atms) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `ATMS` reader - Automatic Trim Machine Select"]
+pub type AtmsR = crate::BitReader<Atms>;
+impl AtmsR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Atms {
+        match self.bits {
+            false => Atms::_0,
+            true => Atms::_1,
+        }
+    }
+    #[doc = "32 kHz Internal Reference Clock selected."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Atms::_0
+    }
+    #[doc = "4 MHz Internal Reference Clock selected."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Atms::_1
+    }
+}
+#[doc = "Field `ATMS` writer - Automatic Trim Machine Select"]
+pub type AtmsW<'a, REG> = crate::BitWriter<'a, REG, Atms>;
+impl<'a, REG> AtmsW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "32 kHz Internal Reference Clock selected."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Atms::_0)
+    }
+    #[doc = "4 MHz Internal Reference Clock selected."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Atms::_1)
+    }
+}
+#[doc = "Automatic Trim Machine Enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Atme {
+    #[doc = "0: Auto Trim Machine disabled."]
+    _0 = 0,
+    #[doc = "1: Auto Trim Machine enabled."]
+    _1 = 1,
+}
+impl From<Atme> for bool {
+    #[inline(always)]
+    fn from(variant: Atme) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `ATME` reader - Automatic Trim Machine Enable"]
+pub type AtmeR = crate::BitReader<Atme>;
+impl AtmeR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Atme {
+        match self.bits {
+            false => Atme::_0,
+            true => Atme::_1,
+        }
+    }
+    #[doc = "Auto Trim Machine disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Atme::_0
+    }
+    #[doc = "Auto Trim Machine enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Atme::_1
+    }
+}
+#[doc = "Field `ATME` writer - Automatic Trim Machine Enable"]
+pub type AtmeW<'a, REG> = crate::BitWriter<'a, REG, Atme>;
+impl<'a, REG> AtmeW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Auto Trim Machine disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Atme::_0)
+    }
+    #[doc = "Auto Trim Machine enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Atme::_1)
+    }
+}
+impl R {
+    #[doc = "Bit 0 - OSC0 Loss of Clock Status"]
+    #[inline(always)]
+    pub fn locs0(&self) -> Locs0R {
+        Locs0R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bits 1:3 - Fast Clock Internal Reference Divider"]
+    #[inline(always)]
+    pub fn fcrdiv(&self) -> FcrdivR {
+        FcrdivR::new((self.bits >> 1) & 7)
+    }
+    #[doc = "Bit 4 - FLL Filter Preserve Enable"]
+    #[inline(always)]
+    pub fn fltprsrv(&self) -> FltprsrvR {
+        FltprsrvR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - Automatic Trim machine Fail Flag"]
+    #[inline(always)]
+    pub fn atmf(&self) -> AtmfR {
+        AtmfR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - Automatic Trim Machine Select"]
+    #[inline(always)]
+    pub fn atms(&self) -> AtmsR {
+        AtmsR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - Automatic Trim Machine Enable"]
+    #[inline(always)]
+    pub fn atme(&self) -> AtmeR {
+        AtmeR::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - OSC0 Loss of Clock Status"]
+    #[inline(always)]
+    #[must_use]
+    pub fn locs0(&mut self) -> Locs0W<ScSpec> {
+        Locs0W::new(self, 0)
+    }
+    #[doc = "Bits 1:3 - Fast Clock Internal Reference Divider"]
+    #[inline(always)]
+    #[must_use]
+    pub fn fcrdiv(&mut self) -> FcrdivW<ScSpec> {
+        FcrdivW::new(self, 1)
+    }
+    #[doc = "Bit 4 - FLL Filter Preserve Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn fltprsrv(&mut self) -> FltprsrvW<ScSpec> {
+        FltprsrvW::new(self, 4)
+    }
+    #[doc = "Bit 5 - Automatic Trim machine Fail Flag"]
+    #[inline(always)]
+    #[must_use]
+    pub fn atmf(&mut self) -> AtmfW<ScSpec> {
+        AtmfW::new(self, 5)
+    }
+    #[doc = "Bit 6 - Automatic Trim Machine Select"]
+    #[inline(always)]
+    #[must_use]
+    pub fn atms(&mut self) -> AtmsW<ScSpec> {
+        AtmsW::new(self, 6)
+    }
+    #[doc = "Bit 7 - Automatic Trim Machine Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn atme(&mut self) -> AtmeW<ScSpec> {
+        AtmeW::new(self, 7)
+    }
+}
+#[doc = "MCG Status and Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`sc::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sc::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ScSpec;
+impl crate::RegisterSpec for ScSpec {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [`sc::R`](R) reader structure"]
+impl crate::Readable for ScSpec {}
+#[doc = "`write(|w| ..)` method takes [`sc::W`](W) writer structure"]
+impl crate::Writable for ScSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+}
+#[doc = "`reset()` method sets SC to value 0x02"]
+impl crate::Resettable for ScSpec {
+    const RESET_VALUE: u8 = 0x02;
+}

@@ -1,0 +1,84 @@
+#[repr(C)]
+#[doc = "Register block"]
+pub struct RegisterBlock {
+    csar: (),
+    _reserved1: [u8; 0x04],
+    csmr: (),
+    _reserved2: [u8; 0x04],
+    cscr: (),
+    _reserved3: [u8; 0x58],
+    cspmcr: Cspmcr,
+}
+impl RegisterBlock {
+    #[doc = "0x00..0x18 - Chip select address register"]
+    #[inline(always)]
+    pub const fn csar(&self, n: usize) -> &Csar {
+        #[allow(clippy::no_effect)]
+        [(); 6][n];
+        unsafe { &*(self as *const Self).cast::<u8>().add(0).add(12 * n).cast() }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x18 - Chip select address register"]
+    #[inline(always)]
+    pub fn csar_iter(&self) -> impl Iterator<Item = &Csar> {
+        (0..6)
+            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(0).add(12 * n).cast() })
+    }
+    #[doc = "0x04..0x1c - Chip select mask register"]
+    #[inline(always)]
+    pub const fn csmr(&self, n: usize) -> &Csmr {
+        #[allow(clippy::no_effect)]
+        [(); 6][n];
+        unsafe { &*(self as *const Self).cast::<u8>().add(4).add(12 * n).cast() }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x04..0x1c - Chip select mask register"]
+    #[inline(always)]
+    pub fn csmr_iter(&self) -> impl Iterator<Item = &Csmr> {
+        (0..6)
+            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(4).add(12 * n).cast() })
+    }
+    #[doc = "0x08..0x20 - Chip select control register"]
+    #[inline(always)]
+    pub const fn cscr(&self, n: usize) -> &Cscr {
+        #[allow(clippy::no_effect)]
+        [(); 6][n];
+        unsafe { &*(self as *const Self).cast::<u8>().add(8).add(12 * n).cast() }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x08..0x20 - Chip select control register"]
+    #[inline(always)]
+    pub fn cscr_iter(&self) -> impl Iterator<Item = &Cscr> {
+        (0..6)
+            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(8).add(12 * n).cast() })
+    }
+    #[doc = "0x60 - Chip select port multiplexing control register"]
+    #[inline(always)]
+    pub const fn cspmcr(&self) -> &Cspmcr {
+        &self.cspmcr
+    }
+}
+#[doc = "CSAR (rw) register accessor: Chip select address register\n\nYou can [`read`](crate::Reg::read) this register and get [`csar::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`csar::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@csar`]
+module"]
+#[doc(alias = "CSAR")]
+pub type Csar = crate::Reg<csar::CsarSpec>;
+#[doc = "Chip select address register"]
+pub mod csar;
+#[doc = "CSMR (rw) register accessor: Chip select mask register\n\nYou can [`read`](crate::Reg::read) this register and get [`csmr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`csmr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@csmr`]
+module"]
+#[doc(alias = "CSMR")]
+pub type Csmr = crate::Reg<csmr::CsmrSpec>;
+#[doc = "Chip select mask register"]
+pub mod csmr;
+#[doc = "CSCR (rw) register accessor: Chip select control register\n\nYou can [`read`](crate::Reg::read) this register and get [`cscr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cscr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cscr`]
+module"]
+#[doc(alias = "CSCR")]
+pub type Cscr = crate::Reg<cscr::CscrSpec>;
+#[doc = "Chip select control register"]
+pub mod cscr;
+#[doc = "CSPMCR (rw) register accessor: Chip select port multiplexing control register\n\nYou can [`read`](crate::Reg::read) this register and get [`cspmcr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cspmcr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cspmcr`]
+module"]
+#[doc(alias = "CSPMCR")]
+pub type Cspmcr = crate::Reg<cspmcr::CspmcrSpec>;
+#[doc = "Chip select port multiplexing control register"]
+pub mod cspmcr;

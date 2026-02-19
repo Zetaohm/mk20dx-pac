@@ -1,0 +1,793 @@
+#[doc = "Register `MPRA` reader"]
+pub type R = crate::R<MpraSpec>;
+#[doc = "Register `MPRA` writer"]
+pub type W = crate::W<MpraSpec>;
+#[doc = "Master privilege level\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Mpl3 {
+    #[doc = "0: Accesses from this master are forced to user-mode."]
+    _0 = 0,
+    #[doc = "1: Accesses from this master are not forced to user-mode."]
+    _1 = 1,
+}
+impl From<Mpl3> for bool {
+    #[inline(always)]
+    fn from(variant: Mpl3) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `MPL3` reader - Master privilege level"]
+pub type Mpl3R = crate::BitReader<Mpl3>;
+impl Mpl3R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Mpl3 {
+        match self.bits {
+            false => Mpl3::_0,
+            true => Mpl3::_1,
+        }
+    }
+    #[doc = "Accesses from this master are forced to user-mode."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Mpl3::_0
+    }
+    #[doc = "Accesses from this master are not forced to user-mode."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Mpl3::_1
+    }
+}
+#[doc = "Field `MPL3` writer - Master privilege level"]
+pub type Mpl3W<'a, REG> = crate::BitWriter<'a, REG, Mpl3>;
+impl<'a, REG> Mpl3W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Accesses from this master are forced to user-mode."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Mpl3::_0)
+    }
+    #[doc = "Accesses from this master are not forced to user-mode."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Mpl3::_1)
+    }
+}
+#[doc = "Master trusted for writes\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Mtw3 {
+    #[doc = "0: This master is not trusted for write accesses."]
+    _0 = 0,
+    #[doc = "1: This master is trusted for write accesses."]
+    _1 = 1,
+}
+impl From<Mtw3> for bool {
+    #[inline(always)]
+    fn from(variant: Mtw3) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `MTW3` reader - Master trusted for writes"]
+pub type Mtw3R = crate::BitReader<Mtw3>;
+impl Mtw3R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Mtw3 {
+        match self.bits {
+            false => Mtw3::_0,
+            true => Mtw3::_1,
+        }
+    }
+    #[doc = "This master is not trusted for write accesses."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Mtw3::_0
+    }
+    #[doc = "This master is trusted for write accesses."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Mtw3::_1
+    }
+}
+#[doc = "Field `MTW3` writer - Master trusted for writes"]
+pub type Mtw3W<'a, REG> = crate::BitWriter<'a, REG, Mtw3>;
+impl<'a, REG> Mtw3W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "This master is not trusted for write accesses."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Mtw3::_0)
+    }
+    #[doc = "This master is trusted for write accesses."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Mtw3::_1)
+    }
+}
+#[doc = "Master trusted for read\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Mtr3 {
+    #[doc = "0: This master is not trusted for read accesses."]
+    _0 = 0,
+    #[doc = "1: This master is trusted for read accesses."]
+    _1 = 1,
+}
+impl From<Mtr3> for bool {
+    #[inline(always)]
+    fn from(variant: Mtr3) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `MTR3` reader - Master trusted for read"]
+pub type Mtr3R = crate::BitReader<Mtr3>;
+impl Mtr3R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Mtr3 {
+        match self.bits {
+            false => Mtr3::_0,
+            true => Mtr3::_1,
+        }
+    }
+    #[doc = "This master is not trusted for read accesses."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Mtr3::_0
+    }
+    #[doc = "This master is trusted for read accesses."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Mtr3::_1
+    }
+}
+#[doc = "Field `MTR3` writer - Master trusted for read"]
+pub type Mtr3W<'a, REG> = crate::BitWriter<'a, REG, Mtr3>;
+impl<'a, REG> Mtr3W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "This master is not trusted for read accesses."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Mtr3::_0)
+    }
+    #[doc = "This master is trusted for read accesses."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Mtr3::_1)
+    }
+}
+#[doc = "Master privilege level\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Mpl2 {
+    #[doc = "0: Accesses from this master are forced to user-mode."]
+    _0 = 0,
+    #[doc = "1: Accesses from this master are not forced to user-mode."]
+    _1 = 1,
+}
+impl From<Mpl2> for bool {
+    #[inline(always)]
+    fn from(variant: Mpl2) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `MPL2` reader - Master privilege level"]
+pub type Mpl2R = crate::BitReader<Mpl2>;
+impl Mpl2R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Mpl2 {
+        match self.bits {
+            false => Mpl2::_0,
+            true => Mpl2::_1,
+        }
+    }
+    #[doc = "Accesses from this master are forced to user-mode."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Mpl2::_0
+    }
+    #[doc = "Accesses from this master are not forced to user-mode."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Mpl2::_1
+    }
+}
+#[doc = "Field `MPL2` writer - Master privilege level"]
+pub type Mpl2W<'a, REG> = crate::BitWriter<'a, REG, Mpl2>;
+impl<'a, REG> Mpl2W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Accesses from this master are forced to user-mode."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Mpl2::_0)
+    }
+    #[doc = "Accesses from this master are not forced to user-mode."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Mpl2::_1)
+    }
+}
+#[doc = "Master trusted for writes\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Mtw2 {
+    #[doc = "0: This master is not trusted for write accesses."]
+    _0 = 0,
+    #[doc = "1: This master is trusted for write accesses."]
+    _1 = 1,
+}
+impl From<Mtw2> for bool {
+    #[inline(always)]
+    fn from(variant: Mtw2) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `MTW2` reader - Master trusted for writes"]
+pub type Mtw2R = crate::BitReader<Mtw2>;
+impl Mtw2R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Mtw2 {
+        match self.bits {
+            false => Mtw2::_0,
+            true => Mtw2::_1,
+        }
+    }
+    #[doc = "This master is not trusted for write accesses."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Mtw2::_0
+    }
+    #[doc = "This master is trusted for write accesses."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Mtw2::_1
+    }
+}
+#[doc = "Field `MTW2` writer - Master trusted for writes"]
+pub type Mtw2W<'a, REG> = crate::BitWriter<'a, REG, Mtw2>;
+impl<'a, REG> Mtw2W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "This master is not trusted for write accesses."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Mtw2::_0)
+    }
+    #[doc = "This master is trusted for write accesses."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Mtw2::_1)
+    }
+}
+#[doc = "Master trusted for read\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Mtr2 {
+    #[doc = "0: This master is not trusted for read accesses."]
+    _0 = 0,
+    #[doc = "1: This master is trusted for read accesses."]
+    _1 = 1,
+}
+impl From<Mtr2> for bool {
+    #[inline(always)]
+    fn from(variant: Mtr2) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `MTR2` reader - Master trusted for read"]
+pub type Mtr2R = crate::BitReader<Mtr2>;
+impl Mtr2R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Mtr2 {
+        match self.bits {
+            false => Mtr2::_0,
+            true => Mtr2::_1,
+        }
+    }
+    #[doc = "This master is not trusted for read accesses."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Mtr2::_0
+    }
+    #[doc = "This master is trusted for read accesses."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Mtr2::_1
+    }
+}
+#[doc = "Field `MTR2` writer - Master trusted for read"]
+pub type Mtr2W<'a, REG> = crate::BitWriter<'a, REG, Mtr2>;
+impl<'a, REG> Mtr2W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "This master is not trusted for read accesses."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Mtr2::_0)
+    }
+    #[doc = "This master is trusted for read accesses."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Mtr2::_1)
+    }
+}
+#[doc = "Master privilege level\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Mpl1 {
+    #[doc = "0: Accesses from this master are forced to user-mode."]
+    _0 = 0,
+    #[doc = "1: Accesses from this master are not forced to user-mode."]
+    _1 = 1,
+}
+impl From<Mpl1> for bool {
+    #[inline(always)]
+    fn from(variant: Mpl1) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `MPL1` reader - Master privilege level"]
+pub type Mpl1R = crate::BitReader<Mpl1>;
+impl Mpl1R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Mpl1 {
+        match self.bits {
+            false => Mpl1::_0,
+            true => Mpl1::_1,
+        }
+    }
+    #[doc = "Accesses from this master are forced to user-mode."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Mpl1::_0
+    }
+    #[doc = "Accesses from this master are not forced to user-mode."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Mpl1::_1
+    }
+}
+#[doc = "Field `MPL1` writer - Master privilege level"]
+pub type Mpl1W<'a, REG> = crate::BitWriter<'a, REG, Mpl1>;
+impl<'a, REG> Mpl1W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Accesses from this master are forced to user-mode."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Mpl1::_0)
+    }
+    #[doc = "Accesses from this master are not forced to user-mode."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Mpl1::_1)
+    }
+}
+#[doc = "Master trusted for writes\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Mtw1 {
+    #[doc = "0: This master is not trusted for write accesses."]
+    _0 = 0,
+    #[doc = "1: This master is trusted for write accesses."]
+    _1 = 1,
+}
+impl From<Mtw1> for bool {
+    #[inline(always)]
+    fn from(variant: Mtw1) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `MTW1` reader - Master trusted for writes"]
+pub type Mtw1R = crate::BitReader<Mtw1>;
+impl Mtw1R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Mtw1 {
+        match self.bits {
+            false => Mtw1::_0,
+            true => Mtw1::_1,
+        }
+    }
+    #[doc = "This master is not trusted for write accesses."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Mtw1::_0
+    }
+    #[doc = "This master is trusted for write accesses."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Mtw1::_1
+    }
+}
+#[doc = "Field `MTW1` writer - Master trusted for writes"]
+pub type Mtw1W<'a, REG> = crate::BitWriter<'a, REG, Mtw1>;
+impl<'a, REG> Mtw1W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "This master is not trusted for write accesses."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Mtw1::_0)
+    }
+    #[doc = "This master is trusted for write accesses."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Mtw1::_1)
+    }
+}
+#[doc = "Master trusted for read\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Mtr1 {
+    #[doc = "0: This master is not trusted for read accesses."]
+    _0 = 0,
+    #[doc = "1: This master is trusted for read accesses."]
+    _1 = 1,
+}
+impl From<Mtr1> for bool {
+    #[inline(always)]
+    fn from(variant: Mtr1) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `MTR1` reader - Master trusted for read"]
+pub type Mtr1R = crate::BitReader<Mtr1>;
+impl Mtr1R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Mtr1 {
+        match self.bits {
+            false => Mtr1::_0,
+            true => Mtr1::_1,
+        }
+    }
+    #[doc = "This master is not trusted for read accesses."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Mtr1::_0
+    }
+    #[doc = "This master is trusted for read accesses."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Mtr1::_1
+    }
+}
+#[doc = "Field `MTR1` writer - Master trusted for read"]
+pub type Mtr1W<'a, REG> = crate::BitWriter<'a, REG, Mtr1>;
+impl<'a, REG> Mtr1W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "This master is not trusted for read accesses."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Mtr1::_0)
+    }
+    #[doc = "This master is trusted for read accesses."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Mtr1::_1)
+    }
+}
+#[doc = "Master privilege level\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Mpl0 {
+    #[doc = "0: Accesses from this master are forced to user-mode."]
+    _0 = 0,
+    #[doc = "1: Accesses from this master are not forced to user-mode."]
+    _1 = 1,
+}
+impl From<Mpl0> for bool {
+    #[inline(always)]
+    fn from(variant: Mpl0) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `MPL0` reader - Master privilege level"]
+pub type Mpl0R = crate::BitReader<Mpl0>;
+impl Mpl0R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Mpl0 {
+        match self.bits {
+            false => Mpl0::_0,
+            true => Mpl0::_1,
+        }
+    }
+    #[doc = "Accesses from this master are forced to user-mode."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Mpl0::_0
+    }
+    #[doc = "Accesses from this master are not forced to user-mode."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Mpl0::_1
+    }
+}
+#[doc = "Field `MPL0` writer - Master privilege level"]
+pub type Mpl0W<'a, REG> = crate::BitWriter<'a, REG, Mpl0>;
+impl<'a, REG> Mpl0W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Accesses from this master are forced to user-mode."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Mpl0::_0)
+    }
+    #[doc = "Accesses from this master are not forced to user-mode."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Mpl0::_1)
+    }
+}
+#[doc = "Master trusted for writes\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Mtw0 {
+    #[doc = "0: This master is not trusted for write accesses."]
+    _0 = 0,
+    #[doc = "1: This master is trusted for write accesses."]
+    _1 = 1,
+}
+impl From<Mtw0> for bool {
+    #[inline(always)]
+    fn from(variant: Mtw0) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `MTW0` reader - Master trusted for writes"]
+pub type Mtw0R = crate::BitReader<Mtw0>;
+impl Mtw0R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Mtw0 {
+        match self.bits {
+            false => Mtw0::_0,
+            true => Mtw0::_1,
+        }
+    }
+    #[doc = "This master is not trusted for write accesses."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Mtw0::_0
+    }
+    #[doc = "This master is trusted for write accesses."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Mtw0::_1
+    }
+}
+#[doc = "Field `MTW0` writer - Master trusted for writes"]
+pub type Mtw0W<'a, REG> = crate::BitWriter<'a, REG, Mtw0>;
+impl<'a, REG> Mtw0W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "This master is not trusted for write accesses."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Mtw0::_0)
+    }
+    #[doc = "This master is trusted for write accesses."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Mtw0::_1)
+    }
+}
+#[doc = "Master trusted for read\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Mtr0 {
+    #[doc = "0: This master is not trusted for read accesses."]
+    _0 = 0,
+    #[doc = "1: This master is trusted for read accesses."]
+    _1 = 1,
+}
+impl From<Mtr0> for bool {
+    #[inline(always)]
+    fn from(variant: Mtr0) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `MTR0` reader - Master trusted for read"]
+pub type Mtr0R = crate::BitReader<Mtr0>;
+impl Mtr0R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Mtr0 {
+        match self.bits {
+            false => Mtr0::_0,
+            true => Mtr0::_1,
+        }
+    }
+    #[doc = "This master is not trusted for read accesses."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Mtr0::_0
+    }
+    #[doc = "This master is trusted for read accesses."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Mtr0::_1
+    }
+}
+#[doc = "Field `MTR0` writer - Master trusted for read"]
+pub type Mtr0W<'a, REG> = crate::BitWriter<'a, REG, Mtr0>;
+impl<'a, REG> Mtr0W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "This master is not trusted for read accesses."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Mtr0::_0)
+    }
+    #[doc = "This master is trusted for read accesses."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Mtr0::_1)
+    }
+}
+impl R {
+    #[doc = "Bit 16 - Master privilege level"]
+    #[inline(always)]
+    pub fn mpl3(&self) -> Mpl3R {
+        Mpl3R::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17 - Master trusted for writes"]
+    #[inline(always)]
+    pub fn mtw3(&self) -> Mtw3R {
+        Mtw3R::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18 - Master trusted for read"]
+    #[inline(always)]
+    pub fn mtr3(&self) -> Mtr3R {
+        Mtr3R::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 20 - Master privilege level"]
+    #[inline(always)]
+    pub fn mpl2(&self) -> Mpl2R {
+        Mpl2R::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bit 21 - Master trusted for writes"]
+    #[inline(always)]
+    pub fn mtw2(&self) -> Mtw2R {
+        Mtw2R::new(((self.bits >> 21) & 1) != 0)
+    }
+    #[doc = "Bit 22 - Master trusted for read"]
+    #[inline(always)]
+    pub fn mtr2(&self) -> Mtr2R {
+        Mtr2R::new(((self.bits >> 22) & 1) != 0)
+    }
+    #[doc = "Bit 24 - Master privilege level"]
+    #[inline(always)]
+    pub fn mpl1(&self) -> Mpl1R {
+        Mpl1R::new(((self.bits >> 24) & 1) != 0)
+    }
+    #[doc = "Bit 25 - Master trusted for writes"]
+    #[inline(always)]
+    pub fn mtw1(&self) -> Mtw1R {
+        Mtw1R::new(((self.bits >> 25) & 1) != 0)
+    }
+    #[doc = "Bit 26 - Master trusted for read"]
+    #[inline(always)]
+    pub fn mtr1(&self) -> Mtr1R {
+        Mtr1R::new(((self.bits >> 26) & 1) != 0)
+    }
+    #[doc = "Bit 28 - Master privilege level"]
+    #[inline(always)]
+    pub fn mpl0(&self) -> Mpl0R {
+        Mpl0R::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bit 29 - Master trusted for writes"]
+    #[inline(always)]
+    pub fn mtw0(&self) -> Mtw0R {
+        Mtw0R::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - Master trusted for read"]
+    #[inline(always)]
+    pub fn mtr0(&self) -> Mtr0R {
+        Mtr0R::new(((self.bits >> 30) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 16 - Master privilege level"]
+    #[inline(always)]
+    #[must_use]
+    pub fn mpl3(&mut self) -> Mpl3W<MpraSpec> {
+        Mpl3W::new(self, 16)
+    }
+    #[doc = "Bit 17 - Master trusted for writes"]
+    #[inline(always)]
+    #[must_use]
+    pub fn mtw3(&mut self) -> Mtw3W<MpraSpec> {
+        Mtw3W::new(self, 17)
+    }
+    #[doc = "Bit 18 - Master trusted for read"]
+    #[inline(always)]
+    #[must_use]
+    pub fn mtr3(&mut self) -> Mtr3W<MpraSpec> {
+        Mtr3W::new(self, 18)
+    }
+    #[doc = "Bit 20 - Master privilege level"]
+    #[inline(always)]
+    #[must_use]
+    pub fn mpl2(&mut self) -> Mpl2W<MpraSpec> {
+        Mpl2W::new(self, 20)
+    }
+    #[doc = "Bit 21 - Master trusted for writes"]
+    #[inline(always)]
+    #[must_use]
+    pub fn mtw2(&mut self) -> Mtw2W<MpraSpec> {
+        Mtw2W::new(self, 21)
+    }
+    #[doc = "Bit 22 - Master trusted for read"]
+    #[inline(always)]
+    #[must_use]
+    pub fn mtr2(&mut self) -> Mtr2W<MpraSpec> {
+        Mtr2W::new(self, 22)
+    }
+    #[doc = "Bit 24 - Master privilege level"]
+    #[inline(always)]
+    #[must_use]
+    pub fn mpl1(&mut self) -> Mpl1W<MpraSpec> {
+        Mpl1W::new(self, 24)
+    }
+    #[doc = "Bit 25 - Master trusted for writes"]
+    #[inline(always)]
+    #[must_use]
+    pub fn mtw1(&mut self) -> Mtw1W<MpraSpec> {
+        Mtw1W::new(self, 25)
+    }
+    #[doc = "Bit 26 - Master trusted for read"]
+    #[inline(always)]
+    #[must_use]
+    pub fn mtr1(&mut self) -> Mtr1W<MpraSpec> {
+        Mtr1W::new(self, 26)
+    }
+    #[doc = "Bit 28 - Master privilege level"]
+    #[inline(always)]
+    #[must_use]
+    pub fn mpl0(&mut self) -> Mpl0W<MpraSpec> {
+        Mpl0W::new(self, 28)
+    }
+    #[doc = "Bit 29 - Master trusted for writes"]
+    #[inline(always)]
+    #[must_use]
+    pub fn mtw0(&mut self) -> Mtw0W<MpraSpec> {
+        Mtw0W::new(self, 29)
+    }
+    #[doc = "Bit 30 - Master trusted for read"]
+    #[inline(always)]
+    #[must_use]
+    pub fn mtr0(&mut self) -> Mtr0W<MpraSpec> {
+        Mtr0W::new(self, 30)
+    }
+}
+#[doc = "Master Privilege Register A\n\nYou can [`read`](crate::Reg::read) this register and get [`mpra::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mpra::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct MpraSpec;
+impl crate::RegisterSpec for MpraSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`mpra::R`](R) reader structure"]
+impl crate::Readable for MpraSpec {}
+#[doc = "`write(|w| ..)` method takes [`mpra::W`](W) writer structure"]
+impl crate::Writable for MpraSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets MPRA to value 0x7770_0000"]
+impl crate::Resettable for MpraSpec {
+    const RESET_VALUE: u32 = 0x7770_0000;
+}

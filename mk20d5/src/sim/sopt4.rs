@@ -1,0 +1,506 @@
+#[doc = "Register `SOPT4` reader"]
+pub type R = crate::R<Sopt4Spec>;
+#[doc = "Register `SOPT4` writer"]
+pub type W = crate::W<Sopt4Spec>;
+#[doc = "FTM0 Fault 0 Select\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Ftm0flt0 {
+    #[doc = "0: FTM0_FLT0 pin"]
+    _0 = 0,
+    #[doc = "1: CMP0 out"]
+    _1 = 1,
+}
+impl From<Ftm0flt0> for bool {
+    #[inline(always)]
+    fn from(variant: Ftm0flt0) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FTM0FLT0` reader - FTM0 Fault 0 Select"]
+pub type Ftm0flt0R = crate::BitReader<Ftm0flt0>;
+impl Ftm0flt0R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Ftm0flt0 {
+        match self.bits {
+            false => Ftm0flt0::_0,
+            true => Ftm0flt0::_1,
+        }
+    }
+    #[doc = "FTM0_FLT0 pin"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Ftm0flt0::_0
+    }
+    #[doc = "CMP0 out"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Ftm0flt0::_1
+    }
+}
+#[doc = "Field `FTM0FLT0` writer - FTM0 Fault 0 Select"]
+pub type Ftm0flt0W<'a, REG> = crate::BitWriter<'a, REG, Ftm0flt0>;
+impl<'a, REG> Ftm0flt0W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "FTM0_FLT0 pin"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Ftm0flt0::_0)
+    }
+    #[doc = "CMP0 out"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Ftm0flt0::_1)
+    }
+}
+#[doc = "FTM0 Fault 1 Select\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Ftm0flt1 {
+    #[doc = "0: FTM0_FLT1 pin"]
+    _0 = 0,
+    #[doc = "1: CMP1 out"]
+    _1 = 1,
+}
+impl From<Ftm0flt1> for bool {
+    #[inline(always)]
+    fn from(variant: Ftm0flt1) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FTM0FLT1` reader - FTM0 Fault 1 Select"]
+pub type Ftm0flt1R = crate::BitReader<Ftm0flt1>;
+impl Ftm0flt1R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Ftm0flt1 {
+        match self.bits {
+            false => Ftm0flt1::_0,
+            true => Ftm0flt1::_1,
+        }
+    }
+    #[doc = "FTM0_FLT1 pin"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Ftm0flt1::_0
+    }
+    #[doc = "CMP1 out"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Ftm0flt1::_1
+    }
+}
+#[doc = "Field `FTM0FLT1` writer - FTM0 Fault 1 Select"]
+pub type Ftm0flt1W<'a, REG> = crate::BitWriter<'a, REG, Ftm0flt1>;
+impl<'a, REG> Ftm0flt1W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "FTM0_FLT1 pin"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Ftm0flt1::_0)
+    }
+    #[doc = "CMP1 out"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Ftm0flt1::_1)
+    }
+}
+#[doc = "FTM1 Fault 0 Select\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Ftm1flt0 {
+    #[doc = "0: FTM1_FLT0 pin"]
+    _0 = 0,
+    #[doc = "1: CMP0 out"]
+    _1 = 1,
+}
+impl From<Ftm1flt0> for bool {
+    #[inline(always)]
+    fn from(variant: Ftm1flt0) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FTM1FLT0` reader - FTM1 Fault 0 Select"]
+pub type Ftm1flt0R = crate::BitReader<Ftm1flt0>;
+impl Ftm1flt0R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Ftm1flt0 {
+        match self.bits {
+            false => Ftm1flt0::_0,
+            true => Ftm1flt0::_1,
+        }
+    }
+    #[doc = "FTM1_FLT0 pin"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Ftm1flt0::_0
+    }
+    #[doc = "CMP0 out"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Ftm1flt0::_1
+    }
+}
+#[doc = "Field `FTM1FLT0` writer - FTM1 Fault 0 Select"]
+pub type Ftm1flt0W<'a, REG> = crate::BitWriter<'a, REG, Ftm1flt0>;
+impl<'a, REG> Ftm1flt0W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "FTM1_FLT0 pin"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Ftm1flt0::_0)
+    }
+    #[doc = "CMP0 out"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Ftm1flt0::_1)
+    }
+}
+#[doc = "FTM1 channel 0 input capture source select\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Ftm1ch0src {
+    #[doc = "0: FTM1_CH0 signal"]
+    _00 = 0,
+    #[doc = "1: CMP0 output"]
+    _01 = 1,
+    #[doc = "2: CMP1 output"]
+    _10 = 2,
+    #[doc = "3: USB start of frame pulse"]
+    _11 = 3,
+}
+impl From<Ftm1ch0src> for u8 {
+    #[inline(always)]
+    fn from(variant: Ftm1ch0src) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Ftm1ch0src {
+    type Ux = u8;
+}
+impl crate::IsEnum for Ftm1ch0src {}
+#[doc = "Field `FTM1CH0SRC` reader - FTM1 channel 0 input capture source select"]
+pub type Ftm1ch0srcR = crate::FieldReader<Ftm1ch0src>;
+impl Ftm1ch0srcR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Ftm1ch0src {
+        match self.bits {
+            0 => Ftm1ch0src::_00,
+            1 => Ftm1ch0src::_01,
+            2 => Ftm1ch0src::_10,
+            3 => Ftm1ch0src::_11,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "FTM1_CH0 signal"]
+    #[inline(always)]
+    pub fn is_00(&self) -> bool {
+        *self == Ftm1ch0src::_00
+    }
+    #[doc = "CMP0 output"]
+    #[inline(always)]
+    pub fn is_01(&self) -> bool {
+        *self == Ftm1ch0src::_01
+    }
+    #[doc = "CMP1 output"]
+    #[inline(always)]
+    pub fn is_10(&self) -> bool {
+        *self == Ftm1ch0src::_10
+    }
+    #[doc = "USB start of frame pulse"]
+    #[inline(always)]
+    pub fn is_11(&self) -> bool {
+        *self == Ftm1ch0src::_11
+    }
+}
+#[doc = "Field `FTM1CH0SRC` writer - FTM1 channel 0 input capture source select"]
+pub type Ftm1ch0srcW<'a, REG> = crate::FieldWriter<'a, REG, 2, Ftm1ch0src, crate::Safe>;
+impl<'a, REG> Ftm1ch0srcW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "FTM1_CH0 signal"]
+    #[inline(always)]
+    pub fn _00(self) -> &'a mut crate::W<REG> {
+        self.variant(Ftm1ch0src::_00)
+    }
+    #[doc = "CMP0 output"]
+    #[inline(always)]
+    pub fn _01(self) -> &'a mut crate::W<REG> {
+        self.variant(Ftm1ch0src::_01)
+    }
+    #[doc = "CMP1 output"]
+    #[inline(always)]
+    pub fn _10(self) -> &'a mut crate::W<REG> {
+        self.variant(Ftm1ch0src::_10)
+    }
+    #[doc = "USB start of frame pulse"]
+    #[inline(always)]
+    pub fn _11(self) -> &'a mut crate::W<REG> {
+        self.variant(Ftm1ch0src::_11)
+    }
+}
+#[doc = "FlexTimer 0 External Clock Pin Select\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Ftm0clksel {
+    #[doc = "0: FTM_CLK0 pin"]
+    _0 = 0,
+    #[doc = "1: FTM_CLK1 pin"]
+    _1 = 1,
+}
+impl From<Ftm0clksel> for bool {
+    #[inline(always)]
+    fn from(variant: Ftm0clksel) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FTM0CLKSEL` reader - FlexTimer 0 External Clock Pin Select"]
+pub type Ftm0clkselR = crate::BitReader<Ftm0clksel>;
+impl Ftm0clkselR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Ftm0clksel {
+        match self.bits {
+            false => Ftm0clksel::_0,
+            true => Ftm0clksel::_1,
+        }
+    }
+    #[doc = "FTM_CLK0 pin"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Ftm0clksel::_0
+    }
+    #[doc = "FTM_CLK1 pin"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Ftm0clksel::_1
+    }
+}
+#[doc = "Field `FTM0CLKSEL` writer - FlexTimer 0 External Clock Pin Select"]
+pub type Ftm0clkselW<'a, REG> = crate::BitWriter<'a, REG, Ftm0clksel>;
+impl<'a, REG> Ftm0clkselW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "FTM_CLK0 pin"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Ftm0clksel::_0)
+    }
+    #[doc = "FTM_CLK1 pin"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Ftm0clksel::_1)
+    }
+}
+#[doc = "FTM1 External Clock Pin Select\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Ftm1clksel {
+    #[doc = "0: FTM_CLK0 pin"]
+    _0 = 0,
+    #[doc = "1: FTM_CLK1 pin"]
+    _1 = 1,
+}
+impl From<Ftm1clksel> for bool {
+    #[inline(always)]
+    fn from(variant: Ftm1clksel) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FTM1CLKSEL` reader - FTM1 External Clock Pin Select"]
+pub type Ftm1clkselR = crate::BitReader<Ftm1clksel>;
+impl Ftm1clkselR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Ftm1clksel {
+        match self.bits {
+            false => Ftm1clksel::_0,
+            true => Ftm1clksel::_1,
+        }
+    }
+    #[doc = "FTM_CLK0 pin"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Ftm1clksel::_0
+    }
+    #[doc = "FTM_CLK1 pin"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Ftm1clksel::_1
+    }
+}
+#[doc = "Field `FTM1CLKSEL` writer - FTM1 External Clock Pin Select"]
+pub type Ftm1clkselW<'a, REG> = crate::BitWriter<'a, REG, Ftm1clksel>;
+impl<'a, REG> Ftm1clkselW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "FTM_CLK0 pin"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Ftm1clksel::_0)
+    }
+    #[doc = "FTM_CLK1 pin"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Ftm1clksel::_1)
+    }
+}
+#[doc = "FlexTimer 0 Hardware Trigger 0 Source Select\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Ftm0trg0src {
+    #[doc = "0: HSCMP0 output drives FTM0 hardware trigger 0"]
+    _0 = 0,
+    #[doc = "1: FTM1 channel match drives FTM0 hardware trigger 0"]
+    _1 = 1,
+}
+impl From<Ftm0trg0src> for bool {
+    #[inline(always)]
+    fn from(variant: Ftm0trg0src) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FTM0TRG0SRC` reader - FlexTimer 0 Hardware Trigger 0 Source Select"]
+pub type Ftm0trg0srcR = crate::BitReader<Ftm0trg0src>;
+impl Ftm0trg0srcR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Ftm0trg0src {
+        match self.bits {
+            false => Ftm0trg0src::_0,
+            true => Ftm0trg0src::_1,
+        }
+    }
+    #[doc = "HSCMP0 output drives FTM0 hardware trigger 0"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Ftm0trg0src::_0
+    }
+    #[doc = "FTM1 channel match drives FTM0 hardware trigger 0"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Ftm0trg0src::_1
+    }
+}
+#[doc = "Field `FTM0TRG0SRC` writer - FlexTimer 0 Hardware Trigger 0 Source Select"]
+pub type Ftm0trg0srcW<'a, REG> = crate::BitWriter<'a, REG, Ftm0trg0src>;
+impl<'a, REG> Ftm0trg0srcW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "HSCMP0 output drives FTM0 hardware trigger 0"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Ftm0trg0src::_0)
+    }
+    #[doc = "FTM1 channel match drives FTM0 hardware trigger 0"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Ftm0trg0src::_1)
+    }
+}
+impl R {
+    #[doc = "Bit 0 - FTM0 Fault 0 Select"]
+    #[inline(always)]
+    pub fn ftm0flt0(&self) -> Ftm0flt0R {
+        Ftm0flt0R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - FTM0 Fault 1 Select"]
+    #[inline(always)]
+    pub fn ftm0flt1(&self) -> Ftm0flt1R {
+        Ftm0flt1R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 4 - FTM1 Fault 0 Select"]
+    #[inline(always)]
+    pub fn ftm1flt0(&self) -> Ftm1flt0R {
+        Ftm1flt0R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bits 18:19 - FTM1 channel 0 input capture source select"]
+    #[inline(always)]
+    pub fn ftm1ch0src(&self) -> Ftm1ch0srcR {
+        Ftm1ch0srcR::new(((self.bits >> 18) & 3) as u8)
+    }
+    #[doc = "Bit 24 - FlexTimer 0 External Clock Pin Select"]
+    #[inline(always)]
+    pub fn ftm0clksel(&self) -> Ftm0clkselR {
+        Ftm0clkselR::new(((self.bits >> 24) & 1) != 0)
+    }
+    #[doc = "Bit 25 - FTM1 External Clock Pin Select"]
+    #[inline(always)]
+    pub fn ftm1clksel(&self) -> Ftm1clkselR {
+        Ftm1clkselR::new(((self.bits >> 25) & 1) != 0)
+    }
+    #[doc = "Bit 28 - FlexTimer 0 Hardware Trigger 0 Source Select"]
+    #[inline(always)]
+    pub fn ftm0trg0src(&self) -> Ftm0trg0srcR {
+        Ftm0trg0srcR::new(((self.bits >> 28) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - FTM0 Fault 0 Select"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ftm0flt0(&mut self) -> Ftm0flt0W<Sopt4Spec> {
+        Ftm0flt0W::new(self, 0)
+    }
+    #[doc = "Bit 1 - FTM0 Fault 1 Select"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ftm0flt1(&mut self) -> Ftm0flt1W<Sopt4Spec> {
+        Ftm0flt1W::new(self, 1)
+    }
+    #[doc = "Bit 4 - FTM1 Fault 0 Select"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ftm1flt0(&mut self) -> Ftm1flt0W<Sopt4Spec> {
+        Ftm1flt0W::new(self, 4)
+    }
+    #[doc = "Bits 18:19 - FTM1 channel 0 input capture source select"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ftm1ch0src(&mut self) -> Ftm1ch0srcW<Sopt4Spec> {
+        Ftm1ch0srcW::new(self, 18)
+    }
+    #[doc = "Bit 24 - FlexTimer 0 External Clock Pin Select"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ftm0clksel(&mut self) -> Ftm0clkselW<Sopt4Spec> {
+        Ftm0clkselW::new(self, 24)
+    }
+    #[doc = "Bit 25 - FTM1 External Clock Pin Select"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ftm1clksel(&mut self) -> Ftm1clkselW<Sopt4Spec> {
+        Ftm1clkselW::new(self, 25)
+    }
+    #[doc = "Bit 28 - FlexTimer 0 Hardware Trigger 0 Source Select"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ftm0trg0src(&mut self) -> Ftm0trg0srcW<Sopt4Spec> {
+        Ftm0trg0srcW::new(self, 28)
+    }
+}
+#[doc = "System Options Register 4\n\nYou can [`read`](crate::Reg::read) this register and get [`sopt4::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sopt4::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Sopt4Spec;
+impl crate::RegisterSpec for Sopt4Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`sopt4::R`](R) reader structure"]
+impl crate::Readable for Sopt4Spec {}
+#[doc = "`write(|w| ..)` method takes [`sopt4::W`](W) writer structure"]
+impl crate::Writable for Sopt4Spec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets SOPT4 to value 0"]
+impl crate::Resettable for Sopt4Spec {
+    const RESET_VALUE: u32 = 0;
+}

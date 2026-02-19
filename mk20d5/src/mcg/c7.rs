@@ -1,0 +1,89 @@
+#[doc = "Register `C7` reader"]
+pub type R = crate::R<C7Spec>;
+#[doc = "Register `C7` writer"]
+pub type W = crate::W<C7Spec>;
+#[doc = "MCG OSC Clock Select\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Oscsel {
+    #[doc = "0: Selects System Oscillator (OSCCLK)."]
+    _0 = 0,
+    #[doc = "1: Selects 32 kHz RTC Oscillator."]
+    _1 = 1,
+}
+impl From<Oscsel> for bool {
+    #[inline(always)]
+    fn from(variant: Oscsel) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `OSCSEL` reader - MCG OSC Clock Select"]
+pub type OscselR = crate::BitReader<Oscsel>;
+impl OscselR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Oscsel {
+        match self.bits {
+            false => Oscsel::_0,
+            true => Oscsel::_1,
+        }
+    }
+    #[doc = "Selects System Oscillator (OSCCLK)."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Oscsel::_0
+    }
+    #[doc = "Selects 32 kHz RTC Oscillator."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Oscsel::_1
+    }
+}
+#[doc = "Field `OSCSEL` writer - MCG OSC Clock Select"]
+pub type OscselW<'a, REG> = crate::BitWriter<'a, REG, Oscsel>;
+impl<'a, REG> OscselW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Selects System Oscillator (OSCCLK)."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Oscsel::_0)
+    }
+    #[doc = "Selects 32 kHz RTC Oscillator."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Oscsel::_1)
+    }
+}
+impl R {
+    #[doc = "Bit 0 - MCG OSC Clock Select"]
+    #[inline(always)]
+    pub fn oscsel(&self) -> OscselR {
+        OscselR::new((self.bits & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - MCG OSC Clock Select"]
+    #[inline(always)]
+    #[must_use]
+    pub fn oscsel(&mut self) -> OscselW<C7Spec> {
+        OscselW::new(self, 0)
+    }
+}
+#[doc = "MCG Control 7 Register\n\nYou can [`read`](crate::Reg::read) this register and get [`c7::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`c7::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct C7Spec;
+impl crate::RegisterSpec for C7Spec {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [`c7::R`](R) reader structure"]
+impl crate::Readable for C7Spec {}
+#[doc = "`write(|w| ..)` method takes [`c7::W`](W) writer structure"]
+impl crate::Writable for C7Spec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+}
+#[doc = "`reset()` method sets C7 to value 0"]
+impl crate::Resettable for C7Spec {
+    const RESET_VALUE: u8 = 0;
+}

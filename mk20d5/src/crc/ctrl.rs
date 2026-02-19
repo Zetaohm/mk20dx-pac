@@ -1,0 +1,411 @@
+#[doc = "Register `CTRL` reader"]
+pub type R = crate::R<CtrlSpec>;
+#[doc = "Register `CTRL` writer"]
+pub type W = crate::W<CtrlSpec>;
+#[doc = "Width of CRC protocol.\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Tcrc {
+    #[doc = "0: 16-bit CRC protocol."]
+    _0 = 0,
+    #[doc = "1: 32-bit CRC protocol."]
+    _1 = 1,
+}
+impl From<Tcrc> for bool {
+    #[inline(always)]
+    fn from(variant: Tcrc) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `TCRC` reader - Width of CRC protocol."]
+pub type TcrcR = crate::BitReader<Tcrc>;
+impl TcrcR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Tcrc {
+        match self.bits {
+            false => Tcrc::_0,
+            true => Tcrc::_1,
+        }
+    }
+    #[doc = "16-bit CRC protocol."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Tcrc::_0
+    }
+    #[doc = "32-bit CRC protocol."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Tcrc::_1
+    }
+}
+#[doc = "Field `TCRC` writer - Width of CRC protocol."]
+pub type TcrcW<'a, REG> = crate::BitWriter<'a, REG, Tcrc>;
+impl<'a, REG> TcrcW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "16-bit CRC protocol."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Tcrc::_0)
+    }
+    #[doc = "32-bit CRC protocol."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Tcrc::_1)
+    }
+}
+#[doc = "Write CRC data register as seed\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Was {
+    #[doc = "0: Writes to the CRC data register are data values."]
+    _0 = 0,
+    #[doc = "1: Writes to the CRC data register are seed values."]
+    _1 = 1,
+}
+impl From<Was> for bool {
+    #[inline(always)]
+    fn from(variant: Was) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `WAS` reader - Write CRC data register as seed"]
+pub type WasR = crate::BitReader<Was>;
+impl WasR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Was {
+        match self.bits {
+            false => Was::_0,
+            true => Was::_1,
+        }
+    }
+    #[doc = "Writes to the CRC data register are data values."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Was::_0
+    }
+    #[doc = "Writes to the CRC data register are seed values."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Was::_1
+    }
+}
+#[doc = "Field `WAS` writer - Write CRC data register as seed"]
+pub type WasW<'a, REG> = crate::BitWriter<'a, REG, Was>;
+impl<'a, REG> WasW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Writes to the CRC data register are data values."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Was::_0)
+    }
+    #[doc = "Writes to the CRC data register are seed values."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Was::_1)
+    }
+}
+#[doc = "Complement Read of CRC data register\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Fxor {
+    #[doc = "0: No XOR on reading."]
+    _0 = 0,
+    #[doc = "1: Invert or complement the read value of the CRC data register."]
+    _1 = 1,
+}
+impl From<Fxor> for bool {
+    #[inline(always)]
+    fn from(variant: Fxor) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FXOR` reader - Complement Read of CRC data register"]
+pub type FxorR = crate::BitReader<Fxor>;
+impl FxorR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Fxor {
+        match self.bits {
+            false => Fxor::_0,
+            true => Fxor::_1,
+        }
+    }
+    #[doc = "No XOR on reading."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Fxor::_0
+    }
+    #[doc = "Invert or complement the read value of the CRC data register."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Fxor::_1
+    }
+}
+#[doc = "Field `FXOR` writer - Complement Read of CRC data register"]
+pub type FxorW<'a, REG> = crate::BitWriter<'a, REG, Fxor>;
+impl<'a, REG> FxorW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "No XOR on reading."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Fxor::_0)
+    }
+    #[doc = "Invert or complement the read value of the CRC data register."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Fxor::_1)
+    }
+}
+#[doc = "Type of Transpose for Read\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Totr {
+    #[doc = "0: No transposition."]
+    _00 = 0,
+    #[doc = "1: Bits in bytes are transposed; bytes are not transposed."]
+    _01 = 1,
+    #[doc = "2: Both bits in bytes and bytes are transposed."]
+    _10 = 2,
+    #[doc = "3: Only bytes are transposed; no bits in a byte are transposed."]
+    _11 = 3,
+}
+impl From<Totr> for u8 {
+    #[inline(always)]
+    fn from(variant: Totr) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Totr {
+    type Ux = u8;
+}
+impl crate::IsEnum for Totr {}
+#[doc = "Field `TOTR` reader - Type of Transpose for Read"]
+pub type TotrR = crate::FieldReader<Totr>;
+impl TotrR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Totr {
+        match self.bits {
+            0 => Totr::_00,
+            1 => Totr::_01,
+            2 => Totr::_10,
+            3 => Totr::_11,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "No transposition."]
+    #[inline(always)]
+    pub fn is_00(&self) -> bool {
+        *self == Totr::_00
+    }
+    #[doc = "Bits in bytes are transposed; bytes are not transposed."]
+    #[inline(always)]
+    pub fn is_01(&self) -> bool {
+        *self == Totr::_01
+    }
+    #[doc = "Both bits in bytes and bytes are transposed."]
+    #[inline(always)]
+    pub fn is_10(&self) -> bool {
+        *self == Totr::_10
+    }
+    #[doc = "Only bytes are transposed; no bits in a byte are transposed."]
+    #[inline(always)]
+    pub fn is_11(&self) -> bool {
+        *self == Totr::_11
+    }
+}
+#[doc = "Field `TOTR` writer - Type of Transpose for Read"]
+pub type TotrW<'a, REG> = crate::FieldWriter<'a, REG, 2, Totr, crate::Safe>;
+impl<'a, REG> TotrW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "No transposition."]
+    #[inline(always)]
+    pub fn _00(self) -> &'a mut crate::W<REG> {
+        self.variant(Totr::_00)
+    }
+    #[doc = "Bits in bytes are transposed; bytes are not transposed."]
+    #[inline(always)]
+    pub fn _01(self) -> &'a mut crate::W<REG> {
+        self.variant(Totr::_01)
+    }
+    #[doc = "Both bits in bytes and bytes are transposed."]
+    #[inline(always)]
+    pub fn _10(self) -> &'a mut crate::W<REG> {
+        self.variant(Totr::_10)
+    }
+    #[doc = "Only bytes are transposed; no bits in a byte are transposed."]
+    #[inline(always)]
+    pub fn _11(self) -> &'a mut crate::W<REG> {
+        self.variant(Totr::_11)
+    }
+}
+#[doc = "Type of Transpose for Writes\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Tot {
+    #[doc = "0: No transposition."]
+    _00 = 0,
+    #[doc = "1: Bits in bytes are transposed; bytes are not transposed."]
+    _01 = 1,
+    #[doc = "2: Both bits in bytes and bytes are transposed."]
+    _10 = 2,
+    #[doc = "3: Only bytes are transposed; no bits in a byte are transposed."]
+    _11 = 3,
+}
+impl From<Tot> for u8 {
+    #[inline(always)]
+    fn from(variant: Tot) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Tot {
+    type Ux = u8;
+}
+impl crate::IsEnum for Tot {}
+#[doc = "Field `TOT` reader - Type of Transpose for Writes"]
+pub type TotR = crate::FieldReader<Tot>;
+impl TotR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Tot {
+        match self.bits {
+            0 => Tot::_00,
+            1 => Tot::_01,
+            2 => Tot::_10,
+            3 => Tot::_11,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "No transposition."]
+    #[inline(always)]
+    pub fn is_00(&self) -> bool {
+        *self == Tot::_00
+    }
+    #[doc = "Bits in bytes are transposed; bytes are not transposed."]
+    #[inline(always)]
+    pub fn is_01(&self) -> bool {
+        *self == Tot::_01
+    }
+    #[doc = "Both bits in bytes and bytes are transposed."]
+    #[inline(always)]
+    pub fn is_10(&self) -> bool {
+        *self == Tot::_10
+    }
+    #[doc = "Only bytes are transposed; no bits in a byte are transposed."]
+    #[inline(always)]
+    pub fn is_11(&self) -> bool {
+        *self == Tot::_11
+    }
+}
+#[doc = "Field `TOT` writer - Type of Transpose for Writes"]
+pub type TotW<'a, REG> = crate::FieldWriter<'a, REG, 2, Tot, crate::Safe>;
+impl<'a, REG> TotW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "No transposition."]
+    #[inline(always)]
+    pub fn _00(self) -> &'a mut crate::W<REG> {
+        self.variant(Tot::_00)
+    }
+    #[doc = "Bits in bytes are transposed; bytes are not transposed."]
+    #[inline(always)]
+    pub fn _01(self) -> &'a mut crate::W<REG> {
+        self.variant(Tot::_01)
+    }
+    #[doc = "Both bits in bytes and bytes are transposed."]
+    #[inline(always)]
+    pub fn _10(self) -> &'a mut crate::W<REG> {
+        self.variant(Tot::_10)
+    }
+    #[doc = "Only bytes are transposed; no bits in a byte are transposed."]
+    #[inline(always)]
+    pub fn _11(self) -> &'a mut crate::W<REG> {
+        self.variant(Tot::_11)
+    }
+}
+impl R {
+    #[doc = "Bit 24 - Width of CRC protocol."]
+    #[inline(always)]
+    pub fn tcrc(&self) -> TcrcR {
+        TcrcR::new(((self.bits >> 24) & 1) != 0)
+    }
+    #[doc = "Bit 25 - Write CRC data register as seed"]
+    #[inline(always)]
+    pub fn was(&self) -> WasR {
+        WasR::new(((self.bits >> 25) & 1) != 0)
+    }
+    #[doc = "Bit 26 - Complement Read of CRC data register"]
+    #[inline(always)]
+    pub fn fxor(&self) -> FxorR {
+        FxorR::new(((self.bits >> 26) & 1) != 0)
+    }
+    #[doc = "Bits 28:29 - Type of Transpose for Read"]
+    #[inline(always)]
+    pub fn totr(&self) -> TotrR {
+        TotrR::new(((self.bits >> 28) & 3) as u8)
+    }
+    #[doc = "Bits 30:31 - Type of Transpose for Writes"]
+    #[inline(always)]
+    pub fn tot(&self) -> TotR {
+        TotR::new(((self.bits >> 30) & 3) as u8)
+    }
+}
+impl W {
+    #[doc = "Bit 24 - Width of CRC protocol."]
+    #[inline(always)]
+    #[must_use]
+    pub fn tcrc(&mut self) -> TcrcW<CtrlSpec> {
+        TcrcW::new(self, 24)
+    }
+    #[doc = "Bit 25 - Write CRC data register as seed"]
+    #[inline(always)]
+    #[must_use]
+    pub fn was(&mut self) -> WasW<CtrlSpec> {
+        WasW::new(self, 25)
+    }
+    #[doc = "Bit 26 - Complement Read of CRC data register"]
+    #[inline(always)]
+    #[must_use]
+    pub fn fxor(&mut self) -> FxorW<CtrlSpec> {
+        FxorW::new(self, 26)
+    }
+    #[doc = "Bits 28:29 - Type of Transpose for Read"]
+    #[inline(always)]
+    #[must_use]
+    pub fn totr(&mut self) -> TotrW<CtrlSpec> {
+        TotrW::new(self, 28)
+    }
+    #[doc = "Bits 30:31 - Type of Transpose for Writes"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tot(&mut self) -> TotW<CtrlSpec> {
+        TotW::new(self, 30)
+    }
+}
+#[doc = "CRC Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CtrlSpec;
+impl crate::RegisterSpec for CtrlSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`ctrl::R`](R) reader structure"]
+impl crate::Readable for CtrlSpec {}
+#[doc = "`write(|w| ..)` method takes [`ctrl::W`](W) writer structure"]
+impl crate::Writable for CtrlSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets CTRL to value 0"]
+impl crate::Resettable for CtrlSpec {
+    const RESET_VALUE: u32 = 0;
+}

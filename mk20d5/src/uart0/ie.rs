@@ -1,0 +1,473 @@
+#[doc = "Register `IE` reader"]
+pub type R = crate::R<IeSpec>;
+#[doc = "Register `IE` writer"]
+pub type W = crate::W<IeSpec>;
+#[doc = "Transmission Fail Interrupt Enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Txfie {
+    #[doc = "0: Interrupt is disabled."]
+    _0 = 0,
+    #[doc = "1: Interrupt is enabled."]
+    _1 = 1,
+}
+impl From<Txfie> for bool {
+    #[inline(always)]
+    fn from(variant: Txfie) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `TXFIE` reader - Transmission Fail Interrupt Enable"]
+pub type TxfieR = crate::BitReader<Txfie>;
+impl TxfieR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Txfie {
+        match self.bits {
+            false => Txfie::_0,
+            true => Txfie::_1,
+        }
+    }
+    #[doc = "Interrupt is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Txfie::_0
+    }
+    #[doc = "Interrupt is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Txfie::_1
+    }
+}
+#[doc = "Field `TXFIE` writer - Transmission Fail Interrupt Enable"]
+pub type TxfieW<'a, REG> = crate::BitWriter<'a, REG, Txfie>;
+impl<'a, REG> TxfieW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Interrupt is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Txfie::_0)
+    }
+    #[doc = "Interrupt is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Txfie::_1)
+    }
+}
+#[doc = "Preamble Start Interrupt Enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Psie {
+    #[doc = "0: Interrupt is disabled."]
+    _0 = 0,
+    #[doc = "1: Interrupt is enabled."]
+    _1 = 1,
+}
+impl From<Psie> for bool {
+    #[inline(always)]
+    fn from(variant: Psie) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `PSIE` reader - Preamble Start Interrupt Enable"]
+pub type PsieR = crate::BitReader<Psie>;
+impl PsieR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Psie {
+        match self.bits {
+            false => Psie::_0,
+            true => Psie::_1,
+        }
+    }
+    #[doc = "Interrupt is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Psie::_0
+    }
+    #[doc = "Interrupt is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Psie::_1
+    }
+}
+#[doc = "Field `PSIE` writer - Preamble Start Interrupt Enable"]
+pub type PsieW<'a, REG> = crate::BitWriter<'a, REG, Psie>;
+impl<'a, REG> PsieW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Interrupt is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Psie::_0)
+    }
+    #[doc = "Interrupt is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Psie::_1)
+    }
+}
+#[doc = "Packet Cycle Timer Interrupt Enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Pcteie {
+    #[doc = "0: Interrupt is disabled."]
+    _0 = 0,
+    #[doc = "1: Interrupt is enabled."]
+    _1 = 1,
+}
+impl From<Pcteie> for bool {
+    #[inline(always)]
+    fn from(variant: Pcteie) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `PCTEIE` reader - Packet Cycle Timer Interrupt Enable"]
+pub type PcteieR = crate::BitReader<Pcteie>;
+impl PcteieR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Pcteie {
+        match self.bits {
+            false => Pcteie::_0,
+            true => Pcteie::_1,
+        }
+    }
+    #[doc = "Interrupt is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Pcteie::_0
+    }
+    #[doc = "Interrupt is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Pcteie::_1
+    }
+}
+#[doc = "Field `PCTEIE` writer - Packet Cycle Timer Interrupt Enable"]
+pub type PcteieW<'a, REG> = crate::BitWriter<'a, REG, Pcteie>;
+impl<'a, REG> PcteieW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Interrupt is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Pcteie::_0)
+    }
+    #[doc = "Interrupt is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Pcteie::_1)
+    }
+}
+#[doc = "Packet Transmitted Interrupt Enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Ptxie {
+    #[doc = "0: Interrupt is disabled."]
+    _0 = 0,
+    #[doc = "1: Interrupt is enabled."]
+    _1 = 1,
+}
+impl From<Ptxie> for bool {
+    #[inline(always)]
+    fn from(variant: Ptxie) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `PTXIE` reader - Packet Transmitted Interrupt Enable"]
+pub type PtxieR = crate::BitReader<Ptxie>;
+impl PtxieR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Ptxie {
+        match self.bits {
+            false => Ptxie::_0,
+            true => Ptxie::_1,
+        }
+    }
+    #[doc = "Interrupt is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Ptxie::_0
+    }
+    #[doc = "Interrupt is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Ptxie::_1
+    }
+}
+#[doc = "Field `PTXIE` writer - Packet Transmitted Interrupt Enable"]
+pub type PtxieW<'a, REG> = crate::BitWriter<'a, REG, Ptxie>;
+impl<'a, REG> PtxieW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Interrupt is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Ptxie::_0)
+    }
+    #[doc = "Interrupt is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Ptxie::_1)
+    }
+}
+#[doc = "Packet Received Interrupt Enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Prxie {
+    #[doc = "0: Interrupt is disabled."]
+    _0 = 0,
+    #[doc = "1: Interrupt is enabled."]
+    _1 = 1,
+}
+impl From<Prxie> for bool {
+    #[inline(always)]
+    fn from(variant: Prxie) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `PRXIE` reader - Packet Received Interrupt Enable"]
+pub type PrxieR = crate::BitReader<Prxie>;
+impl PrxieR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Prxie {
+        match self.bits {
+            false => Prxie::_0,
+            true => Prxie::_1,
+        }
+    }
+    #[doc = "Interrupt is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Prxie::_0
+    }
+    #[doc = "Interrupt is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Prxie::_1
+    }
+}
+#[doc = "Field `PRXIE` writer - Packet Received Interrupt Enable"]
+pub type PrxieW<'a, REG> = crate::BitWriter<'a, REG, Prxie>;
+impl<'a, REG> PrxieW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Interrupt is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Prxie::_0)
+    }
+    #[doc = "Interrupt is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Prxie::_1)
+    }
+}
+#[doc = "Initial Sync Detection Interrupt Enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Isdie {
+    #[doc = "0: Interrupt is disabled."]
+    _0 = 0,
+    #[doc = "1: Interrupt is enabled."]
+    _1 = 1,
+}
+impl From<Isdie> for bool {
+    #[inline(always)]
+    fn from(variant: Isdie) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `ISDIE` reader - Initial Sync Detection Interrupt Enable"]
+pub type IsdieR = crate::BitReader<Isdie>;
+impl IsdieR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Isdie {
+        match self.bits {
+            false => Isdie::_0,
+            true => Isdie::_1,
+        }
+    }
+    #[doc = "Interrupt is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Isdie::_0
+    }
+    #[doc = "Interrupt is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Isdie::_1
+    }
+}
+#[doc = "Field `ISDIE` writer - Initial Sync Detection Interrupt Enable"]
+pub type IsdieW<'a, REG> = crate::BitWriter<'a, REG, Isdie>;
+impl<'a, REG> IsdieW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Interrupt is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Isdie::_0)
+    }
+    #[doc = "Interrupt is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Isdie::_1)
+    }
+}
+#[doc = "Wbase Expired Interrupt Enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Wbeie {
+    #[doc = "0: Interrupt is disabled."]
+    _0 = 0,
+    #[doc = "1: Interrupt is enabled."]
+    _1 = 1,
+}
+impl From<Wbeie> for bool {
+    #[inline(always)]
+    fn from(variant: Wbeie) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `WBEIE` reader - Wbase Expired Interrupt Enable"]
+pub type WbeieR = crate::BitReader<Wbeie>;
+impl WbeieR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Wbeie {
+        match self.bits {
+            false => Wbeie::_0,
+            true => Wbeie::_1,
+        }
+    }
+    #[doc = "Interrupt is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Wbeie::_0
+    }
+    #[doc = "Interrupt is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Wbeie::_1
+    }
+}
+#[doc = "Field `WBEIE` writer - Wbase Expired Interrupt Enable"]
+pub type WbeieW<'a, REG> = crate::BitWriter<'a, REG, Wbeie>;
+impl<'a, REG> WbeieW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Interrupt is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Wbeie::_0)
+    }
+    #[doc = "Interrupt is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Wbeie::_1)
+    }
+}
+impl R {
+    #[doc = "Bit 0 - Transmission Fail Interrupt Enable"]
+    #[inline(always)]
+    pub fn txfie(&self) -> TxfieR {
+        TxfieR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Preamble Start Interrupt Enable"]
+    #[inline(always)]
+    pub fn psie(&self) -> PsieR {
+        PsieR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - Packet Cycle Timer Interrupt Enable"]
+    #[inline(always)]
+    pub fn pcteie(&self) -> PcteieR {
+        PcteieR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Packet Transmitted Interrupt Enable"]
+    #[inline(always)]
+    pub fn ptxie(&self) -> PtxieR {
+        PtxieR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Packet Received Interrupt Enable"]
+    #[inline(always)]
+    pub fn prxie(&self) -> PrxieR {
+        PrxieR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - Initial Sync Detection Interrupt Enable"]
+    #[inline(always)]
+    pub fn isdie(&self) -> IsdieR {
+        IsdieR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - Wbase Expired Interrupt Enable"]
+    #[inline(always)]
+    pub fn wbeie(&self) -> WbeieR {
+        WbeieR::new(((self.bits >> 6) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Transmission Fail Interrupt Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn txfie(&mut self) -> TxfieW<IeSpec> {
+        TxfieW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Preamble Start Interrupt Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn psie(&mut self) -> PsieW<IeSpec> {
+        PsieW::new(self, 1)
+    }
+    #[doc = "Bit 2 - Packet Cycle Timer Interrupt Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn pcteie(&mut self) -> PcteieW<IeSpec> {
+        PcteieW::new(self, 2)
+    }
+    #[doc = "Bit 3 - Packet Transmitted Interrupt Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ptxie(&mut self) -> PtxieW<IeSpec> {
+        PtxieW::new(self, 3)
+    }
+    #[doc = "Bit 4 - Packet Received Interrupt Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn prxie(&mut self) -> PrxieW<IeSpec> {
+        PrxieW::new(self, 4)
+    }
+    #[doc = "Bit 5 - Initial Sync Detection Interrupt Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn isdie(&mut self) -> IsdieW<IeSpec> {
+        IsdieW::new(self, 5)
+    }
+    #[doc = "Bit 6 - Wbase Expired Interrupt Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn wbeie(&mut self) -> WbeieW<IeSpec> {
+        WbeieW::new(self, 6)
+    }
+}
+#[doc = "UART CEA709.1-B Interrupt Enable Register\n\nYou can [`read`](crate::Reg::read) this register and get [`ie::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ie::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IeSpec;
+impl crate::RegisterSpec for IeSpec {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [`ie::R`](R) reader structure"]
+impl crate::Readable for IeSpec {}
+#[doc = "`write(|w| ..)` method takes [`ie::W`](W) writer structure"]
+impl crate::Writable for IeSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+}
+#[doc = "`reset()` method sets IE to value 0"]
+impl crate::Resettable for IeSpec {
+    const RESET_VALUE: u8 = 0;
+}

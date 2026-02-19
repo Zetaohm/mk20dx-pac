@@ -1,0 +1,212 @@
+#[repr(C)]
+#[doc = "Register block"]
+pub struct RegisterBlock {
+    mpra: Mpra,
+    _reserved1: [u8; 0x1c],
+    pacra: Pacra,
+    pacrb: Pacrb,
+    pacrc: Pacrc,
+    pacrd: Pacrd,
+    _reserved5: [u8; 0x10],
+    pacre: Pacre,
+    pacrf: Pacrf,
+    pacrg: Pacrg,
+    pacrh: Pacrh,
+    pacri: Pacri,
+    pacrj: Pacrj,
+    pacrk: Pacrk,
+    pacrl: Pacrl,
+    pacrm: Pacrm,
+    pacrn: Pacrn,
+    pacro: Pacro,
+    pacrp: Pacrp,
+}
+impl RegisterBlock {
+    #[doc = "0x00 - Master Privilege Register A"]
+    #[inline(always)]
+    pub const fn mpra(&self) -> &Mpra {
+        &self.mpra
+    }
+    #[doc = "0x20 - Peripheral Access Control Register"]
+    #[inline(always)]
+    pub const fn pacra(&self) -> &Pacra {
+        &self.pacra
+    }
+    #[doc = "0x24 - Peripheral Access Control Register"]
+    #[inline(always)]
+    pub const fn pacrb(&self) -> &Pacrb {
+        &self.pacrb
+    }
+    #[doc = "0x28 - Peripheral Access Control Register"]
+    #[inline(always)]
+    pub const fn pacrc(&self) -> &Pacrc {
+        &self.pacrc
+    }
+    #[doc = "0x2c - Peripheral Access Control Register"]
+    #[inline(always)]
+    pub const fn pacrd(&self) -> &Pacrd {
+        &self.pacrd
+    }
+    #[doc = "0x40 - Peripheral Access Control Register"]
+    #[inline(always)]
+    pub const fn pacre(&self) -> &Pacre {
+        &self.pacre
+    }
+    #[doc = "0x44 - Peripheral Access Control Register"]
+    #[inline(always)]
+    pub const fn pacrf(&self) -> &Pacrf {
+        &self.pacrf
+    }
+    #[doc = "0x48 - Peripheral Access Control Register"]
+    #[inline(always)]
+    pub const fn pacrg(&self) -> &Pacrg {
+        &self.pacrg
+    }
+    #[doc = "0x4c - Peripheral Access Control Register"]
+    #[inline(always)]
+    pub const fn pacrh(&self) -> &Pacrh {
+        &self.pacrh
+    }
+    #[doc = "0x50 - Peripheral Access Control Register"]
+    #[inline(always)]
+    pub const fn pacri(&self) -> &Pacri {
+        &self.pacri
+    }
+    #[doc = "0x54 - Peripheral Access Control Register"]
+    #[inline(always)]
+    pub const fn pacrj(&self) -> &Pacrj {
+        &self.pacrj
+    }
+    #[doc = "0x58 - Peripheral Access Control Register"]
+    #[inline(always)]
+    pub const fn pacrk(&self) -> &Pacrk {
+        &self.pacrk
+    }
+    #[doc = "0x5c - Peripheral Access Control Register"]
+    #[inline(always)]
+    pub const fn pacrl(&self) -> &Pacrl {
+        &self.pacrl
+    }
+    #[doc = "0x60 - Peripheral Access Control Register"]
+    #[inline(always)]
+    pub const fn pacrm(&self) -> &Pacrm {
+        &self.pacrm
+    }
+    #[doc = "0x64 - Peripheral Access Control Register"]
+    #[inline(always)]
+    pub const fn pacrn(&self) -> &Pacrn {
+        &self.pacrn
+    }
+    #[doc = "0x68 - Peripheral Access Control Register"]
+    #[inline(always)]
+    pub const fn pacro(&self) -> &Pacro {
+        &self.pacro
+    }
+    #[doc = "0x6c - Peripheral Access Control Register"]
+    #[inline(always)]
+    pub const fn pacrp(&self) -> &Pacrp {
+        &self.pacrp
+    }
+}
+#[doc = "MPRA (rw) register accessor: Master Privilege Register A\n\nYou can [`read`](crate::Reg::read) this register and get [`mpra::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mpra::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mpra`]
+module"]
+#[doc(alias = "MPRA")]
+pub type Mpra = crate::Reg<mpra::MpraSpec>;
+#[doc = "Master Privilege Register A"]
+pub mod mpra;
+#[doc = "PACRA (rw) register accessor: Peripheral Access Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`pacra::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pacra::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pacra`]
+module"]
+#[doc(alias = "PACRA")]
+pub type Pacra = crate::Reg<pacra::PacraSpec>;
+#[doc = "Peripheral Access Control Register"]
+pub mod pacra;
+#[doc = "PACRB (rw) register accessor: Peripheral Access Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`pacrb::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pacrb::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pacrb`]
+module"]
+#[doc(alias = "PACRB")]
+pub type Pacrb = crate::Reg<pacrb::PacrbSpec>;
+#[doc = "Peripheral Access Control Register"]
+pub mod pacrb;
+#[doc = "PACRC (rw) register accessor: Peripheral Access Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`pacrc::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pacrc::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pacrc`]
+module"]
+#[doc(alias = "PACRC")]
+pub type Pacrc = crate::Reg<pacrc::PacrcSpec>;
+#[doc = "Peripheral Access Control Register"]
+pub mod pacrc;
+#[doc = "PACRD (rw) register accessor: Peripheral Access Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`pacrd::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pacrd::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pacrd`]
+module"]
+#[doc(alias = "PACRD")]
+pub type Pacrd = crate::Reg<pacrd::PacrdSpec>;
+#[doc = "Peripheral Access Control Register"]
+pub mod pacrd;
+#[doc = "PACRE (rw) register accessor: Peripheral Access Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`pacre::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pacre::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pacre`]
+module"]
+#[doc(alias = "PACRE")]
+pub type Pacre = crate::Reg<pacre::PacreSpec>;
+#[doc = "Peripheral Access Control Register"]
+pub mod pacre;
+#[doc = "PACRF (rw) register accessor: Peripheral Access Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`pacrf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pacrf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pacrf`]
+module"]
+#[doc(alias = "PACRF")]
+pub type Pacrf = crate::Reg<pacrf::PacrfSpec>;
+#[doc = "Peripheral Access Control Register"]
+pub mod pacrf;
+#[doc = "PACRG (rw) register accessor: Peripheral Access Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`pacrg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pacrg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pacrg`]
+module"]
+#[doc(alias = "PACRG")]
+pub type Pacrg = crate::Reg<pacrg::PacrgSpec>;
+#[doc = "Peripheral Access Control Register"]
+pub mod pacrg;
+#[doc = "PACRH (rw) register accessor: Peripheral Access Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`pacrh::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pacrh::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pacrh`]
+module"]
+#[doc(alias = "PACRH")]
+pub type Pacrh = crate::Reg<pacrh::PacrhSpec>;
+#[doc = "Peripheral Access Control Register"]
+pub mod pacrh;
+#[doc = "PACRI (rw) register accessor: Peripheral Access Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`pacri::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pacri::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pacri`]
+module"]
+#[doc(alias = "PACRI")]
+pub type Pacri = crate::Reg<pacri::PacriSpec>;
+#[doc = "Peripheral Access Control Register"]
+pub mod pacri;
+#[doc = "PACRJ (rw) register accessor: Peripheral Access Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`pacrj::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pacrj::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pacrj`]
+module"]
+#[doc(alias = "PACRJ")]
+pub type Pacrj = crate::Reg<pacrj::PacrjSpec>;
+#[doc = "Peripheral Access Control Register"]
+pub mod pacrj;
+#[doc = "PACRK (rw) register accessor: Peripheral Access Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`pacrk::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pacrk::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pacrk`]
+module"]
+#[doc(alias = "PACRK")]
+pub type Pacrk = crate::Reg<pacrk::PacrkSpec>;
+#[doc = "Peripheral Access Control Register"]
+pub mod pacrk;
+#[doc = "PACRL (rw) register accessor: Peripheral Access Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`pacrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pacrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pacrl`]
+module"]
+#[doc(alias = "PACRL")]
+pub type Pacrl = crate::Reg<pacrl::PacrlSpec>;
+#[doc = "Peripheral Access Control Register"]
+pub mod pacrl;
+#[doc = "PACRM (rw) register accessor: Peripheral Access Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`pacrm::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pacrm::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pacrm`]
+module"]
+#[doc(alias = "PACRM")]
+pub type Pacrm = crate::Reg<pacrm::PacrmSpec>;
+#[doc = "Peripheral Access Control Register"]
+pub mod pacrm;
+#[doc = "PACRN (rw) register accessor: Peripheral Access Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`pacrn::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pacrn::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pacrn`]
+module"]
+#[doc(alias = "PACRN")]
+pub type Pacrn = crate::Reg<pacrn::PacrnSpec>;
+#[doc = "Peripheral Access Control Register"]
+pub mod pacrn;
+#[doc = "PACRO (rw) register accessor: Peripheral Access Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`pacro::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pacro::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pacro`]
+module"]
+#[doc(alias = "PACRO")]
+pub type Pacro = crate::Reg<pacro::PacroSpec>;
+#[doc = "Peripheral Access Control Register"]
+pub mod pacro;
+#[doc = "PACRP (rw) register accessor: Peripheral Access Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`pacrp::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pacrp::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pacrp`]
+module"]
+#[doc(alias = "PACRP")]
+pub type Pacrp = crate::Reg<pacrp::PacrpSpec>;
+#[doc = "Peripheral Access Control Register"]
+pub mod pacrp;

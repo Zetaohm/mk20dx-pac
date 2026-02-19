@@ -1,0 +1,537 @@
+#[doc = "Register `EXTTRIG` reader"]
+pub type R = crate::R<ExttrigSpec>;
+#[doc = "Register `EXTTRIG` writer"]
+pub type W = crate::W<ExttrigSpec>;
+#[doc = "Channel 2 Trigger Enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Ch2trig {
+    #[doc = "0: The generation of the channel trigger is disabled."]
+    _0 = 0,
+    #[doc = "1: The generation of the channel trigger is enabled."]
+    _1 = 1,
+}
+impl From<Ch2trig> for bool {
+    #[inline(always)]
+    fn from(variant: Ch2trig) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `CH2TRIG` reader - Channel 2 Trigger Enable"]
+pub type Ch2trigR = crate::BitReader<Ch2trig>;
+impl Ch2trigR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Ch2trig {
+        match self.bits {
+            false => Ch2trig::_0,
+            true => Ch2trig::_1,
+        }
+    }
+    #[doc = "The generation of the channel trigger is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Ch2trig::_0
+    }
+    #[doc = "The generation of the channel trigger is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Ch2trig::_1
+    }
+}
+#[doc = "Field `CH2TRIG` writer - Channel 2 Trigger Enable"]
+pub type Ch2trigW<'a, REG> = crate::BitWriter<'a, REG, Ch2trig>;
+impl<'a, REG> Ch2trigW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The generation of the channel trigger is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Ch2trig::_0)
+    }
+    #[doc = "The generation of the channel trigger is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Ch2trig::_1)
+    }
+}
+#[doc = "Channel 3 Trigger Enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Ch3trig {
+    #[doc = "0: The generation of the channel trigger is disabled."]
+    _0 = 0,
+    #[doc = "1: The generation of the channel trigger is enabled."]
+    _1 = 1,
+}
+impl From<Ch3trig> for bool {
+    #[inline(always)]
+    fn from(variant: Ch3trig) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `CH3TRIG` reader - Channel 3 Trigger Enable"]
+pub type Ch3trigR = crate::BitReader<Ch3trig>;
+impl Ch3trigR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Ch3trig {
+        match self.bits {
+            false => Ch3trig::_0,
+            true => Ch3trig::_1,
+        }
+    }
+    #[doc = "The generation of the channel trigger is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Ch3trig::_0
+    }
+    #[doc = "The generation of the channel trigger is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Ch3trig::_1
+    }
+}
+#[doc = "Field `CH3TRIG` writer - Channel 3 Trigger Enable"]
+pub type Ch3trigW<'a, REG> = crate::BitWriter<'a, REG, Ch3trig>;
+impl<'a, REG> Ch3trigW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The generation of the channel trigger is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Ch3trig::_0)
+    }
+    #[doc = "The generation of the channel trigger is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Ch3trig::_1)
+    }
+}
+#[doc = "Channel 4 Trigger Enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Ch4trig {
+    #[doc = "0: The generation of the channel trigger is disabled."]
+    _0 = 0,
+    #[doc = "1: The generation of the channel trigger is enabled."]
+    _1 = 1,
+}
+impl From<Ch4trig> for bool {
+    #[inline(always)]
+    fn from(variant: Ch4trig) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `CH4TRIG` reader - Channel 4 Trigger Enable"]
+pub type Ch4trigR = crate::BitReader<Ch4trig>;
+impl Ch4trigR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Ch4trig {
+        match self.bits {
+            false => Ch4trig::_0,
+            true => Ch4trig::_1,
+        }
+    }
+    #[doc = "The generation of the channel trigger is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Ch4trig::_0
+    }
+    #[doc = "The generation of the channel trigger is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Ch4trig::_1
+    }
+}
+#[doc = "Field `CH4TRIG` writer - Channel 4 Trigger Enable"]
+pub type Ch4trigW<'a, REG> = crate::BitWriter<'a, REG, Ch4trig>;
+impl<'a, REG> Ch4trigW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The generation of the channel trigger is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Ch4trig::_0)
+    }
+    #[doc = "The generation of the channel trigger is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Ch4trig::_1)
+    }
+}
+#[doc = "Channel 5 Trigger Enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Ch5trig {
+    #[doc = "0: The generation of the channel trigger is disabled."]
+    _0 = 0,
+    #[doc = "1: The generation of the channel trigger is enabled."]
+    _1 = 1,
+}
+impl From<Ch5trig> for bool {
+    #[inline(always)]
+    fn from(variant: Ch5trig) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `CH5TRIG` reader - Channel 5 Trigger Enable"]
+pub type Ch5trigR = crate::BitReader<Ch5trig>;
+impl Ch5trigR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Ch5trig {
+        match self.bits {
+            false => Ch5trig::_0,
+            true => Ch5trig::_1,
+        }
+    }
+    #[doc = "The generation of the channel trigger is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Ch5trig::_0
+    }
+    #[doc = "The generation of the channel trigger is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Ch5trig::_1
+    }
+}
+#[doc = "Field `CH5TRIG` writer - Channel 5 Trigger Enable"]
+pub type Ch5trigW<'a, REG> = crate::BitWriter<'a, REG, Ch5trig>;
+impl<'a, REG> Ch5trigW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The generation of the channel trigger is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Ch5trig::_0)
+    }
+    #[doc = "The generation of the channel trigger is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Ch5trig::_1)
+    }
+}
+#[doc = "Channel 0 Trigger Enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Ch0trig {
+    #[doc = "0: The generation of the channel trigger is disabled."]
+    _0 = 0,
+    #[doc = "1: The generation of the channel trigger is enabled."]
+    _1 = 1,
+}
+impl From<Ch0trig> for bool {
+    #[inline(always)]
+    fn from(variant: Ch0trig) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `CH0TRIG` reader - Channel 0 Trigger Enable"]
+pub type Ch0trigR = crate::BitReader<Ch0trig>;
+impl Ch0trigR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Ch0trig {
+        match self.bits {
+            false => Ch0trig::_0,
+            true => Ch0trig::_1,
+        }
+    }
+    #[doc = "The generation of the channel trigger is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Ch0trig::_0
+    }
+    #[doc = "The generation of the channel trigger is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Ch0trig::_1
+    }
+}
+#[doc = "Field `CH0TRIG` writer - Channel 0 Trigger Enable"]
+pub type Ch0trigW<'a, REG> = crate::BitWriter<'a, REG, Ch0trig>;
+impl<'a, REG> Ch0trigW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The generation of the channel trigger is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Ch0trig::_0)
+    }
+    #[doc = "The generation of the channel trigger is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Ch0trig::_1)
+    }
+}
+#[doc = "Channel 1 Trigger Enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Ch1trig {
+    #[doc = "0: The generation of the channel trigger is disabled."]
+    _0 = 0,
+    #[doc = "1: The generation of the channel trigger is enabled."]
+    _1 = 1,
+}
+impl From<Ch1trig> for bool {
+    #[inline(always)]
+    fn from(variant: Ch1trig) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `CH1TRIG` reader - Channel 1 Trigger Enable"]
+pub type Ch1trigR = crate::BitReader<Ch1trig>;
+impl Ch1trigR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Ch1trig {
+        match self.bits {
+            false => Ch1trig::_0,
+            true => Ch1trig::_1,
+        }
+    }
+    #[doc = "The generation of the channel trigger is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Ch1trig::_0
+    }
+    #[doc = "The generation of the channel trigger is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Ch1trig::_1
+    }
+}
+#[doc = "Field `CH1TRIG` writer - Channel 1 Trigger Enable"]
+pub type Ch1trigW<'a, REG> = crate::BitWriter<'a, REG, Ch1trig>;
+impl<'a, REG> Ch1trigW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The generation of the channel trigger is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Ch1trig::_0)
+    }
+    #[doc = "The generation of the channel trigger is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Ch1trig::_1)
+    }
+}
+#[doc = "Initialization Trigger Enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Inittrigen {
+    #[doc = "0: The generation of initialization trigger is disabled."]
+    _0 = 0,
+    #[doc = "1: The generation of initialization trigger is enabled."]
+    _1 = 1,
+}
+impl From<Inittrigen> for bool {
+    #[inline(always)]
+    fn from(variant: Inittrigen) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `INITTRIGEN` reader - Initialization Trigger Enable"]
+pub type InittrigenR = crate::BitReader<Inittrigen>;
+impl InittrigenR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Inittrigen {
+        match self.bits {
+            false => Inittrigen::_0,
+            true => Inittrigen::_1,
+        }
+    }
+    #[doc = "The generation of initialization trigger is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Inittrigen::_0
+    }
+    #[doc = "The generation of initialization trigger is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Inittrigen::_1
+    }
+}
+#[doc = "Field `INITTRIGEN` writer - Initialization Trigger Enable"]
+pub type InittrigenW<'a, REG> = crate::BitWriter<'a, REG, Inittrigen>;
+impl<'a, REG> InittrigenW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The generation of initialization trigger is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Inittrigen::_0)
+    }
+    #[doc = "The generation of initialization trigger is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Inittrigen::_1)
+    }
+}
+#[doc = "Channel Trigger Flag\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Trigf {
+    #[doc = "0: No channel trigger was generated."]
+    _0 = 0,
+    #[doc = "1: A channel trigger was generated."]
+    _1 = 1,
+}
+impl From<Trigf> for bool {
+    #[inline(always)]
+    fn from(variant: Trigf) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `TRIGF` reader - Channel Trigger Flag"]
+pub type TrigfR = crate::BitReader<Trigf>;
+impl TrigfR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Trigf {
+        match self.bits {
+            false => Trigf::_0,
+            true => Trigf::_1,
+        }
+    }
+    #[doc = "No channel trigger was generated."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Trigf::_0
+    }
+    #[doc = "A channel trigger was generated."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Trigf::_1
+    }
+}
+#[doc = "Field `TRIGF` writer - Channel Trigger Flag"]
+pub type TrigfW<'a, REG> = crate::BitWriter<'a, REG, Trigf>;
+impl<'a, REG> TrigfW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "No channel trigger was generated."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Trigf::_0)
+    }
+    #[doc = "A channel trigger was generated."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Trigf::_1)
+    }
+}
+impl R {
+    #[doc = "Bit 0 - Channel 2 Trigger Enable"]
+    #[inline(always)]
+    pub fn ch2trig(&self) -> Ch2trigR {
+        Ch2trigR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Channel 3 Trigger Enable"]
+    #[inline(always)]
+    pub fn ch3trig(&self) -> Ch3trigR {
+        Ch3trigR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - Channel 4 Trigger Enable"]
+    #[inline(always)]
+    pub fn ch4trig(&self) -> Ch4trigR {
+        Ch4trigR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Channel 5 Trigger Enable"]
+    #[inline(always)]
+    pub fn ch5trig(&self) -> Ch5trigR {
+        Ch5trigR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Channel 0 Trigger Enable"]
+    #[inline(always)]
+    pub fn ch0trig(&self) -> Ch0trigR {
+        Ch0trigR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - Channel 1 Trigger Enable"]
+    #[inline(always)]
+    pub fn ch1trig(&self) -> Ch1trigR {
+        Ch1trigR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - Initialization Trigger Enable"]
+    #[inline(always)]
+    pub fn inittrigen(&self) -> InittrigenR {
+        InittrigenR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - Channel Trigger Flag"]
+    #[inline(always)]
+    pub fn trigf(&self) -> TrigfR {
+        TrigfR::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Channel 2 Trigger Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ch2trig(&mut self) -> Ch2trigW<ExttrigSpec> {
+        Ch2trigW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Channel 3 Trigger Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ch3trig(&mut self) -> Ch3trigW<ExttrigSpec> {
+        Ch3trigW::new(self, 1)
+    }
+    #[doc = "Bit 2 - Channel 4 Trigger Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ch4trig(&mut self) -> Ch4trigW<ExttrigSpec> {
+        Ch4trigW::new(self, 2)
+    }
+    #[doc = "Bit 3 - Channel 5 Trigger Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ch5trig(&mut self) -> Ch5trigW<ExttrigSpec> {
+        Ch5trigW::new(self, 3)
+    }
+    #[doc = "Bit 4 - Channel 0 Trigger Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ch0trig(&mut self) -> Ch0trigW<ExttrigSpec> {
+        Ch0trigW::new(self, 4)
+    }
+    #[doc = "Bit 5 - Channel 1 Trigger Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ch1trig(&mut self) -> Ch1trigW<ExttrigSpec> {
+        Ch1trigW::new(self, 5)
+    }
+    #[doc = "Bit 6 - Initialization Trigger Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn inittrigen(&mut self) -> InittrigenW<ExttrigSpec> {
+        InittrigenW::new(self, 6)
+    }
+    #[doc = "Bit 7 - Channel Trigger Flag"]
+    #[inline(always)]
+    #[must_use]
+    pub fn trigf(&mut self) -> TrigfW<ExttrigSpec> {
+        TrigfW::new(self, 7)
+    }
+}
+#[doc = "FTM External Trigger\n\nYou can [`read`](crate::Reg::read) this register and get [`exttrig::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`exttrig::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ExttrigSpec;
+impl crate::RegisterSpec for ExttrigSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`exttrig::R`](R) reader structure"]
+impl crate::Readable for ExttrigSpec {}
+#[doc = "`write(|w| ..)` method takes [`exttrig::W`](W) writer structure"]
+impl crate::Writable for ExttrigSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets EXTTRIG to value 0"]
+impl crate::Resettable for ExttrigSpec {
+    const RESET_VALUE: u32 = 0;
+}

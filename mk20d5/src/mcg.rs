@@ -1,0 +1,143 @@
+#[repr(C)]
+#[doc = "Register block"]
+pub struct RegisterBlock {
+    c1: C1,
+    c2: C2,
+    c3: C3,
+    c4: C4,
+    c5: C5,
+    c6: C6,
+    s: S,
+    _reserved7: [u8; 0x01],
+    sc: Sc,
+    _reserved8: [u8; 0x01],
+    atcvh: Atcvh,
+    atcvl: Atcvl,
+    c7: C7,
+    c8: C8,
+}
+impl RegisterBlock {
+    #[doc = "0x00 - MCG Control 1 Register"]
+    #[inline(always)]
+    pub const fn c1(&self) -> &C1 {
+        &self.c1
+    }
+    #[doc = "0x01 - MCG Control 2 Register"]
+    #[inline(always)]
+    pub const fn c2(&self) -> &C2 {
+        &self.c2
+    }
+    #[doc = "0x02 - MCG Control 3 Register"]
+    #[inline(always)]
+    pub const fn c3(&self) -> &C3 {
+        &self.c3
+    }
+    #[doc = "0x03 - MCG Control 4 Register"]
+    #[inline(always)]
+    pub const fn c4(&self) -> &C4 {
+        &self.c4
+    }
+    #[doc = "0x04 - MCG Control 5 Register"]
+    #[inline(always)]
+    pub const fn c5(&self) -> &C5 {
+        &self.c5
+    }
+    #[doc = "0x05 - MCG Control 6 Register"]
+    #[inline(always)]
+    pub const fn c6(&self) -> &C6 {
+        &self.c6
+    }
+    #[doc = "0x06 - MCG Status Register"]
+    #[inline(always)]
+    pub const fn s(&self) -> &S {
+        &self.s
+    }
+    #[doc = "0x08 - MCG Status and Control Register"]
+    #[inline(always)]
+    pub const fn sc(&self) -> &Sc {
+        &self.sc
+    }
+    #[doc = "0x0a - MCG Auto Trim Compare Value High Register"]
+    #[inline(always)]
+    pub const fn atcvh(&self) -> &Atcvh {
+        &self.atcvh
+    }
+    #[doc = "0x0b - MCG Auto Trim Compare Value Low Register"]
+    #[inline(always)]
+    pub const fn atcvl(&self) -> &Atcvl {
+        &self.atcvl
+    }
+    #[doc = "0x0c - MCG Control 7 Register"]
+    #[inline(always)]
+    pub const fn c7(&self) -> &C7 {
+        &self.c7
+    }
+    #[doc = "0x0d - MCG Control 8 Register"]
+    #[inline(always)]
+    pub const fn c8(&self) -> &C8 {
+        &self.c8
+    }
+}
+#[doc = "C1 (rw) register accessor: MCG Control 1 Register\n\nYou can [`read`](crate::Reg::read) this register and get [`c1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`c1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@c1`]
+module"]
+pub type C1 = crate::Reg<c1::C1Spec>;
+#[doc = "MCG Control 1 Register"]
+pub mod c1;
+#[doc = "C2 (rw) register accessor: MCG Control 2 Register\n\nYou can [`read`](crate::Reg::read) this register and get [`c2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`c2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@c2`]
+module"]
+pub type C2 = crate::Reg<c2::C2Spec>;
+#[doc = "MCG Control 2 Register"]
+pub mod c2;
+#[doc = "C3 (rw) register accessor: MCG Control 3 Register\n\nYou can [`read`](crate::Reg::read) this register and get [`c3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`c3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@c3`]
+module"]
+pub type C3 = crate::Reg<c3::C3Spec>;
+#[doc = "MCG Control 3 Register"]
+pub mod c3;
+#[doc = "C4 (rw) register accessor: MCG Control 4 Register\n\nYou can [`read`](crate::Reg::read) this register and get [`c4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`c4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@c4`]
+module"]
+pub type C4 = crate::Reg<c4::C4Spec>;
+#[doc = "MCG Control 4 Register"]
+pub mod c4;
+#[doc = "C5 (rw) register accessor: MCG Control 5 Register\n\nYou can [`read`](crate::Reg::read) this register and get [`c5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`c5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@c5`]
+module"]
+pub type C5 = crate::Reg<c5::C5Spec>;
+#[doc = "MCG Control 5 Register"]
+pub mod c5;
+#[doc = "C6 (rw) register accessor: MCG Control 6 Register\n\nYou can [`read`](crate::Reg::read) this register and get [`c6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`c6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@c6`]
+module"]
+pub type C6 = crate::Reg<c6::C6Spec>;
+#[doc = "MCG Control 6 Register"]
+pub mod c6;
+#[doc = "S (rw) register accessor: MCG Status Register\n\nYou can [`read`](crate::Reg::read) this register and get [`s::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`s::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@s`]
+module"]
+pub type S = crate::Reg<s::SSpec>;
+#[doc = "MCG Status Register"]
+pub mod s;
+#[doc = "SC (rw) register accessor: MCG Status and Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`sc::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sc::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sc`]
+module"]
+#[doc(alias = "SC")]
+pub type Sc = crate::Reg<sc::ScSpec>;
+#[doc = "MCG Status and Control Register"]
+pub mod sc;
+#[doc = "ATCVH (rw) register accessor: MCG Auto Trim Compare Value High Register\n\nYou can [`read`](crate::Reg::read) this register and get [`atcvh::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`atcvh::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@atcvh`]
+module"]
+#[doc(alias = "ATCVH")]
+pub type Atcvh = crate::Reg<atcvh::AtcvhSpec>;
+#[doc = "MCG Auto Trim Compare Value High Register"]
+pub mod atcvh;
+#[doc = "ATCVL (rw) register accessor: MCG Auto Trim Compare Value Low Register\n\nYou can [`read`](crate::Reg::read) this register and get [`atcvl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`atcvl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@atcvl`]
+module"]
+#[doc(alias = "ATCVL")]
+pub type Atcvl = crate::Reg<atcvl::AtcvlSpec>;
+#[doc = "MCG Auto Trim Compare Value Low Register"]
+pub mod atcvl;
+#[doc = "C7 (rw) register accessor: MCG Control 7 Register\n\nYou can [`read`](crate::Reg::read) this register and get [`c7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`c7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@c7`]
+module"]
+pub type C7 = crate::Reg<c7::C7Spec>;
+#[doc = "MCG Control 7 Register"]
+pub mod c7;
+#[doc = "C8 (rw) register accessor: MCG Control 8 Register\n\nYou can [`read`](crate::Reg::read) this register and get [`c8::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`c8::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@c8`]
+module"]
+pub type C8 = crate::Reg<c8::C8Spec>;
+#[doc = "MCG Control 8 Register"]
+pub mod c8;

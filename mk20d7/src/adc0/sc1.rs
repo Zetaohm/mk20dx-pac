@@ -1,0 +1,616 @@
+#[doc = "Register `SC1%s` reader"]
+pub type R = crate::R<Sc1Spec>;
+#[doc = "Register `SC1%s` writer"]
+pub type W = crate::W<Sc1Spec>;
+#[doc = "Input channel select\n\nValue on reset: 31"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Adch {
+    #[doc = "0: When DIFF=0, DADP0 is selected as input; when DIFF=1, DAD0 is selected as input."]
+    _00000 = 0,
+    #[doc = "1: When DIFF=0, DADP1 is selected as input; when DIFF=1, DAD1 is selected as input."]
+    _00001 = 1,
+    #[doc = "2: When DIFF=0, DADP2 is selected as input; when DIFF=1, DAD2 is selected as input."]
+    _00010 = 2,
+    #[doc = "3: When DIFF=0, DADP3 is selected as input; when DIFF=1, DAD3 is selected as input."]
+    _00011 = 3,
+    #[doc = "4: When DIFF=0, AD4 is selected as input; when DIFF=1, it is reserved."]
+    _00100 = 4,
+    #[doc = "5: When DIFF=0, AD5 is selected as input; when DIFF=1, it is reserved."]
+    _00101 = 5,
+    #[doc = "6: When DIFF=0, AD6 is selected as input; when DIFF=1, it is reserved."]
+    _00110 = 6,
+    #[doc = "7: When DIFF=0, AD7 is selected as input; when DIFF=1, it is reserved."]
+    _00111 = 7,
+    #[doc = "8: When DIFF=0, AD8 is selected as input; when DIFF=1, it is reserved."]
+    _01000 = 8,
+    #[doc = "9: When DIFF=0, AD9 is selected as input; when DIFF=1, it is reserved."]
+    _01001 = 9,
+    #[doc = "10: When DIFF=0, AD10 is selected as input; when DIFF=1, it is reserved."]
+    _01010 = 10,
+    #[doc = "11: When DIFF=0, AD11 is selected as input; when DIFF=1, it is reserved."]
+    _01011 = 11,
+    #[doc = "12: When DIFF=0, AD12 is selected as input; when DIFF=1, it is reserved."]
+    _01100 = 12,
+    #[doc = "13: When DIFF=0, AD13 is selected as input; when DIFF=1, it is reserved."]
+    _01101 = 13,
+    #[doc = "14: When DIFF=0, AD14 is selected as input; when DIFF=1, it is reserved."]
+    _01110 = 14,
+    #[doc = "15: When DIFF=0, AD15 is selected as input; when DIFF=1, it is reserved."]
+    _01111 = 15,
+    #[doc = "16: When DIFF=0, AD16 is selected as input; when DIFF=1, it is reserved."]
+    _10000 = 16,
+    #[doc = "17: When DIFF=0, AD17 is selected as input; when DIFF=1, it is reserved."]
+    _10001 = 17,
+    #[doc = "18: When DIFF=0, AD18 is selected as input; when DIFF=1, it is reserved."]
+    _10010 = 18,
+    #[doc = "19: When DIFF=0, AD19 is selected as input; when DIFF=1, it is reserved."]
+    _10011 = 19,
+    #[doc = "20: When DIFF=0, AD20 is selected as input; when DIFF=1, it is reserved."]
+    _10100 = 20,
+    #[doc = "21: When DIFF=0, AD21 is selected as input; when DIFF=1, it is reserved."]
+    _10101 = 21,
+    #[doc = "22: When DIFF=0, AD22 is selected as input; when DIFF=1, it is reserved."]
+    _10110 = 22,
+    #[doc = "23: When DIFF=0, AD23 is selected as input; when DIFF=1, it is reserved."]
+    _10111 = 23,
+    #[doc = "26: When DIFF=0, Temp sensor (single-ended) is selected as input; when DIFF=1, Temp sensor (differential) is selected as input."]
+    _11010 = 26,
+    #[doc = "27: When DIFF=0, Bandgap (single-ended) is selected as input; when DIFF=1, Bandgap (differential) is selected as input."]
+    _11011 = 27,
+    #[doc = "29: When DIFF=0, VREFSH is selected as input; when DIFF=1, -VREFSH (differential) is selected as input. Voltage reference selected is determined by the REFSEL bits in the SC2 register."]
+    _11101 = 29,
+    #[doc = "30: When DIFF=0, VREFSL is selected as input; when DIFF=1, it is reserved. Voltage reference selected is determined by the REFSEL bits in the SC2 register."]
+    _11110 = 30,
+    #[doc = "31: Module disabled."]
+    _11111 = 31,
+}
+impl From<Adch> for u8 {
+    #[inline(always)]
+    fn from(variant: Adch) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Adch {
+    type Ux = u8;
+}
+impl crate::IsEnum for Adch {}
+#[doc = "Field `ADCH` reader - Input channel select"]
+pub type AdchR = crate::FieldReader<Adch>;
+impl AdchR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<Adch> {
+        match self.bits {
+            0 => Some(Adch::_00000),
+            1 => Some(Adch::_00001),
+            2 => Some(Adch::_00010),
+            3 => Some(Adch::_00011),
+            4 => Some(Adch::_00100),
+            5 => Some(Adch::_00101),
+            6 => Some(Adch::_00110),
+            7 => Some(Adch::_00111),
+            8 => Some(Adch::_01000),
+            9 => Some(Adch::_01001),
+            10 => Some(Adch::_01010),
+            11 => Some(Adch::_01011),
+            12 => Some(Adch::_01100),
+            13 => Some(Adch::_01101),
+            14 => Some(Adch::_01110),
+            15 => Some(Adch::_01111),
+            16 => Some(Adch::_10000),
+            17 => Some(Adch::_10001),
+            18 => Some(Adch::_10010),
+            19 => Some(Adch::_10011),
+            20 => Some(Adch::_10100),
+            21 => Some(Adch::_10101),
+            22 => Some(Adch::_10110),
+            23 => Some(Adch::_10111),
+            26 => Some(Adch::_11010),
+            27 => Some(Adch::_11011),
+            29 => Some(Adch::_11101),
+            30 => Some(Adch::_11110),
+            31 => Some(Adch::_11111),
+            _ => None,
+        }
+    }
+    #[doc = "When DIFF=0, DADP0 is selected as input; when DIFF=1, DAD0 is selected as input."]
+    #[inline(always)]
+    pub fn is_00000(&self) -> bool {
+        *self == Adch::_00000
+    }
+    #[doc = "When DIFF=0, DADP1 is selected as input; when DIFF=1, DAD1 is selected as input."]
+    #[inline(always)]
+    pub fn is_00001(&self) -> bool {
+        *self == Adch::_00001
+    }
+    #[doc = "When DIFF=0, DADP2 is selected as input; when DIFF=1, DAD2 is selected as input."]
+    #[inline(always)]
+    pub fn is_00010(&self) -> bool {
+        *self == Adch::_00010
+    }
+    #[doc = "When DIFF=0, DADP3 is selected as input; when DIFF=1, DAD3 is selected as input."]
+    #[inline(always)]
+    pub fn is_00011(&self) -> bool {
+        *self == Adch::_00011
+    }
+    #[doc = "When DIFF=0, AD4 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn is_00100(&self) -> bool {
+        *self == Adch::_00100
+    }
+    #[doc = "When DIFF=0, AD5 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn is_00101(&self) -> bool {
+        *self == Adch::_00101
+    }
+    #[doc = "When DIFF=0, AD6 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn is_00110(&self) -> bool {
+        *self == Adch::_00110
+    }
+    #[doc = "When DIFF=0, AD7 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn is_00111(&self) -> bool {
+        *self == Adch::_00111
+    }
+    #[doc = "When DIFF=0, AD8 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn is_01000(&self) -> bool {
+        *self == Adch::_01000
+    }
+    #[doc = "When DIFF=0, AD9 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn is_01001(&self) -> bool {
+        *self == Adch::_01001
+    }
+    #[doc = "When DIFF=0, AD10 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn is_01010(&self) -> bool {
+        *self == Adch::_01010
+    }
+    #[doc = "When DIFF=0, AD11 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn is_01011(&self) -> bool {
+        *self == Adch::_01011
+    }
+    #[doc = "When DIFF=0, AD12 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn is_01100(&self) -> bool {
+        *self == Adch::_01100
+    }
+    #[doc = "When DIFF=0, AD13 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn is_01101(&self) -> bool {
+        *self == Adch::_01101
+    }
+    #[doc = "When DIFF=0, AD14 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn is_01110(&self) -> bool {
+        *self == Adch::_01110
+    }
+    #[doc = "When DIFF=0, AD15 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn is_01111(&self) -> bool {
+        *self == Adch::_01111
+    }
+    #[doc = "When DIFF=0, AD16 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn is_10000(&self) -> bool {
+        *self == Adch::_10000
+    }
+    #[doc = "When DIFF=0, AD17 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn is_10001(&self) -> bool {
+        *self == Adch::_10001
+    }
+    #[doc = "When DIFF=0, AD18 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn is_10010(&self) -> bool {
+        *self == Adch::_10010
+    }
+    #[doc = "When DIFF=0, AD19 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn is_10011(&self) -> bool {
+        *self == Adch::_10011
+    }
+    #[doc = "When DIFF=0, AD20 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn is_10100(&self) -> bool {
+        *self == Adch::_10100
+    }
+    #[doc = "When DIFF=0, AD21 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn is_10101(&self) -> bool {
+        *self == Adch::_10101
+    }
+    #[doc = "When DIFF=0, AD22 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn is_10110(&self) -> bool {
+        *self == Adch::_10110
+    }
+    #[doc = "When DIFF=0, AD23 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn is_10111(&self) -> bool {
+        *self == Adch::_10111
+    }
+    #[doc = "When DIFF=0, Temp sensor (single-ended) is selected as input; when DIFF=1, Temp sensor (differential) is selected as input."]
+    #[inline(always)]
+    pub fn is_11010(&self) -> bool {
+        *self == Adch::_11010
+    }
+    #[doc = "When DIFF=0, Bandgap (single-ended) is selected as input; when DIFF=1, Bandgap (differential) is selected as input."]
+    #[inline(always)]
+    pub fn is_11011(&self) -> bool {
+        *self == Adch::_11011
+    }
+    #[doc = "When DIFF=0, VREFSH is selected as input; when DIFF=1, -VREFSH (differential) is selected as input. Voltage reference selected is determined by the REFSEL bits in the SC2 register."]
+    #[inline(always)]
+    pub fn is_11101(&self) -> bool {
+        *self == Adch::_11101
+    }
+    #[doc = "When DIFF=0, VREFSL is selected as input; when DIFF=1, it is reserved. Voltage reference selected is determined by the REFSEL bits in the SC2 register."]
+    #[inline(always)]
+    pub fn is_11110(&self) -> bool {
+        *self == Adch::_11110
+    }
+    #[doc = "Module disabled."]
+    #[inline(always)]
+    pub fn is_11111(&self) -> bool {
+        *self == Adch::_11111
+    }
+}
+#[doc = "Field `ADCH` writer - Input channel select"]
+pub type AdchW<'a, REG> = crate::FieldWriter<'a, REG, 5, Adch>;
+impl<'a, REG> AdchW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "When DIFF=0, DADP0 is selected as input; when DIFF=1, DAD0 is selected as input."]
+    #[inline(always)]
+    pub fn _00000(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_00000)
+    }
+    #[doc = "When DIFF=0, DADP1 is selected as input; when DIFF=1, DAD1 is selected as input."]
+    #[inline(always)]
+    pub fn _00001(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_00001)
+    }
+    #[doc = "When DIFF=0, DADP2 is selected as input; when DIFF=1, DAD2 is selected as input."]
+    #[inline(always)]
+    pub fn _00010(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_00010)
+    }
+    #[doc = "When DIFF=0, DADP3 is selected as input; when DIFF=1, DAD3 is selected as input."]
+    #[inline(always)]
+    pub fn _00011(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_00011)
+    }
+    #[doc = "When DIFF=0, AD4 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn _00100(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_00100)
+    }
+    #[doc = "When DIFF=0, AD5 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn _00101(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_00101)
+    }
+    #[doc = "When DIFF=0, AD6 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn _00110(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_00110)
+    }
+    #[doc = "When DIFF=0, AD7 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn _00111(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_00111)
+    }
+    #[doc = "When DIFF=0, AD8 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn _01000(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_01000)
+    }
+    #[doc = "When DIFF=0, AD9 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn _01001(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_01001)
+    }
+    #[doc = "When DIFF=0, AD10 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn _01010(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_01010)
+    }
+    #[doc = "When DIFF=0, AD11 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn _01011(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_01011)
+    }
+    #[doc = "When DIFF=0, AD12 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn _01100(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_01100)
+    }
+    #[doc = "When DIFF=0, AD13 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn _01101(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_01101)
+    }
+    #[doc = "When DIFF=0, AD14 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn _01110(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_01110)
+    }
+    #[doc = "When DIFF=0, AD15 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn _01111(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_01111)
+    }
+    #[doc = "When DIFF=0, AD16 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn _10000(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_10000)
+    }
+    #[doc = "When DIFF=0, AD17 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn _10001(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_10001)
+    }
+    #[doc = "When DIFF=0, AD18 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn _10010(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_10010)
+    }
+    #[doc = "When DIFF=0, AD19 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn _10011(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_10011)
+    }
+    #[doc = "When DIFF=0, AD20 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn _10100(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_10100)
+    }
+    #[doc = "When DIFF=0, AD21 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn _10101(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_10101)
+    }
+    #[doc = "When DIFF=0, AD22 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn _10110(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_10110)
+    }
+    #[doc = "When DIFF=0, AD23 is selected as input; when DIFF=1, it is reserved."]
+    #[inline(always)]
+    pub fn _10111(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_10111)
+    }
+    #[doc = "When DIFF=0, Temp sensor (single-ended) is selected as input; when DIFF=1, Temp sensor (differential) is selected as input."]
+    #[inline(always)]
+    pub fn _11010(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_11010)
+    }
+    #[doc = "When DIFF=0, Bandgap (single-ended) is selected as input; when DIFF=1, Bandgap (differential) is selected as input."]
+    #[inline(always)]
+    pub fn _11011(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_11011)
+    }
+    #[doc = "When DIFF=0, VREFSH is selected as input; when DIFF=1, -VREFSH (differential) is selected as input. Voltage reference selected is determined by the REFSEL bits in the SC2 register."]
+    #[inline(always)]
+    pub fn _11101(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_11101)
+    }
+    #[doc = "When DIFF=0, VREFSL is selected as input; when DIFF=1, it is reserved. Voltage reference selected is determined by the REFSEL bits in the SC2 register."]
+    #[inline(always)]
+    pub fn _11110(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_11110)
+    }
+    #[doc = "Module disabled."]
+    #[inline(always)]
+    pub fn _11111(self) -> &'a mut crate::W<REG> {
+        self.variant(Adch::_11111)
+    }
+}
+#[doc = "Differential mode enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Diff {
+    #[doc = "0: Single-ended conversions and input channels are selected."]
+    _0 = 0,
+    #[doc = "1: Differential conversions and input channels are selected."]
+    _1 = 1,
+}
+impl From<Diff> for bool {
+    #[inline(always)]
+    fn from(variant: Diff) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `DIFF` reader - Differential mode enable"]
+pub type DiffR = crate::BitReader<Diff>;
+impl DiffR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Diff {
+        match self.bits {
+            false => Diff::_0,
+            true => Diff::_1,
+        }
+    }
+    #[doc = "Single-ended conversions and input channels are selected."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Diff::_0
+    }
+    #[doc = "Differential conversions and input channels are selected."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Diff::_1
+    }
+}
+#[doc = "Field `DIFF` writer - Differential mode enable"]
+pub type DiffW<'a, REG> = crate::BitWriter<'a, REG, Diff>;
+impl<'a, REG> DiffW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Single-ended conversions and input channels are selected."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Diff::_0)
+    }
+    #[doc = "Differential conversions and input channels are selected."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Diff::_1)
+    }
+}
+#[doc = "Interrupt enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Aien {
+    #[doc = "0: Conversion complete interrupt disabled."]
+    _0 = 0,
+    #[doc = "1: Conversion complete interrupt enabled."]
+    _1 = 1,
+}
+impl From<Aien> for bool {
+    #[inline(always)]
+    fn from(variant: Aien) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `AIEN` reader - Interrupt enable"]
+pub type AienR = crate::BitReader<Aien>;
+impl AienR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Aien {
+        match self.bits {
+            false => Aien::_0,
+            true => Aien::_1,
+        }
+    }
+    #[doc = "Conversion complete interrupt disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Aien::_0
+    }
+    #[doc = "Conversion complete interrupt enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Aien::_1
+    }
+}
+#[doc = "Field `AIEN` writer - Interrupt enable"]
+pub type AienW<'a, REG> = crate::BitWriter<'a, REG, Aien>;
+impl<'a, REG> AienW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Conversion complete interrupt disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Aien::_0)
+    }
+    #[doc = "Conversion complete interrupt enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Aien::_1)
+    }
+}
+#[doc = "Conversion complete flag\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Coco {
+    #[doc = "0: Conversion not completed."]
+    _0 = 0,
+    #[doc = "1: Conversion completed."]
+    _1 = 1,
+}
+impl From<Coco> for bool {
+    #[inline(always)]
+    fn from(variant: Coco) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `COCO` reader - Conversion complete flag"]
+pub type CocoR = crate::BitReader<Coco>;
+impl CocoR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Coco {
+        match self.bits {
+            false => Coco::_0,
+            true => Coco::_1,
+        }
+    }
+    #[doc = "Conversion not completed."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Coco::_0
+    }
+    #[doc = "Conversion completed."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Coco::_1
+    }
+}
+impl R {
+    #[doc = "Bits 0:4 - Input channel select"]
+    #[inline(always)]
+    pub fn adch(&self) -> AdchR {
+        AdchR::new((self.bits & 0x1f) as u8)
+    }
+    #[doc = "Bit 5 - Differential mode enable"]
+    #[inline(always)]
+    pub fn diff(&self) -> DiffR {
+        DiffR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - Interrupt enable"]
+    #[inline(always)]
+    pub fn aien(&self) -> AienR {
+        AienR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - Conversion complete flag"]
+    #[inline(always)]
+    pub fn coco(&self) -> CocoR {
+        CocoR::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:4 - Input channel select"]
+    #[inline(always)]
+    #[must_use]
+    pub fn adch(&mut self) -> AdchW<Sc1Spec> {
+        AdchW::new(self, 0)
+    }
+    #[doc = "Bit 5 - Differential mode enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn diff(&mut self) -> DiffW<Sc1Spec> {
+        DiffW::new(self, 5)
+    }
+    #[doc = "Bit 6 - Interrupt enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn aien(&mut self) -> AienW<Sc1Spec> {
+        AienW::new(self, 6)
+    }
+}
+#[doc = "ADC status and control registers 1\n\nYou can [`read`](crate::Reg::read) this register and get [`sc1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sc1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Sc1Spec;
+impl crate::RegisterSpec for Sc1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`sc1::R`](R) reader structure"]
+impl crate::Readable for Sc1Spec {}
+#[doc = "`write(|w| ..)` method takes [`sc1::W`](W) writer structure"]
+impl crate::Writable for Sc1Spec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets SC1%s to value 0x1f"]
+impl crate::Resettable for Sc1Spec {
+    const RESET_VALUE: u32 = 0x1f;
+}

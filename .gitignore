@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.venv
+
+# svdtools output
+svd/*.patched
+
+# svd2rust intermediate
+mk20d5/lib.rs
+mk20d7/lib.rs
+
+# Rust build artifacts
+mk20d5/target/
+mk20d7/target/
+
+# Generated reference manual chapters
+reference/refman_chapters/
+reference/refman_50mhz_chapters/

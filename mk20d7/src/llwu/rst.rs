@@ -1,0 +1,153 @@
+#[doc = "Register `RST` reader"]
+pub type R = crate::R<RstSpec>;
+#[doc = "Register `RST` writer"]
+pub type W = crate::W<RstSpec>;
+#[doc = "Digital Filter on RESET Pin\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Rstfilt {
+    #[doc = "0: Filter not enabled"]
+    _0 = 0,
+    #[doc = "1: Filter enabled"]
+    _1 = 1,
+}
+impl From<Rstfilt> for bool {
+    #[inline(always)]
+    fn from(variant: Rstfilt) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `RSTFILT` reader - Digital Filter on RESET Pin"]
+pub type RstfiltR = crate::BitReader<Rstfilt>;
+impl RstfiltR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Rstfilt {
+        match self.bits {
+            false => Rstfilt::_0,
+            true => Rstfilt::_1,
+        }
+    }
+    #[doc = "Filter not enabled"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Rstfilt::_0
+    }
+    #[doc = "Filter enabled"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Rstfilt::_1
+    }
+}
+#[doc = "Field `RSTFILT` writer - Digital Filter on RESET Pin"]
+pub type RstfiltW<'a, REG> = crate::BitWriter<'a, REG, Rstfilt>;
+impl<'a, REG> RstfiltW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Filter not enabled"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Rstfilt::_0)
+    }
+    #[doc = "Filter enabled"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Rstfilt::_1)
+    }
+}
+#[doc = "Low Leakage mode RESET enable\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Llrste {
+    #[doc = "0: RESET pin not enabled as a leakage mode exit source"]
+    _0 = 0,
+    #[doc = "1: RESET pin enabled as a low leakage mode exit source"]
+    _1 = 1,
+}
+impl From<Llrste> for bool {
+    #[inline(always)]
+    fn from(variant: Llrste) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `LLRSTE` reader - Low Leakage mode RESET enable"]
+pub type LlrsteR = crate::BitReader<Llrste>;
+impl LlrsteR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Llrste {
+        match self.bits {
+            false => Llrste::_0,
+            true => Llrste::_1,
+        }
+    }
+    #[doc = "RESET pin not enabled as a leakage mode exit source"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Llrste::_0
+    }
+    #[doc = "RESET pin enabled as a low leakage mode exit source"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Llrste::_1
+    }
+}
+#[doc = "Field `LLRSTE` writer - Low Leakage mode RESET enable"]
+pub type LlrsteW<'a, REG> = crate::BitWriter<'a, REG, Llrste>;
+impl<'a, REG> LlrsteW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "RESET pin not enabled as a leakage mode exit source"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Llrste::_0)
+    }
+    #[doc = "RESET pin enabled as a low leakage mode exit source"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Llrste::_1)
+    }
+}
+impl R {
+    #[doc = "Bit 0 - Digital Filter on RESET Pin"]
+    #[inline(always)]
+    pub fn rstfilt(&self) -> RstfiltR {
+        RstfiltR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Low Leakage mode RESET enable"]
+    #[inline(always)]
+    pub fn llrste(&self) -> LlrsteR {
+        LlrsteR::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Digital Filter on RESET Pin"]
+    #[inline(always)]
+    #[must_use]
+    pub fn rstfilt(&mut self) -> RstfiltW<RstSpec> {
+        RstfiltW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Low Leakage mode RESET enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn llrste(&mut self) -> LlrsteW<RstSpec> {
+        LlrsteW::new(self, 1)
+    }
+}
+#[doc = "LLWU Reset Enable Register\n\nYou can [`read`](crate::Reg::read) this register and get [`rst::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rst::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RstSpec;
+impl crate::RegisterSpec for RstSpec {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [`rst::R`](R) reader structure"]
+impl crate::Readable for RstSpec {}
+#[doc = "`write(|w| ..)` method takes [`rst::W`](W) writer structure"]
+impl crate::Writable for RstSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+}
+#[doc = "`reset()` method sets RST to value 0x02"]
+impl crate::Resettable for RstSpec {
+    const RESET_VALUE: u8 = 0x02;
+}

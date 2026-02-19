@@ -1,0 +1,114 @@
+#[doc = "Register `CHS` reader"]
+pub type R = crate::R<ChsSpec>;
+#[doc = "Register `CHS` writer"]
+pub type W = crate::W<ChsSpec>;
+#[doc = "PDB Channel Sequence Error Flags\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Err {
+    #[doc = "0: Sequence error not detected on PDB channel's corresponding pre-trigger."]
+    _0 = 0,
+    #[doc = "1: Sequence error detected on PDB channel's corresponding pre-trigger. ADCn block can be triggered for a conversion by one pre-trigger from PDB channel n. When one conversion, which is triggered by one of the pre-triggers from PDB channel n, is in progress, new trigger from PDB channel's corresponding pre-trigger m cannot be accepted by ADCn, and ERR\\[m\\]
+is set. Writing 1's to clear the sequence error flags."]
+    _1 = 1,
+}
+impl From<Err> for u8 {
+    #[inline(always)]
+    fn from(variant: Err) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Err {
+    type Ux = u8;
+}
+impl crate::IsEnum for Err {}
+#[doc = "Field `ERR` reader - PDB Channel Sequence Error Flags"]
+pub type ErrR = crate::FieldReader<Err>;
+impl ErrR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<Err> {
+        match self.bits {
+            0 => Some(Err::_0),
+            1 => Some(Err::_1),
+            _ => None,
+        }
+    }
+    #[doc = "Sequence error not detected on PDB channel's corresponding pre-trigger."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Err::_0
+    }
+    #[doc = "Sequence error detected on PDB channel's corresponding pre-trigger. ADCn block can be triggered for a conversion by one pre-trigger from PDB channel n. When one conversion, which is triggered by one of the pre-triggers from PDB channel n, is in progress, new trigger from PDB channel's corresponding pre-trigger m cannot be accepted by ADCn, and ERR\\[m\\]
+is set. Writing 1's to clear the sequence error flags."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Err::_1
+    }
+}
+#[doc = "Field `ERR` writer - PDB Channel Sequence Error Flags"]
+pub type ErrW<'a, REG> = crate::FieldWriter<'a, REG, 8, Err>;
+impl<'a, REG> ErrW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "Sequence error not detected on PDB channel's corresponding pre-trigger."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Err::_0)
+    }
+    #[doc = "Sequence error detected on PDB channel's corresponding pre-trigger. ADCn block can be triggered for a conversion by one pre-trigger from PDB channel n. When one conversion, which is triggered by one of the pre-triggers from PDB channel n, is in progress, new trigger from PDB channel's corresponding pre-trigger m cannot be accepted by ADCn, and ERR\\[m\\]
+is set. Writing 1's to clear the sequence error flags."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Err::_1)
+    }
+}
+#[doc = "Field `CF` reader - PDB Channel Flags"]
+pub type CfR = crate::FieldReader;
+#[doc = "Field `CF` writer - PDB Channel Flags"]
+pub type CfW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+impl R {
+    #[doc = "Bits 0:7 - PDB Channel Sequence Error Flags"]
+    #[inline(always)]
+    pub fn err(&self) -> ErrR {
+        ErrR::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 16:23 - PDB Channel Flags"]
+    #[inline(always)]
+    pub fn cf(&self) -> CfR {
+        CfR::new(((self.bits >> 16) & 0xff) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - PDB Channel Sequence Error Flags"]
+    #[inline(always)]
+    #[must_use]
+    pub fn err(&mut self) -> ErrW<ChsSpec> {
+        ErrW::new(self, 0)
+    }
+    #[doc = "Bits 16:23 - PDB Channel Flags"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cf(&mut self) -> CfW<ChsSpec> {
+        CfW::new(self, 16)
+    }
+}
+#[doc = "Channel n Status Register\n\nYou can [`read`](crate::Reg::read) this register and get [`chs::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`chs::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ChsSpec;
+impl crate::RegisterSpec for ChsSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`chs::R`](R) reader structure"]
+impl crate::Readable for ChsSpec {}
+#[doc = "`write(|w| ..)` method takes [`chs::W`](W) writer structure"]
+impl crate::Writable for ChsSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets CHS to value 0"]
+impl crate::Resettable for ChsSpec {
+    const RESET_VALUE: u32 = 0;
+}

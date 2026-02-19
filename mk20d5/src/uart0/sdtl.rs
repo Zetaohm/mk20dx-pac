@@ -1,0 +1,40 @@
+#[doc = "Register `SDTL` reader"]
+pub type R = crate::R<SdtlSpec>;
+#[doc = "Register `SDTL` writer"]
+pub type W = crate::W<SdtlSpec>;
+#[doc = "Field `SDTL` reader - Secondary Delay Timer Low"]
+pub type SdtlR = crate::FieldReader;
+#[doc = "Field `SDTL` writer - Secondary Delay Timer Low"]
+pub type SdtlW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+impl R {
+    #[doc = "Bits 0:7 - Secondary Delay Timer Low"]
+    #[inline(always)]
+    pub fn sdtl(&self) -> SdtlR {
+        SdtlR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - Secondary Delay Timer Low"]
+    #[inline(always)]
+    #[must_use]
+    pub fn sdtl(&mut self) -> SdtlW<SdtlSpec> {
+        SdtlW::new(self, 0)
+    }
+}
+#[doc = "UART CEA709.1-B Secondary Delay Timer Low\n\nYou can [`read`](crate::Reg::read) this register and get [`sdtl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sdtl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SdtlSpec;
+impl crate::RegisterSpec for SdtlSpec {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [`sdtl::R`](R) reader structure"]
+impl crate::Readable for SdtlSpec {}
+#[doc = "`write(|w| ..)` method takes [`sdtl::W`](W) writer structure"]
+impl crate::Writable for SdtlSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+}
+#[doc = "`reset()` method sets SDTL to value 0"]
+impl crate::Resettable for SdtlSpec {
+    const RESET_VALUE: u8 = 0;
+}

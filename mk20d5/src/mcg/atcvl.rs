@@ -1,0 +1,40 @@
+#[doc = "Register `ATCVL` reader"]
+pub type R = crate::R<AtcvlSpec>;
+#[doc = "Register `ATCVL` writer"]
+pub type W = crate::W<AtcvlSpec>;
+#[doc = "Field `ATCVL` reader - ATM Compare Value Low"]
+pub type AtcvlR = crate::FieldReader;
+#[doc = "Field `ATCVL` writer - ATM Compare Value Low"]
+pub type AtcvlW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+impl R {
+    #[doc = "Bits 0:7 - ATM Compare Value Low"]
+    #[inline(always)]
+    pub fn atcvl(&self) -> AtcvlR {
+        AtcvlR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - ATM Compare Value Low"]
+    #[inline(always)]
+    #[must_use]
+    pub fn atcvl(&mut self) -> AtcvlW<AtcvlSpec> {
+        AtcvlW::new(self, 0)
+    }
+}
+#[doc = "MCG Auto Trim Compare Value Low Register\n\nYou can [`read`](crate::Reg::read) this register and get [`atcvl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`atcvl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct AtcvlSpec;
+impl crate::RegisterSpec for AtcvlSpec {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [`atcvl::R`](R) reader structure"]
+impl crate::Readable for AtcvlSpec {}
+#[doc = "`write(|w| ..)` method takes [`atcvl::W`](W) writer structure"]
+impl crate::Writable for AtcvlSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+}
+#[doc = "`reset()` method sets ATCVL to value 0"]
+impl crate::Resettable for AtcvlSpec {
+    const RESET_VALUE: u8 = 0;
+}

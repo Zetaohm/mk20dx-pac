@@ -1,0 +1,445 @@
+#[doc = "Register `CSPMCR` reader"]
+pub type R = crate::R<CspmcrSpec>;
+#[doc = "Register `CSPMCR` writer"]
+pub type W = crate::W<CspmcrSpec>;
+#[doc = "FlexBus signal group 5 multiplex control\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Group5 {
+    #[doc = "0: FB_TA"]
+    _0000 = 0,
+    #[doc = "1: FB_CS3. You must also set CSCRn\\[AA\\]."]
+    _0001 = 1,
+    #[doc = "2: FB_BE_7_0. You must also set CSCRn\\[AA\\]."]
+    _0010 = 2,
+}
+impl From<Group5> for u8 {
+    #[inline(always)]
+    fn from(variant: Group5) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Group5 {
+    type Ux = u8;
+}
+impl crate::IsEnum for Group5 {}
+#[doc = "Field `GROUP5` reader - FlexBus signal group 5 multiplex control"]
+pub type Group5R = crate::FieldReader<Group5>;
+impl Group5R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<Group5> {
+        match self.bits {
+            0 => Some(Group5::_0000),
+            1 => Some(Group5::_0001),
+            2 => Some(Group5::_0010),
+            _ => None,
+        }
+    }
+    #[doc = "FB_TA"]
+    #[inline(always)]
+    pub fn is_0000(&self) -> bool {
+        *self == Group5::_0000
+    }
+    #[doc = "FB_CS3. You must also set CSCRn\\[AA\\]."]
+    #[inline(always)]
+    pub fn is_0001(&self) -> bool {
+        *self == Group5::_0001
+    }
+    #[doc = "FB_BE_7_0. You must also set CSCRn\\[AA\\]."]
+    #[inline(always)]
+    pub fn is_0010(&self) -> bool {
+        *self == Group5::_0010
+    }
+}
+#[doc = "Field `GROUP5` writer - FlexBus signal group 5 multiplex control"]
+pub type Group5W<'a, REG> = crate::FieldWriter<'a, REG, 4, Group5>;
+impl<'a, REG> Group5W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "FB_TA"]
+    #[inline(always)]
+    pub fn _0000(self) -> &'a mut crate::W<REG> {
+        self.variant(Group5::_0000)
+    }
+    #[doc = "FB_CS3. You must also set CSCRn\\[AA\\]."]
+    #[inline(always)]
+    pub fn _0001(self) -> &'a mut crate::W<REG> {
+        self.variant(Group5::_0001)
+    }
+    #[doc = "FB_BE_7_0. You must also set CSCRn\\[AA\\]."]
+    #[inline(always)]
+    pub fn _0010(self) -> &'a mut crate::W<REG> {
+        self.variant(Group5::_0010)
+    }
+}
+#[doc = "FlexBus signal group 4 multiplex control\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Group4 {
+    #[doc = "0: FB_TBST"]
+    _0000 = 0,
+    #[doc = "1: FB_CS2"]
+    _0001 = 1,
+    #[doc = "2: FB_BE_15_8"]
+    _0010 = 2,
+}
+impl From<Group4> for u8 {
+    #[inline(always)]
+    fn from(variant: Group4) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Group4 {
+    type Ux = u8;
+}
+impl crate::IsEnum for Group4 {}
+#[doc = "Field `GROUP4` reader - FlexBus signal group 4 multiplex control"]
+pub type Group4R = crate::FieldReader<Group4>;
+impl Group4R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<Group4> {
+        match self.bits {
+            0 => Some(Group4::_0000),
+            1 => Some(Group4::_0001),
+            2 => Some(Group4::_0010),
+            _ => None,
+        }
+    }
+    #[doc = "FB_TBST"]
+    #[inline(always)]
+    pub fn is_0000(&self) -> bool {
+        *self == Group4::_0000
+    }
+    #[doc = "FB_CS2"]
+    #[inline(always)]
+    pub fn is_0001(&self) -> bool {
+        *self == Group4::_0001
+    }
+    #[doc = "FB_BE_15_8"]
+    #[inline(always)]
+    pub fn is_0010(&self) -> bool {
+        *self == Group4::_0010
+    }
+}
+#[doc = "Field `GROUP4` writer - FlexBus signal group 4 multiplex control"]
+pub type Group4W<'a, REG> = crate::FieldWriter<'a, REG, 4, Group4>;
+impl<'a, REG> Group4W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "FB_TBST"]
+    #[inline(always)]
+    pub fn _0000(self) -> &'a mut crate::W<REG> {
+        self.variant(Group4::_0000)
+    }
+    #[doc = "FB_CS2"]
+    #[inline(always)]
+    pub fn _0001(self) -> &'a mut crate::W<REG> {
+        self.variant(Group4::_0001)
+    }
+    #[doc = "FB_BE_15_8"]
+    #[inline(always)]
+    pub fn _0010(self) -> &'a mut crate::W<REG> {
+        self.variant(Group4::_0010)
+    }
+}
+#[doc = "FlexBus signal group 3 multiplex control\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Group3 {
+    #[doc = "0: FB_CS5"]
+    _0000 = 0,
+    #[doc = "1: FB_TSIZ1"]
+    _0001 = 1,
+    #[doc = "2: FB_BE_23_16"]
+    _0010 = 2,
+}
+impl From<Group3> for u8 {
+    #[inline(always)]
+    fn from(variant: Group3) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Group3 {
+    type Ux = u8;
+}
+impl crate::IsEnum for Group3 {}
+#[doc = "Field `GROUP3` reader - FlexBus signal group 3 multiplex control"]
+pub type Group3R = crate::FieldReader<Group3>;
+impl Group3R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<Group3> {
+        match self.bits {
+            0 => Some(Group3::_0000),
+            1 => Some(Group3::_0001),
+            2 => Some(Group3::_0010),
+            _ => None,
+        }
+    }
+    #[doc = "FB_CS5"]
+    #[inline(always)]
+    pub fn is_0000(&self) -> bool {
+        *self == Group3::_0000
+    }
+    #[doc = "FB_TSIZ1"]
+    #[inline(always)]
+    pub fn is_0001(&self) -> bool {
+        *self == Group3::_0001
+    }
+    #[doc = "FB_BE_23_16"]
+    #[inline(always)]
+    pub fn is_0010(&self) -> bool {
+        *self == Group3::_0010
+    }
+}
+#[doc = "Field `GROUP3` writer - FlexBus signal group 3 multiplex control"]
+pub type Group3W<'a, REG> = crate::FieldWriter<'a, REG, 4, Group3>;
+impl<'a, REG> Group3W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "FB_CS5"]
+    #[inline(always)]
+    pub fn _0000(self) -> &'a mut crate::W<REG> {
+        self.variant(Group3::_0000)
+    }
+    #[doc = "FB_TSIZ1"]
+    #[inline(always)]
+    pub fn _0001(self) -> &'a mut crate::W<REG> {
+        self.variant(Group3::_0001)
+    }
+    #[doc = "FB_BE_23_16"]
+    #[inline(always)]
+    pub fn _0010(self) -> &'a mut crate::W<REG> {
+        self.variant(Group3::_0010)
+    }
+}
+#[doc = "FlexBus signal group 2 multiplex control\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Group2 {
+    #[doc = "0: FB_CS4"]
+    _0000 = 0,
+    #[doc = "1: FB_TSIZ0"]
+    _0001 = 1,
+    #[doc = "2: FB_BE_31_24"]
+    _0010 = 2,
+}
+impl From<Group2> for u8 {
+    #[inline(always)]
+    fn from(variant: Group2) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Group2 {
+    type Ux = u8;
+}
+impl crate::IsEnum for Group2 {}
+#[doc = "Field `GROUP2` reader - FlexBus signal group 2 multiplex control"]
+pub type Group2R = crate::FieldReader<Group2>;
+impl Group2R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<Group2> {
+        match self.bits {
+            0 => Some(Group2::_0000),
+            1 => Some(Group2::_0001),
+            2 => Some(Group2::_0010),
+            _ => None,
+        }
+    }
+    #[doc = "FB_CS4"]
+    #[inline(always)]
+    pub fn is_0000(&self) -> bool {
+        *self == Group2::_0000
+    }
+    #[doc = "FB_TSIZ0"]
+    #[inline(always)]
+    pub fn is_0001(&self) -> bool {
+        *self == Group2::_0001
+    }
+    #[doc = "FB_BE_31_24"]
+    #[inline(always)]
+    pub fn is_0010(&self) -> bool {
+        *self == Group2::_0010
+    }
+}
+#[doc = "Field `GROUP2` writer - FlexBus signal group 2 multiplex control"]
+pub type Group2W<'a, REG> = crate::FieldWriter<'a, REG, 4, Group2>;
+impl<'a, REG> Group2W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "FB_CS4"]
+    #[inline(always)]
+    pub fn _0000(self) -> &'a mut crate::W<REG> {
+        self.variant(Group2::_0000)
+    }
+    #[doc = "FB_TSIZ0"]
+    #[inline(always)]
+    pub fn _0001(self) -> &'a mut crate::W<REG> {
+        self.variant(Group2::_0001)
+    }
+    #[doc = "FB_BE_31_24"]
+    #[inline(always)]
+    pub fn _0010(self) -> &'a mut crate::W<REG> {
+        self.variant(Group2::_0010)
+    }
+}
+#[doc = "FlexBus signal group 1 multiplex control\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Group1 {
+    #[doc = "0: FB_ALE"]
+    _0000 = 0,
+    #[doc = "1: FB_CS1"]
+    _0001 = 1,
+    #[doc = "2: FB_TS"]
+    _0010 = 2,
+}
+impl From<Group1> for u8 {
+    #[inline(always)]
+    fn from(variant: Group1) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Group1 {
+    type Ux = u8;
+}
+impl crate::IsEnum for Group1 {}
+#[doc = "Field `GROUP1` reader - FlexBus signal group 1 multiplex control"]
+pub type Group1R = crate::FieldReader<Group1>;
+impl Group1R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<Group1> {
+        match self.bits {
+            0 => Some(Group1::_0000),
+            1 => Some(Group1::_0001),
+            2 => Some(Group1::_0010),
+            _ => None,
+        }
+    }
+    #[doc = "FB_ALE"]
+    #[inline(always)]
+    pub fn is_0000(&self) -> bool {
+        *self == Group1::_0000
+    }
+    #[doc = "FB_CS1"]
+    #[inline(always)]
+    pub fn is_0001(&self) -> bool {
+        *self == Group1::_0001
+    }
+    #[doc = "FB_TS"]
+    #[inline(always)]
+    pub fn is_0010(&self) -> bool {
+        *self == Group1::_0010
+    }
+}
+#[doc = "Field `GROUP1` writer - FlexBus signal group 1 multiplex control"]
+pub type Group1W<'a, REG> = crate::FieldWriter<'a, REG, 4, Group1>;
+impl<'a, REG> Group1W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "FB_ALE"]
+    #[inline(always)]
+    pub fn _0000(self) -> &'a mut crate::W<REG> {
+        self.variant(Group1::_0000)
+    }
+    #[doc = "FB_CS1"]
+    #[inline(always)]
+    pub fn _0001(self) -> &'a mut crate::W<REG> {
+        self.variant(Group1::_0001)
+    }
+    #[doc = "FB_TS"]
+    #[inline(always)]
+    pub fn _0010(self) -> &'a mut crate::W<REG> {
+        self.variant(Group1::_0010)
+    }
+}
+impl R {
+    #[doc = "Bits 12:15 - FlexBus signal group 5 multiplex control"]
+    #[inline(always)]
+    pub fn group5(&self) -> Group5R {
+        Group5R::new(((self.bits >> 12) & 0x0f) as u8)
+    }
+    #[doc = "Bits 16:19 - FlexBus signal group 4 multiplex control"]
+    #[inline(always)]
+    pub fn group4(&self) -> Group4R {
+        Group4R::new(((self.bits >> 16) & 0x0f) as u8)
+    }
+    #[doc = "Bits 20:23 - FlexBus signal group 3 multiplex control"]
+    #[inline(always)]
+    pub fn group3(&self) -> Group3R {
+        Group3R::new(((self.bits >> 20) & 0x0f) as u8)
+    }
+    #[doc = "Bits 24:27 - FlexBus signal group 2 multiplex control"]
+    #[inline(always)]
+    pub fn group2(&self) -> Group2R {
+        Group2R::new(((self.bits >> 24) & 0x0f) as u8)
+    }
+    #[doc = "Bits 28:31 - FlexBus signal group 1 multiplex control"]
+    #[inline(always)]
+    pub fn group1(&self) -> Group1R {
+        Group1R::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 12:15 - FlexBus signal group 5 multiplex control"]
+    #[inline(always)]
+    #[must_use]
+    pub fn group5(&mut self) -> Group5W<CspmcrSpec> {
+        Group5W::new(self, 12)
+    }
+    #[doc = "Bits 16:19 - FlexBus signal group 4 multiplex control"]
+    #[inline(always)]
+    #[must_use]
+    pub fn group4(&mut self) -> Group4W<CspmcrSpec> {
+        Group4W::new(self, 16)
+    }
+    #[doc = "Bits 20:23 - FlexBus signal group 3 multiplex control"]
+    #[inline(always)]
+    #[must_use]
+    pub fn group3(&mut self) -> Group3W<CspmcrSpec> {
+        Group3W::new(self, 20)
+    }
+    #[doc = "Bits 24:27 - FlexBus signal group 2 multiplex control"]
+    #[inline(always)]
+    #[must_use]
+    pub fn group2(&mut self) -> Group2W<CspmcrSpec> {
+        Group2W::new(self, 24)
+    }
+    #[doc = "Bits 28:31 - FlexBus signal group 1 multiplex control"]
+    #[inline(always)]
+    #[must_use]
+    pub fn group1(&mut self) -> Group1W<CspmcrSpec> {
+        Group1W::new(self, 28)
+    }
+}
+#[doc = "Chip select port multiplexing control register\n\nYou can [`read`](crate::Reg::read) this register and get [`cspmcr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cspmcr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CspmcrSpec;
+impl crate::RegisterSpec for CspmcrSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`cspmcr::R`](R) reader structure"]
+impl crate::Readable for CspmcrSpec {}
+#[doc = "`write(|w| ..)` method takes [`cspmcr::W`](W) writer structure"]
+impl crate::Writable for CspmcrSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets CSPMCR to value 0"]
+impl crate::Resettable for CspmcrSpec {
+    const RESET_VALUE: u32 = 0;
+}

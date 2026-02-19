@@ -1,0 +1,4 @@
+_svd: ../svd/MK20D7.svd
+
+# _include:
+#   - ../patches/common/irq_offset.yaml

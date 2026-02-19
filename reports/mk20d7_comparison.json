@@ -1,0 +1,4118 @@
+{
+  "summary": {
+    "total_discrepancies": 226,
+    "registers_matched": 949,
+    "registers_unmatched_in_svd": 222,
+    "registers_skipped_k64_k66": 375,
+    "irqs_matched": 67,
+    "irqs_in_header": 69,
+    "fields_matched": 115,
+    "fields_checked": 117,
+    "header_registers": 1546,
+    "header_bitfields": 1066,
+    "header_param_fields": 191,
+    "svd_registers": 1594,
+    "svd_fields": 6625,
+    "svd_interrupts": 72
+  },
+  "by_category": {
+    "FIELD_WIDTH_MISMATCH": [
+      {
+        "category": "FIELD_WIDTH_MISMATCH",
+        "peripheral": "DMA",
+        "register": "DMA_TCD0_BITER_ELINKNO",
+        "field": "DMA_TCD_BITER_ELINKYES_BITER",
+        "header_value": "width=9 (mask=0x1FF)",
+        "svd_value": "width=15",
+        "detail": "Field width: header DMA_TCD_BITER_ELINKYES_BITER width=9, SVD DMA_TCD0_BITER_ELINKNO.BITER width=15"
+      },
+      {
+        "category": "FIELD_WIDTH_MISMATCH",
+        "peripheral": "DMA",
+        "register": "DMA_TCD0_CITER_ELINKNO",
+        "field": "DMA_TCD_CITER_ELINKYES_CITER",
+        "header_value": "width=9 (mask=0x1FF)",
+        "svd_value": "width=15",
+        "detail": "Field width: header DMA_TCD_CITER_ELINKYES_CITER width=9, SVD DMA_TCD0_CITER_ELINKNO.CITER width=15"
+      }
+    ],
+    "MISSING_IN_SVD": [
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "SIM",
+        "register": "SIM_USBPHYCTL",
+        "field": "",
+        "header_value": "0x40047008 (32-bit)",
+        "svd_value": null,
+        "detail": "Register SIM_USBPHYCTL at 0x40047008 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "SIM",
+        "register": "SIM_SOPT8",
+        "field": "",
+        "header_value": "0x4004801C (32-bit)",
+        "svd_value": null,
+        "detail": "Register SIM_SOPT8 at 0x4004801C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "SIM",
+        "register": "SIM_SOPT9",
+        "field": "",
+        "header_value": "0x40048020 (32-bit)",
+        "svd_value": null,
+        "detail": "Register SIM_SOPT9 at 0x40048020 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "SIM",
+        "register": "SIM_CLKDIV3",
+        "field": "",
+        "header_value": "0x40048064 (32-bit)",
+        "svd_value": null,
+        "detail": "Register SIM_CLKDIV3 at 0x40048064 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "SIM",
+        "register": "SIM_CLKDIV4",
+        "field": "",
+        "header_value": "0x40048068 (32-bit)",
+        "svd_value": null,
+        "detail": "Register SIM_CLKDIV4 at 0x40048068 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "RCM",
+        "register": "RCM_SSRS0",
+        "field": "",
+        "header_value": "0x4007F008 (8-bit)",
+        "svd_value": null,
+        "detail": "Register RCM_SSRS0 at 0x4007F008 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "RCM",
+        "register": "RCM_SSRS1",
+        "field": "",
+        "header_value": "0x4007F009 (8-bit)",
+        "svd_value": null,
+        "detail": "Register RCM_SSRS1 at 0x4007F009 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "MCM",
+        "register": "MCM_ISCR",
+        "field": "",
+        "header_value": "0xE0080010 (32-bit)",
+        "svd_value": null,
+        "detail": "Register MCM_ISCR at 0xE0080010 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "MCM",
+        "register": "MCM_ETBCC",
+        "field": "",
+        "header_value": "0xE0080014 (32-bit)",
+        "svd_value": null,
+        "detail": "Register MCM_ETBCC at 0xE0080014 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "MCM",
+        "register": "MCM_ETBRL",
+        "field": "",
+        "header_value": "0xE0080018 (32-bit)",
+        "svd_value": null,
+        "detail": "Register MCM_ETBRL at 0xE0080018 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "MCM",
+        "register": "MCM_ETBCNT",
+        "field": "",
+        "header_value": "0xE008001C (32-bit)",
+        "svd_value": null,
+        "detail": "Register MCM_ETBCNT at 0xE008001C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "MCM",
+        "register": "MCM_FADR",
+        "field": "",
+        "header_value": "0xE0080020 (32-bit)",
+        "svd_value": null,
+        "detail": "Register MCM_FADR at 0xE0080020 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "MCM",
+        "register": "MCM_FATR",
+        "field": "",
+        "header_value": "0xE0080024 (32-bit)",
+        "svd_value": null,
+        "detail": "Register MCM_FATR at 0xE0080024 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "MCM",
+        "register": "MCM_FDR",
+        "field": "",
+        "header_value": "0xE0080028 (32-bit)",
+        "svd_value": null,
+        "detail": "Register MCM_FDR at 0xE0080028 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "MCM",
+        "register": "MCM_PID",
+        "field": "",
+        "header_value": "0xE0080030 (32-bit)",
+        "svd_value": null,
+        "detail": "Register MCM_PID at 0xE0080030 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "MCM",
+        "register": "MCM_CPO",
+        "field": "",
+        "header_value": "0xE0080040 (32-bit)",
+        "svd_value": null,
+        "detail": "Register MCM_CPO at 0xE0080040 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "AXBS",
+        "register": "AXBS_PRS4",
+        "field": "",
+        "header_value": "0x40004400 (32-bit)",
+        "svd_value": null,
+        "detail": "Register AXBS_PRS4 at 0x40004400 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "AXBS",
+        "register": "AXBS_CRS4",
+        "field": "",
+        "header_value": "0x40004410 (32-bit)",
+        "svd_value": null,
+        "detail": "Register AXBS_CRS4 at 0x40004410 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "AXBS",
+        "register": "AXBS_PRS5",
+        "field": "",
+        "header_value": "0x40004500 (32-bit)",
+        "svd_value": null,
+        "detail": "Register AXBS_PRS5 at 0x40004500 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "AXBS",
+        "register": "AXBS_CRS5",
+        "field": "",
+        "header_value": "0x40004510 (32-bit)",
+        "svd_value": null,
+        "detail": "Register AXBS_CRS5 at 0x40004510 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "AXBS",
+        "register": "AXBS_PRS6",
+        "field": "",
+        "header_value": "0x40004600 (32-bit)",
+        "svd_value": null,
+        "detail": "Register AXBS_PRS6 at 0x40004600 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "AXBS",
+        "register": "AXBS_CRS6",
+        "field": "",
+        "header_value": "0x40004610 (32-bit)",
+        "svd_value": null,
+        "detail": "Register AXBS_CRS6 at 0x40004610 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "AXBS",
+        "register": "AXBS_PRS7",
+        "field": "",
+        "header_value": "0x40004700 (32-bit)",
+        "svd_value": null,
+        "detail": "Register AXBS_PRS7 at 0x40004700 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "AXBS",
+        "register": "AXBS_CRS7",
+        "field": "",
+        "header_value": "0x40004710 (32-bit)",
+        "svd_value": null,
+        "detail": "Register AXBS_CRS7 at 0x40004710 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "AXBS",
+        "register": "AXBS_MGPCR4",
+        "field": "",
+        "header_value": "0x40004C00 (32-bit)",
+        "svd_value": null,
+        "detail": "Register AXBS_MGPCR4 at 0x40004C00 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "AXBS",
+        "register": "AXBS_MGPCR5",
+        "field": "",
+        "header_value": "0x40004D00 (32-bit)",
+        "svd_value": null,
+        "detail": "Register AXBS_MGPCR5 at 0x40004D00 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "AXBS",
+        "register": "AXBS_MGPCR6",
+        "field": "",
+        "header_value": "0x40004E00 (32-bit)",
+        "svd_value": null,
+        "detail": "Register AXBS_MGPCR6 at 0x40004E00 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "AXBS",
+        "register": "AXBS_MGPCR7",
+        "field": "",
+        "header_value": "0x40004F00 (32-bit)",
+        "svd_value": null,
+        "detail": "Register AXBS_MGPCR7 at 0x40004F00 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG16",
+        "field": "",
+        "header_value": "0x40021010 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG16 at 0x40021010 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG17",
+        "field": "",
+        "header_value": "0x40021011 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG17 at 0x40021011 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG18",
+        "field": "",
+        "header_value": "0x40021012 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG18 at 0x40021012 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG19",
+        "field": "",
+        "header_value": "0x40021013 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG19 at 0x40021013 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG20",
+        "field": "",
+        "header_value": "0x40021014 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG20 at 0x40021014 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG21",
+        "field": "",
+        "header_value": "0x40021015 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG21 at 0x40021015 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG22",
+        "field": "",
+        "header_value": "0x40021016 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG22 at 0x40021016 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG23",
+        "field": "",
+        "header_value": "0x40021017 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG23 at 0x40021017 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG24",
+        "field": "",
+        "header_value": "0x40021018 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG24 at 0x40021018 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG25",
+        "field": "",
+        "header_value": "0x40021019 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG25 at 0x40021019 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG26",
+        "field": "",
+        "header_value": "0x4002101A (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG26 at 0x4002101A not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG27",
+        "field": "",
+        "header_value": "0x4002101B (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG27 at 0x4002101B not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG28",
+        "field": "",
+        "header_value": "0x4002101C (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG28 at 0x4002101C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG29",
+        "field": "",
+        "header_value": "0x4002101D (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG29 at 0x4002101D not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG30",
+        "field": "",
+        "header_value": "0x4002101E (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG30 at 0x4002101E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG31",
+        "field": "",
+        "header_value": "0x4002101F (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG31 at 0x4002101F not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI19",
+        "field": "",
+        "header_value": "0x40008110 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI19 at 0x40008110 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI18",
+        "field": "",
+        "header_value": "0x40008111 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI18 at 0x40008111 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI17",
+        "field": "",
+        "header_value": "0x40008112 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI17 at 0x40008112 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI16",
+        "field": "",
+        "header_value": "0x40008113 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI16 at 0x40008113 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI23",
+        "field": "",
+        "header_value": "0x40008114 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI23 at 0x40008114 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI22",
+        "field": "",
+        "header_value": "0x40008115 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI22 at 0x40008115 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI21",
+        "field": "",
+        "header_value": "0x40008116 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI21 at 0x40008116 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI20",
+        "field": "",
+        "header_value": "0x40008117 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI20 at 0x40008117 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI27",
+        "field": "",
+        "header_value": "0x40008118 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI27 at 0x40008118 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI26",
+        "field": "",
+        "header_value": "0x40008119 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI26 at 0x40008119 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI25",
+        "field": "",
+        "header_value": "0x4000811A (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI25 at 0x4000811A not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI24",
+        "field": "",
+        "header_value": "0x4000811B (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI24 at 0x4000811B not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI31",
+        "field": "",
+        "header_value": "0x4000811C (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI31 at 0x4000811C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI30",
+        "field": "",
+        "header_value": "0x4000811D (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI30 at 0x4000811D not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI29",
+        "field": "",
+        "header_value": "0x4000811E (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI29 at 0x4000811E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI28",
+        "field": "",
+        "header_value": "0x4000811F (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI28 at 0x4000811F not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD16_ATTR",
+        "field": "",
+        "header_value": "0x40009206 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD16_ATTR at 0x40009206 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD16_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x40009208 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD16_NBYTES_MLNO at 0x40009208 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD16_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x40009208 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD16_NBYTES_MLOFFNO at 0x40009208 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD16_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x40009208 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD16_NBYTES_MLOFFYES at 0x40009208 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD16_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x40009216 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD16_CITER_ELINKYES at 0x40009216 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD16_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x40009216 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD16_CITER_ELINKNO at 0x40009216 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD16_CSR",
+        "field": "",
+        "header_value": "0x4000921C (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD16_CSR at 0x4000921C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD16_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x4000921E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD16_BITER_ELINKYES at 0x4000921E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD16_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x4000921E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD16_BITER_ELINKNO at 0x4000921E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD17_ATTR",
+        "field": "",
+        "header_value": "0x40009226 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD17_ATTR at 0x40009226 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD17_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x40009228 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD17_NBYTES_MLNO at 0x40009228 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD17_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x40009228 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD17_NBYTES_MLOFFNO at 0x40009228 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD17_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x40009228 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD17_NBYTES_MLOFFYES at 0x40009228 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD17_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x40009236 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD17_CITER_ELINKYES at 0x40009236 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD17_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x40009236 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD17_CITER_ELINKNO at 0x40009236 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD17_CSR",
+        "field": "",
+        "header_value": "0x4000923C (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD17_CSR at 0x4000923C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD17_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x4000923E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD17_BITER_ELINKYES at 0x4000923E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD17_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x4000923E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD17_BITER_ELINKNO at 0x4000923E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD18_ATTR",
+        "field": "",
+        "header_value": "0x40009246 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD18_ATTR at 0x40009246 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD18_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x40009248 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD18_NBYTES_MLNO at 0x40009248 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD18_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x40009248 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD18_NBYTES_MLOFFNO at 0x40009248 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD18_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x40009248 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD18_NBYTES_MLOFFYES at 0x40009248 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD18_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x40009256 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD18_CITER_ELINKYES at 0x40009256 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD18_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x40009256 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD18_CITER_ELINKNO at 0x40009256 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD18_CSR",
+        "field": "",
+        "header_value": "0x4000925C (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD18_CSR at 0x4000925C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD18_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x4000925E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD18_BITER_ELINKYES at 0x4000925E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD18_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x4000925E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD18_BITER_ELINKNO at 0x4000925E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD19_ATTR",
+        "field": "",
+        "header_value": "0x40009266 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD19_ATTR at 0x40009266 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD19_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x40009268 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD19_NBYTES_MLNO at 0x40009268 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD19_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x40009268 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD19_NBYTES_MLOFFNO at 0x40009268 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD19_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x40009268 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD19_NBYTES_MLOFFYES at 0x40009268 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD19_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x40009276 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD19_CITER_ELINKYES at 0x40009276 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD19_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x40009276 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD19_CITER_ELINKNO at 0x40009276 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD19_CSR",
+        "field": "",
+        "header_value": "0x4000927C (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD19_CSR at 0x4000927C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD19_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x4000927E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD19_BITER_ELINKYES at 0x4000927E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD19_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x4000927E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD19_BITER_ELINKNO at 0x4000927E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD20_ATTR",
+        "field": "",
+        "header_value": "0x40009286 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD20_ATTR at 0x40009286 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD20_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x40009288 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD20_NBYTES_MLNO at 0x40009288 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD20_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x40009288 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD20_NBYTES_MLOFFNO at 0x40009288 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD20_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x40009288 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD20_NBYTES_MLOFFYES at 0x40009288 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD20_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x40009296 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD20_CITER_ELINKYES at 0x40009296 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD20_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x40009296 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD20_CITER_ELINKNO at 0x40009296 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD20_CSR",
+        "field": "",
+        "header_value": "0x4000929C (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD20_CSR at 0x4000929C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD20_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x4000929E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD20_BITER_ELINKYES at 0x4000929E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD20_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x4000929E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD20_BITER_ELINKNO at 0x4000929E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD21_ATTR",
+        "field": "",
+        "header_value": "0x400092A6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD21_ATTR at 0x400092A6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD21_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x400092A8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD21_NBYTES_MLNO at 0x400092A8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD21_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x400092A8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD21_NBYTES_MLOFFNO at 0x400092A8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD21_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x400092A8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD21_NBYTES_MLOFFYES at 0x400092A8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD21_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x400092B6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD21_CITER_ELINKYES at 0x400092B6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD21_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x400092B6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD21_CITER_ELINKNO at 0x400092B6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD21_CSR",
+        "field": "",
+        "header_value": "0x400092BC (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD21_CSR at 0x400092BC not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD21_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x400092BE (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD21_BITER_ELINKYES at 0x400092BE not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD21_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x400092BE (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD21_BITER_ELINKNO at 0x400092BE not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD22_ATTR",
+        "field": "",
+        "header_value": "0x400092C6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD22_ATTR at 0x400092C6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD22_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x400092C8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD22_NBYTES_MLNO at 0x400092C8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD22_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x400092C8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD22_NBYTES_MLOFFNO at 0x400092C8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD22_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x400092C8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD22_NBYTES_MLOFFYES at 0x400092C8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD22_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x400092D6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD22_CITER_ELINKYES at 0x400092D6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD22_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x400092D6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD22_CITER_ELINKNO at 0x400092D6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD22_CSR",
+        "field": "",
+        "header_value": "0x400092DC (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD22_CSR at 0x400092DC not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD22_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x400092DE (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD22_BITER_ELINKYES at 0x400092DE not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD22_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x400092DE (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD22_BITER_ELINKNO at 0x400092DE not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD23_ATTR",
+        "field": "",
+        "header_value": "0x400092E6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD23_ATTR at 0x400092E6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD23_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x400092E8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD23_NBYTES_MLNO at 0x400092E8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD23_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x400092E8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD23_NBYTES_MLOFFNO at 0x400092E8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD23_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x400092E8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD23_NBYTES_MLOFFYES at 0x400092E8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD23_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x400092F6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD23_CITER_ELINKYES at 0x400092F6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD23_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x400092F6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD23_CITER_ELINKNO at 0x400092F6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD23_CSR",
+        "field": "",
+        "header_value": "0x400092FC (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD23_CSR at 0x400092FC not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD23_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x400092FE (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD23_BITER_ELINKYES at 0x400092FE not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD23_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x400092FE (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD23_BITER_ELINKNO at 0x400092FE not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD24_ATTR",
+        "field": "",
+        "header_value": "0x40009306 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD24_ATTR at 0x40009306 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD24_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x40009308 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD24_NBYTES_MLNO at 0x40009308 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD24_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x40009308 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD24_NBYTES_MLOFFNO at 0x40009308 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD24_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x40009308 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD24_NBYTES_MLOFFYES at 0x40009308 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD24_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x40009316 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD24_CITER_ELINKYES at 0x40009316 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD24_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x40009316 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD24_CITER_ELINKNO at 0x40009316 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD24_CSR",
+        "field": "",
+        "header_value": "0x4000931C (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD24_CSR at 0x4000931C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD24_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x4000931E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD24_BITER_ELINKYES at 0x4000931E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD24_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x4000931E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD24_BITER_ELINKNO at 0x4000931E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD25_ATTR",
+        "field": "",
+        "header_value": "0x40009326 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD25_ATTR at 0x40009326 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD25_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x40009328 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD25_NBYTES_MLNO at 0x40009328 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD25_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x40009328 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD25_NBYTES_MLOFFNO at 0x40009328 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD25_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x40009328 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD25_NBYTES_MLOFFYES at 0x40009328 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD25_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x40009336 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD25_CITER_ELINKYES at 0x40009336 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD25_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x40009336 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD25_CITER_ELINKNO at 0x40009336 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD25_CSR",
+        "field": "",
+        "header_value": "0x4000933C (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD25_CSR at 0x4000933C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD25_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x4000933E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD25_BITER_ELINKYES at 0x4000933E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD25_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x4000933E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD25_BITER_ELINKNO at 0x4000933E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD26_ATTR",
+        "field": "",
+        "header_value": "0x40009346 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD26_ATTR at 0x40009346 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD26_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x40009348 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD26_NBYTES_MLNO at 0x40009348 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD26_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x40009348 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD26_NBYTES_MLOFFNO at 0x40009348 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD26_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x40009348 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD26_NBYTES_MLOFFYES at 0x40009348 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD26_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x40009356 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD26_CITER_ELINKYES at 0x40009356 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD26_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x40009356 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD26_CITER_ELINKNO at 0x40009356 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD26_CSR",
+        "field": "",
+        "header_value": "0x4000935C (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD26_CSR at 0x4000935C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD26_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x4000935E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD26_BITER_ELINKYES at 0x4000935E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD26_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x4000935E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD26_BITER_ELINKNO at 0x4000935E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD27_ATTR",
+        "field": "",
+        "header_value": "0x40009366 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD27_ATTR at 0x40009366 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD27_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x40009368 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD27_NBYTES_MLNO at 0x40009368 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD27_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x40009368 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD27_NBYTES_MLOFFNO at 0x40009368 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD27_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x40009368 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD27_NBYTES_MLOFFYES at 0x40009368 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD27_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x40009376 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD27_CITER_ELINKYES at 0x40009376 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD27_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x40009376 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD27_CITER_ELINKNO at 0x40009376 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD27_CSR",
+        "field": "",
+        "header_value": "0x4000937C (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD27_CSR at 0x4000937C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD27_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x4000937E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD27_BITER_ELINKYES at 0x4000937E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD27_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x4000937E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD27_BITER_ELINKNO at 0x4000937E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD28_ATTR",
+        "field": "",
+        "header_value": "0x40009386 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD28_ATTR at 0x40009386 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD28_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x40009388 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD28_NBYTES_MLNO at 0x40009388 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD28_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x40009388 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD28_NBYTES_MLOFFNO at 0x40009388 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD28_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x40009388 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD28_NBYTES_MLOFFYES at 0x40009388 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD28_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x40009396 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD28_CITER_ELINKYES at 0x40009396 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD28_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x40009396 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD28_CITER_ELINKNO at 0x40009396 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD28_CSR",
+        "field": "",
+        "header_value": "0x4000939C (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD28_CSR at 0x4000939C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD28_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x4000939E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD28_BITER_ELINKYES at 0x4000939E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD28_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x4000939E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD28_BITER_ELINKNO at 0x4000939E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD29_ATTR",
+        "field": "",
+        "header_value": "0x400093A6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD29_ATTR at 0x400093A6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD29_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x400093A8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD29_NBYTES_MLNO at 0x400093A8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD29_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x400093A8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD29_NBYTES_MLOFFNO at 0x400093A8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD29_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x400093A8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD29_NBYTES_MLOFFYES at 0x400093A8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD29_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x400093B6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD29_CITER_ELINKYES at 0x400093B6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD29_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x400093B6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD29_CITER_ELINKNO at 0x400093B6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD29_CSR",
+        "field": "",
+        "header_value": "0x400093BC (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD29_CSR at 0x400093BC not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD29_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x400093BE (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD29_BITER_ELINKYES at 0x400093BE not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD29_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x400093BE (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD29_BITER_ELINKNO at 0x400093BE not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD30_ATTR",
+        "field": "",
+        "header_value": "0x400093C6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD30_ATTR at 0x400093C6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD30_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x400093C8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD30_NBYTES_MLNO at 0x400093C8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD30_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x400093C8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD30_NBYTES_MLOFFNO at 0x400093C8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD30_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x400093C8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD30_NBYTES_MLOFFYES at 0x400093C8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD30_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x400093D6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD30_CITER_ELINKYES at 0x400093D6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD30_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x400093D6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD30_CITER_ELINKNO at 0x400093D6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD30_CSR",
+        "field": "",
+        "header_value": "0x400093DC (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD30_CSR at 0x400093DC not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD30_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x400093DE (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD30_BITER_ELINKYES at 0x400093DE not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD30_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x400093DE (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD30_BITER_ELINKNO at 0x400093DE not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD31_ATTR",
+        "field": "",
+        "header_value": "0x400093E6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD31_ATTR at 0x400093E6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD31_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x400093E8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD31_NBYTES_MLNO at 0x400093E8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD31_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x400093E8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD31_NBYTES_MLOFFNO at 0x400093E8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD31_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x400093E8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD31_NBYTES_MLOFFYES at 0x400093E8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD31_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x400093F6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD31_CITER_ELINKYES at 0x400093F6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD31_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x400093F6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD31_CITER_ELINKNO at 0x400093F6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD31_CSR",
+        "field": "",
+        "header_value": "0x400093FC (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD31_CSR at 0x400093FC not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD31_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x400093FE (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD31_BITER_ELINKYES at 0x400093FE not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD31_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x400093FE (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD31_BITER_ELINKNO at 0x400093FE not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "OSC0",
+        "register": "OSC0_OSC_DIV",
+        "field": "",
+        "header_value": "0x40065002 (8-bit)",
+        "svd_value": null,
+        "detail": "Register OSC0_OSC_DIV at 0x40065002 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "PDB0",
+        "register": "PDB0_DACINTC1",
+        "field": "",
+        "header_value": "0x40036158 (32-bit)",
+        "svd_value": null,
+        "detail": "Register PDB0_DACINTC1 at 0x40036158 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "PDB0",
+        "register": "PDB0_DACINT1",
+        "field": "",
+        "header_value": "0x4003615C (32-bit)",
+        "svd_value": null,
+        "detail": "Register PDB0_DACINT1 at 0x4003615C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "PDB0",
+        "register": "PDB0_PO3DLY",
+        "field": "",
+        "header_value": "0x400361A0 (32-bit)",
+        "svd_value": null,
+        "detail": "Register PDB0_PO3DLY at 0x400361A0 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "USB0",
+        "register": "USB0_CLK_RECOVER_CTRL",
+        "field": "",
+        "header_value": "0x40072140 (8-bit)",
+        "svd_value": null,
+        "detail": "Register USB0_CLK_RECOVER_CTRL at 0x40072140 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "USB0",
+        "register": "USB0_CLK_RECOVER_IRC_EN",
+        "field": "",
+        "header_value": "0x40072144 (8-bit)",
+        "svd_value": null,
+        "detail": "Register USB0_CLK_RECOVER_IRC_EN at 0x40072144 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "USB0",
+        "register": "USB0_CLK_RECOVER_INT_EN",
+        "field": "",
+        "header_value": "0x40072154 (8-bit)",
+        "svd_value": null,
+        "detail": "Register USB0_CLK_RECOVER_INT_EN at 0x40072154 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "USB0",
+        "register": "USB0_CLK_RECOVER_INT_STATUS",
+        "field": "",
+        "header_value": "0x4007215C (8-bit)",
+        "svd_value": null,
+        "detail": "Register USB0_CLK_RECOVER_INT_STATUS at 0x4007215C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "SCB",
+        "register": "SCB_CPACR",
+        "field": "",
+        "header_value": "0xE000ED88 (32-bit)",
+        "svd_value": null,
+        "detail": "Register SCB_CPACR at 0xE000ED88 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "SCB",
+        "register": "SCB_FPCCR",
+        "field": "",
+        "header_value": "0xE000EF34 (32-bit)",
+        "svd_value": null,
+        "detail": "Register SCB_FPCCR at 0xE000EF34 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "SCB",
+        "register": "SCB_FPCAR",
+        "field": "",
+        "header_value": "0xE000EF38 (32-bit)",
+        "svd_value": null,
+        "detail": "Register SCB_FPCAR at 0xE000EF38 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "SCB",
+        "register": "SCB_FPDSCR",
+        "field": "",
+        "header_value": "0xE000EF3C (32-bit)",
+        "svd_value": null,
+        "detail": "Register SCB_FPDSCR at 0xE000EF3C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "SCB",
+        "register": "SCB_MVFR0",
+        "field": "",
+        "header_value": "0xE000EF40 (32-bit)",
+        "svd_value": null,
+        "detail": "Register SCB_MVFR0 at 0xE000EF40 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "SCB",
+        "register": "SCB_MVFR1",
+        "field": "",
+        "header_value": "0xE000EF44 (32-bit)",
+        "svd_value": null,
+        "detail": "Register SCB_MVFR1 at 0xE000EF44 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "SCB",
+        "register": "SCB_MVFR2",
+        "field": "",
+        "header_value": "0xE000EF48 (32-bit)",
+        "svd_value": null,
+        "detail": "Register SCB_MVFR2 at 0xE000EF48 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "ARM",
+        "register": "ARM_DEMCR",
+        "field": "",
+        "header_value": "0xE000EDFC (32-bit)",
+        "svd_value": null,
+        "detail": "Register ARM_DEMCR at 0xE000EDFC not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "ARM",
+        "register": "ARM_DWT_CTRL",
+        "field": "",
+        "header_value": "0xE0001000 (32-bit)",
+        "svd_value": null,
+        "detail": "Register ARM_DWT_CTRL at 0xE0001000 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "ARM",
+        "register": "ARM_DWT_CYCCNT",
+        "field": "",
+        "header_value": "0xE0001004 (32-bit)",
+        "svd_value": null,
+        "detail": "Register ARM_DWT_CYCCNT at 0xE0001004 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "",
+        "register": "",
+        "field": "IRQ_MCG",
+        "header_value": "84",
+        "svd_value": null,
+        "detail": "IRQ IRQ_MCG=84 not found in SVD (also checked +16 offset)"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "",
+        "register": "",
+        "field": "IRQ_SOFTWARE",
+        "header_value": "94",
+        "svd_value": null,
+        "detail": "IRQ IRQ_SOFTWARE=94 not found in SVD (also checked +16 offset)"
+      }
+    ]
+  },
+  "by_peripheral": {
+    "(global)": [
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "",
+        "register": "",
+        "field": "IRQ_MCG",
+        "header_value": "84",
+        "svd_value": null,
+        "detail": "IRQ IRQ_MCG=84 not found in SVD (also checked +16 offset)"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "",
+        "register": "",
+        "field": "IRQ_SOFTWARE",
+        "header_value": "94",
+        "svd_value": null,
+        "detail": "IRQ IRQ_SOFTWARE=94 not found in SVD (also checked +16 offset)"
+      }
+    ],
+    "ARM": [
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "ARM",
+        "register": "ARM_DEMCR",
+        "field": "",
+        "header_value": "0xE000EDFC (32-bit)",
+        "svd_value": null,
+        "detail": "Register ARM_DEMCR at 0xE000EDFC not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "ARM",
+        "register": "ARM_DWT_CTRL",
+        "field": "",
+        "header_value": "0xE0001000 (32-bit)",
+        "svd_value": null,
+        "detail": "Register ARM_DWT_CTRL at 0xE0001000 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "ARM",
+        "register": "ARM_DWT_CYCCNT",
+        "field": "",
+        "header_value": "0xE0001004 (32-bit)",
+        "svd_value": null,
+        "detail": "Register ARM_DWT_CYCCNT at 0xE0001004 not found in SVD"
+      }
+    ],
+    "AXBS": [
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "AXBS",
+        "register": "AXBS_PRS4",
+        "field": "",
+        "header_value": "0x40004400 (32-bit)",
+        "svd_value": null,
+        "detail": "Register AXBS_PRS4 at 0x40004400 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "AXBS",
+        "register": "AXBS_CRS4",
+        "field": "",
+        "header_value": "0x40004410 (32-bit)",
+        "svd_value": null,
+        "detail": "Register AXBS_CRS4 at 0x40004410 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "AXBS",
+        "register": "AXBS_PRS5",
+        "field": "",
+        "header_value": "0x40004500 (32-bit)",
+        "svd_value": null,
+        "detail": "Register AXBS_PRS5 at 0x40004500 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "AXBS",
+        "register": "AXBS_CRS5",
+        "field": "",
+        "header_value": "0x40004510 (32-bit)",
+        "svd_value": null,
+        "detail": "Register AXBS_CRS5 at 0x40004510 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "AXBS",
+        "register": "AXBS_PRS6",
+        "field": "",
+        "header_value": "0x40004600 (32-bit)",
+        "svd_value": null,
+        "detail": "Register AXBS_PRS6 at 0x40004600 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "AXBS",
+        "register": "AXBS_CRS6",
+        "field": "",
+        "header_value": "0x40004610 (32-bit)",
+        "svd_value": null,
+        "detail": "Register AXBS_CRS6 at 0x40004610 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "AXBS",
+        "register": "AXBS_PRS7",
+        "field": "",
+        "header_value": "0x40004700 (32-bit)",
+        "svd_value": null,
+        "detail": "Register AXBS_PRS7 at 0x40004700 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "AXBS",
+        "register": "AXBS_CRS7",
+        "field": "",
+        "header_value": "0x40004710 (32-bit)",
+        "svd_value": null,
+        "detail": "Register AXBS_CRS7 at 0x40004710 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "AXBS",
+        "register": "AXBS_MGPCR4",
+        "field": "",
+        "header_value": "0x40004C00 (32-bit)",
+        "svd_value": null,
+        "detail": "Register AXBS_MGPCR4 at 0x40004C00 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "AXBS",
+        "register": "AXBS_MGPCR5",
+        "field": "",
+        "header_value": "0x40004D00 (32-bit)",
+        "svd_value": null,
+        "detail": "Register AXBS_MGPCR5 at 0x40004D00 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "AXBS",
+        "register": "AXBS_MGPCR6",
+        "field": "",
+        "header_value": "0x40004E00 (32-bit)",
+        "svd_value": null,
+        "detail": "Register AXBS_MGPCR6 at 0x40004E00 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "AXBS",
+        "register": "AXBS_MGPCR7",
+        "field": "",
+        "header_value": "0x40004F00 (32-bit)",
+        "svd_value": null,
+        "detail": "Register AXBS_MGPCR7 at 0x40004F00 not found in SVD"
+      }
+    ],
+    "DMA": [
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI19",
+        "field": "",
+        "header_value": "0x40008110 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI19 at 0x40008110 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI18",
+        "field": "",
+        "header_value": "0x40008111 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI18 at 0x40008111 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI17",
+        "field": "",
+        "header_value": "0x40008112 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI17 at 0x40008112 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI16",
+        "field": "",
+        "header_value": "0x40008113 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI16 at 0x40008113 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI23",
+        "field": "",
+        "header_value": "0x40008114 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI23 at 0x40008114 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI22",
+        "field": "",
+        "header_value": "0x40008115 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI22 at 0x40008115 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI21",
+        "field": "",
+        "header_value": "0x40008116 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI21 at 0x40008116 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI20",
+        "field": "",
+        "header_value": "0x40008117 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI20 at 0x40008117 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI27",
+        "field": "",
+        "header_value": "0x40008118 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI27 at 0x40008118 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI26",
+        "field": "",
+        "header_value": "0x40008119 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI26 at 0x40008119 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI25",
+        "field": "",
+        "header_value": "0x4000811A (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI25 at 0x4000811A not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI24",
+        "field": "",
+        "header_value": "0x4000811B (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI24 at 0x4000811B not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI31",
+        "field": "",
+        "header_value": "0x4000811C (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI31 at 0x4000811C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI30",
+        "field": "",
+        "header_value": "0x4000811D (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI30 at 0x4000811D not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI29",
+        "field": "",
+        "header_value": "0x4000811E (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI29 at 0x4000811E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_DCHPRI28",
+        "field": "",
+        "header_value": "0x4000811F (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_DCHPRI28 at 0x4000811F not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD16_ATTR",
+        "field": "",
+        "header_value": "0x40009206 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD16_ATTR at 0x40009206 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD16_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x40009208 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD16_NBYTES_MLNO at 0x40009208 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD16_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x40009208 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD16_NBYTES_MLOFFNO at 0x40009208 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD16_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x40009208 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD16_NBYTES_MLOFFYES at 0x40009208 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD16_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x40009216 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD16_CITER_ELINKYES at 0x40009216 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD16_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x40009216 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD16_CITER_ELINKNO at 0x40009216 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD16_CSR",
+        "field": "",
+        "header_value": "0x4000921C (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD16_CSR at 0x4000921C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD16_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x4000921E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD16_BITER_ELINKYES at 0x4000921E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD16_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x4000921E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD16_BITER_ELINKNO at 0x4000921E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD17_ATTR",
+        "field": "",
+        "header_value": "0x40009226 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD17_ATTR at 0x40009226 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD17_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x40009228 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD17_NBYTES_MLNO at 0x40009228 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD17_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x40009228 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD17_NBYTES_MLOFFNO at 0x40009228 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD17_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x40009228 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD17_NBYTES_MLOFFYES at 0x40009228 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD17_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x40009236 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD17_CITER_ELINKYES at 0x40009236 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD17_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x40009236 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD17_CITER_ELINKNO at 0x40009236 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD17_CSR",
+        "field": "",
+        "header_value": "0x4000923C (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD17_CSR at 0x4000923C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD17_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x4000923E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD17_BITER_ELINKYES at 0x4000923E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD17_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x4000923E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD17_BITER_ELINKNO at 0x4000923E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD18_ATTR",
+        "field": "",
+        "header_value": "0x40009246 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD18_ATTR at 0x40009246 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD18_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x40009248 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD18_NBYTES_MLNO at 0x40009248 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD18_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x40009248 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD18_NBYTES_MLOFFNO at 0x40009248 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD18_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x40009248 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD18_NBYTES_MLOFFYES at 0x40009248 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD18_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x40009256 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD18_CITER_ELINKYES at 0x40009256 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD18_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x40009256 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD18_CITER_ELINKNO at 0x40009256 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD18_CSR",
+        "field": "",
+        "header_value": "0x4000925C (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD18_CSR at 0x4000925C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD18_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x4000925E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD18_BITER_ELINKYES at 0x4000925E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD18_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x4000925E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD18_BITER_ELINKNO at 0x4000925E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD19_ATTR",
+        "field": "",
+        "header_value": "0x40009266 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD19_ATTR at 0x40009266 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD19_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x40009268 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD19_NBYTES_MLNO at 0x40009268 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD19_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x40009268 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD19_NBYTES_MLOFFNO at 0x40009268 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD19_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x40009268 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD19_NBYTES_MLOFFYES at 0x40009268 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD19_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x40009276 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD19_CITER_ELINKYES at 0x40009276 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD19_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x40009276 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD19_CITER_ELINKNO at 0x40009276 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD19_CSR",
+        "field": "",
+        "header_value": "0x4000927C (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD19_CSR at 0x4000927C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD19_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x4000927E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD19_BITER_ELINKYES at 0x4000927E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD19_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x4000927E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD19_BITER_ELINKNO at 0x4000927E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD20_ATTR",
+        "field": "",
+        "header_value": "0x40009286 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD20_ATTR at 0x40009286 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD20_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x40009288 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD20_NBYTES_MLNO at 0x40009288 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD20_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x40009288 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD20_NBYTES_MLOFFNO at 0x40009288 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD20_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x40009288 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD20_NBYTES_MLOFFYES at 0x40009288 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD20_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x40009296 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD20_CITER_ELINKYES at 0x40009296 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD20_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x40009296 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD20_CITER_ELINKNO at 0x40009296 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD20_CSR",
+        "field": "",
+        "header_value": "0x4000929C (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD20_CSR at 0x4000929C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD20_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x4000929E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD20_BITER_ELINKYES at 0x4000929E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD20_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x4000929E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD20_BITER_ELINKNO at 0x4000929E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD21_ATTR",
+        "field": "",
+        "header_value": "0x400092A6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD21_ATTR at 0x400092A6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD21_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x400092A8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD21_NBYTES_MLNO at 0x400092A8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD21_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x400092A8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD21_NBYTES_MLOFFNO at 0x400092A8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD21_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x400092A8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD21_NBYTES_MLOFFYES at 0x400092A8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD21_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x400092B6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD21_CITER_ELINKYES at 0x400092B6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD21_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x400092B6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD21_CITER_ELINKNO at 0x400092B6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD21_CSR",
+        "field": "",
+        "header_value": "0x400092BC (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD21_CSR at 0x400092BC not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD21_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x400092BE (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD21_BITER_ELINKYES at 0x400092BE not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD21_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x400092BE (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD21_BITER_ELINKNO at 0x400092BE not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD22_ATTR",
+        "field": "",
+        "header_value": "0x400092C6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD22_ATTR at 0x400092C6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD22_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x400092C8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD22_NBYTES_MLNO at 0x400092C8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD22_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x400092C8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD22_NBYTES_MLOFFNO at 0x400092C8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD22_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x400092C8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD22_NBYTES_MLOFFYES at 0x400092C8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD22_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x400092D6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD22_CITER_ELINKYES at 0x400092D6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD22_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x400092D6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD22_CITER_ELINKNO at 0x400092D6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD22_CSR",
+        "field": "",
+        "header_value": "0x400092DC (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD22_CSR at 0x400092DC not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD22_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x400092DE (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD22_BITER_ELINKYES at 0x400092DE not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD22_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x400092DE (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD22_BITER_ELINKNO at 0x400092DE not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD23_ATTR",
+        "field": "",
+        "header_value": "0x400092E6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD23_ATTR at 0x400092E6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD23_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x400092E8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD23_NBYTES_MLNO at 0x400092E8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD23_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x400092E8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD23_NBYTES_MLOFFNO at 0x400092E8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD23_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x400092E8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD23_NBYTES_MLOFFYES at 0x400092E8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD23_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x400092F6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD23_CITER_ELINKYES at 0x400092F6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD23_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x400092F6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD23_CITER_ELINKNO at 0x400092F6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD23_CSR",
+        "field": "",
+        "header_value": "0x400092FC (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD23_CSR at 0x400092FC not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD23_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x400092FE (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD23_BITER_ELINKYES at 0x400092FE not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD23_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x400092FE (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD23_BITER_ELINKNO at 0x400092FE not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD24_ATTR",
+        "field": "",
+        "header_value": "0x40009306 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD24_ATTR at 0x40009306 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD24_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x40009308 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD24_NBYTES_MLNO at 0x40009308 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD24_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x40009308 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD24_NBYTES_MLOFFNO at 0x40009308 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD24_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x40009308 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD24_NBYTES_MLOFFYES at 0x40009308 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD24_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x40009316 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD24_CITER_ELINKYES at 0x40009316 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD24_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x40009316 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD24_CITER_ELINKNO at 0x40009316 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD24_CSR",
+        "field": "",
+        "header_value": "0x4000931C (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD24_CSR at 0x4000931C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD24_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x4000931E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD24_BITER_ELINKYES at 0x4000931E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD24_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x4000931E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD24_BITER_ELINKNO at 0x4000931E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD25_ATTR",
+        "field": "",
+        "header_value": "0x40009326 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD25_ATTR at 0x40009326 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD25_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x40009328 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD25_NBYTES_MLNO at 0x40009328 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD25_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x40009328 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD25_NBYTES_MLOFFNO at 0x40009328 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD25_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x40009328 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD25_NBYTES_MLOFFYES at 0x40009328 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD25_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x40009336 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD25_CITER_ELINKYES at 0x40009336 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD25_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x40009336 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD25_CITER_ELINKNO at 0x40009336 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD25_CSR",
+        "field": "",
+        "header_value": "0x4000933C (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD25_CSR at 0x4000933C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD25_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x4000933E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD25_BITER_ELINKYES at 0x4000933E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD25_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x4000933E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD25_BITER_ELINKNO at 0x4000933E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD26_ATTR",
+        "field": "",
+        "header_value": "0x40009346 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD26_ATTR at 0x40009346 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD26_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x40009348 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD26_NBYTES_MLNO at 0x40009348 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD26_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x40009348 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD26_NBYTES_MLOFFNO at 0x40009348 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD26_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x40009348 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD26_NBYTES_MLOFFYES at 0x40009348 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD26_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x40009356 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD26_CITER_ELINKYES at 0x40009356 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD26_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x40009356 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD26_CITER_ELINKNO at 0x40009356 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD26_CSR",
+        "field": "",
+        "header_value": "0x4000935C (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD26_CSR at 0x4000935C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD26_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x4000935E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD26_BITER_ELINKYES at 0x4000935E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD26_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x4000935E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD26_BITER_ELINKNO at 0x4000935E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD27_ATTR",
+        "field": "",
+        "header_value": "0x40009366 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD27_ATTR at 0x40009366 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD27_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x40009368 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD27_NBYTES_MLNO at 0x40009368 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD27_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x40009368 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD27_NBYTES_MLOFFNO at 0x40009368 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD27_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x40009368 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD27_NBYTES_MLOFFYES at 0x40009368 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD27_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x40009376 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD27_CITER_ELINKYES at 0x40009376 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD27_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x40009376 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD27_CITER_ELINKNO at 0x40009376 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD27_CSR",
+        "field": "",
+        "header_value": "0x4000937C (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD27_CSR at 0x4000937C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD27_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x4000937E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD27_BITER_ELINKYES at 0x4000937E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD27_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x4000937E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD27_BITER_ELINKNO at 0x4000937E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD28_ATTR",
+        "field": "",
+        "header_value": "0x40009386 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD28_ATTR at 0x40009386 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD28_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x40009388 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD28_NBYTES_MLNO at 0x40009388 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD28_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x40009388 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD28_NBYTES_MLOFFNO at 0x40009388 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD28_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x40009388 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD28_NBYTES_MLOFFYES at 0x40009388 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD28_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x40009396 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD28_CITER_ELINKYES at 0x40009396 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD28_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x40009396 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD28_CITER_ELINKNO at 0x40009396 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD28_CSR",
+        "field": "",
+        "header_value": "0x4000939C (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD28_CSR at 0x4000939C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD28_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x4000939E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD28_BITER_ELINKYES at 0x4000939E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD28_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x4000939E (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD28_BITER_ELINKNO at 0x4000939E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD29_ATTR",
+        "field": "",
+        "header_value": "0x400093A6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD29_ATTR at 0x400093A6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD29_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x400093A8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD29_NBYTES_MLNO at 0x400093A8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD29_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x400093A8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD29_NBYTES_MLOFFNO at 0x400093A8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD29_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x400093A8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD29_NBYTES_MLOFFYES at 0x400093A8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD29_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x400093B6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD29_CITER_ELINKYES at 0x400093B6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD29_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x400093B6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD29_CITER_ELINKNO at 0x400093B6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD29_CSR",
+        "field": "",
+        "header_value": "0x400093BC (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD29_CSR at 0x400093BC not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD29_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x400093BE (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD29_BITER_ELINKYES at 0x400093BE not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD29_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x400093BE (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD29_BITER_ELINKNO at 0x400093BE not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD30_ATTR",
+        "field": "",
+        "header_value": "0x400093C6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD30_ATTR at 0x400093C6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD30_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x400093C8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD30_NBYTES_MLNO at 0x400093C8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD30_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x400093C8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD30_NBYTES_MLOFFNO at 0x400093C8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD30_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x400093C8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD30_NBYTES_MLOFFYES at 0x400093C8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD30_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x400093D6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD30_CITER_ELINKYES at 0x400093D6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD30_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x400093D6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD30_CITER_ELINKNO at 0x400093D6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD30_CSR",
+        "field": "",
+        "header_value": "0x400093DC (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD30_CSR at 0x400093DC not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD30_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x400093DE (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD30_BITER_ELINKYES at 0x400093DE not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD30_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x400093DE (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD30_BITER_ELINKNO at 0x400093DE not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD31_ATTR",
+        "field": "",
+        "header_value": "0x400093E6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD31_ATTR at 0x400093E6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD31_NBYTES_MLNO",
+        "field": "",
+        "header_value": "0x400093E8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD31_NBYTES_MLNO at 0x400093E8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD31_NBYTES_MLOFFNO",
+        "field": "",
+        "header_value": "0x400093E8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD31_NBYTES_MLOFFNO at 0x400093E8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD31_NBYTES_MLOFFYES",
+        "field": "",
+        "header_value": "0x400093E8 (32-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD31_NBYTES_MLOFFYES at 0x400093E8 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD31_CITER_ELINKYES",
+        "field": "",
+        "header_value": "0x400093F6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD31_CITER_ELINKYES at 0x400093F6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD31_CITER_ELINKNO",
+        "field": "",
+        "header_value": "0x400093F6 (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD31_CITER_ELINKNO at 0x400093F6 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD31_CSR",
+        "field": "",
+        "header_value": "0x400093FC (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD31_CSR at 0x400093FC not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD31_BITER_ELINKYES",
+        "field": "",
+        "header_value": "0x400093FE (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD31_BITER_ELINKYES at 0x400093FE not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMA",
+        "register": "DMA_TCD31_BITER_ELINKNO",
+        "field": "",
+        "header_value": "0x400093FE (16-bit)",
+        "svd_value": null,
+        "detail": "Register DMA_TCD31_BITER_ELINKNO at 0x400093FE not found in SVD"
+      },
+      {
+        "category": "FIELD_WIDTH_MISMATCH",
+        "peripheral": "DMA",
+        "register": "DMA_TCD0_BITER_ELINKNO",
+        "field": "DMA_TCD_BITER_ELINKYES_BITER",
+        "header_value": "width=9 (mask=0x1FF)",
+        "svd_value": "width=15",
+        "detail": "Field width: header DMA_TCD_BITER_ELINKYES_BITER width=9, SVD DMA_TCD0_BITER_ELINKNO.BITER width=15"
+      },
+      {
+        "category": "FIELD_WIDTH_MISMATCH",
+        "peripheral": "DMA",
+        "register": "DMA_TCD0_CITER_ELINKNO",
+        "field": "DMA_TCD_CITER_ELINKYES_CITER",
+        "header_value": "width=9 (mask=0x1FF)",
+        "svd_value": "width=15",
+        "detail": "Field width: header DMA_TCD_CITER_ELINKYES_CITER width=9, SVD DMA_TCD0_CITER_ELINKNO.CITER width=15"
+      }
+    ],
+    "DMAMUX0": [
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG16",
+        "field": "",
+        "header_value": "0x40021010 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG16 at 0x40021010 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG17",
+        "field": "",
+        "header_value": "0x40021011 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG17 at 0x40021011 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG18",
+        "field": "",
+        "header_value": "0x40021012 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG18 at 0x40021012 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG19",
+        "field": "",
+        "header_value": "0x40021013 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG19 at 0x40021013 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG20",
+        "field": "",
+        "header_value": "0x40021014 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG20 at 0x40021014 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG21",
+        "field": "",
+        "header_value": "0x40021015 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG21 at 0x40021015 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG22",
+        "field": "",
+        "header_value": "0x40021016 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG22 at 0x40021016 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG23",
+        "field": "",
+        "header_value": "0x40021017 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG23 at 0x40021017 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG24",
+        "field": "",
+        "header_value": "0x40021018 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG24 at 0x40021018 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG25",
+        "field": "",
+        "header_value": "0x40021019 (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG25 at 0x40021019 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG26",
+        "field": "",
+        "header_value": "0x4002101A (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG26 at 0x4002101A not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG27",
+        "field": "",
+        "header_value": "0x4002101B (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG27 at 0x4002101B not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG28",
+        "field": "",
+        "header_value": "0x4002101C (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG28 at 0x4002101C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG29",
+        "field": "",
+        "header_value": "0x4002101D (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG29 at 0x4002101D not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG30",
+        "field": "",
+        "header_value": "0x4002101E (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG30 at 0x4002101E not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "DMAMUX0",
+        "register": "DMAMUX0_CHCFG31",
+        "field": "",
+        "header_value": "0x4002101F (8-bit)",
+        "svd_value": null,
+        "detail": "Register DMAMUX0_CHCFG31 at 0x4002101F not found in SVD"
+      }
+    ],
+    "MCM": [
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "MCM",
+        "register": "MCM_ISCR",
+        "field": "",
+        "header_value": "0xE0080010 (32-bit)",
+        "svd_value": null,
+        "detail": "Register MCM_ISCR at 0xE0080010 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "MCM",
+        "register": "MCM_ETBCC",
+        "field": "",
+        "header_value": "0xE0080014 (32-bit)",
+        "svd_value": null,
+        "detail": "Register MCM_ETBCC at 0xE0080014 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "MCM",
+        "register": "MCM_ETBRL",
+        "field": "",
+        "header_value": "0xE0080018 (32-bit)",
+        "svd_value": null,
+        "detail": "Register MCM_ETBRL at 0xE0080018 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "MCM",
+        "register": "MCM_ETBCNT",
+        "field": "",
+        "header_value": "0xE008001C (32-bit)",
+        "svd_value": null,
+        "detail": "Register MCM_ETBCNT at 0xE008001C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "MCM",
+        "register": "MCM_FADR",
+        "field": "",
+        "header_value": "0xE0080020 (32-bit)",
+        "svd_value": null,
+        "detail": "Register MCM_FADR at 0xE0080020 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "MCM",
+        "register": "MCM_FATR",
+        "field": "",
+        "header_value": "0xE0080024 (32-bit)",
+        "svd_value": null,
+        "detail": "Register MCM_FATR at 0xE0080024 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "MCM",
+        "register": "MCM_FDR",
+        "field": "",
+        "header_value": "0xE0080028 (32-bit)",
+        "svd_value": null,
+        "detail": "Register MCM_FDR at 0xE0080028 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "MCM",
+        "register": "MCM_PID",
+        "field": "",
+        "header_value": "0xE0080030 (32-bit)",
+        "svd_value": null,
+        "detail": "Register MCM_PID at 0xE0080030 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "MCM",
+        "register": "MCM_CPO",
+        "field": "",
+        "header_value": "0xE0080040 (32-bit)",
+        "svd_value": null,
+        "detail": "Register MCM_CPO at 0xE0080040 not found in SVD"
+      }
+    ],
+    "OSC0": [
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "OSC0",
+        "register": "OSC0_OSC_DIV",
+        "field": "",
+        "header_value": "0x40065002 (8-bit)",
+        "svd_value": null,
+        "detail": "Register OSC0_OSC_DIV at 0x40065002 not found in SVD"
+      }
+    ],
+    "PDB0": [
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "PDB0",
+        "register": "PDB0_DACINTC1",
+        "field": "",
+        "header_value": "0x40036158 (32-bit)",
+        "svd_value": null,
+        "detail": "Register PDB0_DACINTC1 at 0x40036158 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "PDB0",
+        "register": "PDB0_DACINT1",
+        "field": "",
+        "header_value": "0x4003615C (32-bit)",
+        "svd_value": null,
+        "detail": "Register PDB0_DACINT1 at 0x4003615C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "PDB0",
+        "register": "PDB0_PO3DLY",
+        "field": "",
+        "header_value": "0x400361A0 (32-bit)",
+        "svd_value": null,
+        "detail": "Register PDB0_PO3DLY at 0x400361A0 not found in SVD"
+      }
+    ],
+    "RCM": [
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "RCM",
+        "register": "RCM_SSRS0",
+        "field": "",
+        "header_value": "0x4007F008 (8-bit)",
+        "svd_value": null,
+        "detail": "Register RCM_SSRS0 at 0x4007F008 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "RCM",
+        "register": "RCM_SSRS1",
+        "field": "",
+        "header_value": "0x4007F009 (8-bit)",
+        "svd_value": null,
+        "detail": "Register RCM_SSRS1 at 0x4007F009 not found in SVD"
+      }
+    ],
+    "SCB": [
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "SCB",
+        "register": "SCB_CPACR",
+        "field": "",
+        "header_value": "0xE000ED88 (32-bit)",
+        "svd_value": null,
+        "detail": "Register SCB_CPACR at 0xE000ED88 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "SCB",
+        "register": "SCB_FPCCR",
+        "field": "",
+        "header_value": "0xE000EF34 (32-bit)",
+        "svd_value": null,
+        "detail": "Register SCB_FPCCR at 0xE000EF34 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "SCB",
+        "register": "SCB_FPCAR",
+        "field": "",
+        "header_value": "0xE000EF38 (32-bit)",
+        "svd_value": null,
+        "detail": "Register SCB_FPCAR at 0xE000EF38 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "SCB",
+        "register": "SCB_FPDSCR",
+        "field": "",
+        "header_value": "0xE000EF3C (32-bit)",
+        "svd_value": null,
+        "detail": "Register SCB_FPDSCR at 0xE000EF3C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "SCB",
+        "register": "SCB_MVFR0",
+        "field": "",
+        "header_value": "0xE000EF40 (32-bit)",
+        "svd_value": null,
+        "detail": "Register SCB_MVFR0 at 0xE000EF40 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "SCB",
+        "register": "SCB_MVFR1",
+        "field": "",
+        "header_value": "0xE000EF44 (32-bit)",
+        "svd_value": null,
+        "detail": "Register SCB_MVFR1 at 0xE000EF44 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "SCB",
+        "register": "SCB_MVFR2",
+        "field": "",
+        "header_value": "0xE000EF48 (32-bit)",
+        "svd_value": null,
+        "detail": "Register SCB_MVFR2 at 0xE000EF48 not found in SVD"
+      }
+    ],
+    "SIM": [
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "SIM",
+        "register": "SIM_USBPHYCTL",
+        "field": "",
+        "header_value": "0x40047008 (32-bit)",
+        "svd_value": null,
+        "detail": "Register SIM_USBPHYCTL at 0x40047008 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "SIM",
+        "register": "SIM_SOPT8",
+        "field": "",
+        "header_value": "0x4004801C (32-bit)",
+        "svd_value": null,
+        "detail": "Register SIM_SOPT8 at 0x4004801C not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "SIM",
+        "register": "SIM_SOPT9",
+        "field": "",
+        "header_value": "0x40048020 (32-bit)",
+        "svd_value": null,
+        "detail": "Register SIM_SOPT9 at 0x40048020 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "SIM",
+        "register": "SIM_CLKDIV3",
+        "field": "",
+        "header_value": "0x40048064 (32-bit)",
+        "svd_value": null,
+        "detail": "Register SIM_CLKDIV3 at 0x40048064 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "SIM",
+        "register": "SIM_CLKDIV4",
+        "field": "",
+        "header_value": "0x40048068 (32-bit)",
+        "svd_value": null,
+        "detail": "Register SIM_CLKDIV4 at 0x40048068 not found in SVD"
+      }
+    ],
+    "USB0": [
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "USB0",
+        "register": "USB0_CLK_RECOVER_CTRL",
+        "field": "",
+        "header_value": "0x40072140 (8-bit)",
+        "svd_value": null,
+        "detail": "Register USB0_CLK_RECOVER_CTRL at 0x40072140 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "USB0",
+        "register": "USB0_CLK_RECOVER_IRC_EN",
+        "field": "",
+        "header_value": "0x40072144 (8-bit)",
+        "svd_value": null,
+        "detail": "Register USB0_CLK_RECOVER_IRC_EN at 0x40072144 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "USB0",
+        "register": "USB0_CLK_RECOVER_INT_EN",
+        "field": "",
+        "header_value": "0x40072154 (8-bit)",
+        "svd_value": null,
+        "detail": "Register USB0_CLK_RECOVER_INT_EN at 0x40072154 not found in SVD"
+      },
+      {
+        "category": "MISSING_IN_SVD",
+        "peripheral": "USB0",
+        "register": "USB0_CLK_RECOVER_INT_STATUS",
+        "field": "",
+        "header_value": "0x4007215C (8-bit)",
+        "svd_value": null,
+        "detail": "Register USB0_CLK_RECOVER_INT_STATUS at 0x4007215C not found in SVD"
+      }
+    ]
+  }
+}

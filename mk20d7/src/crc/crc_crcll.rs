@@ -1,0 +1,40 @@
+#[doc = "Register `CRCLL` reader"]
+pub type R = crate::R<CrcCrcllSpec>;
+#[doc = "Register `CRCLL` writer"]
+pub type W = crate::W<CrcCrcllSpec>;
+#[doc = "Field `CRCLL` reader - CRCLL stores the first 8 bits of the 32 bit CRC"]
+pub type CrcllR = crate::FieldReader;
+#[doc = "Field `CRCLL` writer - CRCLL stores the first 8 bits of the 32 bit CRC"]
+pub type CrcllW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+impl R {
+    #[doc = "Bits 0:7 - CRCLL stores the first 8 bits of the 32 bit CRC"]
+    #[inline(always)]
+    pub fn crcll(&self) -> CrcllR {
+        CrcllR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - CRCLL stores the first 8 bits of the 32 bit CRC"]
+    #[inline(always)]
+    #[must_use]
+    pub fn crcll(&mut self) -> CrcllW<CrcCrcllSpec> {
+        CrcllW::new(self, 0)
+    }
+}
+#[doc = "CRC_CRCLL register.\n\nYou can [`read`](crate::Reg::read) this register and get [`crc_crcll::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`crc_crcll::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CrcCrcllSpec;
+impl crate::RegisterSpec for CrcCrcllSpec {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [`crc_crcll::R`](R) reader structure"]
+impl crate::Readable for CrcCrcllSpec {}
+#[doc = "`write(|w| ..)` method takes [`crc_crcll::W`](W) writer structure"]
+impl crate::Writable for CrcCrcllSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+}
+#[doc = "`reset()` method sets CRCLL to value 0xff"]
+impl crate::Resettable for CrcCrcllSpec {
+    const RESET_VALUE: u8 = 0xff;
+}

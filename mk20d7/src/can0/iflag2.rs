@@ -1,0 +1,96 @@
+#[doc = "Register `IFLAG2` reader"]
+pub type R = crate::R<Iflag2Spec>;
+#[doc = "Register `IFLAG2` writer"]
+pub type W = crate::W<Iflag2Spec>;
+#[doc = "Buffer MBi Interrupt\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u32)]
+pub enum Bufhi {
+    #[doc = "0: The corresponding buffer has no occurrence of successfully completed transmission or reception."]
+    _0 = 0,
+    #[doc = "1: The corresponding buffer has successfully completed transmission or reception."]
+    _1 = 1,
+}
+impl From<Bufhi> for u32 {
+    #[inline(always)]
+    fn from(variant: Bufhi) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Bufhi {
+    type Ux = u32;
+}
+impl crate::IsEnum for Bufhi {}
+#[doc = "Field `BUFHI` reader - Buffer MBi Interrupt"]
+pub type BufhiR = crate::FieldReader<Bufhi>;
+impl BufhiR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<Bufhi> {
+        match self.bits {
+            0 => Some(Bufhi::_0),
+            1 => Some(Bufhi::_1),
+            _ => None,
+        }
+    }
+    #[doc = "The corresponding buffer has no occurrence of successfully completed transmission or reception."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Bufhi::_0
+    }
+    #[doc = "The corresponding buffer has successfully completed transmission or reception."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Bufhi::_1
+    }
+}
+#[doc = "Field `BUFHI` writer - Buffer MBi Interrupt"]
+pub type BufhiW<'a, REG> = crate::FieldWriter<'a, REG, 32, Bufhi>;
+impl<'a, REG> BufhiW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u32>,
+{
+    #[doc = "The corresponding buffer has no occurrence of successfully completed transmission or reception."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Bufhi::_0)
+    }
+    #[doc = "The corresponding buffer has successfully completed transmission or reception."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Bufhi::_1)
+    }
+}
+impl R {
+    #[doc = "Bits 0:31 - Buffer MBi Interrupt"]
+    #[inline(always)]
+    pub fn bufhi(&self) -> BufhiR {
+        BufhiR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - Buffer MBi Interrupt"]
+    #[inline(always)]
+    #[must_use]
+    pub fn bufhi(&mut self) -> BufhiW<Iflag2Spec> {
+        BufhiW::new(self, 0)
+    }
+}
+#[doc = "Interrupt Flags 2 Register\n\nYou can [`read`](crate::Reg::read) this register and get [`iflag2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`iflag2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Iflag2Spec;
+impl crate::RegisterSpec for Iflag2Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`iflag2::R`](R) reader structure"]
+impl crate::Readable for Iflag2Spec {}
+#[doc = "`write(|w| ..)` method takes [`iflag2::W`](W) writer structure"]
+impl crate::Writable for Iflag2Spec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets IFLAG2 to value 0"]
+impl crate::Resettable for Iflag2Spec {
+    const RESET_VALUE: u32 = 0;
+}

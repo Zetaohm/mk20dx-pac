@@ -1,0 +1,227 @@
+#[doc = "Register `MCR` reader"]
+pub type R = crate::R<McrSpec>;
+#[doc = "Register `MCR` writer"]
+pub type W = crate::W<McrSpec>;
+#[doc = "MCLK Input Clock Select\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Mics {
+    #[doc = "0: MCLK Divider input clock 0 selected."]
+    _00 = 0,
+    #[doc = "1: MCLK Divider input clock 1 selected."]
+    _01 = 1,
+    #[doc = "2: MCLK Divider input clock 2 selected."]
+    _10 = 2,
+    #[doc = "3: MCLK Divider input clock 3 selected."]
+    _11 = 3,
+}
+impl From<Mics> for u8 {
+    #[inline(always)]
+    fn from(variant: Mics) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Mics {
+    type Ux = u8;
+}
+impl crate::IsEnum for Mics {}
+#[doc = "Field `MICS` reader - MCLK Input Clock Select"]
+pub type MicsR = crate::FieldReader<Mics>;
+impl MicsR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Mics {
+        match self.bits {
+            0 => Mics::_00,
+            1 => Mics::_01,
+            2 => Mics::_10,
+            3 => Mics::_11,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "MCLK Divider input clock 0 selected."]
+    #[inline(always)]
+    pub fn is_00(&self) -> bool {
+        *self == Mics::_00
+    }
+    #[doc = "MCLK Divider input clock 1 selected."]
+    #[inline(always)]
+    pub fn is_01(&self) -> bool {
+        *self == Mics::_01
+    }
+    #[doc = "MCLK Divider input clock 2 selected."]
+    #[inline(always)]
+    pub fn is_10(&self) -> bool {
+        *self == Mics::_10
+    }
+    #[doc = "MCLK Divider input clock 3 selected."]
+    #[inline(always)]
+    pub fn is_11(&self) -> bool {
+        *self == Mics::_11
+    }
+}
+#[doc = "Field `MICS` writer - MCLK Input Clock Select"]
+pub type MicsW<'a, REG> = crate::FieldWriter<'a, REG, 2, Mics, crate::Safe>;
+impl<'a, REG> MicsW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "MCLK Divider input clock 0 selected."]
+    #[inline(always)]
+    pub fn _00(self) -> &'a mut crate::W<REG> {
+        self.variant(Mics::_00)
+    }
+    #[doc = "MCLK Divider input clock 1 selected."]
+    #[inline(always)]
+    pub fn _01(self) -> &'a mut crate::W<REG> {
+        self.variant(Mics::_01)
+    }
+    #[doc = "MCLK Divider input clock 2 selected."]
+    #[inline(always)]
+    pub fn _10(self) -> &'a mut crate::W<REG> {
+        self.variant(Mics::_10)
+    }
+    #[doc = "MCLK Divider input clock 3 selected."]
+    #[inline(always)]
+    pub fn _11(self) -> &'a mut crate::W<REG> {
+        self.variant(Mics::_11)
+    }
+}
+#[doc = "MCLK Output Enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Moe {
+    #[doc = "0: SAI_MCLK pin is configured as an input that bypasses the MCLK Divider."]
+    _0 = 0,
+    #[doc = "1: SAI_MCLK pin is configured as an output from the MCLK Divider and the MCLK Divider is enabled."]
+    _1 = 1,
+}
+impl From<Moe> for bool {
+    #[inline(always)]
+    fn from(variant: Moe) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `MOE` reader - MCLK Output Enable"]
+pub type MoeR = crate::BitReader<Moe>;
+impl MoeR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Moe {
+        match self.bits {
+            false => Moe::_0,
+            true => Moe::_1,
+        }
+    }
+    #[doc = "SAI_MCLK pin is configured as an input that bypasses the MCLK Divider."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Moe::_0
+    }
+    #[doc = "SAI_MCLK pin is configured as an output from the MCLK Divider and the MCLK Divider is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Moe::_1
+    }
+}
+#[doc = "Field `MOE` writer - MCLK Output Enable"]
+pub type MoeW<'a, REG> = crate::BitWriter<'a, REG, Moe>;
+impl<'a, REG> MoeW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "SAI_MCLK pin is configured as an input that bypasses the MCLK Divider."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Moe::_0)
+    }
+    #[doc = "SAI_MCLK pin is configured as an output from the MCLK Divider and the MCLK Divider is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Moe::_1)
+    }
+}
+#[doc = "Divider Update Flag\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Duf {
+    #[doc = "0: MCLK Divider ratio is not being updated currently."]
+    _0 = 0,
+    #[doc = "1: MCLK Divider ratio is updating on-the-fly. Furthur updates to the MCLK Divider ratio are blocked while this flag remains set."]
+    _1 = 1,
+}
+impl From<Duf> for bool {
+    #[inline(always)]
+    fn from(variant: Duf) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `DUF` reader - Divider Update Flag"]
+pub type DufR = crate::BitReader<Duf>;
+impl DufR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Duf {
+        match self.bits {
+            false => Duf::_0,
+            true => Duf::_1,
+        }
+    }
+    #[doc = "MCLK Divider ratio is not being updated currently."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Duf::_0
+    }
+    #[doc = "MCLK Divider ratio is updating on-the-fly. Furthur updates to the MCLK Divider ratio are blocked while this flag remains set."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Duf::_1
+    }
+}
+impl R {
+    #[doc = "Bits 24:25 - MCLK Input Clock Select"]
+    #[inline(always)]
+    pub fn mics(&self) -> MicsR {
+        MicsR::new(((self.bits >> 24) & 3) as u8)
+    }
+    #[doc = "Bit 30 - MCLK Output Enable"]
+    #[inline(always)]
+    pub fn moe(&self) -> MoeR {
+        MoeR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - Divider Update Flag"]
+    #[inline(always)]
+    pub fn duf(&self) -> DufR {
+        DufR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 24:25 - MCLK Input Clock Select"]
+    #[inline(always)]
+    #[must_use]
+    pub fn mics(&mut self) -> MicsW<McrSpec> {
+        MicsW::new(self, 24)
+    }
+    #[doc = "Bit 30 - MCLK Output Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn moe(&mut self) -> MoeW<McrSpec> {
+        MoeW::new(self, 30)
+    }
+}
+#[doc = "SAI MCLK Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`mcr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mcr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct McrSpec;
+impl crate::RegisterSpec for McrSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`mcr::R`](R) reader structure"]
+impl crate::Readable for McrSpec {}
+#[doc = "`write(|w| ..)` method takes [`mcr::W`](W) writer structure"]
+impl crate::Writable for McrSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets MCR to value 0"]
+impl crate::Resettable for McrSpec {
+    const RESET_VALUE: u32 = 0;
+}

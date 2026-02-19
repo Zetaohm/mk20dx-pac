@@ -1,0 +1,460 @@
+#[doc = "Register `SOPT1` reader"]
+pub type R = crate::R<Sopt1Spec>;
+#[doc = "Register `SOPT1` writer"]
+pub type W = crate::W<Sopt1Spec>;
+#[doc = "RAM size\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Ramsize {
+    #[doc = "0: Undefined"]
+    _0000 = 0,
+    #[doc = "1: 8 KBytes"]
+    _0001 = 1,
+    #[doc = "2: Undefined"]
+    _0010 = 2,
+    #[doc = "3: 16 KBytes"]
+    _0011 = 3,
+    #[doc = "4: Undefined"]
+    _0100 = 4,
+    #[doc = "5: Undefined"]
+    _0101 = 5,
+    #[doc = "6: Undefined"]
+    _0110 = 6,
+    #[doc = "7: Undefined"]
+    _0111 = 7,
+    #[doc = "8: Undefined"]
+    _1000 = 8,
+    #[doc = "9: Undefined"]
+    _1001 = 9,
+    #[doc = "10: Undefined"]
+    _1010 = 10,
+    #[doc = "11: Undefined"]
+    _1011 = 11,
+    #[doc = "12: Undefined"]
+    _1100 = 12,
+    #[doc = "13: Undefined"]
+    _1101 = 13,
+    #[doc = "14: Undefined"]
+    _1110 = 14,
+    #[doc = "15: Undefined"]
+    _1111 = 15,
+}
+impl From<Ramsize> for u8 {
+    #[inline(always)]
+    fn from(variant: Ramsize) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Ramsize {
+    type Ux = u8;
+}
+impl crate::IsEnum for Ramsize {}
+#[doc = "Field `RAMSIZE` reader - RAM size"]
+pub type RamsizeR = crate::FieldReader<Ramsize>;
+impl RamsizeR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Ramsize {
+        match self.bits {
+            0 => Ramsize::_0000,
+            1 => Ramsize::_0001,
+            2 => Ramsize::_0010,
+            3 => Ramsize::_0011,
+            4 => Ramsize::_0100,
+            5 => Ramsize::_0101,
+            6 => Ramsize::_0110,
+            7 => Ramsize::_0111,
+            8 => Ramsize::_1000,
+            9 => Ramsize::_1001,
+            10 => Ramsize::_1010,
+            11 => Ramsize::_1011,
+            12 => Ramsize::_1100,
+            13 => Ramsize::_1101,
+            14 => Ramsize::_1110,
+            15 => Ramsize::_1111,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "Undefined"]
+    #[inline(always)]
+    pub fn is_0000(&self) -> bool {
+        *self == Ramsize::_0000
+    }
+    #[doc = "8 KBytes"]
+    #[inline(always)]
+    pub fn is_0001(&self) -> bool {
+        *self == Ramsize::_0001
+    }
+    #[doc = "Undefined"]
+    #[inline(always)]
+    pub fn is_0010(&self) -> bool {
+        *self == Ramsize::_0010
+    }
+    #[doc = "16 KBytes"]
+    #[inline(always)]
+    pub fn is_0011(&self) -> bool {
+        *self == Ramsize::_0011
+    }
+    #[doc = "Undefined"]
+    #[inline(always)]
+    pub fn is_0100(&self) -> bool {
+        *self == Ramsize::_0100
+    }
+    #[doc = "Undefined"]
+    #[inline(always)]
+    pub fn is_0101(&self) -> bool {
+        *self == Ramsize::_0101
+    }
+    #[doc = "Undefined"]
+    #[inline(always)]
+    pub fn is_0110(&self) -> bool {
+        *self == Ramsize::_0110
+    }
+    #[doc = "Undefined"]
+    #[inline(always)]
+    pub fn is_0111(&self) -> bool {
+        *self == Ramsize::_0111
+    }
+    #[doc = "Undefined"]
+    #[inline(always)]
+    pub fn is_1000(&self) -> bool {
+        *self == Ramsize::_1000
+    }
+    #[doc = "Undefined"]
+    #[inline(always)]
+    pub fn is_1001(&self) -> bool {
+        *self == Ramsize::_1001
+    }
+    #[doc = "Undefined"]
+    #[inline(always)]
+    pub fn is_1010(&self) -> bool {
+        *self == Ramsize::_1010
+    }
+    #[doc = "Undefined"]
+    #[inline(always)]
+    pub fn is_1011(&self) -> bool {
+        *self == Ramsize::_1011
+    }
+    #[doc = "Undefined"]
+    #[inline(always)]
+    pub fn is_1100(&self) -> bool {
+        *self == Ramsize::_1100
+    }
+    #[doc = "Undefined"]
+    #[inline(always)]
+    pub fn is_1101(&self) -> bool {
+        *self == Ramsize::_1101
+    }
+    #[doc = "Undefined"]
+    #[inline(always)]
+    pub fn is_1110(&self) -> bool {
+        *self == Ramsize::_1110
+    }
+    #[doc = "Undefined"]
+    #[inline(always)]
+    pub fn is_1111(&self) -> bool {
+        *self == Ramsize::_1111
+    }
+}
+#[doc = "32K oscillator clock select\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Osc32ksel {
+    #[doc = "0: System oscillator (OSC32KCLK)"]
+    _00 = 0,
+    #[doc = "2: RTC 32.768kHz oscillator"]
+    _10 = 2,
+    #[doc = "3: LPO 1 kHz"]
+    _11 = 3,
+}
+impl From<Osc32ksel> for u8 {
+    #[inline(always)]
+    fn from(variant: Osc32ksel) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Osc32ksel {
+    type Ux = u8;
+}
+impl crate::IsEnum for Osc32ksel {}
+#[doc = "Field `OSC32KSEL` reader - 32K oscillator clock select"]
+pub type Osc32kselR = crate::FieldReader<Osc32ksel>;
+impl Osc32kselR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<Osc32ksel> {
+        match self.bits {
+            0 => Some(Osc32ksel::_00),
+            2 => Some(Osc32ksel::_10),
+            3 => Some(Osc32ksel::_11),
+            _ => None,
+        }
+    }
+    #[doc = "System oscillator (OSC32KCLK)"]
+    #[inline(always)]
+    pub fn is_00(&self) -> bool {
+        *self == Osc32ksel::_00
+    }
+    #[doc = "RTC 32.768kHz oscillator"]
+    #[inline(always)]
+    pub fn is_10(&self) -> bool {
+        *self == Osc32ksel::_10
+    }
+    #[doc = "LPO 1 kHz"]
+    #[inline(always)]
+    pub fn is_11(&self) -> bool {
+        *self == Osc32ksel::_11
+    }
+}
+#[doc = "Field `OSC32KSEL` writer - 32K oscillator clock select"]
+pub type Osc32kselW<'a, REG> = crate::FieldWriter<'a, REG, 2, Osc32ksel>;
+impl<'a, REG> Osc32kselW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "System oscillator (OSC32KCLK)"]
+    #[inline(always)]
+    pub fn _00(self) -> &'a mut crate::W<REG> {
+        self.variant(Osc32ksel::_00)
+    }
+    #[doc = "RTC 32.768kHz oscillator"]
+    #[inline(always)]
+    pub fn _10(self) -> &'a mut crate::W<REG> {
+        self.variant(Osc32ksel::_10)
+    }
+    #[doc = "LPO 1 kHz"]
+    #[inline(always)]
+    pub fn _11(self) -> &'a mut crate::W<REG> {
+        self.variant(Osc32ksel::_11)
+    }
+}
+#[doc = "USB voltage regulator in standby mode during VLPR and VLPW modes\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Usbvstby {
+    #[doc = "0: USB voltage regulator not in standby during VLPR and VLPW modes."]
+    _0 = 0,
+    #[doc = "1: USB voltage regulator in standby during VLPR and VLPW modes."]
+    _1 = 1,
+}
+impl From<Usbvstby> for bool {
+    #[inline(always)]
+    fn from(variant: Usbvstby) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `USBVSTBY` reader - USB voltage regulator in standby mode during VLPR and VLPW modes"]
+pub type UsbvstbyR = crate::BitReader<Usbvstby>;
+impl UsbvstbyR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Usbvstby {
+        match self.bits {
+            false => Usbvstby::_0,
+            true => Usbvstby::_1,
+        }
+    }
+    #[doc = "USB voltage regulator not in standby during VLPR and VLPW modes."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Usbvstby::_0
+    }
+    #[doc = "USB voltage regulator in standby during VLPR and VLPW modes."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Usbvstby::_1
+    }
+}
+#[doc = "Field `USBVSTBY` writer - USB voltage regulator in standby mode during VLPR and VLPW modes"]
+pub type UsbvstbyW<'a, REG> = crate::BitWriter<'a, REG, Usbvstby>;
+impl<'a, REG> UsbvstbyW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "USB voltage regulator not in standby during VLPR and VLPW modes."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Usbvstby::_0)
+    }
+    #[doc = "USB voltage regulator in standby during VLPR and VLPW modes."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Usbvstby::_1)
+    }
+}
+#[doc = "USB voltage regulator in standby mode during Stop, VLPS, LLS and VLLS modes.\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Usbsstby {
+    #[doc = "0: USB voltage regulator not in standby during Stop, VLPS, LLS and VLLS modes."]
+    _0 = 0,
+    #[doc = "1: USB voltage regulator in standby during Stop, VLPS, LLS and VLLS modes."]
+    _1 = 1,
+}
+impl From<Usbsstby> for bool {
+    #[inline(always)]
+    fn from(variant: Usbsstby) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `USBSSTBY` reader - USB voltage regulator in standby mode during Stop, VLPS, LLS and VLLS modes."]
+pub type UsbsstbyR = crate::BitReader<Usbsstby>;
+impl UsbsstbyR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Usbsstby {
+        match self.bits {
+            false => Usbsstby::_0,
+            true => Usbsstby::_1,
+        }
+    }
+    #[doc = "USB voltage regulator not in standby during Stop, VLPS, LLS and VLLS modes."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Usbsstby::_0
+    }
+    #[doc = "USB voltage regulator in standby during Stop, VLPS, LLS and VLLS modes."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Usbsstby::_1
+    }
+}
+#[doc = "Field `USBSSTBY` writer - USB voltage regulator in standby mode during Stop, VLPS, LLS and VLLS modes."]
+pub type UsbsstbyW<'a, REG> = crate::BitWriter<'a, REG, Usbsstby>;
+impl<'a, REG> UsbsstbyW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "USB voltage regulator not in standby during Stop, VLPS, LLS and VLLS modes."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Usbsstby::_0)
+    }
+    #[doc = "USB voltage regulator in standby during Stop, VLPS, LLS and VLLS modes."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Usbsstby::_1)
+    }
+}
+#[doc = "USB voltage regulator enable\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Usbregen {
+    #[doc = "0: USB voltage regulator is disabled."]
+    _0 = 0,
+    #[doc = "1: USB voltage regulator is enabled."]
+    _1 = 1,
+}
+impl From<Usbregen> for bool {
+    #[inline(always)]
+    fn from(variant: Usbregen) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `USBREGEN` reader - USB voltage regulator enable"]
+pub type UsbregenR = crate::BitReader<Usbregen>;
+impl UsbregenR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Usbregen {
+        match self.bits {
+            false => Usbregen::_0,
+            true => Usbregen::_1,
+        }
+    }
+    #[doc = "USB voltage regulator is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Usbregen::_0
+    }
+    #[doc = "USB voltage regulator is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Usbregen::_1
+    }
+}
+#[doc = "Field `USBREGEN` writer - USB voltage regulator enable"]
+pub type UsbregenW<'a, REG> = crate::BitWriter<'a, REG, Usbregen>;
+impl<'a, REG> UsbregenW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "USB voltage regulator is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Usbregen::_0)
+    }
+    #[doc = "USB voltage regulator is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Usbregen::_1)
+    }
+}
+impl R {
+    #[doc = "Bits 12:15 - RAM size"]
+    #[inline(always)]
+    pub fn ramsize(&self) -> RamsizeR {
+        RamsizeR::new(((self.bits >> 12) & 0x0f) as u8)
+    }
+    #[doc = "Bits 18:19 - 32K oscillator clock select"]
+    #[inline(always)]
+    pub fn osc32ksel(&self) -> Osc32kselR {
+        Osc32kselR::new(((self.bits >> 18) & 3) as u8)
+    }
+    #[doc = "Bit 29 - USB voltage regulator in standby mode during VLPR and VLPW modes"]
+    #[inline(always)]
+    pub fn usbvstby(&self) -> UsbvstbyR {
+        UsbvstbyR::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - USB voltage regulator in standby mode during Stop, VLPS, LLS and VLLS modes."]
+    #[inline(always)]
+    pub fn usbsstby(&self) -> UsbsstbyR {
+        UsbsstbyR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - USB voltage regulator enable"]
+    #[inline(always)]
+    pub fn usbregen(&self) -> UsbregenR {
+        UsbregenR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 18:19 - 32K oscillator clock select"]
+    #[inline(always)]
+    #[must_use]
+    pub fn osc32ksel(&mut self) -> Osc32kselW<Sopt1Spec> {
+        Osc32kselW::new(self, 18)
+    }
+    #[doc = "Bit 29 - USB voltage regulator in standby mode during VLPR and VLPW modes"]
+    #[inline(always)]
+    #[must_use]
+    pub fn usbvstby(&mut self) -> UsbvstbyW<Sopt1Spec> {
+        UsbvstbyW::new(self, 29)
+    }
+    #[doc = "Bit 30 - USB voltage regulator in standby mode during Stop, VLPS, LLS and VLLS modes."]
+    #[inline(always)]
+    #[must_use]
+    pub fn usbsstby(&mut self) -> UsbsstbyW<Sopt1Spec> {
+        UsbsstbyW::new(self, 30)
+    }
+    #[doc = "Bit 31 - USB voltage regulator enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn usbregen(&mut self) -> UsbregenW<Sopt1Spec> {
+        UsbregenW::new(self, 31)
+    }
+}
+#[doc = "System Options Register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`sopt1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sopt1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Sopt1Spec;
+impl crate::RegisterSpec for Sopt1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`sopt1::R`](R) reader structure"]
+impl crate::Readable for Sopt1Spec {}
+#[doc = "`write(|w| ..)` method takes [`sopt1::W`](W) writer structure"]
+impl crate::Writable for Sopt1Spec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets SOPT1 to value 0x8000_0000"]
+impl crate::Resettable for Sopt1Spec {
+    const RESET_VALUE: u32 = 0x8000_0000;
+}

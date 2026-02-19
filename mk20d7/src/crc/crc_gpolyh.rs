@@ -1,0 +1,40 @@
+#[doc = "Register `GPOLYH` reader"]
+pub type R = crate::R<CrcGpolyhSpec>;
+#[doc = "Register `GPOLYH` writer"]
+pub type W = crate::W<CrcGpolyhSpec>;
+#[doc = "Field `GPOLYH` reader - POLYH stores the high 16 bits of the 16/32 bit CRC polynomial value"]
+pub type GpolyhR = crate::FieldReader<u16>;
+#[doc = "Field `GPOLYH` writer - POLYH stores the high 16 bits of the 16/32 bit CRC polynomial value"]
+pub type GpolyhW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+impl R {
+    #[doc = "Bits 0:15 - POLYH stores the high 16 bits of the 16/32 bit CRC polynomial value"]
+    #[inline(always)]
+    pub fn gpolyh(&self) -> GpolyhR {
+        GpolyhR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:15 - POLYH stores the high 16 bits of the 16/32 bit CRC polynomial value"]
+    #[inline(always)]
+    #[must_use]
+    pub fn gpolyh(&mut self) -> GpolyhW<CrcGpolyhSpec> {
+        GpolyhW::new(self, 0)
+    }
+}
+#[doc = "CRC_GPOLYH register.\n\nYou can [`read`](crate::Reg::read) this register and get [`crc_gpolyh::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`crc_gpolyh::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CrcGpolyhSpec;
+impl crate::RegisterSpec for CrcGpolyhSpec {
+    type Ux = u16;
+}
+#[doc = "`read()` method returns [`crc_gpolyh::R`](R) reader structure"]
+impl crate::Readable for CrcGpolyhSpec {}
+#[doc = "`write(|w| ..)` method takes [`crc_gpolyh::W`](W) writer structure"]
+impl crate::Writable for CrcGpolyhSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+}
+#[doc = "`reset()` method sets GPOLYH to value 0xffff"]
+impl crate::Resettable for CrcGpolyhSpec {
+    const RESET_VALUE: u16 = 0xffff;
+}

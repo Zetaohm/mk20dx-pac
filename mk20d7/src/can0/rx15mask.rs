@@ -1,0 +1,96 @@
+#[doc = "Register `RX15MASK` reader"]
+pub type R = crate::R<Rx15maskSpec>;
+#[doc = "Register `RX15MASK` writer"]
+pub type W = crate::W<Rx15maskSpec>;
+#[doc = "Rx Buffer 15 Mask Bits\n\nValue on reset: 4294967295"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u32)]
+pub enum Rx15m {
+    #[doc = "0: The corresponding bit in the filter is \"don't care.\""]
+    _0 = 0,
+    #[doc = "1: The corresponding bit in the filter is checked."]
+    _1 = 1,
+}
+impl From<Rx15m> for u32 {
+    #[inline(always)]
+    fn from(variant: Rx15m) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Rx15m {
+    type Ux = u32;
+}
+impl crate::IsEnum for Rx15m {}
+#[doc = "Field `RX15M` reader - Rx Buffer 15 Mask Bits"]
+pub type Rx15mR = crate::FieldReader<Rx15m>;
+impl Rx15mR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<Rx15m> {
+        match self.bits {
+            0 => Some(Rx15m::_0),
+            1 => Some(Rx15m::_1),
+            _ => None,
+        }
+    }
+    #[doc = "The corresponding bit in the filter is \"don't care.\""]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Rx15m::_0
+    }
+    #[doc = "The corresponding bit in the filter is checked."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Rx15m::_1
+    }
+}
+#[doc = "Field `RX15M` writer - Rx Buffer 15 Mask Bits"]
+pub type Rx15mW<'a, REG> = crate::FieldWriter<'a, REG, 32, Rx15m>;
+impl<'a, REG> Rx15mW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u32>,
+{
+    #[doc = "The corresponding bit in the filter is \"don't care.\""]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Rx15m::_0)
+    }
+    #[doc = "The corresponding bit in the filter is checked."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Rx15m::_1)
+    }
+}
+impl R {
+    #[doc = "Bits 0:31 - Rx Buffer 15 Mask Bits"]
+    #[inline(always)]
+    pub fn rx15m(&self) -> Rx15mR {
+        Rx15mR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - Rx Buffer 15 Mask Bits"]
+    #[inline(always)]
+    #[must_use]
+    pub fn rx15m(&mut self) -> Rx15mW<Rx15maskSpec> {
+        Rx15mW::new(self, 0)
+    }
+}
+#[doc = "Rx 15 Mask Register\n\nYou can [`read`](crate::Reg::read) this register and get [`rx15mask::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx15mask::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Rx15maskSpec;
+impl crate::RegisterSpec for Rx15maskSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`rx15mask::R`](R) reader structure"]
+impl crate::Readable for Rx15maskSpec {}
+#[doc = "`write(|w| ..)` method takes [`rx15mask::W`](W) writer structure"]
+impl crate::Writable for Rx15maskSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets RX15MASK to value 0xffff_ffff"]
+impl crate::Resettable for Rx15maskSpec {
+    const RESET_VALUE: u32 = 0xffff_ffff;
+}

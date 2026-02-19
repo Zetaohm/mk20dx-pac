@@ -1,0 +1,40 @@
+#[doc = "Register `AFSR` reader"]
+pub type R = crate::R<AfsrSpec>;
+#[doc = "Register `AFSR` writer"]
+pub type W = crate::W<AfsrSpec>;
+#[doc = "Field `AUXFAULT` reader - Latched version of the AUXFAULT inputs"]
+pub type AuxfaultR = crate::FieldReader<u32>;
+#[doc = "Field `AUXFAULT` writer - Latched version of the AUXFAULT inputs"]
+pub type AuxfaultW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31 - Latched version of the AUXFAULT inputs"]
+    #[inline(always)]
+    pub fn auxfault(&self) -> AuxfaultR {
+        AuxfaultR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - Latched version of the AUXFAULT inputs"]
+    #[inline(always)]
+    #[must_use]
+    pub fn auxfault(&mut self) -> AuxfaultW<AfsrSpec> {
+        AuxfaultW::new(self, 0)
+    }
+}
+#[doc = "Auxiliary Fault Status Register\n\nYou can [`read`](crate::Reg::read) this register and get [`afsr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`afsr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct AfsrSpec;
+impl crate::RegisterSpec for AfsrSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`afsr::R`](R) reader structure"]
+impl crate::Readable for AfsrSpec {}
+#[doc = "`write(|w| ..)` method takes [`afsr::W`](W) writer structure"]
+impl crate::Writable for AfsrSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets AFSR to value 0"]
+impl crate::Resettable for AfsrSpec {
+    const RESET_VALUE: u32 = 0;
+}

@@ -1,0 +1,985 @@
+#[doc = "Register `SYNCONF` reader"]
+pub type R = crate::R<SynconfSpec>;
+#[doc = "Register `SYNCONF` writer"]
+pub type W = crate::W<SynconfSpec>;
+#[doc = "Hardware Trigger Mode\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Hwtrigmode {
+    #[doc = "0: FTM clears the TRIGj bit when the hardware trigger j is detected."]
+    _0 = 0,
+    #[doc = "1: FTM does not clear the TRIGj bit when the hardware trigger j is detected."]
+    _1 = 1,
+}
+impl From<Hwtrigmode> for bool {
+    #[inline(always)]
+    fn from(variant: Hwtrigmode) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `HWTRIGMODE` reader - Hardware Trigger Mode"]
+pub type HwtrigmodeR = crate::BitReader<Hwtrigmode>;
+impl HwtrigmodeR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Hwtrigmode {
+        match self.bits {
+            false => Hwtrigmode::_0,
+            true => Hwtrigmode::_1,
+        }
+    }
+    #[doc = "FTM clears the TRIGj bit when the hardware trigger j is detected."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Hwtrigmode::_0
+    }
+    #[doc = "FTM does not clear the TRIGj bit when the hardware trigger j is detected."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Hwtrigmode::_1
+    }
+}
+#[doc = "Field `HWTRIGMODE` writer - Hardware Trigger Mode"]
+pub type HwtrigmodeW<'a, REG> = crate::BitWriter<'a, REG, Hwtrigmode>;
+impl<'a, REG> HwtrigmodeW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "FTM clears the TRIGj bit when the hardware trigger j is detected."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Hwtrigmode::_0)
+    }
+    #[doc = "FTM does not clear the TRIGj bit when the hardware trigger j is detected."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Hwtrigmode::_1)
+    }
+}
+#[doc = "CNTIN register synchronization\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Cntinc {
+    #[doc = "0: CNTIN register is updated with its buffer value at all rising edges of system clock."]
+    _0 = 0,
+    #[doc = "1: CNTIN register is updated with its buffer value by the PWM synchronization."]
+    _1 = 1,
+}
+impl From<Cntinc> for bool {
+    #[inline(always)]
+    fn from(variant: Cntinc) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `CNTINC` reader - CNTIN register synchronization"]
+pub type CntincR = crate::BitReader<Cntinc>;
+impl CntincR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Cntinc {
+        match self.bits {
+            false => Cntinc::_0,
+            true => Cntinc::_1,
+        }
+    }
+    #[doc = "CNTIN register is updated with its buffer value at all rising edges of system clock."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Cntinc::_0
+    }
+    #[doc = "CNTIN register is updated with its buffer value by the PWM synchronization."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Cntinc::_1
+    }
+}
+#[doc = "Field `CNTINC` writer - CNTIN register synchronization"]
+pub type CntincW<'a, REG> = crate::BitWriter<'a, REG, Cntinc>;
+impl<'a, REG> CntincW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "CNTIN register is updated with its buffer value at all rising edges of system clock."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Cntinc::_0)
+    }
+    #[doc = "CNTIN register is updated with its buffer value by the PWM synchronization."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Cntinc::_1)
+    }
+}
+#[doc = "INVCTRL register synchronization\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Invc {
+    #[doc = "0: INVCTRL register is updated with its buffer value at all rising edges of system clock."]
+    _0 = 0,
+    #[doc = "1: INVCTRL register is updated with its buffer value by the PWM synchronization."]
+    _1 = 1,
+}
+impl From<Invc> for bool {
+    #[inline(always)]
+    fn from(variant: Invc) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `INVC` reader - INVCTRL register synchronization"]
+pub type InvcR = crate::BitReader<Invc>;
+impl InvcR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Invc {
+        match self.bits {
+            false => Invc::_0,
+            true => Invc::_1,
+        }
+    }
+    #[doc = "INVCTRL register is updated with its buffer value at all rising edges of system clock."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Invc::_0
+    }
+    #[doc = "INVCTRL register is updated with its buffer value by the PWM synchronization."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Invc::_1
+    }
+}
+#[doc = "Field `INVC` writer - INVCTRL register synchronization"]
+pub type InvcW<'a, REG> = crate::BitWriter<'a, REG, Invc>;
+impl<'a, REG> InvcW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "INVCTRL register is updated with its buffer value at all rising edges of system clock."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Invc::_0)
+    }
+    #[doc = "INVCTRL register is updated with its buffer value by the PWM synchronization."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Invc::_1)
+    }
+}
+#[doc = "SWOCTRL register synchronization\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Swoc {
+    #[doc = "0: SWOCTRL register is updated with its buffer value at all rising edges of system clock."]
+    _0 = 0,
+    #[doc = "1: SWOCTRL register is updated with its buffer value by the PWM synchronization."]
+    _1 = 1,
+}
+impl From<Swoc> for bool {
+    #[inline(always)]
+    fn from(variant: Swoc) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `SWOC` reader - SWOCTRL register synchronization"]
+pub type SwocR = crate::BitReader<Swoc>;
+impl SwocR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Swoc {
+        match self.bits {
+            false => Swoc::_0,
+            true => Swoc::_1,
+        }
+    }
+    #[doc = "SWOCTRL register is updated with its buffer value at all rising edges of system clock."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Swoc::_0
+    }
+    #[doc = "SWOCTRL register is updated with its buffer value by the PWM synchronization."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Swoc::_1
+    }
+}
+#[doc = "Field `SWOC` writer - SWOCTRL register synchronization"]
+pub type SwocW<'a, REG> = crate::BitWriter<'a, REG, Swoc>;
+impl<'a, REG> SwocW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "SWOCTRL register is updated with its buffer value at all rising edges of system clock."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Swoc::_0)
+    }
+    #[doc = "SWOCTRL register is updated with its buffer value by the PWM synchronization."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Swoc::_1)
+    }
+}
+#[doc = "Synchronization Mode\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Syncmode {
+    #[doc = "0: Legacy PWM synchronization is selected."]
+    _0 = 0,
+    #[doc = "1: Enhanced PWM synchronization is selected."]
+    _1 = 1,
+}
+impl From<Syncmode> for bool {
+    #[inline(always)]
+    fn from(variant: Syncmode) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `SYNCMODE` reader - Synchronization Mode"]
+pub type SyncmodeR = crate::BitReader<Syncmode>;
+impl SyncmodeR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Syncmode {
+        match self.bits {
+            false => Syncmode::_0,
+            true => Syncmode::_1,
+        }
+    }
+    #[doc = "Legacy PWM synchronization is selected."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Syncmode::_0
+    }
+    #[doc = "Enhanced PWM synchronization is selected."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Syncmode::_1
+    }
+}
+#[doc = "Field `SYNCMODE` writer - Synchronization Mode"]
+pub type SyncmodeW<'a, REG> = crate::BitWriter<'a, REG, Syncmode>;
+impl<'a, REG> SyncmodeW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Legacy PWM synchronization is selected."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Syncmode::_0)
+    }
+    #[doc = "Enhanced PWM synchronization is selected."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Syncmode::_1)
+    }
+}
+#[doc = "no description available\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Swrstcnt {
+    #[doc = "0: The software trigger does not activate the FTM counter synchronization."]
+    _0 = 0,
+    #[doc = "1: The software trigger activates the FTM counter synchronization."]
+    _1 = 1,
+}
+impl From<Swrstcnt> for bool {
+    #[inline(always)]
+    fn from(variant: Swrstcnt) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `SWRSTCNT` reader - no description available"]
+pub type SwrstcntR = crate::BitReader<Swrstcnt>;
+impl SwrstcntR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Swrstcnt {
+        match self.bits {
+            false => Swrstcnt::_0,
+            true => Swrstcnt::_1,
+        }
+    }
+    #[doc = "The software trigger does not activate the FTM counter synchronization."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Swrstcnt::_0
+    }
+    #[doc = "The software trigger activates the FTM counter synchronization."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Swrstcnt::_1
+    }
+}
+#[doc = "Field `SWRSTCNT` writer - no description available"]
+pub type SwrstcntW<'a, REG> = crate::BitWriter<'a, REG, Swrstcnt>;
+impl<'a, REG> SwrstcntW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The software trigger does not activate the FTM counter synchronization."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Swrstcnt::_0)
+    }
+    #[doc = "The software trigger activates the FTM counter synchronization."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Swrstcnt::_1)
+    }
+}
+#[doc = "no description available\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Swwrbuf {
+    #[doc = "0: The software trigger does not activate MOD, CNTIN, and CV registers synchronization."]
+    _0 = 0,
+    #[doc = "1: The software trigger activates MOD, CNTIN, and CV registers synchronization."]
+    _1 = 1,
+}
+impl From<Swwrbuf> for bool {
+    #[inline(always)]
+    fn from(variant: Swwrbuf) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `SWWRBUF` reader - no description available"]
+pub type SwwrbufR = crate::BitReader<Swwrbuf>;
+impl SwwrbufR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Swwrbuf {
+        match self.bits {
+            false => Swwrbuf::_0,
+            true => Swwrbuf::_1,
+        }
+    }
+    #[doc = "The software trigger does not activate MOD, CNTIN, and CV registers synchronization."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Swwrbuf::_0
+    }
+    #[doc = "The software trigger activates MOD, CNTIN, and CV registers synchronization."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Swwrbuf::_1
+    }
+}
+#[doc = "Field `SWWRBUF` writer - no description available"]
+pub type SwwrbufW<'a, REG> = crate::BitWriter<'a, REG, Swwrbuf>;
+impl<'a, REG> SwwrbufW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The software trigger does not activate MOD, CNTIN, and CV registers synchronization."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Swwrbuf::_0)
+    }
+    #[doc = "The software trigger activates MOD, CNTIN, and CV registers synchronization."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Swwrbuf::_1)
+    }
+}
+#[doc = "no description available\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Swom {
+    #[doc = "0: The software trigger does not activate the OUTMASK register synchronization."]
+    _0 = 0,
+    #[doc = "1: The software trigger activates the OUTMASK register synchronization."]
+    _1 = 1,
+}
+impl From<Swom> for bool {
+    #[inline(always)]
+    fn from(variant: Swom) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `SWOM` reader - no description available"]
+pub type SwomR = crate::BitReader<Swom>;
+impl SwomR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Swom {
+        match self.bits {
+            false => Swom::_0,
+            true => Swom::_1,
+        }
+    }
+    #[doc = "The software trigger does not activate the OUTMASK register synchronization."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Swom::_0
+    }
+    #[doc = "The software trigger activates the OUTMASK register synchronization."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Swom::_1
+    }
+}
+#[doc = "Field `SWOM` writer - no description available"]
+pub type SwomW<'a, REG> = crate::BitWriter<'a, REG, Swom>;
+impl<'a, REG> SwomW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The software trigger does not activate the OUTMASK register synchronization."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Swom::_0)
+    }
+    #[doc = "The software trigger activates the OUTMASK register synchronization."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Swom::_1)
+    }
+}
+#[doc = "no description available\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Swinvc {
+    #[doc = "0: The software trigger does not activate the INVCTRL register synchronization."]
+    _0 = 0,
+    #[doc = "1: The software trigger activates the INVCTRL register synchronization."]
+    _1 = 1,
+}
+impl From<Swinvc> for bool {
+    #[inline(always)]
+    fn from(variant: Swinvc) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `SWINVC` reader - no description available"]
+pub type SwinvcR = crate::BitReader<Swinvc>;
+impl SwinvcR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Swinvc {
+        match self.bits {
+            false => Swinvc::_0,
+            true => Swinvc::_1,
+        }
+    }
+    #[doc = "The software trigger does not activate the INVCTRL register synchronization."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Swinvc::_0
+    }
+    #[doc = "The software trigger activates the INVCTRL register synchronization."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Swinvc::_1
+    }
+}
+#[doc = "Field `SWINVC` writer - no description available"]
+pub type SwinvcW<'a, REG> = crate::BitWriter<'a, REG, Swinvc>;
+impl<'a, REG> SwinvcW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The software trigger does not activate the INVCTRL register synchronization."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Swinvc::_0)
+    }
+    #[doc = "The software trigger activates the INVCTRL register synchronization."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Swinvc::_1)
+    }
+}
+#[doc = "no description available\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Swsoc {
+    #[doc = "0: The software trigger does not activate the SWOCTRL register synchronization."]
+    _0 = 0,
+    #[doc = "1: The software trigger activates the SWOCTRL register synchronization."]
+    _1 = 1,
+}
+impl From<Swsoc> for bool {
+    #[inline(always)]
+    fn from(variant: Swsoc) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `SWSOC` reader - no description available"]
+pub type SwsocR = crate::BitReader<Swsoc>;
+impl SwsocR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Swsoc {
+        match self.bits {
+            false => Swsoc::_0,
+            true => Swsoc::_1,
+        }
+    }
+    #[doc = "The software trigger does not activate the SWOCTRL register synchronization."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Swsoc::_0
+    }
+    #[doc = "The software trigger activates the SWOCTRL register synchronization."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Swsoc::_1
+    }
+}
+#[doc = "Field `SWSOC` writer - no description available"]
+pub type SwsocW<'a, REG> = crate::BitWriter<'a, REG, Swsoc>;
+impl<'a, REG> SwsocW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The software trigger does not activate the SWOCTRL register synchronization."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Swsoc::_0)
+    }
+    #[doc = "The software trigger activates the SWOCTRL register synchronization."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Swsoc::_1)
+    }
+}
+#[doc = "no description available\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Hwrstcnt {
+    #[doc = "0: A hardware trigger does not activate the FTM counter synchronization."]
+    _0 = 0,
+    #[doc = "1: A hardware trigger activates the FTM counter synchronization."]
+    _1 = 1,
+}
+impl From<Hwrstcnt> for bool {
+    #[inline(always)]
+    fn from(variant: Hwrstcnt) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `HWRSTCNT` reader - no description available"]
+pub type HwrstcntR = crate::BitReader<Hwrstcnt>;
+impl HwrstcntR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Hwrstcnt {
+        match self.bits {
+            false => Hwrstcnt::_0,
+            true => Hwrstcnt::_1,
+        }
+    }
+    #[doc = "A hardware trigger does not activate the FTM counter synchronization."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Hwrstcnt::_0
+    }
+    #[doc = "A hardware trigger activates the FTM counter synchronization."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Hwrstcnt::_1
+    }
+}
+#[doc = "Field `HWRSTCNT` writer - no description available"]
+pub type HwrstcntW<'a, REG> = crate::BitWriter<'a, REG, Hwrstcnt>;
+impl<'a, REG> HwrstcntW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "A hardware trigger does not activate the FTM counter synchronization."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Hwrstcnt::_0)
+    }
+    #[doc = "A hardware trigger activates the FTM counter synchronization."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Hwrstcnt::_1)
+    }
+}
+#[doc = "no description available\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Hwwrbuf {
+    #[doc = "0: A hardware trigger does not activate MOD, CNTIN, and CV registers synchronization."]
+    _0 = 0,
+    #[doc = "1: A hardware trigger activates MOD, CNTIN, and CV registers synchronization."]
+    _1 = 1,
+}
+impl From<Hwwrbuf> for bool {
+    #[inline(always)]
+    fn from(variant: Hwwrbuf) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `HWWRBUF` reader - no description available"]
+pub type HwwrbufR = crate::BitReader<Hwwrbuf>;
+impl HwwrbufR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Hwwrbuf {
+        match self.bits {
+            false => Hwwrbuf::_0,
+            true => Hwwrbuf::_1,
+        }
+    }
+    #[doc = "A hardware trigger does not activate MOD, CNTIN, and CV registers synchronization."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Hwwrbuf::_0
+    }
+    #[doc = "A hardware trigger activates MOD, CNTIN, and CV registers synchronization."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Hwwrbuf::_1
+    }
+}
+#[doc = "Field `HWWRBUF` writer - no description available"]
+pub type HwwrbufW<'a, REG> = crate::BitWriter<'a, REG, Hwwrbuf>;
+impl<'a, REG> HwwrbufW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "A hardware trigger does not activate MOD, CNTIN, and CV registers synchronization."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Hwwrbuf::_0)
+    }
+    #[doc = "A hardware trigger activates MOD, CNTIN, and CV registers synchronization."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Hwwrbuf::_1)
+    }
+}
+#[doc = "no description available\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Hwom {
+    #[doc = "0: A hardware trigger does not activate the OUTMASK register synchronization."]
+    _0 = 0,
+    #[doc = "1: A hardware trigger activates the OUTMASK register synchronization."]
+    _1 = 1,
+}
+impl From<Hwom> for bool {
+    #[inline(always)]
+    fn from(variant: Hwom) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `HWOM` reader - no description available"]
+pub type HwomR = crate::BitReader<Hwom>;
+impl HwomR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Hwom {
+        match self.bits {
+            false => Hwom::_0,
+            true => Hwom::_1,
+        }
+    }
+    #[doc = "A hardware trigger does not activate the OUTMASK register synchronization."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Hwom::_0
+    }
+    #[doc = "A hardware trigger activates the OUTMASK register synchronization."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Hwom::_1
+    }
+}
+#[doc = "Field `HWOM` writer - no description available"]
+pub type HwomW<'a, REG> = crate::BitWriter<'a, REG, Hwom>;
+impl<'a, REG> HwomW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "A hardware trigger does not activate the OUTMASK register synchronization."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Hwom::_0)
+    }
+    #[doc = "A hardware trigger activates the OUTMASK register synchronization."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Hwom::_1)
+    }
+}
+#[doc = "no description available\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Hwinvc {
+    #[doc = "0: A hardware trigger does not activate the INVCTRL register synchronization."]
+    _0 = 0,
+    #[doc = "1: A hardware trigger activates the INVCTRL register synchronization."]
+    _1 = 1,
+}
+impl From<Hwinvc> for bool {
+    #[inline(always)]
+    fn from(variant: Hwinvc) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `HWINVC` reader - no description available"]
+pub type HwinvcR = crate::BitReader<Hwinvc>;
+impl HwinvcR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Hwinvc {
+        match self.bits {
+            false => Hwinvc::_0,
+            true => Hwinvc::_1,
+        }
+    }
+    #[doc = "A hardware trigger does not activate the INVCTRL register synchronization."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Hwinvc::_0
+    }
+    #[doc = "A hardware trigger activates the INVCTRL register synchronization."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Hwinvc::_1
+    }
+}
+#[doc = "Field `HWINVC` writer - no description available"]
+pub type HwinvcW<'a, REG> = crate::BitWriter<'a, REG, Hwinvc>;
+impl<'a, REG> HwinvcW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "A hardware trigger does not activate the INVCTRL register synchronization."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Hwinvc::_0)
+    }
+    #[doc = "A hardware trigger activates the INVCTRL register synchronization."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Hwinvc::_1)
+    }
+}
+#[doc = "no description available\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Hwsoc {
+    #[doc = "0: A hardware trigger does not activate the SWOCTRL register synchronization."]
+    _0 = 0,
+    #[doc = "1: A hardware trigger activates the SWOCTRL register synchronization."]
+    _1 = 1,
+}
+impl From<Hwsoc> for bool {
+    #[inline(always)]
+    fn from(variant: Hwsoc) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `HWSOC` reader - no description available"]
+pub type HwsocR = crate::BitReader<Hwsoc>;
+impl HwsocR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Hwsoc {
+        match self.bits {
+            false => Hwsoc::_0,
+            true => Hwsoc::_1,
+        }
+    }
+    #[doc = "A hardware trigger does not activate the SWOCTRL register synchronization."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Hwsoc::_0
+    }
+    #[doc = "A hardware trigger activates the SWOCTRL register synchronization."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Hwsoc::_1
+    }
+}
+#[doc = "Field `HWSOC` writer - no description available"]
+pub type HwsocW<'a, REG> = crate::BitWriter<'a, REG, Hwsoc>;
+impl<'a, REG> HwsocW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "A hardware trigger does not activate the SWOCTRL register synchronization."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Hwsoc::_0)
+    }
+    #[doc = "A hardware trigger activates the SWOCTRL register synchronization."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Hwsoc::_1)
+    }
+}
+impl R {
+    #[doc = "Bit 0 - Hardware Trigger Mode"]
+    #[inline(always)]
+    pub fn hwtrigmode(&self) -> HwtrigmodeR {
+        HwtrigmodeR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 2 - CNTIN register synchronization"]
+    #[inline(always)]
+    pub fn cntinc(&self) -> CntincR {
+        CntincR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 4 - INVCTRL register synchronization"]
+    #[inline(always)]
+    pub fn invc(&self) -> InvcR {
+        InvcR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - SWOCTRL register synchronization"]
+    #[inline(always)]
+    pub fn swoc(&self) -> SwocR {
+        SwocR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 7 - Synchronization Mode"]
+    #[inline(always)]
+    pub fn syncmode(&self) -> SyncmodeR {
+        SyncmodeR::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - no description available"]
+    #[inline(always)]
+    pub fn swrstcnt(&self) -> SwrstcntR {
+        SwrstcntR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - no description available"]
+    #[inline(always)]
+    pub fn swwrbuf(&self) -> SwwrbufR {
+        SwwrbufR::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - no description available"]
+    #[inline(always)]
+    pub fn swom(&self) -> SwomR {
+        SwomR::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - no description available"]
+    #[inline(always)]
+    pub fn swinvc(&self) -> SwinvcR {
+        SwinvcR::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - no description available"]
+    #[inline(always)]
+    pub fn swsoc(&self) -> SwsocR {
+        SwsocR::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 16 - no description available"]
+    #[inline(always)]
+    pub fn hwrstcnt(&self) -> HwrstcntR {
+        HwrstcntR::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17 - no description available"]
+    #[inline(always)]
+    pub fn hwwrbuf(&self) -> HwwrbufR {
+        HwwrbufR::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18 - no description available"]
+    #[inline(always)]
+    pub fn hwom(&self) -> HwomR {
+        HwomR::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19 - no description available"]
+    #[inline(always)]
+    pub fn hwinvc(&self) -> HwinvcR {
+        HwinvcR::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 20 - no description available"]
+    #[inline(always)]
+    pub fn hwsoc(&self) -> HwsocR {
+        HwsocR::new(((self.bits >> 20) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Hardware Trigger Mode"]
+    #[inline(always)]
+    #[must_use]
+    pub fn hwtrigmode(&mut self) -> HwtrigmodeW<SynconfSpec> {
+        HwtrigmodeW::new(self, 0)
+    }
+    #[doc = "Bit 2 - CNTIN register synchronization"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cntinc(&mut self) -> CntincW<SynconfSpec> {
+        CntincW::new(self, 2)
+    }
+    #[doc = "Bit 4 - INVCTRL register synchronization"]
+    #[inline(always)]
+    #[must_use]
+    pub fn invc(&mut self) -> InvcW<SynconfSpec> {
+        InvcW::new(self, 4)
+    }
+    #[doc = "Bit 5 - SWOCTRL register synchronization"]
+    #[inline(always)]
+    #[must_use]
+    pub fn swoc(&mut self) -> SwocW<SynconfSpec> {
+        SwocW::new(self, 5)
+    }
+    #[doc = "Bit 7 - Synchronization Mode"]
+    #[inline(always)]
+    #[must_use]
+    pub fn syncmode(&mut self) -> SyncmodeW<SynconfSpec> {
+        SyncmodeW::new(self, 7)
+    }
+    #[doc = "Bit 8 - no description available"]
+    #[inline(always)]
+    #[must_use]
+    pub fn swrstcnt(&mut self) -> SwrstcntW<SynconfSpec> {
+        SwrstcntW::new(self, 8)
+    }
+    #[doc = "Bit 9 - no description available"]
+    #[inline(always)]
+    #[must_use]
+    pub fn swwrbuf(&mut self) -> SwwrbufW<SynconfSpec> {
+        SwwrbufW::new(self, 9)
+    }
+    #[doc = "Bit 10 - no description available"]
+    #[inline(always)]
+    #[must_use]
+    pub fn swom(&mut self) -> SwomW<SynconfSpec> {
+        SwomW::new(self, 10)
+    }
+    #[doc = "Bit 11 - no description available"]
+    #[inline(always)]
+    #[must_use]
+    pub fn swinvc(&mut self) -> SwinvcW<SynconfSpec> {
+        SwinvcW::new(self, 11)
+    }
+    #[doc = "Bit 12 - no description available"]
+    #[inline(always)]
+    #[must_use]
+    pub fn swsoc(&mut self) -> SwsocW<SynconfSpec> {
+        SwsocW::new(self, 12)
+    }
+    #[doc = "Bit 16 - no description available"]
+    #[inline(always)]
+    #[must_use]
+    pub fn hwrstcnt(&mut self) -> HwrstcntW<SynconfSpec> {
+        HwrstcntW::new(self, 16)
+    }
+    #[doc = "Bit 17 - no description available"]
+    #[inline(always)]
+    #[must_use]
+    pub fn hwwrbuf(&mut self) -> HwwrbufW<SynconfSpec> {
+        HwwrbufW::new(self, 17)
+    }
+    #[doc = "Bit 18 - no description available"]
+    #[inline(always)]
+    #[must_use]
+    pub fn hwom(&mut self) -> HwomW<SynconfSpec> {
+        HwomW::new(self, 18)
+    }
+    #[doc = "Bit 19 - no description available"]
+    #[inline(always)]
+    #[must_use]
+    pub fn hwinvc(&mut self) -> HwinvcW<SynconfSpec> {
+        HwinvcW::new(self, 19)
+    }
+    #[doc = "Bit 20 - no description available"]
+    #[inline(always)]
+    #[must_use]
+    pub fn hwsoc(&mut self) -> HwsocW<SynconfSpec> {
+        HwsocW::new(self, 20)
+    }
+}
+#[doc = "Synchronization Configuration\n\nYou can [`read`](crate::Reg::read) this register and get [`synconf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`synconf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SynconfSpec;
+impl crate::RegisterSpec for SynconfSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`synconf::R`](R) reader structure"]
+impl crate::Readable for SynconfSpec {}
+#[doc = "`write(|w| ..)` method takes [`synconf::W`](W) writer structure"]
+impl crate::Writable for SynconfSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets SYNCONF to value 0"]
+impl crate::Resettable for SynconfSpec {
+    const RESET_VALUE: u32 = 0;
+}

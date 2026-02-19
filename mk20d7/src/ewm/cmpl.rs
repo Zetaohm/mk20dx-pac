@@ -1,0 +1,40 @@
+#[doc = "Register `CMPL` reader"]
+pub type R = crate::R<CmplSpec>;
+#[doc = "Register `CMPL` writer"]
+pub type W = crate::W<CmplSpec>;
+#[doc = "Field `COMPAREL` reader - no description available"]
+pub type ComparelR = crate::FieldReader;
+#[doc = "Field `COMPAREL` writer - no description available"]
+pub type ComparelW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+impl R {
+    #[doc = "Bits 0:7 - no description available"]
+    #[inline(always)]
+    pub fn comparel(&self) -> ComparelR {
+        ComparelR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - no description available"]
+    #[inline(always)]
+    #[must_use]
+    pub fn comparel(&mut self) -> ComparelW<CmplSpec> {
+        ComparelW::new(self, 0)
+    }
+}
+#[doc = "Compare Low Register\n\nYou can [`read`](crate::Reg::read) this register and get [`cmpl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cmpl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CmplSpec;
+impl crate::RegisterSpec for CmplSpec {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [`cmpl::R`](R) reader structure"]
+impl crate::Readable for CmplSpec {}
+#[doc = "`write(|w| ..)` method takes [`cmpl::W`](W) writer structure"]
+impl crate::Writable for CmplSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+}
+#[doc = "`reset()` method sets CMPL to value 0"]
+impl crate::Resettable for CmplSpec {
+    const RESET_VALUE: u8 = 0;
+}

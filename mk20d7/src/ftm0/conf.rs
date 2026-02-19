@@ -1,0 +1,183 @@
+#[doc = "Register `CONF` reader"]
+pub type R = crate::R<ConfSpec>;
+#[doc = "Register `CONF` writer"]
+pub type W = crate::W<ConfSpec>;
+#[doc = "Field `NUMTOF` reader - TOF Frequency"]
+pub type NumtofR = crate::FieldReader;
+#[doc = "Field `NUMTOF` writer - TOF Frequency"]
+pub type NumtofW<'a, REG> = crate::FieldWriter<'a, REG, 5>;
+#[doc = "Field `BDMMODE` reader - BDM Mode"]
+pub type BdmmodeR = crate::FieldReader;
+#[doc = "Field `BDMMODE` writer - BDM Mode"]
+pub type BdmmodeW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Global time base enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Gtbeen {
+    #[doc = "0: Use of an external global time base is disabled."]
+    _0 = 0,
+    #[doc = "1: Use of an external global time base is enabled."]
+    _1 = 1,
+}
+impl From<Gtbeen> for bool {
+    #[inline(always)]
+    fn from(variant: Gtbeen) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `GTBEEN` reader - Global time base enable"]
+pub type GtbeenR = crate::BitReader<Gtbeen>;
+impl GtbeenR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Gtbeen {
+        match self.bits {
+            false => Gtbeen::_0,
+            true => Gtbeen::_1,
+        }
+    }
+    #[doc = "Use of an external global time base is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Gtbeen::_0
+    }
+    #[doc = "Use of an external global time base is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Gtbeen::_1
+    }
+}
+#[doc = "Field `GTBEEN` writer - Global time base enable"]
+pub type GtbeenW<'a, REG> = crate::BitWriter<'a, REG, Gtbeen>;
+impl<'a, REG> GtbeenW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Use of an external global time base is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Gtbeen::_0)
+    }
+    #[doc = "Use of an external global time base is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Gtbeen::_1)
+    }
+}
+#[doc = "Global time base output\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Gtbeout {
+    #[doc = "0: A global time base signal generation is disabled."]
+    _0 = 0,
+    #[doc = "1: A global time base signal generation is enabled."]
+    _1 = 1,
+}
+impl From<Gtbeout> for bool {
+    #[inline(always)]
+    fn from(variant: Gtbeout) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `GTBEOUT` reader - Global time base output"]
+pub type GtbeoutR = crate::BitReader<Gtbeout>;
+impl GtbeoutR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Gtbeout {
+        match self.bits {
+            false => Gtbeout::_0,
+            true => Gtbeout::_1,
+        }
+    }
+    #[doc = "A global time base signal generation is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Gtbeout::_0
+    }
+    #[doc = "A global time base signal generation is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Gtbeout::_1
+    }
+}
+#[doc = "Field `GTBEOUT` writer - Global time base output"]
+pub type GtbeoutW<'a, REG> = crate::BitWriter<'a, REG, Gtbeout>;
+impl<'a, REG> GtbeoutW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "A global time base signal generation is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Gtbeout::_0)
+    }
+    #[doc = "A global time base signal generation is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Gtbeout::_1)
+    }
+}
+impl R {
+    #[doc = "Bits 0:4 - TOF Frequency"]
+    #[inline(always)]
+    pub fn numtof(&self) -> NumtofR {
+        NumtofR::new((self.bits & 0x1f) as u8)
+    }
+    #[doc = "Bits 6:7 - BDM Mode"]
+    #[inline(always)]
+    pub fn bdmmode(&self) -> BdmmodeR {
+        BdmmodeR::new(((self.bits >> 6) & 3) as u8)
+    }
+    #[doc = "Bit 9 - Global time base enable"]
+    #[inline(always)]
+    pub fn gtbeen(&self) -> GtbeenR {
+        GtbeenR::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - Global time base output"]
+    #[inline(always)]
+    pub fn gtbeout(&self) -> GtbeoutR {
+        GtbeoutR::new(((self.bits >> 10) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:4 - TOF Frequency"]
+    #[inline(always)]
+    #[must_use]
+    pub fn numtof(&mut self) -> NumtofW<ConfSpec> {
+        NumtofW::new(self, 0)
+    }
+    #[doc = "Bits 6:7 - BDM Mode"]
+    #[inline(always)]
+    #[must_use]
+    pub fn bdmmode(&mut self) -> BdmmodeW<ConfSpec> {
+        BdmmodeW::new(self, 6)
+    }
+    #[doc = "Bit 9 - Global time base enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn gtbeen(&mut self) -> GtbeenW<ConfSpec> {
+        GtbeenW::new(self, 9)
+    }
+    #[doc = "Bit 10 - Global time base output"]
+    #[inline(always)]
+    #[must_use]
+    pub fn gtbeout(&mut self) -> GtbeoutW<ConfSpec> {
+        GtbeoutW::new(self, 10)
+    }
+}
+#[doc = "Configuration\n\nYou can [`read`](crate::Reg::read) this register and get [`conf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`conf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ConfSpec;
+impl crate::RegisterSpec for ConfSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`conf::R`](R) reader structure"]
+impl crate::Readable for ConfSpec {}
+#[doc = "`write(|w| ..)` method takes [`conf::W`](W) writer structure"]
+impl crate::Writable for ConfSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets CONF to value 0"]
+impl crate::Resettable for ConfSpec {
+    const RESET_VALUE: u32 = 0;
+}

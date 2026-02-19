@@ -1,0 +1,892 @@
+#[doc = "Register `ESR1` reader"]
+pub type R = crate::R<Esr1Spec>;
+#[doc = "Register `ESR1` writer"]
+pub type W = crate::W<Esr1Spec>;
+#[doc = "Wake-Up Interrupt\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Wakint {
+    #[doc = "0: No such occurrence"]
+    _0 = 0,
+    #[doc = "1: Indicates a recessive to dominant transition was received on the CAN bus"]
+    _1 = 1,
+}
+impl From<Wakint> for bool {
+    #[inline(always)]
+    fn from(variant: Wakint) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `WAKINT` reader - Wake-Up Interrupt"]
+pub type WakintR = crate::BitReader<Wakint>;
+impl WakintR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Wakint {
+        match self.bits {
+            false => Wakint::_0,
+            true => Wakint::_1,
+        }
+    }
+    #[doc = "No such occurrence"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Wakint::_0
+    }
+    #[doc = "Indicates a recessive to dominant transition was received on the CAN bus"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Wakint::_1
+    }
+}
+#[doc = "Field `WAKINT` writer - Wake-Up Interrupt"]
+pub type WakintW<'a, REG> = crate::BitWriter<'a, REG, Wakint>;
+impl<'a, REG> WakintW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "No such occurrence"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Wakint::_0)
+    }
+    #[doc = "Indicates a recessive to dominant transition was received on the CAN bus"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Wakint::_1)
+    }
+}
+#[doc = "Error Interrupt\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Errint {
+    #[doc = "0: No such occurrence"]
+    _0 = 0,
+    #[doc = "1: Indicates setting of any Error Bit in the Error and Status Register"]
+    _1 = 1,
+}
+impl From<Errint> for bool {
+    #[inline(always)]
+    fn from(variant: Errint) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `ERRINT` reader - Error Interrupt"]
+pub type ErrintR = crate::BitReader<Errint>;
+impl ErrintR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Errint {
+        match self.bits {
+            false => Errint::_0,
+            true => Errint::_1,
+        }
+    }
+    #[doc = "No such occurrence"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Errint::_0
+    }
+    #[doc = "Indicates setting of any Error Bit in the Error and Status Register"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Errint::_1
+    }
+}
+#[doc = "Field `ERRINT` writer - Error Interrupt"]
+pub type ErrintW<'a, REG> = crate::BitWriter<'a, REG, Errint>;
+impl<'a, REG> ErrintW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "No such occurrence"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Errint::_0)
+    }
+    #[doc = "Indicates setting of any Error Bit in the Error and Status Register"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Errint::_1)
+    }
+}
+#[doc = "'Bus Off' Interrupt\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Boffint {
+    #[doc = "0: No such occurrence"]
+    _0 = 0,
+    #[doc = "1: FlexCAN module entered 'Bus Off' state"]
+    _1 = 1,
+}
+impl From<Boffint> for bool {
+    #[inline(always)]
+    fn from(variant: Boffint) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `BOFFINT` reader - 'Bus Off' Interrupt"]
+pub type BoffintR = crate::BitReader<Boffint>;
+impl BoffintR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Boffint {
+        match self.bits {
+            false => Boffint::_0,
+            true => Boffint::_1,
+        }
+    }
+    #[doc = "No such occurrence"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Boffint::_0
+    }
+    #[doc = "FlexCAN module entered 'Bus Off' state"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Boffint::_1
+    }
+}
+#[doc = "Field `BOFFINT` writer - 'Bus Off' Interrupt"]
+pub type BoffintW<'a, REG> = crate::BitWriter<'a, REG, Boffint>;
+impl<'a, REG> BoffintW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "No such occurrence"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Boffint::_0)
+    }
+    #[doc = "FlexCAN module entered 'Bus Off' state"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Boffint::_1)
+    }
+}
+#[doc = "FlexCAN in Reception\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Rx {
+    #[doc = "0: FlexCAN is not receiving a message."]
+    _0 = 0,
+    #[doc = "1: FlexCAN is receiving a message."]
+    _1 = 1,
+}
+impl From<Rx> for bool {
+    #[inline(always)]
+    fn from(variant: Rx) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `RX` reader - FlexCAN in Reception"]
+pub type RxR = crate::BitReader<Rx>;
+impl RxR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Rx {
+        match self.bits {
+            false => Rx::_0,
+            true => Rx::_1,
+        }
+    }
+    #[doc = "FlexCAN is not receiving a message."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Rx::_0
+    }
+    #[doc = "FlexCAN is receiving a message."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Rx::_1
+    }
+}
+#[doc = "Fault Confinement State\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Fltconf {
+    #[doc = "0: Error Active"]
+    _00 = 0,
+    #[doc = "1: Error Passive"]
+    _01 = 1,
+    #[doc = "2: Bus Off"]
+    _1x = 2,
+}
+impl From<Fltconf> for u8 {
+    #[inline(always)]
+    fn from(variant: Fltconf) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Fltconf {
+    type Ux = u8;
+}
+impl crate::IsEnum for Fltconf {}
+#[doc = "Field `FLTCONF` reader - Fault Confinement State"]
+pub type FltconfR = crate::FieldReader<Fltconf>;
+impl FltconfR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<Fltconf> {
+        match self.bits {
+            0 => Some(Fltconf::_00),
+            1 => Some(Fltconf::_01),
+            2 => Some(Fltconf::_1x),
+            _ => None,
+        }
+    }
+    #[doc = "Error Active"]
+    #[inline(always)]
+    pub fn is_00(&self) -> bool {
+        *self == Fltconf::_00
+    }
+    #[doc = "Error Passive"]
+    #[inline(always)]
+    pub fn is_01(&self) -> bool {
+        *self == Fltconf::_01
+    }
+    #[doc = "Bus Off"]
+    #[inline(always)]
+    pub fn is_1x(&self) -> bool {
+        *self == Fltconf::_1x
+    }
+}
+#[doc = "FlexCAN in Transmission\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Tx {
+    #[doc = "0: FlexCAN is not transmitting a message."]
+    _0 = 0,
+    #[doc = "1: FlexCAN is transmitting a message."]
+    _1 = 1,
+}
+impl From<Tx> for bool {
+    #[inline(always)]
+    fn from(variant: Tx) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `TX` reader - FlexCAN in Transmission"]
+pub type TxR = crate::BitReader<Tx>;
+impl TxR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Tx {
+        match self.bits {
+            false => Tx::_0,
+            true => Tx::_1,
+        }
+    }
+    #[doc = "FlexCAN is not transmitting a message."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Tx::_0
+    }
+    #[doc = "FlexCAN is transmitting a message."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Tx::_1
+    }
+}
+#[doc = "no description available\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Idle {
+    #[doc = "0: No such occurrence"]
+    _0 = 0,
+    #[doc = "1: CAN bus is now IDLE."]
+    _1 = 1,
+}
+impl From<Idle> for bool {
+    #[inline(always)]
+    fn from(variant: Idle) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `IDLE` reader - no description available"]
+pub type IdleR = crate::BitReader<Idle>;
+impl IdleR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Idle {
+        match self.bits {
+            false => Idle::_0,
+            true => Idle::_1,
+        }
+    }
+    #[doc = "No such occurrence"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Idle::_0
+    }
+    #[doc = "CAN bus is now IDLE."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Idle::_1
+    }
+}
+#[doc = "Rx Error Warning\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Rxwrn {
+    #[doc = "0: No such occurrence"]
+    _0 = 0,
+    #[doc = "1: RXERRCNT is greater than or equal to 96."]
+    _1 = 1,
+}
+impl From<Rxwrn> for bool {
+    #[inline(always)]
+    fn from(variant: Rxwrn) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `RXWRN` reader - Rx Error Warning"]
+pub type RxwrnR = crate::BitReader<Rxwrn>;
+impl RxwrnR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Rxwrn {
+        match self.bits {
+            false => Rxwrn::_0,
+            true => Rxwrn::_1,
+        }
+    }
+    #[doc = "No such occurrence"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Rxwrn::_0
+    }
+    #[doc = "RXERRCNT is greater than or equal to 96."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Rxwrn::_1
+    }
+}
+#[doc = "TX Error Warning\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Txwrn {
+    #[doc = "0: No such occurrence"]
+    _0 = 0,
+    #[doc = "1: TXERRCNT is greater than or equal to 96."]
+    _1 = 1,
+}
+impl From<Txwrn> for bool {
+    #[inline(always)]
+    fn from(variant: Txwrn) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `TXWRN` reader - TX Error Warning"]
+pub type TxwrnR = crate::BitReader<Txwrn>;
+impl TxwrnR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Txwrn {
+        match self.bits {
+            false => Txwrn::_0,
+            true => Txwrn::_1,
+        }
+    }
+    #[doc = "No such occurrence"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Txwrn::_0
+    }
+    #[doc = "TXERRCNT is greater than or equal to 96."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Txwrn::_1
+    }
+}
+#[doc = "Stuffing Error\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Stferr {
+    #[doc = "0: No such occurrence"]
+    _0 = 0,
+    #[doc = "1: A Stuffing Error occurred since last read of this register."]
+    _1 = 1,
+}
+impl From<Stferr> for bool {
+    #[inline(always)]
+    fn from(variant: Stferr) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `STFERR` reader - Stuffing Error"]
+pub type StferrR = crate::BitReader<Stferr>;
+impl StferrR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Stferr {
+        match self.bits {
+            false => Stferr::_0,
+            true => Stferr::_1,
+        }
+    }
+    #[doc = "No such occurrence"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Stferr::_0
+    }
+    #[doc = "A Stuffing Error occurred since last read of this register."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Stferr::_1
+    }
+}
+#[doc = "Form Error\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Frmerr {
+    #[doc = "0: No such occurrence"]
+    _0 = 0,
+    #[doc = "1: A Form Error occurred since last read of this register."]
+    _1 = 1,
+}
+impl From<Frmerr> for bool {
+    #[inline(always)]
+    fn from(variant: Frmerr) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FRMERR` reader - Form Error"]
+pub type FrmerrR = crate::BitReader<Frmerr>;
+impl FrmerrR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Frmerr {
+        match self.bits {
+            false => Frmerr::_0,
+            true => Frmerr::_1,
+        }
+    }
+    #[doc = "No such occurrence"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Frmerr::_0
+    }
+    #[doc = "A Form Error occurred since last read of this register."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Frmerr::_1
+    }
+}
+#[doc = "Cyclic Redundancy Check Error\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Crcerr {
+    #[doc = "0: No such occurrence"]
+    _0 = 0,
+    #[doc = "1: A CRC error occurred since last read of this register."]
+    _1 = 1,
+}
+impl From<Crcerr> for bool {
+    #[inline(always)]
+    fn from(variant: Crcerr) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `CRCERR` reader - Cyclic Redundancy Check Error"]
+pub type CrcerrR = crate::BitReader<Crcerr>;
+impl CrcerrR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Crcerr {
+        match self.bits {
+            false => Crcerr::_0,
+            true => Crcerr::_1,
+        }
+    }
+    #[doc = "No such occurrence"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Crcerr::_0
+    }
+    #[doc = "A CRC error occurred since last read of this register."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Crcerr::_1
+    }
+}
+#[doc = "Acknowledge Error\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Ackerr {
+    #[doc = "0: No such occurrence"]
+    _0 = 0,
+    #[doc = "1: An ACK error occurred since last read of this register."]
+    _1 = 1,
+}
+impl From<Ackerr> for bool {
+    #[inline(always)]
+    fn from(variant: Ackerr) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `ACKERR` reader - Acknowledge Error"]
+pub type AckerrR = crate::BitReader<Ackerr>;
+impl AckerrR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Ackerr {
+        match self.bits {
+            false => Ackerr::_0,
+            true => Ackerr::_1,
+        }
+    }
+    #[doc = "No such occurrence"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Ackerr::_0
+    }
+    #[doc = "An ACK error occurred since last read of this register."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Ackerr::_1
+    }
+}
+#[doc = "Bit0 Error\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Bit0err {
+    #[doc = "0: No such occurrence"]
+    _0 = 0,
+    #[doc = "1: At least one bit sent as dominant is received as recessive."]
+    _1 = 1,
+}
+impl From<Bit0err> for bool {
+    #[inline(always)]
+    fn from(variant: Bit0err) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `BIT0ERR` reader - Bit0 Error"]
+pub type Bit0errR = crate::BitReader<Bit0err>;
+impl Bit0errR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Bit0err {
+        match self.bits {
+            false => Bit0err::_0,
+            true => Bit0err::_1,
+        }
+    }
+    #[doc = "No such occurrence"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Bit0err::_0
+    }
+    #[doc = "At least one bit sent as dominant is received as recessive."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Bit0err::_1
+    }
+}
+#[doc = "Bit1 Error\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Bit1err {
+    #[doc = "0: No such occurrence"]
+    _0 = 0,
+    #[doc = "1: At least one bit sent as recessive is received as dominant."]
+    _1 = 1,
+}
+impl From<Bit1err> for bool {
+    #[inline(always)]
+    fn from(variant: Bit1err) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `BIT1ERR` reader - Bit1 Error"]
+pub type Bit1errR = crate::BitReader<Bit1err>;
+impl Bit1errR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Bit1err {
+        match self.bits {
+            false => Bit1err::_0,
+            true => Bit1err::_1,
+        }
+    }
+    #[doc = "No such occurrence"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Bit1err::_0
+    }
+    #[doc = "At least one bit sent as recessive is received as dominant."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Bit1err::_1
+    }
+}
+#[doc = "Rx Warning Interrupt Flag\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Rwrnint {
+    #[doc = "0: No such occurrence"]
+    _0 = 0,
+    #[doc = "1: The Rx error counter transitioned from less than 96 to greater than or equal to 96."]
+    _1 = 1,
+}
+impl From<Rwrnint> for bool {
+    #[inline(always)]
+    fn from(variant: Rwrnint) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `RWRNINT` reader - Rx Warning Interrupt Flag"]
+pub type RwrnintR = crate::BitReader<Rwrnint>;
+impl RwrnintR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Rwrnint {
+        match self.bits {
+            false => Rwrnint::_0,
+            true => Rwrnint::_1,
+        }
+    }
+    #[doc = "No such occurrence"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Rwrnint::_0
+    }
+    #[doc = "The Rx error counter transitioned from less than 96 to greater than or equal to 96."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Rwrnint::_1
+    }
+}
+#[doc = "Field `RWRNINT` writer - Rx Warning Interrupt Flag"]
+pub type RwrnintW<'a, REG> = crate::BitWriter<'a, REG, Rwrnint>;
+impl<'a, REG> RwrnintW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "No such occurrence"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Rwrnint::_0)
+    }
+    #[doc = "The Rx error counter transitioned from less than 96 to greater than or equal to 96."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Rwrnint::_1)
+    }
+}
+#[doc = "Tx Warning Interrupt Flag\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Twrnint {
+    #[doc = "0: No such occurrence"]
+    _0 = 0,
+    #[doc = "1: The Tx error counter transitioned from less than 96 to greater than or equal to 96."]
+    _1 = 1,
+}
+impl From<Twrnint> for bool {
+    #[inline(always)]
+    fn from(variant: Twrnint) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `TWRNINT` reader - Tx Warning Interrupt Flag"]
+pub type TwrnintR = crate::BitReader<Twrnint>;
+impl TwrnintR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Twrnint {
+        match self.bits {
+            false => Twrnint::_0,
+            true => Twrnint::_1,
+        }
+    }
+    #[doc = "No such occurrence"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Twrnint::_0
+    }
+    #[doc = "The Tx error counter transitioned from less than 96 to greater than or equal to 96."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Twrnint::_1
+    }
+}
+#[doc = "Field `TWRNINT` writer - Tx Warning Interrupt Flag"]
+pub type TwrnintW<'a, REG> = crate::BitWriter<'a, REG, Twrnint>;
+impl<'a, REG> TwrnintW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "No such occurrence"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Twrnint::_0)
+    }
+    #[doc = "The Tx error counter transitioned from less than 96 to greater than or equal to 96."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Twrnint::_1)
+    }
+}
+#[doc = "CAN Synchronization Status\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Synch {
+    #[doc = "0: FlexCAN is not synchronized to the CAN bus."]
+    _0 = 0,
+    #[doc = "1: FlexCAN is synchronized to the CAN bus."]
+    _1 = 1,
+}
+impl From<Synch> for bool {
+    #[inline(always)]
+    fn from(variant: Synch) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `SYNCH` reader - CAN Synchronization Status"]
+pub type SynchR = crate::BitReader<Synch>;
+impl SynchR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Synch {
+        match self.bits {
+            false => Synch::_0,
+            true => Synch::_1,
+        }
+    }
+    #[doc = "FlexCAN is not synchronized to the CAN bus."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Synch::_0
+    }
+    #[doc = "FlexCAN is synchronized to the CAN bus."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Synch::_1
+    }
+}
+impl R {
+    #[doc = "Bit 0 - Wake-Up Interrupt"]
+    #[inline(always)]
+    pub fn wakint(&self) -> WakintR {
+        WakintR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Error Interrupt"]
+    #[inline(always)]
+    pub fn errint(&self) -> ErrintR {
+        ErrintR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - 'Bus Off' Interrupt"]
+    #[inline(always)]
+    pub fn boffint(&self) -> BoffintR {
+        BoffintR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - FlexCAN in Reception"]
+    #[inline(always)]
+    pub fn rx(&self) -> RxR {
+        RxR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bits 4:5 - Fault Confinement State"]
+    #[inline(always)]
+    pub fn fltconf(&self) -> FltconfR {
+        FltconfR::new(((self.bits >> 4) & 3) as u8)
+    }
+    #[doc = "Bit 6 - FlexCAN in Transmission"]
+    #[inline(always)]
+    pub fn tx(&self) -> TxR {
+        TxR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - no description available"]
+    #[inline(always)]
+    pub fn idle(&self) -> IdleR {
+        IdleR::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - Rx Error Warning"]
+    #[inline(always)]
+    pub fn rxwrn(&self) -> RxwrnR {
+        RxwrnR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - TX Error Warning"]
+    #[inline(always)]
+    pub fn txwrn(&self) -> TxwrnR {
+        TxwrnR::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - Stuffing Error"]
+    #[inline(always)]
+    pub fn stferr(&self) -> StferrR {
+        StferrR::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - Form Error"]
+    #[inline(always)]
+    pub fn frmerr(&self) -> FrmerrR {
+        FrmerrR::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - Cyclic Redundancy Check Error"]
+    #[inline(always)]
+    pub fn crcerr(&self) -> CrcerrR {
+        CrcerrR::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13 - Acknowledge Error"]
+    #[inline(always)]
+    pub fn ackerr(&self) -> AckerrR {
+        AckerrR::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14 - Bit0 Error"]
+    #[inline(always)]
+    pub fn bit0err(&self) -> Bit0errR {
+        Bit0errR::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15 - Bit1 Error"]
+    #[inline(always)]
+    pub fn bit1err(&self) -> Bit1errR {
+        Bit1errR::new(((self.bits >> 15) & 1) != 0)
+    }
+    #[doc = "Bit 16 - Rx Warning Interrupt Flag"]
+    #[inline(always)]
+    pub fn rwrnint(&self) -> RwrnintR {
+        RwrnintR::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17 - Tx Warning Interrupt Flag"]
+    #[inline(always)]
+    pub fn twrnint(&self) -> TwrnintR {
+        TwrnintR::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18 - CAN Synchronization Status"]
+    #[inline(always)]
+    pub fn synch(&self) -> SynchR {
+        SynchR::new(((self.bits >> 18) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Wake-Up Interrupt"]
+    #[inline(always)]
+    #[must_use]
+    pub fn wakint(&mut self) -> WakintW<Esr1Spec> {
+        WakintW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Error Interrupt"]
+    #[inline(always)]
+    #[must_use]
+    pub fn errint(&mut self) -> ErrintW<Esr1Spec> {
+        ErrintW::new(self, 1)
+    }
+    #[doc = "Bit 2 - 'Bus Off' Interrupt"]
+    #[inline(always)]
+    #[must_use]
+    pub fn boffint(&mut self) -> BoffintW<Esr1Spec> {
+        BoffintW::new(self, 2)
+    }
+    #[doc = "Bit 16 - Rx Warning Interrupt Flag"]
+    #[inline(always)]
+    #[must_use]
+    pub fn rwrnint(&mut self) -> RwrnintW<Esr1Spec> {
+        RwrnintW::new(self, 16)
+    }
+    #[doc = "Bit 17 - Tx Warning Interrupt Flag"]
+    #[inline(always)]
+    #[must_use]
+    pub fn twrnint(&mut self) -> TwrnintW<Esr1Spec> {
+        TwrnintW::new(self, 17)
+    }
+}
+#[doc = "Error and Status 1 Register\n\nYou can [`read`](crate::Reg::read) this register and get [`esr1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`esr1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Esr1Spec;
+impl crate::RegisterSpec for Esr1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`esr1::R`](R) reader structure"]
+impl crate::Readable for Esr1Spec {}
+#[doc = "`write(|w| ..)` method takes [`esr1::W`](W) writer structure"]
+impl crate::Writable for Esr1Spec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets ESR1 to value 0"]
+impl crate::Resettable for Esr1Spec {
+    const RESET_VALUE: u32 = 0;
+}

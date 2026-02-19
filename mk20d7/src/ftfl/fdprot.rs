@@ -1,0 +1,96 @@
+#[doc = "Register `FDPROT` reader"]
+pub type R = crate::R<FdprotSpec>;
+#[doc = "Register `FDPROT` writer"]
+pub type W = crate::W<FdprotSpec>;
+#[doc = "Data Flash Region Protect\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Dprot {
+    #[doc = "0: Data Flash region is protected"]
+    _0 = 0,
+    #[doc = "1: Data Flash region is not protected"]
+    _1 = 1,
+}
+impl From<Dprot> for u8 {
+    #[inline(always)]
+    fn from(variant: Dprot) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Dprot {
+    type Ux = u8;
+}
+impl crate::IsEnum for Dprot {}
+#[doc = "Field `DPROT` reader - Data Flash Region Protect"]
+pub type DprotR = crate::FieldReader<Dprot>;
+impl DprotR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<Dprot> {
+        match self.bits {
+            0 => Some(Dprot::_0),
+            1 => Some(Dprot::_1),
+            _ => None,
+        }
+    }
+    #[doc = "Data Flash region is protected"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Dprot::_0
+    }
+    #[doc = "Data Flash region is not protected"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Dprot::_1
+    }
+}
+#[doc = "Field `DPROT` writer - Data Flash Region Protect"]
+pub type DprotW<'a, REG> = crate::FieldWriter<'a, REG, 8, Dprot>;
+impl<'a, REG> DprotW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "Data Flash region is protected"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Dprot::_0)
+    }
+    #[doc = "Data Flash region is not protected"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Dprot::_1)
+    }
+}
+impl R {
+    #[doc = "Bits 0:7 - Data Flash Region Protect"]
+    #[inline(always)]
+    pub fn dprot(&self) -> DprotR {
+        DprotR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - Data Flash Region Protect"]
+    #[inline(always)]
+    #[must_use]
+    pub fn dprot(&mut self) -> DprotW<FdprotSpec> {
+        DprotW::new(self, 0)
+    }
+}
+#[doc = "Data Flash Protection Register\n\nYou can [`read`](crate::Reg::read) this register and get [`fdprot::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fdprot::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct FdprotSpec;
+impl crate::RegisterSpec for FdprotSpec {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [`fdprot::R`](R) reader structure"]
+impl crate::Readable for FdprotSpec {}
+#[doc = "`write(|w| ..)` method takes [`fdprot::W`](W) writer structure"]
+impl crate::Writable for FdprotSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+}
+#[doc = "`reset()` method sets FDPROT to value 0"]
+impl crate::Resettable for FdprotSpec {
+    const RESET_VALUE: u8 = 0;
+}

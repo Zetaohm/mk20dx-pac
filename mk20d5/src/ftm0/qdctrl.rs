@@ -1,0 +1,491 @@
+#[doc = "Register `QDCTRL` reader"]
+pub type R = crate::R<QdctrlSpec>;
+#[doc = "Register `QDCTRL` writer"]
+pub type W = crate::W<QdctrlSpec>;
+#[doc = "Quadrature Decoder Mode Enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Quaden {
+    #[doc = "0: Quadrature decoder mode is disabled."]
+    _0 = 0,
+    #[doc = "1: Quadrature decoder mode is enabled."]
+    _1 = 1,
+}
+impl From<Quaden> for bool {
+    #[inline(always)]
+    fn from(variant: Quaden) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `QUADEN` reader - Quadrature Decoder Mode Enable"]
+pub type QuadenR = crate::BitReader<Quaden>;
+impl QuadenR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Quaden {
+        match self.bits {
+            false => Quaden::_0,
+            true => Quaden::_1,
+        }
+    }
+    #[doc = "Quadrature decoder mode is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Quaden::_0
+    }
+    #[doc = "Quadrature decoder mode is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Quaden::_1
+    }
+}
+#[doc = "Field `QUADEN` writer - Quadrature Decoder Mode Enable"]
+pub type QuadenW<'a, REG> = crate::BitWriter<'a, REG, Quaden>;
+impl<'a, REG> QuadenW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Quadrature decoder mode is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Quaden::_0)
+    }
+    #[doc = "Quadrature decoder mode is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Quaden::_1)
+    }
+}
+#[doc = "Timer Overflow Direction in Quadrature Decoder Mode\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Tofdir {
+    #[doc = "0: TOF bit was set on the bottom of counting. There was an FTM counter decrement and FTM counter changes from its minimum value (CNTIN register) to its maximum value (MOD register)."]
+    _0 = 0,
+    #[doc = "1: TOF bit was set on the top of counting. There was an FTM counter increment and FTM counter changes from its maximum value (MOD register) to its minimum value (CNTIN register)."]
+    _1 = 1,
+}
+impl From<Tofdir> for bool {
+    #[inline(always)]
+    fn from(variant: Tofdir) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `TOFDIR` reader - Timer Overflow Direction in Quadrature Decoder Mode"]
+pub type TofdirR = crate::BitReader<Tofdir>;
+impl TofdirR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Tofdir {
+        match self.bits {
+            false => Tofdir::_0,
+            true => Tofdir::_1,
+        }
+    }
+    #[doc = "TOF bit was set on the bottom of counting. There was an FTM counter decrement and FTM counter changes from its minimum value (CNTIN register) to its maximum value (MOD register)."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Tofdir::_0
+    }
+    #[doc = "TOF bit was set on the top of counting. There was an FTM counter increment and FTM counter changes from its maximum value (MOD register) to its minimum value (CNTIN register)."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Tofdir::_1
+    }
+}
+#[doc = "FTM Counter Direction in Quadrature Decoder Mode\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Quadir {
+    #[doc = "0: Counting direction is decreasing (FTM counter decrement)."]
+    _0 = 0,
+    #[doc = "1: Counting direction is increasing (FTM counter increment)."]
+    _1 = 1,
+}
+impl From<Quadir> for bool {
+    #[inline(always)]
+    fn from(variant: Quadir) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `QUADIR` reader - FTM Counter Direction in Quadrature Decoder Mode"]
+pub type QuadirR = crate::BitReader<Quadir>;
+impl QuadirR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Quadir {
+        match self.bits {
+            false => Quadir::_0,
+            true => Quadir::_1,
+        }
+    }
+    #[doc = "Counting direction is decreasing (FTM counter decrement)."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Quadir::_0
+    }
+    #[doc = "Counting direction is increasing (FTM counter increment)."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Quadir::_1
+    }
+}
+#[doc = "Quadrature Decoder Mode\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Quadmode {
+    #[doc = "0: Phase A and phase B encoding mode."]
+    _0 = 0,
+    #[doc = "1: Count and direction encoding mode."]
+    _1 = 1,
+}
+impl From<Quadmode> for bool {
+    #[inline(always)]
+    fn from(variant: Quadmode) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `QUADMODE` reader - Quadrature Decoder Mode"]
+pub type QuadmodeR = crate::BitReader<Quadmode>;
+impl QuadmodeR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Quadmode {
+        match self.bits {
+            false => Quadmode::_0,
+            true => Quadmode::_1,
+        }
+    }
+    #[doc = "Phase A and phase B encoding mode."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Quadmode::_0
+    }
+    #[doc = "Count and direction encoding mode."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Quadmode::_1
+    }
+}
+#[doc = "Field `QUADMODE` writer - Quadrature Decoder Mode"]
+pub type QuadmodeW<'a, REG> = crate::BitWriter<'a, REG, Quadmode>;
+impl<'a, REG> QuadmodeW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Phase A and phase B encoding mode."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Quadmode::_0)
+    }
+    #[doc = "Count and direction encoding mode."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Quadmode::_1)
+    }
+}
+#[doc = "Phase B Input Polarity\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Phbpol {
+    #[doc = "0: Normal polarity. Phase B input signal is not inverted before identifying the rising and falling edges of this signal."]
+    _0 = 0,
+    #[doc = "1: Inverted polarity. Phase B input signal is inverted before identifying the rising and falling edges of this signal."]
+    _1 = 1,
+}
+impl From<Phbpol> for bool {
+    #[inline(always)]
+    fn from(variant: Phbpol) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `PHBPOL` reader - Phase B Input Polarity"]
+pub type PhbpolR = crate::BitReader<Phbpol>;
+impl PhbpolR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Phbpol {
+        match self.bits {
+            false => Phbpol::_0,
+            true => Phbpol::_1,
+        }
+    }
+    #[doc = "Normal polarity. Phase B input signal is not inverted before identifying the rising and falling edges of this signal."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Phbpol::_0
+    }
+    #[doc = "Inverted polarity. Phase B input signal is inverted before identifying the rising and falling edges of this signal."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Phbpol::_1
+    }
+}
+#[doc = "Field `PHBPOL` writer - Phase B Input Polarity"]
+pub type PhbpolW<'a, REG> = crate::BitWriter<'a, REG, Phbpol>;
+impl<'a, REG> PhbpolW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Normal polarity. Phase B input signal is not inverted before identifying the rising and falling edges of this signal."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Phbpol::_0)
+    }
+    #[doc = "Inverted polarity. Phase B input signal is inverted before identifying the rising and falling edges of this signal."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Phbpol::_1)
+    }
+}
+#[doc = "Phase A Input Polarity\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Phapol {
+    #[doc = "0: Normal polarity. Phase A input signal is not inverted before identifying the rising and falling edges of this signal."]
+    _0 = 0,
+    #[doc = "1: Inverted polarity. Phase A input signal is inverted before identifying the rising and falling edges of this signal."]
+    _1 = 1,
+}
+impl From<Phapol> for bool {
+    #[inline(always)]
+    fn from(variant: Phapol) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `PHAPOL` reader - Phase A Input Polarity"]
+pub type PhapolR = crate::BitReader<Phapol>;
+impl PhapolR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Phapol {
+        match self.bits {
+            false => Phapol::_0,
+            true => Phapol::_1,
+        }
+    }
+    #[doc = "Normal polarity. Phase A input signal is not inverted before identifying the rising and falling edges of this signal."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Phapol::_0
+    }
+    #[doc = "Inverted polarity. Phase A input signal is inverted before identifying the rising and falling edges of this signal."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Phapol::_1
+    }
+}
+#[doc = "Field `PHAPOL` writer - Phase A Input Polarity"]
+pub type PhapolW<'a, REG> = crate::BitWriter<'a, REG, Phapol>;
+impl<'a, REG> PhapolW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Normal polarity. Phase A input signal is not inverted before identifying the rising and falling edges of this signal."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Phapol::_0)
+    }
+    #[doc = "Inverted polarity. Phase A input signal is inverted before identifying the rising and falling edges of this signal."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Phapol::_1)
+    }
+}
+#[doc = "Phase B Input Filter Enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Phbfltren {
+    #[doc = "0: Phase B input filter is disabled."]
+    _0 = 0,
+    #[doc = "1: Phase B input filter is enabled."]
+    _1 = 1,
+}
+impl From<Phbfltren> for bool {
+    #[inline(always)]
+    fn from(variant: Phbfltren) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `PHBFLTREN` reader - Phase B Input Filter Enable"]
+pub type PhbfltrenR = crate::BitReader<Phbfltren>;
+impl PhbfltrenR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Phbfltren {
+        match self.bits {
+            false => Phbfltren::_0,
+            true => Phbfltren::_1,
+        }
+    }
+    #[doc = "Phase B input filter is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Phbfltren::_0
+    }
+    #[doc = "Phase B input filter is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Phbfltren::_1
+    }
+}
+#[doc = "Field `PHBFLTREN` writer - Phase B Input Filter Enable"]
+pub type PhbfltrenW<'a, REG> = crate::BitWriter<'a, REG, Phbfltren>;
+impl<'a, REG> PhbfltrenW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Phase B input filter is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Phbfltren::_0)
+    }
+    #[doc = "Phase B input filter is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Phbfltren::_1)
+    }
+}
+#[doc = "Phase A Input Filter Enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Phafltren {
+    #[doc = "0: Phase A input filter is disabled."]
+    _0 = 0,
+    #[doc = "1: Phase A input filter is enabled."]
+    _1 = 1,
+}
+impl From<Phafltren> for bool {
+    #[inline(always)]
+    fn from(variant: Phafltren) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `PHAFLTREN` reader - Phase A Input Filter Enable"]
+pub type PhafltrenR = crate::BitReader<Phafltren>;
+impl PhafltrenR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Phafltren {
+        match self.bits {
+            false => Phafltren::_0,
+            true => Phafltren::_1,
+        }
+    }
+    #[doc = "Phase A input filter is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Phafltren::_0
+    }
+    #[doc = "Phase A input filter is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Phafltren::_1
+    }
+}
+#[doc = "Field `PHAFLTREN` writer - Phase A Input Filter Enable"]
+pub type PhafltrenW<'a, REG> = crate::BitWriter<'a, REG, Phafltren>;
+impl<'a, REG> PhafltrenW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Phase A input filter is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Phafltren::_0)
+    }
+    #[doc = "Phase A input filter is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Phafltren::_1)
+    }
+}
+impl R {
+    #[doc = "Bit 0 - Quadrature Decoder Mode Enable"]
+    #[inline(always)]
+    pub fn quaden(&self) -> QuadenR {
+        QuadenR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Timer Overflow Direction in Quadrature Decoder Mode"]
+    #[inline(always)]
+    pub fn tofdir(&self) -> TofdirR {
+        TofdirR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - FTM Counter Direction in Quadrature Decoder Mode"]
+    #[inline(always)]
+    pub fn quadir(&self) -> QuadirR {
+        QuadirR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Quadrature Decoder Mode"]
+    #[inline(always)]
+    pub fn quadmode(&self) -> QuadmodeR {
+        QuadmodeR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Phase B Input Polarity"]
+    #[inline(always)]
+    pub fn phbpol(&self) -> PhbpolR {
+        PhbpolR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - Phase A Input Polarity"]
+    #[inline(always)]
+    pub fn phapol(&self) -> PhapolR {
+        PhapolR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - Phase B Input Filter Enable"]
+    #[inline(always)]
+    pub fn phbfltren(&self) -> PhbfltrenR {
+        PhbfltrenR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - Phase A Input Filter Enable"]
+    #[inline(always)]
+    pub fn phafltren(&self) -> PhafltrenR {
+        PhafltrenR::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Quadrature Decoder Mode Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn quaden(&mut self) -> QuadenW<QdctrlSpec> {
+        QuadenW::new(self, 0)
+    }
+    #[doc = "Bit 3 - Quadrature Decoder Mode"]
+    #[inline(always)]
+    #[must_use]
+    pub fn quadmode(&mut self) -> QuadmodeW<QdctrlSpec> {
+        QuadmodeW::new(self, 3)
+    }
+    #[doc = "Bit 4 - Phase B Input Polarity"]
+    #[inline(always)]
+    #[must_use]
+    pub fn phbpol(&mut self) -> PhbpolW<QdctrlSpec> {
+        PhbpolW::new(self, 4)
+    }
+    #[doc = "Bit 5 - Phase A Input Polarity"]
+    #[inline(always)]
+    #[must_use]
+    pub fn phapol(&mut self) -> PhapolW<QdctrlSpec> {
+        PhapolW::new(self, 5)
+    }
+    #[doc = "Bit 6 - Phase B Input Filter Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn phbfltren(&mut self) -> PhbfltrenW<QdctrlSpec> {
+        PhbfltrenW::new(self, 6)
+    }
+    #[doc = "Bit 7 - Phase A Input Filter Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn phafltren(&mut self) -> PhafltrenW<QdctrlSpec> {
+        PhafltrenW::new(self, 7)
+    }
+}
+#[doc = "Quadrature Decoder Control and Status\n\nYou can [`read`](crate::Reg::read) this register and get [`qdctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`qdctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct QdctrlSpec;
+impl crate::RegisterSpec for QdctrlSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`qdctrl::R`](R) reader structure"]
+impl crate::Readable for QdctrlSpec {}
+#[doc = "`write(|w| ..)` method takes [`qdctrl::W`](W) writer structure"]
+impl crate::Writable for QdctrlSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets QDCTRL to value 0"]
+impl crate::Resettable for QdctrlSpec {
+    const RESET_VALUE: u32 = 0;
+}

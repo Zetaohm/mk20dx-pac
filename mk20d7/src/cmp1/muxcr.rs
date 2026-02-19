@@ -1,0 +1,323 @@
+#[doc = "Register `MUXCR` reader"]
+pub type R = crate::R<MuxcrSpec>;
+#[doc = "Register `MUXCR` writer"]
+pub type W = crate::W<MuxcrSpec>;
+#[doc = "Minus Input MUX Control\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Msel {
+    #[doc = "0: IN0"]
+    _000 = 0,
+    #[doc = "1: IN1"]
+    _001 = 1,
+    #[doc = "2: IN2"]
+    _010 = 2,
+    #[doc = "3: IN3"]
+    _011 = 3,
+    #[doc = "4: IN4"]
+    _100 = 4,
+    #[doc = "5: IN5"]
+    _101 = 5,
+    #[doc = "6: IN6"]
+    _110 = 6,
+    #[doc = "7: IN7"]
+    _111 = 7,
+}
+impl From<Msel> for u8 {
+    #[inline(always)]
+    fn from(variant: Msel) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Msel {
+    type Ux = u8;
+}
+impl crate::IsEnum for Msel {}
+#[doc = "Field `MSEL` reader - Minus Input MUX Control"]
+pub type MselR = crate::FieldReader<Msel>;
+impl MselR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Msel {
+        match self.bits {
+            0 => Msel::_000,
+            1 => Msel::_001,
+            2 => Msel::_010,
+            3 => Msel::_011,
+            4 => Msel::_100,
+            5 => Msel::_101,
+            6 => Msel::_110,
+            7 => Msel::_111,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "IN0"]
+    #[inline(always)]
+    pub fn is_000(&self) -> bool {
+        *self == Msel::_000
+    }
+    #[doc = "IN1"]
+    #[inline(always)]
+    pub fn is_001(&self) -> bool {
+        *self == Msel::_001
+    }
+    #[doc = "IN2"]
+    #[inline(always)]
+    pub fn is_010(&self) -> bool {
+        *self == Msel::_010
+    }
+    #[doc = "IN3"]
+    #[inline(always)]
+    pub fn is_011(&self) -> bool {
+        *self == Msel::_011
+    }
+    #[doc = "IN4"]
+    #[inline(always)]
+    pub fn is_100(&self) -> bool {
+        *self == Msel::_100
+    }
+    #[doc = "IN5"]
+    #[inline(always)]
+    pub fn is_101(&self) -> bool {
+        *self == Msel::_101
+    }
+    #[doc = "IN6"]
+    #[inline(always)]
+    pub fn is_110(&self) -> bool {
+        *self == Msel::_110
+    }
+    #[doc = "IN7"]
+    #[inline(always)]
+    pub fn is_111(&self) -> bool {
+        *self == Msel::_111
+    }
+}
+#[doc = "Field `MSEL` writer - Minus Input MUX Control"]
+pub type MselW<'a, REG> = crate::FieldWriter<'a, REG, 3, Msel, crate::Safe>;
+impl<'a, REG> MselW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "IN0"]
+    #[inline(always)]
+    pub fn _000(self) -> &'a mut crate::W<REG> {
+        self.variant(Msel::_000)
+    }
+    #[doc = "IN1"]
+    #[inline(always)]
+    pub fn _001(self) -> &'a mut crate::W<REG> {
+        self.variant(Msel::_001)
+    }
+    #[doc = "IN2"]
+    #[inline(always)]
+    pub fn _010(self) -> &'a mut crate::W<REG> {
+        self.variant(Msel::_010)
+    }
+    #[doc = "IN3"]
+    #[inline(always)]
+    pub fn _011(self) -> &'a mut crate::W<REG> {
+        self.variant(Msel::_011)
+    }
+    #[doc = "IN4"]
+    #[inline(always)]
+    pub fn _100(self) -> &'a mut crate::W<REG> {
+        self.variant(Msel::_100)
+    }
+    #[doc = "IN5"]
+    #[inline(always)]
+    pub fn _101(self) -> &'a mut crate::W<REG> {
+        self.variant(Msel::_101)
+    }
+    #[doc = "IN6"]
+    #[inline(always)]
+    pub fn _110(self) -> &'a mut crate::W<REG> {
+        self.variant(Msel::_110)
+    }
+    #[doc = "IN7"]
+    #[inline(always)]
+    pub fn _111(self) -> &'a mut crate::W<REG> {
+        self.variant(Msel::_111)
+    }
+}
+#[doc = "Plus Input MUX Control\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Psel {
+    #[doc = "0: IN0"]
+    _000 = 0,
+    #[doc = "1: IN1"]
+    _001 = 1,
+    #[doc = "2: IN2"]
+    _010 = 2,
+    #[doc = "3: IN3"]
+    _011 = 3,
+    #[doc = "4: IN4"]
+    _100 = 4,
+    #[doc = "5: IN5"]
+    _101 = 5,
+    #[doc = "6: IN6"]
+    _110 = 6,
+    #[doc = "7: IN7"]
+    _111 = 7,
+}
+impl From<Psel> for u8 {
+    #[inline(always)]
+    fn from(variant: Psel) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Psel {
+    type Ux = u8;
+}
+impl crate::IsEnum for Psel {}
+#[doc = "Field `PSEL` reader - Plus Input MUX Control"]
+pub type PselR = crate::FieldReader<Psel>;
+impl PselR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Psel {
+        match self.bits {
+            0 => Psel::_000,
+            1 => Psel::_001,
+            2 => Psel::_010,
+            3 => Psel::_011,
+            4 => Psel::_100,
+            5 => Psel::_101,
+            6 => Psel::_110,
+            7 => Psel::_111,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "IN0"]
+    #[inline(always)]
+    pub fn is_000(&self) -> bool {
+        *self == Psel::_000
+    }
+    #[doc = "IN1"]
+    #[inline(always)]
+    pub fn is_001(&self) -> bool {
+        *self == Psel::_001
+    }
+    #[doc = "IN2"]
+    #[inline(always)]
+    pub fn is_010(&self) -> bool {
+        *self == Psel::_010
+    }
+    #[doc = "IN3"]
+    #[inline(always)]
+    pub fn is_011(&self) -> bool {
+        *self == Psel::_011
+    }
+    #[doc = "IN4"]
+    #[inline(always)]
+    pub fn is_100(&self) -> bool {
+        *self == Psel::_100
+    }
+    #[doc = "IN5"]
+    #[inline(always)]
+    pub fn is_101(&self) -> bool {
+        *self == Psel::_101
+    }
+    #[doc = "IN6"]
+    #[inline(always)]
+    pub fn is_110(&self) -> bool {
+        *self == Psel::_110
+    }
+    #[doc = "IN7"]
+    #[inline(always)]
+    pub fn is_111(&self) -> bool {
+        *self == Psel::_111
+    }
+}
+#[doc = "Field `PSEL` writer - Plus Input MUX Control"]
+pub type PselW<'a, REG> = crate::FieldWriter<'a, REG, 3, Psel, crate::Safe>;
+impl<'a, REG> PselW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "IN0"]
+    #[inline(always)]
+    pub fn _000(self) -> &'a mut crate::W<REG> {
+        self.variant(Psel::_000)
+    }
+    #[doc = "IN1"]
+    #[inline(always)]
+    pub fn _001(self) -> &'a mut crate::W<REG> {
+        self.variant(Psel::_001)
+    }
+    #[doc = "IN2"]
+    #[inline(always)]
+    pub fn _010(self) -> &'a mut crate::W<REG> {
+        self.variant(Psel::_010)
+    }
+    #[doc = "IN3"]
+    #[inline(always)]
+    pub fn _011(self) -> &'a mut crate::W<REG> {
+        self.variant(Psel::_011)
+    }
+    #[doc = "IN4"]
+    #[inline(always)]
+    pub fn _100(self) -> &'a mut crate::W<REG> {
+        self.variant(Psel::_100)
+    }
+    #[doc = "IN5"]
+    #[inline(always)]
+    pub fn _101(self) -> &'a mut crate::W<REG> {
+        self.variant(Psel::_101)
+    }
+    #[doc = "IN6"]
+    #[inline(always)]
+    pub fn _110(self) -> &'a mut crate::W<REG> {
+        self.variant(Psel::_110)
+    }
+    #[doc = "IN7"]
+    #[inline(always)]
+    pub fn _111(self) -> &'a mut crate::W<REG> {
+        self.variant(Psel::_111)
+    }
+}
+impl R {
+    #[doc = "Bits 0:2 - Minus Input MUX Control"]
+    #[inline(always)]
+    pub fn msel(&self) -> MselR {
+        MselR::new(self.bits & 7)
+    }
+    #[doc = "Bits 3:5 - Plus Input MUX Control"]
+    #[inline(always)]
+    pub fn psel(&self) -> PselR {
+        PselR::new((self.bits >> 3) & 7)
+    }
+}
+impl W {
+    #[doc = "Bits 0:2 - Minus Input MUX Control"]
+    #[inline(always)]
+    #[must_use]
+    pub fn msel(&mut self) -> MselW<MuxcrSpec> {
+        MselW::new(self, 0)
+    }
+    #[doc = "Bits 3:5 - Plus Input MUX Control"]
+    #[inline(always)]
+    #[must_use]
+    pub fn psel(&mut self) -> PselW<MuxcrSpec> {
+        PselW::new(self, 3)
+    }
+}
+#[doc = "MUX Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`muxcr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`muxcr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct MuxcrSpec;
+impl crate::RegisterSpec for MuxcrSpec {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [`muxcr::R`](R) reader structure"]
+impl crate::Readable for MuxcrSpec {}
+#[doc = "`write(|w| ..)` method takes [`muxcr::W`](W) writer structure"]
+impl crate::Writable for MuxcrSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+}
+#[doc = "`reset()` method sets MUXCR to value 0"]
+impl crate::Resettable for MuxcrSpec {
+    const RESET_VALUE: u8 = 0;
+}

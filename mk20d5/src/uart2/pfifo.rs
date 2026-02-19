@@ -1,0 +1,327 @@
+#[doc = "Register `PFIFO` reader"]
+pub type R = crate::R<PfifoSpec>;
+#[doc = "Register `PFIFO` writer"]
+pub type W = crate::W<PfifoSpec>;
+#[doc = "Receive FIFO. Buffer Depth\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Rxfifosize {
+    #[doc = "0: Receive FIFO/Buffer Depth = 1 Dataword."]
+    _000 = 0,
+    #[doc = "1: Receive FIFO/Buffer Depth = 4 Datawords."]
+    _001 = 1,
+    #[doc = "2: Receive FIFO/Buffer Depth = 8 Datawords."]
+    _010 = 2,
+    #[doc = "3: Receive FIFO/Buffer Depth = 16 Datawords."]
+    _011 = 3,
+    #[doc = "4: Receive FIFO/Buffer Depth = 32 Datawords."]
+    _100 = 4,
+    #[doc = "5: Receive FIFO/Buffer Depth = 64 Datawords."]
+    _101 = 5,
+    #[doc = "6: Receive FIFO/Buffer Depth = 128 Datawords."]
+    _110 = 6,
+}
+impl From<Rxfifosize> for u8 {
+    #[inline(always)]
+    fn from(variant: Rxfifosize) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Rxfifosize {
+    type Ux = u8;
+}
+impl crate::IsEnum for Rxfifosize {}
+#[doc = "Field `RXFIFOSIZE` reader - Receive FIFO. Buffer Depth"]
+pub type RxfifosizeR = crate::FieldReader<Rxfifosize>;
+impl RxfifosizeR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<Rxfifosize> {
+        match self.bits {
+            0 => Some(Rxfifosize::_000),
+            1 => Some(Rxfifosize::_001),
+            2 => Some(Rxfifosize::_010),
+            3 => Some(Rxfifosize::_011),
+            4 => Some(Rxfifosize::_100),
+            5 => Some(Rxfifosize::_101),
+            6 => Some(Rxfifosize::_110),
+            _ => None,
+        }
+    }
+    #[doc = "Receive FIFO/Buffer Depth = 1 Dataword."]
+    #[inline(always)]
+    pub fn is_000(&self) -> bool {
+        *self == Rxfifosize::_000
+    }
+    #[doc = "Receive FIFO/Buffer Depth = 4 Datawords."]
+    #[inline(always)]
+    pub fn is_001(&self) -> bool {
+        *self == Rxfifosize::_001
+    }
+    #[doc = "Receive FIFO/Buffer Depth = 8 Datawords."]
+    #[inline(always)]
+    pub fn is_010(&self) -> bool {
+        *self == Rxfifosize::_010
+    }
+    #[doc = "Receive FIFO/Buffer Depth = 16 Datawords."]
+    #[inline(always)]
+    pub fn is_011(&self) -> bool {
+        *self == Rxfifosize::_011
+    }
+    #[doc = "Receive FIFO/Buffer Depth = 32 Datawords."]
+    #[inline(always)]
+    pub fn is_100(&self) -> bool {
+        *self == Rxfifosize::_100
+    }
+    #[doc = "Receive FIFO/Buffer Depth = 64 Datawords."]
+    #[inline(always)]
+    pub fn is_101(&self) -> bool {
+        *self == Rxfifosize::_101
+    }
+    #[doc = "Receive FIFO/Buffer Depth = 128 Datawords."]
+    #[inline(always)]
+    pub fn is_110(&self) -> bool {
+        *self == Rxfifosize::_110
+    }
+}
+#[doc = "Receive FIFO Enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Rxfe {
+    #[doc = "0: Receive FIFO is not enabled. Buffer is depth 1. (Legacy support)"]
+    _0 = 0,
+    #[doc = "1: Receive FIFO is enabled. Buffer is depth indicted by RXFIFOSIZE."]
+    _1 = 1,
+}
+impl From<Rxfe> for bool {
+    #[inline(always)]
+    fn from(variant: Rxfe) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `RXFE` reader - Receive FIFO Enable"]
+pub type RxfeR = crate::BitReader<Rxfe>;
+impl RxfeR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Rxfe {
+        match self.bits {
+            false => Rxfe::_0,
+            true => Rxfe::_1,
+        }
+    }
+    #[doc = "Receive FIFO is not enabled. Buffer is depth 1. (Legacy support)"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Rxfe::_0
+    }
+    #[doc = "Receive FIFO is enabled. Buffer is depth indicted by RXFIFOSIZE."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Rxfe::_1
+    }
+}
+#[doc = "Field `RXFE` writer - Receive FIFO Enable"]
+pub type RxfeW<'a, REG> = crate::BitWriter<'a, REG, Rxfe>;
+impl<'a, REG> RxfeW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Receive FIFO is not enabled. Buffer is depth 1. (Legacy support)"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Rxfe::_0)
+    }
+    #[doc = "Receive FIFO is enabled. Buffer is depth indicted by RXFIFOSIZE."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Rxfe::_1)
+    }
+}
+#[doc = "Transmit FIFO. Buffer Depth\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum Txfifosize {
+    #[doc = "0: Transmit FIFO/Buffer Depth = 1 Dataword."]
+    _000 = 0,
+    #[doc = "1: Transmit FIFO/Buffer Depth = 4 Datawords."]
+    _001 = 1,
+    #[doc = "2: Transmit FIFO/Buffer Depth = 8 Datawords."]
+    _010 = 2,
+    #[doc = "3: Transmit FIFO/Buffer Depth = 16 Datawords."]
+    _011 = 3,
+    #[doc = "4: Transmit FIFO/Buffer Depth = 32 Datawords."]
+    _100 = 4,
+    #[doc = "5: Transmit FIFO/Buffer Depth = 64 Datawords."]
+    _101 = 5,
+    #[doc = "6: Transmit FIFO/Buffer Depth = 128 Datawords."]
+    _110 = 6,
+}
+impl From<Txfifosize> for u8 {
+    #[inline(always)]
+    fn from(variant: Txfifosize) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Txfifosize {
+    type Ux = u8;
+}
+impl crate::IsEnum for Txfifosize {}
+#[doc = "Field `TXFIFOSIZE` reader - Transmit FIFO. Buffer Depth"]
+pub type TxfifosizeR = crate::FieldReader<Txfifosize>;
+impl TxfifosizeR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<Txfifosize> {
+        match self.bits {
+            0 => Some(Txfifosize::_000),
+            1 => Some(Txfifosize::_001),
+            2 => Some(Txfifosize::_010),
+            3 => Some(Txfifosize::_011),
+            4 => Some(Txfifosize::_100),
+            5 => Some(Txfifosize::_101),
+            6 => Some(Txfifosize::_110),
+            _ => None,
+        }
+    }
+    #[doc = "Transmit FIFO/Buffer Depth = 1 Dataword."]
+    #[inline(always)]
+    pub fn is_000(&self) -> bool {
+        *self == Txfifosize::_000
+    }
+    #[doc = "Transmit FIFO/Buffer Depth = 4 Datawords."]
+    #[inline(always)]
+    pub fn is_001(&self) -> bool {
+        *self == Txfifosize::_001
+    }
+    #[doc = "Transmit FIFO/Buffer Depth = 8 Datawords."]
+    #[inline(always)]
+    pub fn is_010(&self) -> bool {
+        *self == Txfifosize::_010
+    }
+    #[doc = "Transmit FIFO/Buffer Depth = 16 Datawords."]
+    #[inline(always)]
+    pub fn is_011(&self) -> bool {
+        *self == Txfifosize::_011
+    }
+    #[doc = "Transmit FIFO/Buffer Depth = 32 Datawords."]
+    #[inline(always)]
+    pub fn is_100(&self) -> bool {
+        *self == Txfifosize::_100
+    }
+    #[doc = "Transmit FIFO/Buffer Depth = 64 Datawords."]
+    #[inline(always)]
+    pub fn is_101(&self) -> bool {
+        *self == Txfifosize::_101
+    }
+    #[doc = "Transmit FIFO/Buffer Depth = 128 Datawords."]
+    #[inline(always)]
+    pub fn is_110(&self) -> bool {
+        *self == Txfifosize::_110
+    }
+}
+#[doc = "Transmit FIFO Enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Txfe {
+    #[doc = "0: Transmit FIFO is not enabled. Buffer is depth 1. (Legacy support)."]
+    _0 = 0,
+    #[doc = "1: Transmit FIFO is enabled. Buffer is depth indicted by TXFIFOSIZE."]
+    _1 = 1,
+}
+impl From<Txfe> for bool {
+    #[inline(always)]
+    fn from(variant: Txfe) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `TXFE` reader - Transmit FIFO Enable"]
+pub type TxfeR = crate::BitReader<Txfe>;
+impl TxfeR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Txfe {
+        match self.bits {
+            false => Txfe::_0,
+            true => Txfe::_1,
+        }
+    }
+    #[doc = "Transmit FIFO is not enabled. Buffer is depth 1. (Legacy support)."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Txfe::_0
+    }
+    #[doc = "Transmit FIFO is enabled. Buffer is depth indicted by TXFIFOSIZE."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Txfe::_1
+    }
+}
+#[doc = "Field `TXFE` writer - Transmit FIFO Enable"]
+pub type TxfeW<'a, REG> = crate::BitWriter<'a, REG, Txfe>;
+impl<'a, REG> TxfeW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Transmit FIFO is not enabled. Buffer is depth 1. (Legacy support)."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Txfe::_0)
+    }
+    #[doc = "Transmit FIFO is enabled. Buffer is depth indicted by TXFIFOSIZE."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Txfe::_1)
+    }
+}
+impl R {
+    #[doc = "Bits 0:2 - Receive FIFO. Buffer Depth"]
+    #[inline(always)]
+    pub fn rxfifosize(&self) -> RxfifosizeR {
+        RxfifosizeR::new(self.bits & 7)
+    }
+    #[doc = "Bit 3 - Receive FIFO Enable"]
+    #[inline(always)]
+    pub fn rxfe(&self) -> RxfeR {
+        RxfeR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bits 4:6 - Transmit FIFO. Buffer Depth"]
+    #[inline(always)]
+    pub fn txfifosize(&self) -> TxfifosizeR {
+        TxfifosizeR::new((self.bits >> 4) & 7)
+    }
+    #[doc = "Bit 7 - Transmit FIFO Enable"]
+    #[inline(always)]
+    pub fn txfe(&self) -> TxfeR {
+        TxfeR::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 3 - Receive FIFO Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn rxfe(&mut self) -> RxfeW<PfifoSpec> {
+        RxfeW::new(self, 3)
+    }
+    #[doc = "Bit 7 - Transmit FIFO Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn txfe(&mut self) -> TxfeW<PfifoSpec> {
+        TxfeW::new(self, 7)
+    }
+}
+#[doc = "UART FIFO Parameters\n\nYou can [`read`](crate::Reg::read) this register and get [`pfifo::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pfifo::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct PfifoSpec;
+impl crate::RegisterSpec for PfifoSpec {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [`pfifo::R`](R) reader structure"]
+impl crate::Readable for PfifoSpec {}
+#[doc = "`write(|w| ..)` method takes [`pfifo::W`](W) writer structure"]
+impl crate::Writable for PfifoSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+}
+#[doc = "`reset()` method sets PFIFO to value 0"]
+impl crate::Resettable for PfifoSpec {
+    const RESET_VALUE: u8 = 0;
+}

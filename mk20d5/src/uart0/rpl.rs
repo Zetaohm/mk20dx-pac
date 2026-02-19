@@ -1,0 +1,22 @@
+#[doc = "Register `RPL` reader"]
+pub type R = crate::R<RplSpec>;
+#[doc = "Field `RPL` reader - Received packet length"]
+pub type RplR = crate::FieldReader;
+impl R {
+    #[doc = "Bits 0:7 - Received packet length"]
+    #[inline(always)]
+    pub fn rpl(&self) -> RplR {
+        RplR::new(self.bits)
+    }
+}
+#[doc = "UART CEA709.1-B Received Packet Length\n\nYou can [`read`](crate::Reg::read) this register and get [`rpl::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RplSpec;
+impl crate::RegisterSpec for RplSpec {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [`rpl::R`](R) reader structure"]
+impl crate::Readable for RplSpec {}
+#[doc = "`reset()` method sets RPL to value 0"]
+impl crate::Resettable for RplSpec {
+    const RESET_VALUE: u8 = 0;
+}

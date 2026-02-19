@@ -1,0 +1,224 @@
+#[doc = "Register `CSMR%s` reader"]
+pub type R = crate::R<CsmrSpec>;
+#[doc = "Register `CSMR%s` writer"]
+pub type W = crate::W<CsmrSpec>;
+#[doc = "Valid\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum V {
+    #[doc = "0: Chip select invalid"]
+    _0 = 0,
+    #[doc = "1: Chip select valid"]
+    _1 = 1,
+}
+impl From<V> for bool {
+    #[inline(always)]
+    fn from(variant: V) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `V` reader - Valid"]
+pub type VR = crate::BitReader<V>;
+impl VR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> V {
+        match self.bits {
+            false => V::_0,
+            true => V::_1,
+        }
+    }
+    #[doc = "Chip select invalid"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == V::_0
+    }
+    #[doc = "Chip select valid"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == V::_1
+    }
+}
+#[doc = "Field `V` writer - Valid"]
+pub type VW<'a, REG> = crate::BitWriter<'a, REG, V>;
+impl<'a, REG> VW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Chip select invalid"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(V::_0)
+    }
+    #[doc = "Chip select valid"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(V::_1)
+    }
+}
+#[doc = "Write protect\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Wp {
+    #[doc = "0: Read and write accesses are allowed"]
+    _0 = 0,
+    #[doc = "1: Only read accesses are allowed"]
+    _1 = 1,
+}
+impl From<Wp> for bool {
+    #[inline(always)]
+    fn from(variant: Wp) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `WP` reader - Write protect"]
+pub type WpR = crate::BitReader<Wp>;
+impl WpR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Wp {
+        match self.bits {
+            false => Wp::_0,
+            true => Wp::_1,
+        }
+    }
+    #[doc = "Read and write accesses are allowed"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Wp::_0
+    }
+    #[doc = "Only read accesses are allowed"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Wp::_1
+    }
+}
+#[doc = "Field `WP` writer - Write protect"]
+pub type WpW<'a, REG> = crate::BitWriter<'a, REG, Wp>;
+impl<'a, REG> WpW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Read and write accesses are allowed"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Wp::_0)
+    }
+    #[doc = "Only read accesses are allowed"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Wp::_1)
+    }
+}
+#[doc = "Base address mask\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u16)]
+pub enum Bam {
+    #[doc = "0: Corresponding address bit is used in chip-select decode"]
+    _0 = 0,
+    #[doc = "1: Corresponding address bit is a don't care in chip-select decode."]
+    _1 = 1,
+}
+impl From<Bam> for u16 {
+    #[inline(always)]
+    fn from(variant: Bam) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Bam {
+    type Ux = u16;
+}
+impl crate::IsEnum for Bam {}
+#[doc = "Field `BAM` reader - Base address mask"]
+pub type BamR = crate::FieldReader<Bam>;
+impl BamR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<Bam> {
+        match self.bits {
+            0 => Some(Bam::_0),
+            1 => Some(Bam::_1),
+            _ => None,
+        }
+    }
+    #[doc = "Corresponding address bit is used in chip-select decode"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Bam::_0
+    }
+    #[doc = "Corresponding address bit is a don't care in chip-select decode."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Bam::_1
+    }
+}
+#[doc = "Field `BAM` writer - Base address mask"]
+pub type BamW<'a, REG> = crate::FieldWriter<'a, REG, 16, Bam>;
+impl<'a, REG> BamW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u16>,
+{
+    #[doc = "Corresponding address bit is used in chip-select decode"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Bam::_0)
+    }
+    #[doc = "Corresponding address bit is a don't care in chip-select decode."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Bam::_1)
+    }
+}
+impl R {
+    #[doc = "Bit 0 - Valid"]
+    #[inline(always)]
+    pub fn v(&self) -> VR {
+        VR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 8 - Write protect"]
+    #[inline(always)]
+    pub fn wp(&self) -> WpR {
+        WpR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bits 16:31 - Base address mask"]
+    #[inline(always)]
+    pub fn bam(&self) -> BamR {
+        BamR::new(((self.bits >> 16) & 0xffff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Valid"]
+    #[inline(always)]
+    #[must_use]
+    pub fn v(&mut self) -> VW<CsmrSpec> {
+        VW::new(self, 0)
+    }
+    #[doc = "Bit 8 - Write protect"]
+    #[inline(always)]
+    #[must_use]
+    pub fn wp(&mut self) -> WpW<CsmrSpec> {
+        WpW::new(self, 8)
+    }
+    #[doc = "Bits 16:31 - Base address mask"]
+    #[inline(always)]
+    #[must_use]
+    pub fn bam(&mut self) -> BamW<CsmrSpec> {
+        BamW::new(self, 16)
+    }
+}
+#[doc = "Chip select mask register\n\nYou can [`read`](crate::Reg::read) this register and get [`csmr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`csmr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CsmrSpec;
+impl crate::RegisterSpec for CsmrSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`csmr::R`](R) reader structure"]
+impl crate::Readable for CsmrSpec {}
+#[doc = "`write(|w| ..)` method takes [`csmr::W`](W) writer structure"]
+impl crate::Writable for CsmrSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets CSMR%s to value 0"]
+impl crate::Resettable for CsmrSpec {
+    const RESET_VALUE: u32 = 0;
+}

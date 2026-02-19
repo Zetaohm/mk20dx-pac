@@ -1,0 +1,311 @@
+#[doc = "Register `RCR4` reader"]
+pub type R = crate::R<Rcr4Spec>;
+#[doc = "Register `RCR4` writer"]
+pub type W = crate::W<Rcr4Spec>;
+#[doc = "Frame sync direction\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Fsd {
+    #[doc = "0: Frame Sync is generated externally (slave mode)."]
+    _0 = 0,
+    #[doc = "1: Frame Sync is generated internally (master mode)."]
+    _1 = 1,
+}
+impl From<Fsd> for bool {
+    #[inline(always)]
+    fn from(variant: Fsd) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FSD` reader - Frame sync direction"]
+pub type FsdR = crate::BitReader<Fsd>;
+impl FsdR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Fsd {
+        match self.bits {
+            false => Fsd::_0,
+            true => Fsd::_1,
+        }
+    }
+    #[doc = "Frame Sync is generated externally (slave mode)."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Fsd::_0
+    }
+    #[doc = "Frame Sync is generated internally (master mode)."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Fsd::_1
+    }
+}
+#[doc = "Field `FSD` writer - Frame sync direction"]
+pub type FsdW<'a, REG> = crate::BitWriter<'a, REG, Fsd>;
+impl<'a, REG> FsdW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Frame Sync is generated externally (slave mode)."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Fsd::_0)
+    }
+    #[doc = "Frame Sync is generated internally (master mode)."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Fsd::_1)
+    }
+}
+#[doc = "Frame sync polarity\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Fsp {
+    #[doc = "0: Frame sync is active high."]
+    _0 = 0,
+    #[doc = "1: Frame sync is active low."]
+    _1 = 1,
+}
+impl From<Fsp> for bool {
+    #[inline(always)]
+    fn from(variant: Fsp) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FSP` reader - Frame sync polarity"]
+pub type FspR = crate::BitReader<Fsp>;
+impl FspR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Fsp {
+        match self.bits {
+            false => Fsp::_0,
+            true => Fsp::_1,
+        }
+    }
+    #[doc = "Frame sync is active high."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Fsp::_0
+    }
+    #[doc = "Frame sync is active low."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Fsp::_1
+    }
+}
+#[doc = "Field `FSP` writer - Frame sync polarity"]
+pub type FspW<'a, REG> = crate::BitWriter<'a, REG, Fsp>;
+impl<'a, REG> FspW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Frame sync is active high."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Fsp::_0)
+    }
+    #[doc = "Frame sync is active low."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Fsp::_1)
+    }
+}
+#[doc = "Frame sync early\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Fse {
+    #[doc = "0: Frame sync asserts with the first bit of the frame."]
+    _0 = 0,
+    #[doc = "1: Frame sync asserts one bit before the first bit of the frame."]
+    _1 = 1,
+}
+impl From<Fse> for bool {
+    #[inline(always)]
+    fn from(variant: Fse) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `FSE` reader - Frame sync early"]
+pub type FseR = crate::BitReader<Fse>;
+impl FseR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Fse {
+        match self.bits {
+            false => Fse::_0,
+            true => Fse::_1,
+        }
+    }
+    #[doc = "Frame sync asserts with the first bit of the frame."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Fse::_0
+    }
+    #[doc = "Frame sync asserts one bit before the first bit of the frame."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Fse::_1
+    }
+}
+#[doc = "Field `FSE` writer - Frame sync early"]
+pub type FseW<'a, REG> = crate::BitWriter<'a, REG, Fse>;
+impl<'a, REG> FseW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Frame sync asserts with the first bit of the frame."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Fse::_0)
+    }
+    #[doc = "Frame sync asserts one bit before the first bit of the frame."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Fse::_1)
+    }
+}
+#[doc = "MSB first\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Mf {
+    #[doc = "0: LBS is transmitted/received first."]
+    _0 = 0,
+    #[doc = "1: MBS is transmitted/received first."]
+    _1 = 1,
+}
+impl From<Mf> for bool {
+    #[inline(always)]
+    fn from(variant: Mf) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `MF` reader - MSB first"]
+pub type MfR = crate::BitReader<Mf>;
+impl MfR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Mf {
+        match self.bits {
+            false => Mf::_0,
+            true => Mf::_1,
+        }
+    }
+    #[doc = "LBS is transmitted/received first."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Mf::_0
+    }
+    #[doc = "MBS is transmitted/received first."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Mf::_1
+    }
+}
+#[doc = "Field `MF` writer - MSB first"]
+pub type MfW<'a, REG> = crate::BitWriter<'a, REG, Mf>;
+impl<'a, REG> MfW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "LBS is transmitted/received first."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Mf::_0)
+    }
+    #[doc = "MBS is transmitted/received first."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Mf::_1)
+    }
+}
+#[doc = "Field `SYWD` reader - Sync width"]
+pub type SywdR = crate::FieldReader;
+#[doc = "Field `SYWD` writer - Sync width"]
+pub type SywdW<'a, REG> = crate::FieldWriter<'a, REG, 5>;
+#[doc = "Field `FRSZ` reader - Frame size"]
+pub type FrszR = crate::FieldReader;
+#[doc = "Field `FRSZ` writer - Frame size"]
+pub type FrszW<'a, REG> = crate::FieldWriter<'a, REG, 5>;
+impl R {
+    #[doc = "Bit 0 - Frame sync direction"]
+    #[inline(always)]
+    pub fn fsd(&self) -> FsdR {
+        FsdR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Frame sync polarity"]
+    #[inline(always)]
+    pub fn fsp(&self) -> FspR {
+        FspR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Frame sync early"]
+    #[inline(always)]
+    pub fn fse(&self) -> FseR {
+        FseR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - MSB first"]
+    #[inline(always)]
+    pub fn mf(&self) -> MfR {
+        MfR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bits 8:12 - Sync width"]
+    #[inline(always)]
+    pub fn sywd(&self) -> SywdR {
+        SywdR::new(((self.bits >> 8) & 0x1f) as u8)
+    }
+    #[doc = "Bits 16:20 - Frame size"]
+    #[inline(always)]
+    pub fn frsz(&self) -> FrszR {
+        FrszR::new(((self.bits >> 16) & 0x1f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Frame sync direction"]
+    #[inline(always)]
+    #[must_use]
+    pub fn fsd(&mut self) -> FsdW<Rcr4Spec> {
+        FsdW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Frame sync polarity"]
+    #[inline(always)]
+    #[must_use]
+    pub fn fsp(&mut self) -> FspW<Rcr4Spec> {
+        FspW::new(self, 1)
+    }
+    #[doc = "Bit 3 - Frame sync early"]
+    #[inline(always)]
+    #[must_use]
+    pub fn fse(&mut self) -> FseW<Rcr4Spec> {
+        FseW::new(self, 3)
+    }
+    #[doc = "Bit 4 - MSB first"]
+    #[inline(always)]
+    #[must_use]
+    pub fn mf(&mut self) -> MfW<Rcr4Spec> {
+        MfW::new(self, 4)
+    }
+    #[doc = "Bits 8:12 - Sync width"]
+    #[inline(always)]
+    #[must_use]
+    pub fn sywd(&mut self) -> SywdW<Rcr4Spec> {
+        SywdW::new(self, 8)
+    }
+    #[doc = "Bits 16:20 - Frame size"]
+    #[inline(always)]
+    #[must_use]
+    pub fn frsz(&mut self) -> FrszW<Rcr4Spec> {
+        FrszW::new(self, 16)
+    }
+}
+#[doc = "SAI Receive Configuration 4 Register\n\nYou can [`read`](crate::Reg::read) this register and get [`rcr4::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rcr4::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Rcr4Spec;
+impl crate::RegisterSpec for Rcr4Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`rcr4::R`](R) reader structure"]
+impl crate::Readable for Rcr4Spec {}
+#[doc = "`write(|w| ..)` method takes [`rcr4::W`](W) writer structure"]
+impl crate::Writable for Rcr4Spec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets RCR4 to value 0"]
+impl crate::Resettable for Rcr4Spec {
+    const RESET_VALUE: u32 = 0;
+}

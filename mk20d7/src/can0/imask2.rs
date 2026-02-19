@@ -1,0 +1,96 @@
+#[doc = "Register `IMASK2` reader"]
+pub type R = crate::R<Imask2Spec>;
+#[doc = "Register `IMASK2` writer"]
+pub type W = crate::W<Imask2Spec>;
+#[doc = "Buffer MBi Mask\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u32)]
+pub enum Bufhm {
+    #[doc = "0: The corresponding buffer Interrupt is disabled."]
+    _0 = 0,
+    #[doc = "1: The corresponding buffer Interrupt is enabled."]
+    _1 = 1,
+}
+impl From<Bufhm> for u32 {
+    #[inline(always)]
+    fn from(variant: Bufhm) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for Bufhm {
+    type Ux = u32;
+}
+impl crate::IsEnum for Bufhm {}
+#[doc = "Field `BUFHM` reader - Buffer MBi Mask"]
+pub type BufhmR = crate::FieldReader<Bufhm>;
+impl BufhmR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<Bufhm> {
+        match self.bits {
+            0 => Some(Bufhm::_0),
+            1 => Some(Bufhm::_1),
+            _ => None,
+        }
+    }
+    #[doc = "The corresponding buffer Interrupt is disabled."]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == Bufhm::_0
+    }
+    #[doc = "The corresponding buffer Interrupt is enabled."]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == Bufhm::_1
+    }
+}
+#[doc = "Field `BUFHM` writer - Buffer MBi Mask"]
+pub type BufhmW<'a, REG> = crate::FieldWriter<'a, REG, 32, Bufhm>;
+impl<'a, REG> BufhmW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u32>,
+{
+    #[doc = "The corresponding buffer Interrupt is disabled."]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut crate::W<REG> {
+        self.variant(Bufhm::_0)
+    }
+    #[doc = "The corresponding buffer Interrupt is enabled."]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut crate::W<REG> {
+        self.variant(Bufhm::_1)
+    }
+}
+impl R {
+    #[doc = "Bits 0:31 - Buffer MBi Mask"]
+    #[inline(always)]
+    pub fn bufhm(&self) -> BufhmR {
+        BufhmR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - Buffer MBi Mask"]
+    #[inline(always)]
+    #[must_use]
+    pub fn bufhm(&mut self) -> BufhmW<Imask2Spec> {
+        BufhmW::new(self, 0)
+    }
+}
+#[doc = "Interrupt Masks 2 Register\n\nYou can [`read`](crate::Reg::read) this register and get [`imask2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`imask2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Imask2Spec;
+impl crate::RegisterSpec for Imask2Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`imask2::R`](R) reader structure"]
+impl crate::Readable for Imask2Spec {}
+#[doc = "`write(|w| ..)` method takes [`imask2::W`](W) writer structure"]
+impl crate::Writable for Imask2Spec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets IMASK2 to value 0"]
+impl crate::Resettable for Imask2Spec {
+    const RESET_VALUE: u32 = 0;
+}

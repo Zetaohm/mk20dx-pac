@@ -424,13 +424,39 @@ Investigation of the MK20D7 SVD revealed that most peripherals already have comp
 
 No additional enum patches needed for these peripherals.
 
-### 5.3 Remaining Ergonomics Work
+### 5.3 DMA TCD Clustering — COMPLETE
+
+DMA Transfer Control Descriptors were flat per-register-type arrays requiring callers to manually correlate registers across separate accessors. A two-pass svdtools patch restructures them into per-channel cluster structs.
+
+**Technique:** `_expand_array` (flattens dim-arrayed registers) → `_cluster` (collects flat registers into a cluster array). Also strips `alternateGroup=DMA` so svd2rust generates clean accessor names without a `dma_` prefix.
+
+| | MK20D5 | MK20D7 |
+|---|---|---|
+| **Patch file** | `patches/mk20d5/dma/tcd_cluster.yaml` | `patches/mk20d7/dma/tcd_cluster.yaml` |
+| **Channels** | 4 (dim=4, dimIndex=0-3) | 16 (dim=16, dimIndex=0-15) |
+| **Registers per TCD** | 15 (8 unique + 7 alternate variants) | 15 (8 unique + 7 alternate variants) |
+
+**Generated API (before vs after):**
+```rust
+// Before: flat arrays, manually correlate by index
+dma.tcd_saddr(3);
+dma.dma_tcd_nbytes_mloffyes(3);  // inconsistent dma_ prefix
+
+// After: per-channel struct with all registers grouped
+dma.tcd(3).saddr();
+dma.tcd(3).nbytes_mloffyes();     // clean, consistent
+dma.tcd_iter().for_each(|tcd| { ... });
+```
+
+Overloaded registers (NBYTES ×3, CITER ×2, BITER ×2) at shared offsets are preserved as separate accessors within the cluster, using svd2rust's address-overlap detection.
+
+### 5.4 Remaining Ergonomics Work
 
 | Item | Status | Notes |
 |------|--------|-------|
-| DMA TCD clustering | Blocked | svd2rust#16 — overloaded registers at same offset prevent proper clustering |
-| Register array collection | Future | FTM channels, PORT PCR registers |
-| Peripheral name prefix stripping | Future | Lower priority, cosmetic |
+| Semantic enum variant names | Future | Rename raw bit patterns (e.g., `_010`) to meaningful names (e.g., `Flash`) |
+| Register array collection | N/A | Already using dim arrays (FTM channels, PORT PCRs) |
+| Peripheral name prefix stripping | N/A | Already correct via svd2rust register block structure |
 
 ---
 
@@ -455,12 +481,14 @@ No additional enum patches needed for these peripherals.
 | `reference/K20P64M50SF0RM.pdf` | 50MHz K20 ref manual | Downloaded from PJRC |
 | `reference/refman_chapters/` | Extracted 72MHz chapters (51 files) | Generated, gitignored |
 | `reference/refman_50mhz_chapters/` | Extracted 50MHz chapters (49 files) | Generated, gitignored |
-| `devices/mk20d5.yaml` | svdtools device config | Includes 3 patches |
-| `devices/mk20d7.yaml` | svdtools device config | Includes 1 patch |
+| `devices/mk20d5.yaml` | svdtools device config | Includes 4 patches |
+| `devices/mk20d7.yaml` | svdtools device config | Includes 2 patches |
 | `patches/mk20d5/sim/sopt5_uart_txsrc.yaml` | SIM_SOPT5 field width fix | Applied, verified |
 | `patches/mk20d5/fmc/cache_addresses.yaml` | FMC address + dimIncrement fix | Applied, verified |
 | `patches/mk20d5/dmamux/source_enums.yaml` | DMAMUX SOURCE field enums (43 variants) | Applied, verified |
 | `patches/mk20d7/dmamux/source_enums.yaml` | DMAMUX SOURCE field enums (50 variants) | Applied, verified |
+| `patches/mk20d5/dma/tcd_cluster.yaml` | DMA TCD clustering (4 channels) | Applied, verified |
+| `patches/mk20d7/dma/tcd_cluster.yaml` | DMA TCD clustering (16 channels) | Applied, verified |
 | `scripts/compare_header_svd.py` | Header↔SVD comparison | Working, produces JSON+text reports |
 | `scripts/missing_summary.py` | Quick MISSING_IN_SVD summary | Utility script |
 | `scripts/extract_refman_chapters.py` | PDF→Markdown chapter extraction | Working |

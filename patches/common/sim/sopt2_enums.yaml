@@ -1,0 +1,17 @@
+# SIM SOPT2 clock selection enumerated values
+# Replaces raw bit-pattern names with semantic clock source names
+# Source: K20 Sub-Family Reference Manual, SIM chapter
+SIM:
+  SOPT2:
+    CLKOUTSEL:
+      _replace_enum:
+        FlexBus: [0, "FlexBus CLKOUT"]
+        Flash: [2, "Flash clock"]
+        Lpo: [3, "LPO clock (1 kHz)"]
+        Irc: [4, "MCGIRCLK"]
+        Rtc: [5, "RTC 32.768 kHz"]
+        OscErclk: [6, "OSCERCLK"]
+    PLLFLLSEL:
+      _replace_enum:
+        Fll: [0, "MCGFLLCLK clock"]
+        Pll: [1, "MCGPLLCLK clock"]

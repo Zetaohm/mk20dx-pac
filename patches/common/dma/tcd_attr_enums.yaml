@@ -1,0 +1,17 @@
+# DMA TCD ATTR SSIZE/DSIZE enumerated values
+# Replaces raw bit-pattern names with semantic transfer size names
+# Must be included BEFORE tcd_cluster.yaml (targets TCD%s_ATTR before clustering)
+# Source: K20 Sub-Family Reference Manual, eDMA chapter
+DMA:
+  "TCD%s_ATTR":
+    SSIZE:
+      _replace_enum:
+        Bits8: [0, "8-bit"]
+        Bits16: [1, "16-bit"]
+        Bits32: [2, "32-bit"]
+        Burst16: [4, "16-byte burst"]
+    DSIZE:
+      Bits8: [0, "8-bit"]
+      Bits16: [1, "16-bit"]
+      Bits32: [2, "32-bit"]
+      Burst16: [4, "16-byte burst"]

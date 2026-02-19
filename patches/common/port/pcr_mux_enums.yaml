@@ -1,0 +1,67 @@
+# PORT PCR MUX field enumerated values
+# Replaces raw bit-pattern names (000-111) with semantic pin mux names
+# Source: K20 Sub-Family Reference Manual, PORT chapter
+PORTA:
+  "PCR%s":
+    MUX:
+      _replace_enum:
+        Disabled: [0, "Pin disabled (analog)"]
+        Gpio: [1, "Alternative 1 (GPIO)"]
+        Alt2: [2, "Alternative 2 (chip-specific)"]
+        Alt3: [3, "Alternative 3 (chip-specific)"]
+        Alt4: [4, "Alternative 4 (chip-specific)"]
+        Alt5: [5, "Alternative 5 (chip-specific)"]
+        Alt6: [6, "Alternative 6 (chip-specific)"]
+        Alt7: [7, "Alternative 7 (chip-specific)"]
+
+PORTB:
+  "PCR%s":
+    MUX:
+      _replace_enum:
+        Disabled: [0, "Pin disabled (analog)"]
+        Gpio: [1, "Alternative 1 (GPIO)"]
+        Alt2: [2, "Alternative 2 (chip-specific)"]
+        Alt3: [3, "Alternative 3 (chip-specific)"]
+        Alt4: [4, "Alternative 4 (chip-specific)"]
+        Alt5: [5, "Alternative 5 (chip-specific)"]
+        Alt6: [6, "Alternative 6 (chip-specific)"]
+        Alt7: [7, "Alternative 7 (chip-specific)"]
+
+PORTC:
+  "PCR%s":
+    MUX:
+      _replace_enum:
+        Disabled: [0, "Pin disabled (analog)"]
+        Gpio: [1, "Alternative 1 (GPIO)"]
+        Alt2: [2, "Alternative 2 (chip-specific)"]
+        Alt3: [3, "Alternative 3 (chip-specific)"]
+        Alt4: [4, "Alternative 4 (chip-specific)"]
+        Alt5: [5, "Alternative 5 (chip-specific)"]
+        Alt6: [6, "Alternative 6 (chip-specific)"]
+        Alt7: [7, "Alternative 7 (chip-specific)"]
+
+PORTD:
+  "PCR%s":
+    MUX:
+      _replace_enum:
+        Disabled: [0, "Pin disabled (analog)"]
+        Gpio: [1, "Alternative 1 (GPIO)"]
+        Alt2: [2, "Alternative 2 (chip-specific)"]
+        Alt3: [3, "Alternative 3 (chip-specific)"]
+        Alt4: [4, "Alternative 4 (chip-specific)"]
+        Alt5: [5, "Alternative 5 (chip-specific)"]
+        Alt6: [6, "Alternative 6 (chip-specific)"]
+        Alt7: [7, "Alternative 7 (chip-specific)"]
+
+PORTE:
+  "PCR%s":
+    MUX:
+      _replace_enum:
+        Disabled: [0, "Pin disabled (analog)"]
+        Gpio: [1, "Alternative 1 (GPIO)"]
+        Alt2: [2, "Alternative 2 (chip-specific)"]
+        Alt3: [3, "Alternative 3 (chip-specific)"]
+        Alt4: [4, "Alternative 4 (chip-specific)"]
+        Alt5: [5, "Alternative 5 (chip-specific)"]
+        Alt6: [6, "Alternative 6 (chip-specific)"]
+        Alt7: [7, "Alternative 7 (chip-specific)"]

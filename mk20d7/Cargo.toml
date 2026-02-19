@@ -4,6 +4,9 @@ version = "0.1.0"
 edition = "2021"
 description = "Peripheral Access Crate for MK20DX256 (Teensy 3.1/3.2)"
 license = "MIT OR Apache-2.0"
+repository = "https://github.com/zetaohm/mk20dx-pac"
+readme = "../README.md"
+rust-version = "1.76"
 categories = ["embedded", "hardware-support", "no-std"]
 keywords = ["arm", "cortex-m", "teensy", "kinetis", "nxp"]
 

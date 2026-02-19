@@ -1,0 +1,16 @@
+# MCG clock selection enumerated values
+# Replaces raw bit-pattern names with semantic clock source names
+# Source: K20 Sub-Family Reference Manual, MCG chapter
+MCG:
+  C1:
+    CLKS:
+      _replace_enum:
+        FllPll: [0, "Output of FLL or PLL (depends on PLLS)"]
+        Internal: [1, "Internal reference clock"]
+        External: [2, "External reference clock"]
+        Reserved: [3, "Reserved"]
+  C2:
+    RANGE0:
+      _replace_enum:
+        Low: [0, "Low frequency range for the crystal oscillator"]
+        High: [1, "High frequency range for the crystal oscillator"]

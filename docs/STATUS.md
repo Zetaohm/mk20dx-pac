@@ -1,6 +1,6 @@
 # mk20dx-pac: Project Status
 
-**Last updated:** 2026-02-19 (Phase 5 ergonomics in progress)
+**Last updated:** 2026-02-19 (Phase 6 publishing preparation)
 
 ---
 
@@ -383,7 +383,7 @@ Warnings are all benign (1543/3324 lifetime elision + 1 cfg each).
 
 ---
 
-## Phase 5: Ergonomics Patches — IN PROGRESS
+## Phase 5: Ergonomics Patches — COMPLETE
 
 ### 5.1 DMAMUX SOURCE Enumerated Values — COMPLETE
 
@@ -450,20 +450,49 @@ dma.tcd_iter().for_each(|tcd| { ... });
 
 Overloaded registers (NBYTES ×3, CITER ×2, BITER ×2) at shared offsets are preserved as separate accessors within the cluster, using svd2rust's address-overlap detection.
 
-### 5.4 Remaining Ergonomics Work
+### 5.4 Semantic Enum Names — COMPLETE
+
+Raw bit-pattern enum names (e.g., `_010`, `_101`) were replaced with meaningful names across 6 peripheral groups, making the generated API self-documenting.
+
+**Patch files created (8 total):**
+
+| Patch File | Peripheral | Fields Renamed |
+|-----------|-----------|----------------|
+| `patches/common/port/pcr_mux_enums.yaml` | PORT | PCR MUX (Alt0-Alt7 → Disabled, Gpio, etc.) |
+| `patches/common/ftm/sc_enums.yaml` | FTM0, FTM1 | SC CLKS, PS |
+| `patches/common/adc/cfg_enums.yaml` | ADC0 | CFG1 MODE, ADICLK, ADLSMP; CFG2 ADACKEN, ADHSC |
+| `patches/common/mcg/clks_enums.yaml` | MCG | C1 CLKS, FRDIV, IREFS; C2 RANGE, IRCS; C6 VDIV |
+| `patches/common/sim/sopt2_enums.yaml` | SIM | SOPT2 PLLFLLSEL, CLKOUTSEL |
+| `patches/common/dma/tcd_attr_enums.yaml` | DMA TCD | ATTR SSIZE, DSIZE |
+| `patches/mk20d7/ftm/ftm2_sc_enums.yaml` | FTM2 (MK20D7 only) | SC CLKS, PS |
+| `patches/mk20d7/adc/adc1_cfg_enums.yaml` | ADC1 (MK20D7 only) | CFG1 MODE, ADICLK, ADLSMP; CFG2 ADACKEN, ADHSC |
+
+Used `_replace_enum` for fields that already had NXP-provided enums with raw bit-pattern names. Used standard `_write_constraint: "enum"` to make writers safe.
+
+### 5.5 Remaining Ergonomics Work
 
 | Item | Status | Notes |
 |------|--------|-------|
-| Semantic enum variant names | Future | Rename raw bit patterns (e.g., `_010`) to meaningful names (e.g., `Flash`) |
+| Semantic enum variant names | COMPLETE | 8 patch files, 10 fields across 6 peripheral groups |
+| DMAMUX source enums | COMPLETE | 43 variants (MK20D5), 50 variants (MK20D7) |
+| DMA TCD clustering | COMPLETE | Per-channel struct access |
 | Register array collection | N/A | Already using dim arrays (FTM channels, PORT PCRs) |
 | Peripheral name prefix stripping | N/A | Already correct via svd2rust register block structure |
 
 ---
 
+## Phase 6: Publishing Preparation — IN PROGRESS
+
+- Move internal docs to `docs/`
+- Add LICENSE-MIT, LICENSE-APACHE
+- Update Cargo.toml metadata (repository, readme, rust-version)
+- Write root README.md
+
+---
+
 ## What's Next
 
-1. **Phase 5 continued**: Additional ergonomics patches (register arrays, prefix stripping)
-2. **Phase 6: Publishing** — crate metadata, docs, crates.io
+1. **Phase 6: Publishing** — finalize metadata, README, license files
 
 ---
 
@@ -481,14 +510,22 @@ Overloaded registers (NBYTES ×3, CITER ×2, BITER ×2) at shared offsets are pr
 | `reference/K20P64M50SF0RM.pdf` | 50MHz K20 ref manual | Downloaded from PJRC |
 | `reference/refman_chapters/` | Extracted 72MHz chapters (51 files) | Generated, gitignored |
 | `reference/refman_50mhz_chapters/` | Extracted 50MHz chapters (49 files) | Generated, gitignored |
-| `devices/mk20d5.yaml` | svdtools device config | Includes 4 patches |
-| `devices/mk20d7.yaml` | svdtools device config | Includes 2 patches |
+| `devices/mk20d5.yaml` | svdtools device config | Includes 11 patches |
+| `devices/mk20d7.yaml` | svdtools device config | Includes 10 patches |
 | `patches/mk20d5/sim/sopt5_uart_txsrc.yaml` | SIM_SOPT5 field width fix | Applied, verified |
 | `patches/mk20d5/fmc/cache_addresses.yaml` | FMC address + dimIncrement fix | Applied, verified |
 | `patches/mk20d5/dmamux/source_enums.yaml` | DMAMUX SOURCE field enums (43 variants) | Applied, verified |
 | `patches/mk20d7/dmamux/source_enums.yaml` | DMAMUX SOURCE field enums (50 variants) | Applied, verified |
 | `patches/mk20d5/dma/tcd_cluster.yaml` | DMA TCD clustering (4 channels) | Applied, verified |
 | `patches/mk20d7/dma/tcd_cluster.yaml` | DMA TCD clustering (16 channels) | Applied, verified |
+| `patches/common/port/pcr_mux_enums.yaml` | PORT PCR MUX semantic enums | Applied, verified |
+| `patches/common/ftm/sc_enums.yaml` | FTM SC CLKS/PS semantic enums | Applied, verified |
+| `patches/common/adc/cfg_enums.yaml` | ADC CFG1/CFG2 semantic enums | Applied, verified |
+| `patches/common/mcg/clks_enums.yaml` | MCG C1/C2/C6 semantic enums | Applied, verified |
+| `patches/common/sim/sopt2_enums.yaml` | SIM SOPT2 semantic enums | Applied, verified |
+| `patches/common/dma/tcd_attr_enums.yaml` | DMA TCD ATTR SSIZE/DSIZE semantic enums | Applied, verified |
+| `patches/mk20d7/ftm/ftm2_sc_enums.yaml` | FTM2 SC enums (MK20D7 only) | Applied, verified |
+| `patches/mk20d7/adc/adc1_cfg_enums.yaml` | ADC1 CFG enums (MK20D7 only) | Applied, verified |
 | `scripts/compare_header_svd.py` | Header↔SVD comparison | Working, produces JSON+text reports |
 | `scripts/missing_summary.py` | Quick MISSING_IN_SVD summary | Utility script |
 | `scripts/extract_refman_chapters.py` | PDF→Markdown chapter extraction | Working |

@@ -1,0 +1,15 @@
+# ADC1 configuration enumerated values (MK20D7 only — ADC1 not present in MK20D5)
+# Same enum values as ADC0 in common patch
+ADC1:
+  CFG1:
+    MODE:
+      _replace_enum:
+        Bits8: [0, "8-bit conversion (9-bit in diff mode)"]
+        Bits12: [1, "12-bit conversion (13-bit in diff mode)"]
+        Bits10: [2, "10-bit conversion (11-bit in diff mode)"]
+        Bits16: [3, "16-bit conversion"]
+  SC2:
+    REFSEL:
+      _replace_enum:
+        Default: [0, "Default voltage reference (VREFH/VREFL)"]
+        Alternate: [1, "Alternate voltage reference (VALTH/VALTL)"]

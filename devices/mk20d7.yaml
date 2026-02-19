@@ -2,4 +2,15 @@ _svd: ../svd/MK20D7.svd
 
 _include:
   - ../patches/mk20d7/dmamux/source_enums.yaml
+  # Ergonomics: semantic enum names (common)
+  - ../patches/common/port/pcr_mux_enums.yaml
+  - ../patches/common/ftm/sc_enums.yaml
+  - ../patches/common/adc/cfg_enums.yaml
+  - ../patches/common/mcg/clks_enums.yaml
+  - ../patches/common/sim/sopt2_enums.yaml
+  - ../patches/common/dma/tcd_attr_enums.yaml
+  # Ergonomics: semantic enum names (MK20D7-only peripherals)
+  - ../patches/mk20d7/ftm/ftm2_sc_enums.yaml
+  - ../patches/mk20d7/adc/adc1_cfg_enums.yaml
+  # Clustering (must come after DMA ATTR enums)
   - ../patches/mk20d7/dma/tcd_cluster.yaml

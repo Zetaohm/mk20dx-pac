@@ -1,7 +1,16 @@
 _svd: ../svd/MK20D5.svd
 
 _include:
+  # Correctness patches
   - ../patches/mk20d5/sim/sopt5_uart_txsrc.yaml
   - ../patches/mk20d5/fmc/cache_addresses.yaml
   - ../patches/mk20d5/dmamux/source_enums.yaml
+  # Ergonomics: semantic enum names (common)
+  - ../patches/common/port/pcr_mux_enums.yaml
+  - ../patches/common/ftm/sc_enums.yaml
+  - ../patches/common/adc/cfg_enums.yaml
+  - ../patches/common/mcg/clks_enums.yaml
+  - ../patches/common/sim/sopt2_enums.yaml
+  - ../patches/common/dma/tcd_attr_enums.yaml
+  # Clustering (must come after DMA ATTR enums)
   - ../patches/mk20d5/dma/tcd_cluster.yaml

@@ -1,0 +1,20 @@
+# FTM2 SC register enumerated values (MK20D7 only — FTM2 not present in MK20D5)
+# Same enum values as FTM0/FTM1 in common patch
+FTM2:
+  SC:
+    PS:
+      _replace_enum:
+        Div1: [0, "Divide by 1"]
+        Div2: [1, "Divide by 2"]
+        Div4: [2, "Divide by 4"]
+        Div8: [3, "Divide by 8"]
+        Div16: [4, "Divide by 16"]
+        Div32: [5, "Divide by 32"]
+        Div64: [6, "Divide by 64"]
+        Div128: [7, "Divide by 128"]
+    CLKS:
+      _replace_enum:
+        "None": [0, "No clock selected (counter disabled)"]
+        System: [1, "System clock"]
+        FixedFreq: [2, "Fixed frequency clock"]
+        External: [3, "External clock"]

@@ -2,3 +2,4 @@ _svd: ../svd/MK20D7.svd
 
 _include:
   - ../patches/mk20d7/dmamux/source_enums.yaml
+  - ../patches/mk20d7/dma/tcd_cluster.yaml

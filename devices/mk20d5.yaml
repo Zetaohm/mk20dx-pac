@@ -4,3 +4,4 @@ _include:
   - ../patches/mk20d5/sim/sopt5_uart_txsrc.yaml
   - ../patches/mk20d5/fmc/cache_addresses.yaml
   - ../patches/mk20d5/dmamux/source_enums.yaml
+  - ../patches/mk20d5/dma/tcd_cluster.yaml

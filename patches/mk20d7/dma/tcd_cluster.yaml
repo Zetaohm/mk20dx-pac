@@ -1,0 +1,60 @@
+# DMA TCD clustering — three steps:
+# 1. Strip alternateGroup from TCD registers (prevents dma_ prefix in generated code)
+# 2. Expand dim arrays into flat registers
+# 3. Collect flat registers into a TCD cluster array
+DMA:
+  # Step 1: Remove alternateGroup=DMA from alternate registers
+  _modify:
+    "TCD%s_NBYTES_MLNO":
+      alternateGroup: ""
+    "TCD%s_NBYTES_MLOFFNO":
+      alternateGroup: ""
+    "TCD%s_NBYTES_MLOFFYES":
+      alternateGroup: ""
+    "TCD%s_CITER_ELINKNO":
+      alternateGroup: ""
+    "TCD%s_CITER_ELINKYES":
+      alternateGroup: ""
+    "TCD%s_BITER_ELINKNO":
+      alternateGroup: ""
+    "TCD%s_BITER_ELINKYES":
+      alternateGroup: ""
+
+  # Step 2: Expand dim-arrayed TCD registers into flat individual registers
+  _expand_array:
+    TCD%s_*: {}
+
+  # Step 3: Collect flat registers into a TCD cluster array
+  _cluster:
+    TCD%s:
+      description: "Transfer Control Descriptor"
+      TCD*_SADDR:
+        name: SADDR
+      TCD*_SOFF:
+        name: SOFF
+      TCD*_ATTR:
+        name: ATTR
+      TCD*_NBYTES_MLNO:
+        name: NBYTES_MLNO
+      TCD*_NBYTES_MLOFFNO:
+        name: NBYTES_MLOFFNO
+      TCD*_NBYTES_MLOFFYES:
+        name: NBYTES_MLOFFYES
+      TCD*_SLAST:
+        name: SLAST
+      TCD*_DADDR:
+        name: DADDR
+      TCD*_DOFF:
+        name: DOFF
+      TCD*_CITER_ELINKNO:
+        name: CITER_ELINKNO
+      TCD*_CITER_ELINKYES:
+        name: CITER_ELINKYES
+      TCD*_DLASTSGA:
+        name: DLASTSGA
+      TCD*_CSR:
+        name: CSR
+      TCD*_BITER_ELINKNO:
+        name: BITER_ELINKNO
+      TCD*_BITER_ELINKYES:
+        name: BITER_ELINKYES

@@ -102,7 +102,7 @@ mk20dx-pac/
 │   └── mk20d7/         # MK20DX256-specific patches
 ├── mk20d5/             # Generated PAC crate (Teensy 3.0)
 ├── mk20d7/             # Generated PAC crate (Teensy 3.1/3.2)
-├── reference/          # Teensyduino headers for cross-referencing
+├── reference/          # kinetis.h header + K20 reference manuals
 ├── scripts/            # Comparison and validation tools
 ├── docs/               # Project documentation
 └── Makefile

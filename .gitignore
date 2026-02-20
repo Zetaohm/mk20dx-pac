@@ -21,3 +21,7 @@ mk20d7/target/
 # Generated reference manual chapters
 reference/refman_chapters/
 reference/refman_50mhz_chapters/
+
+# AI tooling
+CLAUDE.md
+.claude/

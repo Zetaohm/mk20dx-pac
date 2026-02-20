@@ -1,0 +1,4 @@
+# GitHub Linguist overrides
+*.rs linguist-language=Rust
+mk20d5/ linguist-generated=true
+mk20d7/ linguist-generated=true
